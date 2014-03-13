@@ -115,6 +115,10 @@ article header time {
   display: block;
   font-size: 16px;
   text-transform: uppercase;
+  color: #999;
+}
+
+article header time:hover {
   color: #000;
 }
 
