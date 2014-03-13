@@ -1,0 +1,398 @@
+/*
+Theme Name: The Ocho
+Theme URI: http://evanhahn.com/
+Author: Evan Hahn
+Author URI: http://evanhahn.com/
+Description: This is version 8 of Evan Hahn dot com.
+Version: 1.4
+License: MIT
+Tags: website
+*/
+
+/* Eric Meyer's CSS reset */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Global styles */
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+html {
+  font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: #85242f;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+a:hover {
+  border-bottom: 2px solid #85242f;
+}
+
+a:active {
+  position: relative;
+  top: 1px;
+  border-bottom-width: 1px;
+}
+
+::selection {
+  color: #fff;
+  background-color: #85242f;
+}
+::-moz-selection {
+  color: #fff;
+  background-color: #85242f;
+}
+
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+/* Site header and navigation */
+
+.site-header .logo {
+  display: block;
+  text-decoration: none;
+  border: none;
+}
+
+.site-header .logo img {
+  border-radius: 999px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  -webkit-border-radius: 999px;
+  -khtml-border-radius: 999px;
+  -moz-border-radius: 999px;
+  behavior: url(http://evanhahn.com/wp-content/themes/8/js/pie.htc); /* TODO */
+}
+
+/* Posts and pages */
+
+article {
+  display: block;
+  margin-bottom: 1em;
+}
+
+article header {
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em 20px;
+  border-bottom: 1px dashed #999;
+}
+
+article header h1 {
+  font-size: 22pt;
+  font-weight: 900;
+}
+
+article header a {
+  border-bottom: 0;
+}
+
+article header time {
+  margin-top: .5em;
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+article .body {
+  text-align: left;
+  padding: 0 20px;
+}
+
+article .body h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6,
+article p,
+article ul,
+article ol,
+article blockquote,
+article pre {
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+article em {
+  font-style: italic;
+}
+
+article strong {
+  font-weight: 900;
+}
+
+article code {
+  padding: .25em;
+  font-family: "SourceCodePro", Inconsolata, Consolas, Monaco, monospace;
+  background-color: #f0f0f0;
+}
+
+article .body h1 {
+  font-weight: 900;
+  font-size: 18pt;
+  margin-bottom: .8em;
+}
+
+article h2 {
+  font-weight: 900;
+}
+
+article h3 {
+  text-decoration: underline;
+}
+
+article blockquote {
+  border-left: 5px solid #f0f0f0;
+  padding: 0 10px;
+}
+
+article ul, article ol {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+article ul li {
+  list-style-type: square;
+}
+
+article ol li {
+  list-style-type: decimal;
+}
+
+article pre {
+  line-height: 1em;
+  color: #fff;
+  background-color: #333;
+  white-space: pre-wrap;
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+article pre code {
+  background-color: transparent;
+}
+
+article img {
+  max-width: 100%;
+}
+
+footer {
+  padding: 1em;
+  line-height: 1.5em;
+}
+
+/* Large screen */
+
+@media screen and (min-width: 700px) {
+
+  body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+  }
+
+  .site-header {
+    float: left;
+    width: 25%;
+    max-width: 256px;
+    height: 100%;
+    padding: 10px 20px;
+  }
+
+  .site-header .logo {
+    margin-bottom: 3em;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+  }
+
+  .site-header .logo img {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    display: block;
+    margin: 0 auto;
+    transition: all .25s ease-in-out;
+    transform: rotate(0deg);
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+
+  .site-header .logo:hover img {
+    transform: rotate(360deg);
+    background-color: #85242f;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+
+  .site-header .logo:active img {
+    position: relative;
+    top: 3px;
+  }
+
+  .site-header .description {
+    margin-bottom: 3em;
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  .site-header nav ul li {
+    display: block;
+    text-align: center;
+    margin: .5em 0;
+  }
+
+  .site-header nav ul li a {
+    display: inline-block;
+    padding: .5em;
+    text-align: center;
+    font-weight: 900;
+    color: #999;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    transition: all .075s ease-in;
+    -webkit-transition: all .075s ease-in;
+    -moz-transition: all .075s ease-in;
+    -o-transition: all .075s ease-in;
+  }
+
+  .site-header:hover nav ul li a {
+    color: #999;
+  }
+
+  .site-header nav ul li a:hover {
+    color: #85242f;
+    border-bottom: 1px solid #85242f;
+  }
+
+  .site-content {
+    float: left;
+    width: 72.5%;
+    margin-left: 2.5%;
+    padding-top: 1em;
+    max-width: 800px;
+    vertical-align: top;
+    background-color: #fff;
+  }
+
+  article .body pre {
+    padding: 1em;
+  }
+
+  footer {
+    width: 100%;
+    padding: 3em 20%;
+    clear: both;
+    text-align: center;
+    font-size: 80%;
+    color: #999;
+  }
+
+}
+
+/* Small screen */
+
+@media screen and (max-width: 700px) {
+
+  .site-header {
+    padding: 2em 0;
+    background-color: #f0f0f0;
+  }
+
+  .site-header .logo {
+    text-align: center;
+  }
+
+  .site-header .logo img {
+    width: 128px;
+    background-color: #85242f;
+  }
+
+  .site-header .description {
+    margin: 1em 0;
+    text-align: center;
+  }
+
+  .site-header nav {
+    text-align: center;
+  }
+
+  .site-header nav ul li {
+    display: inline-block;
+    padding: 0 .25em;
+    line-height: 1.5em;
+  }
+
+  .site-header nav ul li a {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #999;
+  }
+
+  .site-header nav ul li a:hover {
+    color: #85242f;
+  }
+
+  article header h1 {
+    font-weight: 900;
+  }
+
+  article .body pre {
+    padding: 1em .5em;
+  }
+
+  footer {
+    margin-top: 1em;
+    background-color: #f0f0f0;
+  }
+
+}
+
+/* HLJS Monokai, modified */
+
+.hljs{display:block;#272822;color:#DDD;padding:.5em}.hljs-tag,.hljs-tag .hljs-title,.hljs-keyword,.hljs-literal,.hljs-strong,.hljs-change,.hljs-winutils,.hljs-flow,.lisp .hljs-title,.clojure .hljs-built_in,.nginx .hljs-title,.tex .hljs-special{color:#F92672}.hljs .hljs-constant,.asciidoc .hljs-code{color:#66D9EF}.hljs-code,.hljs-class .hljs-title,.hljs-header{color:#FFF}.hljs-link_label,.hljs-attribute,.hljs-symbol,.hljs-symbol .hljs-string,.hljs-value,.hljs-regexp{color:#BF79DB}.hljs-link_url,.hljs-tag .hljs-value,.hljs-string,.hljs-bullet,.hljs-subst,.hljs-title,.hljs-emphasis,.haskell .hljs-type,.hljs-preprocessor,.hljs-pragma,.ruby .hljs-class .hljs-parent,.hljs-built_in,.sql .hljs-aggregate,.django .hljs-template_tag,.django .hljs-variable,.smalltalk .hljs-class,.hljs-javadoc,.django .hljs-filter .hljs-argument,.smalltalk .hljs-localvars,.smalltalk .hljs-array,.hljs-attr_selector,.hljs-pseudo,.hljs-addition,.hljs-stream,.hljs-envvar,.apache .hljs-tag,.apache .hljs-cbracket,.tex .hljs-command,.hljs-prompt{color:#A6E22E}.hljs-comment,.java .hljs-annotation,.smartquote,.hljs-blockquote,.hljs-horizontal_rule,.python .hljs-decorator,.hljs-template_comment,.hljs-pi,.hljs-doctype,.hljs-deletion,.hljs-shebang,.apache .hljs-sqbracket,.tex .hljs-formula{color:#75715E}.hljs-keyword,.hljs-literal,.css .hljs-id,.hljs-phpdoc,.hljs-title,.hljs-header,.haskell .hljs-type,.vbscript .hljs-built_in,.sql .hljs-aggregate,.rsl .hljs-built_in,.smalltalk .hljs-class,.diff .hljs-header,.hljs-chunk,.hljs-winutils,.bash .hljs-variable,.apache .hljs-tag,.tex .hljs-special,.hljs-request,.hljs-status{font-weight:700}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:0.5}
+
+/* And finally, print styles */
+
+@media print {
+
+  .site-header {
+    display: none;
+  }
+
+}
