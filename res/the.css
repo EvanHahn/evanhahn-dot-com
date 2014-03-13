@@ -152,7 +152,7 @@ article strong {
 
 article code {
   padding: .25em;
-  font-family: "SourceCodePro", Inconsolata, Consolas, Monaco, monospace;
+  font-family: SourceCodePro, Inconsolata, Consolas, Monaco, monospace;
   background-color: #f0f0f0;
 }
 
