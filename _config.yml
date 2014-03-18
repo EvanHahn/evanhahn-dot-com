@@ -3,3 +3,5 @@ name: Evan Hahn
 description: I love Sriracha sauce and websites.
 
 permalink: ':title'
+
+markdown: redcarpet
