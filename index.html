@@ -1,7 +1,20 @@
 ---
 layout: default
 ---
-{% for post in site.posts %}
+
+{% for post in paginator.posts %}
   {% assign page=post %}
   {% include post.html %}
 {% endfor %}
+
+<div class="pagination">
+
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="previous">Forward in time</a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}" class="next">Back in time</a>
+  {% endif %}
+
+</div>

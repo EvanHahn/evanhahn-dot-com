@@ -76,6 +76,17 @@ sub {
   behavior: url(http://evanhahn.com/wp-content/themes/8/js/pie.htc); /* TODO */
 }
 
+/* Pagination */
+
+.pagination {
+	margin-top: 3em;
+	text-align: center;
+}
+
+.pagination .previous {
+	margin-right: 1em;
+}
+
 /* Posts and pages */
 
 article {
