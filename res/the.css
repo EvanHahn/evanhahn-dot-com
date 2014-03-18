@@ -84,7 +84,11 @@ sub {
 }
 
 .pagination .previous {
-	margin-right: 1em;
+  margin-right: 1em;
+}
+
+.post.pagination > div {
+  margin-bottom: 2em;
 }
 
 /* Posts and pages */
