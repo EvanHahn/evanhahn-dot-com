@@ -1,6 +1,5 @@
 ---
 title: Is jQuery too big for mobile?
-author: Evan Hahn
 layout: post
 permalink: /is-jquery-too-big-for-mobile/
 ---

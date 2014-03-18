@@ -1,6 +1,5 @@
 ---
 title: Disable JSHint for a file
-author: Evan Hahn
 layout: post
 permalink: /disable-jshint-for-a-file/
 ---

@@ -1,6 +1,5 @@
 ---
 title: The Underhanded C Contest
-author: Evan Hahn
 layout: post
 permalink: /the-underhanded-c-contest/
 ---

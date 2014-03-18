@@ -1,6 +1,5 @@
 ---
 title: 'Introducing cyborg.txt: robots.txt utilities for Node'
-author: Evan Hahn
 layout: post
 permalink: /introducing-cyborg/
 ---

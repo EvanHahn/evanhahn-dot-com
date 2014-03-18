@@ -1,6 +1,5 @@
 ---
 title: Proteus
-author: Evan Hahn
 layout: post
 permalink: /proteus-review/
 ---

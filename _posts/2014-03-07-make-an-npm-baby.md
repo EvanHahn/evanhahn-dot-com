@@ -1,6 +1,5 @@
 ---
 title: Publishing a simple package to npm
-author: Evan Hahn
 layout: post
 permalink: /make-an-npm-baby/
 ---
