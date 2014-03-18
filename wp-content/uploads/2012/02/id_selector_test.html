@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+
+	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
+
+	html, body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font-family: 'Open Sans', sans-serif;
+		vertical-align: baseline;
+	}
+
+	body {
+		width: 90%;
+		max-width: 800px;
+		margin: 1em auto;
+	}
+
+	a {
+		color: #903;
+		text-decoration: none;
+	}
+
+	a:hover, a:active {
+		color: #f03;
+		background-color: #fff6f6;
+	}
+
+	a:active {
+		position: relative;
+		top: 1px;
+	}
+
+	h1, h2, h3, h4, h5, h6, p {
+		margin-bottom: 1em;
+	}
+
+	h1 {
+		padding: 0.5em 1em;
+		font-size: 1.5em;
+		font-weight: bold;
+		color: white;
+		background-color: black;
+	}
+
+	h2 {
+		padding: 0.5em 1em;
+		background-color: #ddd;
+	}
+
+	ul {
+		margin-left: 2em;
+	}
+
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+
+	window.loops = 1000000;
+
+	</script>
+
+	<title>$('#foo') or $(document.getElementById('foo'))?</title>
+
+</head>
+<body>
+
+	<h1>$('#foo') or $(document.getElementById('foo'))?</h1>
+
+	<p>You know the ID of an element you're trying to select. Should you write <code>$('#foo')</code> or <code>$(document.getElementById('foo'))</code>?</p>
+
+	<p id="foo"><em>This is a test paragraph that I'm going to try to select.</em></p>
+
+	<h2>$('#foo')</h2>
+
+	<p>Time taken: <script>
+
+	var start = new Date;
+	for (var i = 0; i < window.loops; i ++) {
+		(function() {
+			var elt = $('#foo');
+		})();
+	}
+	var end = new Date;
+	document.write(end - start);
+
+	</script>.</p>
+
+	<h2>$(document.getElementById('foo'))</h2>
+
+	<p>Time taken: <script>
+
+	var start = new Date;
+	for (var i = 0; i < window.loops; i ++) {
+		(function() {
+			var elt = $(document.getElementById('foo'));
+		})();
+	}
+	var end = new Date;
+	document.write(end - start);
+
+	</script>.</p>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+Example: A 5000L tank contains salt water with salt concentration 0.004 kg/L. Seawater's concentration is 0.03 kg/L. Seawater starts pouring into the tank at a rate of 25 L/min. Solution is well-mixed and drains at the same rate. How much salt after 30 minutes?
+
+* t = time, minutes
+* y(t) = amount of salt at time t, kg
+* y(0) = 5000 * 0.004
+* y(30) = ?
+* dy / dt = rate of change of salt = in - out = (0.03 * 25) - (y(t) * 25)

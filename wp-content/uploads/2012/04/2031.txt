@@ -1,0 +1,142 @@
+EECS 203 W12, EXAM #1 STUDY GUIDE
+
+This study guide aims to cover every topic that will be on the exam. Useful for studying and our one page of notes. Send it around!
+
+What's on the exam?
+
+ * Homeworks 1 through 5
+ * Lectures 1 through 10
+ * Chapter 1, sections 2.1 through 2.5, sections 5.1 and 5.2
+
+Propositions and operations
+
+ * Proposition = either true or false, but not both.
+
+ * ¬p = Negation of p
+ * p ∧ q = and (remember that ∧ is like the A in "AND")
+ * p ∨ q = or
+ * p ⊕ q = Exclusive or; XOR; only one can be true
+
+ * Tautology = always true
+ * Contradiction = always false
+
+ * Distributive laws
+   * p ∨ (q ∧ r) ≡ (p v q) ∧ (p v r)
+   * p ∧ (q v r) ≡ (p ∧ q) v (p ∧ r)
+ * De Morgan's Laws
+   * ¬(p ∧ q) ≡ ¬p v ¬q
+   * ¬(p ∨ q) ≡ ¬p ∧ ¬q
+
+Conditionals
+
+ * p → q: if p, then q
+   * T → F = F; everything else is true
+
+ * Logical equivalencies
+   * p → q ≡ ¬p v q
+   * p → q ≡ ¬q → ¬p
+   * p v q ≡ ¬p → q
+   * p ∧ q ≡ ¬(p → ¬q)
+   * ¬(p → q) ≡ p ∧ ¬q
+   * (p → q) ∧ (p → r) ≡ p → (q ∧ r)
+   * (p → r) ∧ (q → r) ≡ (p v q) → r
+   * (p → q) v (p → r) ≡ p → (q v r)
+   * (p → r) v (q → r) ≡ (p ∧ q) → r
+
+ * Biconditional logical equivalencies
+   * p ↔ q ≡ (p → q) ∧ (q → p)
+   * p ↔ q ≡ ¬p ↔ ¬q
+   * p ↔ q ≡ (p ∧ q) v (¬p ∧ ¬q)
+   * ¬(p ↔ q) ≡ p ↔ ¬q
+
+Quantifiers
+
+ * ∀x P(x) = P(x) is true for every x on the domain
+ * ∃x P(x) = there is an x on the domain for which P(x) is true
+ * ∃! x P(x) = there is ONLY ONE x on the domain for which P(x) is true
+
+ * De Morgan's Laws
+   * ¬∃x P(x) ≡ ∀x ¬P(x)
+   * ¬∀x P(x) ≡ ∃x ¬P(x)
+
+ * Nested quantifiers
+   * ∀x ∃x Q(x) ≡ ∀x (∃x Q(x))
+
+ * Quantifying two variables
+   * ∀x ∀y P(x, y) ≡ ∀y ∀x P(x, y) = true when P(x, y) is true for every pair of x and y
+   * ∀x ∃y P(x, y) = true when for every x, there is a y for which P(x, y) is true
+   * ∃x ∀y P(x, y) = true when there is an x for which P(x, y) is true for every y
+   * ∃x ∃y P(x, y) ≡ ∃y ∃x P(x, y) = true when there's a pair x,y for which P(x, y) is true
+
+Rules of inference
+
+ * For propositional logic
+   * [p ∧ (p → q)] → q (modus ponens)
+   * [¬q ∧ (p → q)] → ¬p (modus tollens)
+   * [(p → q) ∧ (q → r)] → (p → r) (hypothetical syllogism)
+   * [(p v q) ∧ ¬p] → q (disjunctive syllogism)
+   * p → (p v q) (addition)
+   * (p ∧ q) → p (simplification)
+   * [(p) ∧ (q)] → (p ∧ q) (conjunction)
+   * [(p v q) ∧ (¬p v r)] → (q v r) (resolution)
+
+ * For quantifiers
+   * ∀x P(x) → P(c) (universal instantiation. Example: "All women are wise", therefore "Lisa is wise.")
+   * P(c) for arbitrary c → ∀x P(x) (universal generalization)
+   * ∃x P(x) → P(c) for some c (existential instantiation)
+   * P(c) → ∃x P(x) for some c (existential generalization)
+
+Proofs
+
+ * Proof by exhaustion: try everything (only works with a finite number of possibilities)
+ * Proof by cases: you can break things into groups and show that certain groups work
+ * Proof by implication
+   * Assume P is true
+     * Assume P, P then Q, therefore Q
+     * Holds because if P is true you get Q and if P is false then Q is automatically implied
+     * After you prove Q it is no longer safe to assume P still holds
+   * Prove the contrapositive
+     * Assume Not Q show that it implies Not P
+ * Proving "if and only if"
+   * Prove each implies the other
+     * P implies Q AND Q implies P
+   * Construct a chain of iffs
+     * Show P iff R iff S iff Q so P iffQ
+ * Proof by contradiction
+   * Show that if the premise is T or F then something F would be T
+   * Example: Show that if P is false, then 0=2 since 0!=2 P must be true
+
+Sets
+
+ * A collection of of objects called elements grouped together
+ * Ordering is not important, just which elements are contained
+   * ex. {x,y} is the same as {y,x}
+ * x ∈ D shows x is an element of D
+ * Special sets
+   * φ = the empty set = {}
+   * N = natural numbers = { 0, 1, 2, ... }
+   * Z = integers = { ... -2, -1, 0, 1, 2, ... }
+   * Z+ = positive integers = { 1, 2, 3, 4, ... }
+   * Q = rationals
+   * R = reals
+   * R+ = positive reals
+   * C = complex numbers
+ * Sets can contain other sets denoted S⊆T showing S is a subset of T or all the elements in S are in T
+ * Unioning (∪) two sets combines all the elements of two sets (additive)
+ * Intersection (∩) creates a set containing all elements contained by both sets
+ * Subtraction (–) creates a set containing only elements of either on or the other set but not both
+ * The compliment of a set is everything except the elements in that set
+ * A set has a cardinality equal to the number of elements in the set
+ * Power set
+   * The set of all sets in a set (I know, kind of strange wording)
+   * ex. B∈P({1,2}) iff B = {∅},{1},{2},{1,2}
+ * Cartesian product of sets
+   * Gives  all possible Sets of which the first element comes from set one and the second element comes from set 2
+ * Notation for defining a set
+   * A = { n ∈ R | x^3-3x+1 > 0 }
+ * Set equality
+   * Two sets are equal iff every element in one set is in the other and visa versa
+
+License info
+
+In case anyone gives a damn, this is licensed under the Unlicense (see unlicense.org for terms).

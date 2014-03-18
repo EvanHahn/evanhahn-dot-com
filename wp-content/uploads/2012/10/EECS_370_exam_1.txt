@@ -1,0 +1,38 @@
+EECS 370 exam 1 stuff to study
+==============================
+
+by Evan Hahn and Scott Godbold
+
+- floating point conversion
+   0. convert to binary & normalize
+   1. signed bit: first bit (positive or negative)
+   2. exponent: next 8 bits (127 + shift amount)
+   3. mantissa: remaining 23 bits (remaing values to the right of the decimal)
+   
+- hex conversion
+  - every 4 bits = one hex digit (0-F)
+  - denoted 0x<stuff>
+
+- size of things
+    * int = 4 bytes
+    * short = 2 bytes
+    * long = 8 bytes
+    * char = 1 byte
+    * Important notes:
+      - item must start on a evenly divisible adress (i.e. int must start on an address divisible by 4)
+      - structs must start on a multiple of their largest element (which includes containing structs)
+
+- callee/caller registers
+
+- static, stack, heap, text, symbol
+  - text: code
+  - static: globals and statics
+  - stack: small variables, parameters to subroutines, local variables
+  - heap: big variables, not in the stack
+  - symbols: type, scope level, sometimes pointer to location
+
+************
+
+This is licensed under a Creative Commons Attribution 3.0 Unported license. Please give credit to Evan Hahn.
+
+<http://creativecommons.org/licenses/by/3.0/deed.en_US>

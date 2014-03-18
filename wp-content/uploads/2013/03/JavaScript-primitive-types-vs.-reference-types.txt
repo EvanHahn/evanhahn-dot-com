@@ -1,0 +1,39 @@
+From http://youtu.be/mh-hPzDfb_Q
+
+* Primitive types
+    * Number
+    * Boolean
+    * String
+
+* Reference types
+    * Object
+    * Array
+    * Function
+
+Objects aren't equal by reference:
+
+    var a = { x: 1, y: 7 };
+    var b = { x: 1, y: 7 };
+    a == b    // false
+    a === b    // false
+
+Reference types are passed by reference:
+
+    function foo(bar) {
+        bar.x = 2;
+    }
+    var a = { x: 1, y: 7 };
+    foo(a);
+    a.x;    // 2
+
+Copying arrays (not a deep copy):
+
+    var array2 = array1.slice(0);
+
+Copying objects:
+
+    // Shallow copy
+    var newObject = $.extend({}, oldObject);
+
+    // Deep copy
+    var newObject = $.extend(true, {}, oldObject);

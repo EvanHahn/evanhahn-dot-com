@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sync-looking async loader</title>
+</head>
+<body>
+
+	<script src="loader.js"></script>
+	<script>
+
+	var logger = require("logger.js");
+	logger.log("Hello world!");
+
+	var version = logger.version();
+	logger.log(version);
+
+	</script>
+
+</body>
+</html>

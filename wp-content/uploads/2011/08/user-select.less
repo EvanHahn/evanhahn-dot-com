@@ -1,0 +1,27 @@
+// LESS CSS user-select mixins
+// by Evan Hahn (evanhahn.com)
+// licensed under the Unlicense
+
+// Usage:
+// .logo {
+//     color: #f00;
+//     .user-select(none);
+// }
+
+// For more about how this stuff works, check out my incredibly long blog post
+// that explores this business.
+// <http://evanhahn.com/?p=379>
+
+// Enjoy!
+
+.user-select (@select) {
+	-webkit-user-select: @select;
+	-khtml-user-drag: @select;
+	-khtml-user-select: @select;
+	-moz-user-select: @select;
+	-ms-user-select: @select;
+	user-select: @select;
+}
+.user-select (@select) when (@select = none) {
+	-moz-user-select: -moz-none;
+}

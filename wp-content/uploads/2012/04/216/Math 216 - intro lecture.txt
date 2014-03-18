@@ -1,0 +1,5 @@
+http://cl.ly/40232w1H472D1u0U2e3u
+
+Typically, solutions aren't unique.
+
+In applications, a unique solution is determined by some additional piece of info (like initial conditions).

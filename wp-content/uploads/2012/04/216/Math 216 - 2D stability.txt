@@ -1,0 +1,17 @@
+* Positive and negative λ (λ < 0, λ > 0)
+  Saddle. Unstable.
+
+* Negative λ
+  Nodal sink. Asymptotically stable.
+
+* Positive λ
+  Nodal source. Unstable.
+
+* Complex number, positive real part
+  Spiral source. Unstable.
+
+* Complex number, negative real part
+  Spiral sink. Asymptotically stable.
+
+* Complex number, 0 real part
+  Center. Stable.

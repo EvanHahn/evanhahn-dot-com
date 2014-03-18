@@ -1,0 +1,3 @@
+students need to be able to understand and draw reasonable phase plane diagrams for the nonlinear systems we study in chapter 6 (but we won't be testing them on their ability to identify what different predator/prey/etc. models look like).  In chapter 7 we _will_ provide a list of transforms for the final.  It will likely be table 7.1.2 on p.446, plus the transform of the delta function.
+
+In the web homework for chapter 7, note that the web homework system writes the step function u(t) as step(t).

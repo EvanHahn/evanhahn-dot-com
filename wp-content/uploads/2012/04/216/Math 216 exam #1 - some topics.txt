@@ -1,0 +1,7 @@
+- 6 to 7 questions
+- Given mass, spring constant, air resistance, what's the equation?
+- Memorize Euler, maybe improved Euler. No need to memorize Kathan Kaudan whatever.
+- Know alternatives for sin^2 and cos^2
+- Logistic, population stuff. Analyze stability for these.
+- Mixture
+- Parachute

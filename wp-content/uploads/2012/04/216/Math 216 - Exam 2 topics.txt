@@ -1,0 +1,11 @@
+1. Write a system of first-order as a single equation of a higher order.
+
+2. Write a single equation of higher order as a first-order system.
+
+3. Numerical methods for systems (able to carry out several steps). Formulas will be given.
+
+4. Matrices, determinants (at least 3x3)
+
+5. Independence, Wronskian
+
+6. Eigenvalue method, real and complex

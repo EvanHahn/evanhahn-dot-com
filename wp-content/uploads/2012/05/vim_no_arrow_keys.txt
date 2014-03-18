@@ -1,0 +1,12 @@
+" Break out of the arrow key habit
+
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+
+" Stolen from http://blog.sanctum.geek.nz/vim-anti-patterns/
+
+" This code was licensed under a Creative Commons Noncommercial-Share
+" Alike license on Tom Ryder's website, and so it also is here.
+" http://creativecommons.org/licenses/by-nc-sa/3.0/nz/legalcode

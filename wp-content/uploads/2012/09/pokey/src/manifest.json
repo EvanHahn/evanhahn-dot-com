@@ -1,0 +1,20 @@
+{
+	"name": "Pokey",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Open facebook.com/pokes and it will auto-poke everyone.",
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": [
+			"zepto.min.js",
+			"pokey.js"
+		],
+		"run_at": "document_start",
+		"all_frames": false
+	}],
+	"permissions": [
+		"tabs",
+		"http://*.facebook.com/*",
+		"https://*.facebook.com/*"
+	]
+}

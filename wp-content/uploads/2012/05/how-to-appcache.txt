@@ -1,0 +1,29 @@
+From <http://www.alistapart.com/articles/application-cache-is-a-douchebag/>
+
+************
+
+Reference appcache like so:
+
+    <html manifest="offline.appcache">
+
+Clean caches in chrome://appcache-internals/
+
+"When you visit Sprite Cow, you'll instantly get the version from your cache.
+Once the page has finished rendering, the browser will look for updates to the
+manifest and cached files." If it has updated, it fires updateready event.
+
+Appcache only refreshes if you make a change to the manifest (any change will
+do, do it with a comment).
+
+"Non-cached resources will not load on a cached page", even online. Get around
+this with NETWORK in appcache.
+
+"Redirects to other domains are treated as failures"
+
+LocalStorage might be a good alternative
+
+************
+
+Notes by Evan Hahn (evanhahn.com).
+
+Licensed under <http://creativecommons.org/licenses/by/3.0/>

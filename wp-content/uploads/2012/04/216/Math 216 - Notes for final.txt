@@ -1,0 +1,4 @@
+* my''   cy'   ky = F(t)
+  * If F(t) = 0, it's unforced.
+    * If c = 0, undamped
+    * If c > 0, it's damped

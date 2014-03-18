@@ -1,0 +1,365 @@
+################################
+## EECS 370 EXAM 2, FALL 2012 ##
+##        STUDY GUIDE         ##
+################################
+
+RANDOM BULLSHIT
+===============
+
+* 1 ns = 1E-9 seconds
+* 1 byte = 8 bits
+* LC2K word = 32 bits
+
+LC2K
+====
+
+Instructions
+------------
+
+* add (000): add regA with regB, store in destReg
+* nand (001): nand regA with regB, store in destReg
+* lw (010): load from memory at offsetField + regA, put it into regB
+* sw (011): store memory at offsetField + regA, from regB
+* beq (100): if regA == regB, branch to PC + 1 + offsetField
+* jalr (101): first, store PC + 1 into regB. Then branch to address in regA.
+* halt (110): stop
+* noop (111): do nothing
+
+* all instructions increment PC
+
+How instructions are represented
+--------------------------------
+
+* add, nand
+  * bits 24-22: opcode
+  * bits 21-19: reg A
+  * bits 18-16: reg B
+  * bits 15-3: unused (should all be 0)
+  * bits 2-0: destReg
+
+* lw, sw, beq
+  * bits 24-22: opcode
+  * bits 21-19: reg A
+  * bits 18-16: reg B
+  * bits 15-0: offsetField (a 16-bit, 2's complement number with a range of -32768 to 32767)
+
+* jalr
+  * bits 24-22: opcode
+  * bits 21-19: reg A
+  * bits 18-16: reg B
+  * bits 15-0: unused (should all be 0)
+
+* halt, noop
+  * bits 24-22: opcode
+  * bits 21-0: unused (should all be 0)
+
+MIPS
+====
+
+* <http://www.eecs.umich.edu/courses/eecs370/eecs370.f12/resources/materials/mips_assembly.jpg>
+* <http://www.eecs.umich.edu/courses/eecs370/eecs370.f12/resources/materials/MIPS_Green_Sheet.pdf>
+
+PIPELINING
+==========
+
+Steps
+-----
+
+1. Fetch
+  - Get instruction from memory
+  - Increment pc
+  - Write all needed data to IFID register
+2. Decode
+  - Read in the nessisary registers
+  - Calculate the offset
+  - Pass register data, instruction, pc+1, and offset in IDEX register
+3. Execute (ALU)
+  - Calculates pc+1+offset incase this is a branch
+  - Performs ALU operation on regA and either regB or offset
+  - Stores instruction, pc+1+offset, aluResult to EXMEM register
+4. Memory write
+  - Uses aluResult to find the target or lw or sw
+  - The op/destination bits of the instruction control r/w access
+  - Does nothing if not a lw or sw
+  - Passes along aluResult or Memory read data and instruction to MEMWB register
+5. Register write
+  - Writes memData or aluResult back to the registers
+  - op bits used to control write access to the registers
+
+Buggy datapaths
+---------------
+
+* Data Hazards
+  - Occur when an instruction reads in a register that should have been changed but hasnt hit write back yet
+  - Options:
+    1. Avoid
+      - make sure the code is Hazard free before compiling (insert noops as needed)
+      - Issues:
+        * Longer pipelines need more noops so your code is not legacy compatible/versatile
+        * Program gets larger as you insert noops
+        * CPI is still 1 but now more of the instructions are noops
+    2. Detect & Stall
+      - see there is a hazard and insert noops at execute until the hazard passes
+      - Issues:
+        * Increases the CPI whenever it encounters a hazard
+        * Easily avoidable
+    3. Detect & Forward
+      - see there is a hazard and get the value from the pipeline register before it is writen back
+      - Issues:
+        * Not fool proof, a stall may still be required (case of lw followed by a dependant instruction)
+        *BEQ has to predict taken/not taken. When prediction fails, inserts noops
+* Control Hazards
+  - Branch instructions change the pc but not till Memory writeback so we need to account for that
+  - Options:
+    1. Avoid
+      - Don't use branches (this is mostly impractical)
+      - Must insert noops following a branch
+      - Issues:
+        * Breaks legacy code
+        * Program size increases
+        * Program execution slows down
+    2. Detect & Stall
+      - delay all fetches until the branch is resolved by holding instruction in fetch and passing noops to decode
+      - must wait for each instruction to be decoded before fetching the next (incase its a beq or jalr)
+      - Issues:
+        * CPI Increases
+        * Not always necessary (the branch isn't always taken)
+          * If mistaken it's fine as long as no instruction was completed
+    3. Speculate & Squash if Wrong
+      - Speculate:
+        * Keep fetching instructions until we know that branch is really taken
+        * SquashL
+          * Send a noop to Decode, Execute, and Memory
+          * Send target address to PC
+  - Branch prediction
+    - Branch Target Buffer
+      * Table of target addresses for previous branches
+        * Store taken address
+        * Fall through address just PC+1
+      * 2 bit counter for each entry
+        * Each time a branch is taken, increase (full at 3)
+        * Each time a branch isn't taken, decrease (empty at 0)
+        * Predict based on counter (0 or 1 not taken, 2 or 3 take)
+* Exceptions
+  - When something unexpected happens during execution
+    - Flush pipeline and jalr to exeception handler
+    - If unsure (early fetch instruction down potentially wrong path) delay handling until
+      it is known to be an issue
+
+FOR IN-CLASS PIPELINE:
+    -lw hazard inserts 1 noop instruction
+    -beq hazard (wrong prediction) inserts 3 noop instructions
+
+TYPES OF MEMORY
+===============
+
+* There's a dichotomy of speed and cost. how do we get the best properties of multiple memory technologies?
+
+* SRAM (static RAM)
+  * fast: ~2ns access time
+  * expensive
+  * this is in your processor
+
+* DRAM (dynamic RAM)
+  * slower: ~60ns access time
+  * much cheaper
+  * this is what you buy in a store
+
+* hard disks
+  * real slow
+  * REAL cheap
+  * Made of magnets (how the fuck do they work!?)
+  * nonvolatile: your data is saved when the power is off, unlike SRAM or DRAM
+
+* optical disks (CDs, DVDs)
+  * the slowest
+  * almost the cheapest (free) [Not really anymore, but whatever]
+
+* use small array of SRAM for the cache. accessed frequently
+* use bigger amount of DRAM for main memory
+* use disk for virtual memory and persistent storage
+
+* architectural view of memory is "just a big array"
+* machine language doesn't know about SRAM or DRAM or whatever, nor is register 1 truly register 1.
+
+CACHES
+======
+
+Organization
+------------
+
+* cache memory can copy data from any part of main memory
+* tag (CAM) has a block (SRAM)
+* to access the cache, compare reference address with tag. if they match, pull from cache, otherwise pull from main memory
+* you can search through the CAM
+* you can write to the CAM, which replaces old stuff, or maybe not-recently-searched-for stuff (usually more performant).
+* tag match = hit. no match = miss.
+* cache line: tag and block (blocks can be one byte, two, etc)
+
+* first, you check your cache. then you check memory.
+* you COULD check both in parallel but you don't because it'd use more power
+
+Locality
+--------
+
+* temporal locality: you're more likely to access memory that you accessed recently
+  * Generally uses LRU replacement policy
+  * Any data referenced that is not in the cache should be put into the cache
+* spacial locality: you're more likely to access memory nearby
+
+Misses
+------
+
+* compulsory misses
+  * you'll always hit these
+  * also known as "cold start" misses
+  * to find: simulate with a cache of unlimited size (cache size = memory size)
+  * to fix: reducing the number of blocks by increasing block size. you can also preload things into the cache
+
+* capacity misses
+  * your cache isn't large enough
+  * to find: simulate with a fully associated cache of the intended size
+  * to fix: build a bigger cache
+
+* conflict misses
+  * you can't store cache blocks wherever you want to
+  * to find: simulate with actual intended cache
+  * to fix: increase associativity
+
+Cache types
+-----------
+
+* fully-associative
+  * you can think of it as "fill up an array, then find good spots for it"
+  * LRU policy basically picks a good spot. One COULD just loop around, but that's not the most efficient way to use a fully-associative cache.
+
+* direct-mapped caches
+  * direct-mapped caches are kind of like hashmaps
+  * one cache line where a block can reside
+  * direct mapped cache has associativity of 1
+
+* set-associative
+  * kind of like hashmaps but with "buckets". you basically "hash" the data and narrow it down to only a few options, and then it's like a fully-associative cache
+
+* cache configuration
+  * number of blocks = number of cache lines = cache-size / block-size
+  * number of sets = number of blocks / associativity
+    * Fully associative cache    : always 1 set
+    * Direct mapped cache        : associativity is 1
+    * 2-way associative cache    : associativity is 2
+    * 4-way associative cache    : associativity is 4
+  * Block offset size = log(base2)(block-size) bits
+  * Set index size = log(base2)(#sets) bits
+  * Tag size = (Address size) - (set index size) - (block offset size) bits
+      | Tag | Index | Offset |
+      
+* ex: Given a Cache size of 16 bytes for a 2-way associative cache, LRU policy, Address size of 16 bits, byte addressable, and a block-size of 2 bytes
+  * #blocks = 16 bytes / 2 bytes = 8 blocks
+  * #sets = 8 blocks / 2 associativity = 4 sets
+  * block offset size = log2( 2bytes/1byte ) = 1 bit  (where the 1 byte comes from being byte addressable)
+  * set index size = log2(4) = 2 bit
+  * tag size = 16 - 2 - 1 = 13 bit
+    | 13 | 2 | 1 |
+
+1 word = 4 bytes = 32 bits
+1 byte = 8 bits
+64KB = 2^16 bits
+1 KB = 2^10 bits
+
+PERFORMANCE
+===========
+
+* frequency: how many processor cycles per second? 500 MHz = 500E6 cycles per second
+* cycle time = 1/f. 2 ns/cycle = 500 MHz
+* CPI: clock cycles per instruction, on average
+
+* 1GHz = 1 / 1ns
+* 100MHz = 1 / 10ns
+* 1MHz = 1 / 1000ns
+
+****************************************************************
+
+EXAMPLES
+========
+
+* The CPI for a single-cycle processor is generally ≤ than that of a pipelined processor.
+* The CPI of a multi-cycle processor is generally ≥ than that of a pipelined processor.
+* The cycle time for a single-cycle processor is generally ≥ than that of a multicycle processor.
+* The cycle time for a single-cycle processor is generally ≥ than that of a pipelined processor.
+* The cycle time for a multi-cycle processor is generally ≤ than that of a pipelined processor.
+* The average number of stalls due to data hazards for a multi-cycle processor is generally ≤ than that for a pipelined processor.
+* The memory access latency, in nanoseconds, for a multi-cycle processor is generally = than that for a pipelined processor.
+* The number of misses incurred by a direct mapped cache is generally ≥  than that for a fully associative cache that is the same total size.
+* The access time, in nanoseconds, of a direct mapped cache is generally ≤ than that for a fully associative cache that is the same total size.
+* For programs with high spatial locality, the number of misses in a cache with a small block size is generally ≥ than that for the same-sized cache with a larger block size
+
+****************************************************************
+
+NOTES FROM REVIEW SESSION
+=========================
+
+* main topics
+  * pipelining
+  * caching
+  * performance
+  * predictors
+
+* LRU: kick out old stuff
+
+* byte-addressable is default
+
+* offset tells where in the block the data is
+
+* bit selection is a lot like decimal mod arithmetic
+
+* no index = fully associative
+
+* Convert numbers into 2^x format when e
+
+* predictors on exam: not taken, 2-bit predictor with branch target buffer
+
+Example 1
+---------
+
+Setup: Cache size = 16 bytes. Block size = 2 bytes. Direct mapped. LRU replacement policy. Address size = 16 bits, byte addressable.
+
+* 0xF19C: what are the tag and index?
+* 1111 0001 1001 1100
+* Offset: 1 bit. Block size is 2, so cool
+* Block size = 16 / 2 = 8
+* # sets = 8 / 1 = 8
+* 3 bits for index
+* offset = 1, index = 110
+* tag = 111100010001
+
+* What's the average memory latency (in cycles) for the next reference stream if hits take 1 cycle and miss penalty is 10 cycles?
+
+* Given that you want the reference stream hit/miss behavior to be the following. What is the minimum cache associativity which will result in this behavior (everything else is unchanged)? 4M, 7M, 21M, 22M, 23H, 20H, 5H, 7H, 36M, 6H, 4H
+* Block # = Divide by 2 round down in decimal. removes least significant digit (only works with 1 bit if 2 you will have to increase what you divide by)
+
+Example 2
+---------
+
+* 64kB (2^16 byte) cache, 32-bit address, 32 byte block, 4-way set associative
+
+* # blocks = 2^16 / 2^5 = 2^11
+* # sets = 2^11 / 2^2 = 2^9
+
+* offset: 5 bits
+* index: 9 bits
+* tag: 18 bits
+
+From Winter 2010 Exam, question 2
+---------------------------------
+
+1 cycle to access cache
+95% hit rate
+40 cycles to access memory
+98% hit rate
+the, disk access
+1000 cycles to access disk
+
+(cache cycles * hit rate) + (mem cycles + cache cycles) * cache miss * mem hit + (cache cycles + mem cycles + disk cycles) * cache miss * mem miss = cycles
+
+(1 * .95) + (40 + 1) * 0.05 * 0.98 + (1 + 40 + 1000) * 0.05 * 0.02 = 4 cycles latency
+

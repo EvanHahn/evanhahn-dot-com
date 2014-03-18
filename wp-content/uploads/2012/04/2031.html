@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>/FzcwDwlO3L</title>
+</head>
+<body><b><u>EECS 203 W12, EXAM #1 STUDY GUIDE</u></b><br
+/><br
+/>This study guide aims to cover every topic that will be on the exam. Useful for studying and our one page of notes. Send it around!<br
+/><br
+/><u>What's on the exam?</u><br
+/><br
+/><ul><li>Homeworks 1 through 5</li
+><li>Lectures 1 through 10</li
+><li>Chapter 1, sections 2.1 through 2.5, sections 5.1 and 5.2<br/><br
+/></li></ul
+><u>Propositions and operations</u><br
+/><br
+/><ul><li>Proposition = either true or false, but not both.<br/><br
+/></li
+><li>¬p = Negation of p</li
+><li>p ∧ q = and (remember that ∧ is like the A in "AND")</li
+><li>p ∨ q = or</li
+><li>p ⊕ q = Exclusive or; XOR; only one can be true<br/><br
+/></li
+><li>Tautology = always true</li
+><li>Contradiction = always false<br/><br
+/></li
+><li>Distributive laws<ul><li>p ∨ (q ∧ r) ≡ (p v q) ∧ (p v r)</li
+><li>p ∧ (q v r) ≡ (p ∧ q) v (p ∧ r)</li></ul
+></li
+><li>De Morgan's Laws<ul><li>¬(p ∧ q) ≡ ¬p v ¬q</li
+><li>¬(p ∨ q) ≡ ¬p ∧ ¬q<br/><br
+/></li></ul
+></li></ul
+><u>Conditionals</u><br
+/><br
+/><ul><li>p → q: if p, then q<ul><li>T → F = F; everything else is true<br/><br
+/></li></ul
+></li
+><li>Logical equivalencies<ul><li>p → q ≡ ¬p v q</li
+><li>p → q ≡ ¬q → ¬p</li
+><li>p v q ≡ ¬p → q</li
+><li>p ∧ q ≡ ¬(p → ¬q)</li
+><li>¬(p → q) ≡ p ∧ ¬q</li
+><li>(p → q) ∧ (p → r) ≡ p → (q ∧ r)</li
+><li>(p → r) ∧ (q → r) ≡ (p v q) → r</li
+><li>(p → q) v (p → r) ≡ p → (q v r)</li
+><li>(p → r) v (q → r) ≡ (p ∧ q) → r<br/><br
+/></li></ul
+></li
+><li>Biconditional logical equivalencies<ul><li>p ↔ q ≡ (p → q) ∧ (q → p)</li
+><li>p ↔ q ≡ ¬p ↔ ¬q</li
+><li>p ↔ q ≡ (p ∧ q) v (¬p ∧ ¬q)</li
+><li>¬(p ↔ q) ≡ p ↔ ¬q<br/><br
+/></li></ul
+></li></ul
+><u>Quantifiers</u><br
+/><br
+/><ul><li>∀x P(x) = P(x) is true for every x on the domain</li
+><li>∃x P(x) = there is an x on the domain for which P(x) is true</li
+><li>∃! x P(x) = there is ONLY ONE x on the domain for which P(x) is true<br/><br
+/></li
+><li>De Morgan's Laws<ul><li>¬∃x P(x) ≡ ∀x ¬P(x)</li
+><li>¬∀x P(x) ≡ ∃x ¬P(x)<br/><br
+/></li></ul
+></li
+><li>Nested quantifiers<ul><li>∀x ∃x Q(x) ≡ ∀x (∃x Q(x))<br/><br
+/></li></ul
+></li
+><li>Quantifying two variables<ul><li>∀x ∀y P(x, y) ≡ ∀y ∀x P(x, y) = true when P(x, y) is true for every pair of x and y</li
+><li>∀x ∃y P(x, y) = true when for every x, there is a y for which P(x, y) is true</li
+><li>∃x ∀y P(x, y) = true when there is an x for which P(x, y) is true for every y</li
+><li>∃x ∃y P(x, y) ≡ ∃y ∃x P(x, y) = true when there's a pair x,y for which P(x, y) is true<br/><br
+/></li></ul
+></li></ul
+><u>Rules of inference</u><br
+/><br
+/><ul><li>For propositional logic<ul><li>[p ∧ (p → q)] → q (modus ponens)</li
+><li>[¬q ∧ (p → q)] → ¬p (modus tollens)</li
+><li>[(p → q) ∧ (q → r)] → (p → r) (hypothetical syllogism)</li
+><li>[(p v q) ∧ ¬p] → q (disjunctive syllogism)</li
+><li>p → (p v q) (addition)</li
+><li>(p ∧ q) → p (simplification)</li
+><li>[(p) ∧ (q)] → (p ∧ q) (conjunction)</li
+><li>[(p v q) ∧ (¬p v r)] → (q v r) (resolution)<br/><br
+/></li></ul
+></li
+><li>For quantifiers<ul><li>∀x P(x) → P(c) (universal instantiation. Example: "All women are wise", therefore "Lisa is wise.")</li
+><li>P(c) for arbitrary c → ∀x P(x) (universal generalization)</li
+><li>∃x P(x) → P(c) for some c (existential instantiation)</li
+><li>P(c) → ∃x P(x) for some c (existential generalization)<br/><br
+/></li></ul
+></li></ul
+><u>Proofs</u><br
+/><br
+/><ul><li>Proof by exhaustion: try everything (only works with a finite number of possibilities)</li
+><li>Proof by cases: you can break things into groups and show that certain groups work</li
+><li>Proof by implication<ul><li>Assume P is true<ul><li>Assume P, P then Q, therefore Q</li
+><li>Holds because if P is true you get Q and if P is false then Q is automatically implied</li
+><li>After you prove Q it is no longer safe to assume P still holds</li></ul
+></li
+><li>Prove the contrapositive<ul><li>Assume Not Q show that it implies Not P</li></ul
+></li></ul
+></li
+><li>Proving "if and only if"<ul><li>Prove each implies the other<ul><li>P implies Q AND Q implies P</li></ul
+></li
+><li>Construct a chain of iffs<ul><li>Show P iff R iff S iff Q so P iffQ</li></ul
+></li></ul
+></li
+><li>Proof by contradiction<ul><li>Show that if the premise is T or F then something F would be T</li
+><li>Example: Show that if P is false, then 0=2 since 0!=2 P must be true<br/><br
+/></li></ul
+></li></ul
+><u>Sets</u><br
+/><br
+/><ul><li>A collection of of objects called elements grouped together</li
+><li>Ordering is not important, just which elements are contained<ul><li>ex. {x,y} is the same as {y,x}</li></ul
+></li
+><li>x ∈ D shows x is an element of D</li
+><li>Special sets<ul><li>φ = the empty set = {}</li
+><li>N = natural numbers = { 0, 1, 2, ... }</li
+><li>Z = integers = { ... -2, -1, 0, 1, 2, ... }</li
+><li>Z+ = positive integers = { 1, 2, 3, 4, ... }</li
+><li>Q = rationals</li
+><li>R = reals</li
+><li>R+ = positive reals</li
+><li>C = complex numbers</li></ul
+></li
+><li>Sets can contain other sets denoted S⊆T showing S is a subset of T or all the elements in S are in T</li
+><li>Unioning (∪) two sets combines all the elements of two sets (additive)</li
+><li>Intersection (∩) creates a set containing all elements contained by both sets</li
+><li>Subtraction (–) creates a set containing only elements of either on or the other set but not both</li
+><li>The compliment of a set is everything except the elements in that set</li
+><li>A set has a cardinality equal to the number of elements in the set</li
+><li>Power set<ul><li>The set of all sets in a set (I know, kind of strange wording)</li
+><li>ex. B∈P({1,2}) iff B = {∅},{1},{2},{1,2}</li></ul
+></li
+><li>Cartesian product of sets<ul><li>Gives all possible sets of which the first element comes from set one and the second element comes from set 2</li></ul
+></li
+><li>Notation for defining a set<ul><li>A = { n ∈ R | x^3-3x+1 &gt; 0 }</li></ul
+></li
+><li>Set equality<ul><li>Two sets are equal iff every element in one set is in the other and visa versa<br/><br
+/></li></ul
+></li></ul
+><u>Induction</u><br
+/><br
+/><ul><li>Principal<ul><li>P(n) is your predicate</li
+><li>If P(0) is true and P(k) implies P(k+1) then P(n) is true for all n in the set</li></ul
+></li
+><li>Induction Template<ul><li>State you are using induction</li
+><li>Define your predicate P(n)</li
+><li>Proove that P(0) is true</li
+><li>Show that P(n) implies P(n+1)</li></ul
+></li
+><li>Strong Induction<ul><li>P(0) is true and P(0) through P(n) imply P(n+1)<br/><br
+/></li></ul
+></li></ul
+><u>License info</u><br
+/><br
+/><i>In case anyone gives a damn, this is licensed under the Unlicense (see unlicense.org for terms).</i><br
+/><br
+/></body>
+</html>

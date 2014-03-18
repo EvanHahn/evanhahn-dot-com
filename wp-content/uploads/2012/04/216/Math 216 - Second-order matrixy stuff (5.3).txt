@@ -1,0 +1,10 @@
+x'' = Ax
+
+* Set Av = μv
+* Then λ^2 = μ
+* Then x = e^(λt) * v
+
+Example problem
+http://cl.ly/1V0t140L052O1U3o1D14
+http://cl.ly/0W3Y02050a2F3k1f0039
+http://cl.ly/2J023v3n3Y1d2X250B1l

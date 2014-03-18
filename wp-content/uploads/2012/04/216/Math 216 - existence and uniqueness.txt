@@ -1,0 +1,5 @@
+* Existence theorem - f is defined and continuous on some rectangle R in the t-y plane. For any point in the rectangle, the initial value problem y' = f(t, y) and y(t0) = y0 has a solution on R. If it's not true, it could exist, but not guaranteed.
+
+* Uniqueness theorem - If f(t, y) and δf/δy(t, y) are continous on R, it's a unique solution on R if it's an initial value problem. If not true, it COULD be.
+
+* Geometrically, if something is unique in rectangle R, two solutions can't touch.

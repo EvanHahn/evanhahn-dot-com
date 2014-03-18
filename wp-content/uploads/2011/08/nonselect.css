@@ -1,0 +1,35 @@
+/*
+ * Make elements nonselectable.
+ * by Evan Hahn
+ * licensed under the Unlicense
+ *
+ * Usage:
+ * <div class="nonselectable">
+ *    This is nonselectable, <span class="selectable">but this part is</span>.
+ * </div>
+ *
+ * For more about how this stuff works, check out my incredibly long blog post
+ * that explores this business.
+ * <http://evanhahn.com/?p=379>
+ *
+ * Enjoy!
+ */
+
+.nonselectable {
+  -webkit-user-select: none;
+  -khtml-user-drag: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.selectable {
+  -webkit-user-select: auto;
+  -khtml-user-drag: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}

@@ -1,0 +1,18 @@
+Very large force over a very short time.
+
+Suppose f(t) is a force applied to an object at time t. The impulse of f on the interval t ∈ [a, b]
+
+Impulse = integral of f(t)dt on (a, b)
+
+The delta function centered at t = a is a generalized function/distribution:
+
+δ(t - a) = lim ε → 0 of something
+
+* If δ(t - a) = 0, t =/= a
+* Integrating δ(t - a)dt from -∞ to ∞ gives 1
+* Integrating δ(t - a)f(t)dt from 0 to ∞ gives f(a)
+* L{δ(t - a)} = exp(-sa)
+
+* y'' - y = 2δ(t - 3), y(0) = 1, y'(0) = 0
+* [s*Y(s) - s*y(0) - y'(0)] - Y(s) = 2 * exp(-3s)
+* (s^2 - 1)*Y(s) = s + 2 * exp(-3s)

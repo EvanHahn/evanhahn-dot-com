@@ -1,0 +1,2 @@
+fn.apply(scope, [argsArray])
+fn.call(scope, argA, argB, ...)
