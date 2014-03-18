@@ -24,9 +24,7 @@ I thought it'd be interesting to catalog my first impressions of Rails. Please k
 
 * I'm glad I'm learning it because it's an important skill to have, both for my own personal projects and because (selfishly) it's employable.
 
-Stay tuned for my app! [I think I have to build this one.][6]
-
- [1]: http://evanhahn.com/?p=1067
+ [1]: /on-my-internship-at-universitynow
  [2]: http://gembundler.com/gemfile.html
  [3]: http://railscasts.com/
  [4]: http://railscasts.com/episodes/328-twitter-bootstrap-basics
