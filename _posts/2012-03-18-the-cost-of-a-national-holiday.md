@@ -3,8 +3,6 @@ title: The cost of a national holiday
 author: Evan Hahn
 layout: post
 permalink: /the-cost-of-a-national-holiday/
-categories:
-  - Uncategorized
 ---
 From [a post on Sohaib Athar's blog][1]:
 

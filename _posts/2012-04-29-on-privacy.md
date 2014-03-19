@@ -3,8 +3,6 @@ title: On privacy
 author: Evan Hahn
 layout: post
 permalink: /on-privacy/
-categories:
-  - Uncategorized
 ---
 *In short: I'd be fine with tracking if I completely trusted the organizations tracking me.*
 
@@ -28,4 +26,4 @@ Until I trust the government, I will not trust them to track me responsibly.
  [6]: http://mixpanel.com
  [7]: http://www.merriam-webster.com/dictionary/latin
  [8]: http://www.leginfo.ca.gov/.const/.article_1
- [9]: http://www.house.gov/house/Constitution/Amend.html
+ [9]: http://www.law.cornell.edu/constitution/fifth_amendment

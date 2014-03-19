@@ -41,7 +41,7 @@ I remember being very sad when I had to give my laptop and key card back -- I ha
  [3]: http://backbonejs.org/
  [4]: http://emberjs.com/
  [5]: https://www.clippercard.com/
- [6]: /is-it-worth-cheating-caltrain?
+ [6]: /is-it-worth-cheating-caltrain
  [7]: https://en.wikipedia.org/wiki/South_of_Market%2C_San_Francisco
  [8]: http://www.agilemanifesto.org/
  [9]: http://www.pivotaltracker.com/

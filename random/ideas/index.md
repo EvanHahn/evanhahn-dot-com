@@ -140,7 +140,7 @@ This work is licensed under the [Creative Commons Attribution-Noncommercial-Shar
 *   "Carpet cave"
 
 *   Words that don't exist in English
-    
+
     *   Why isn't there a "visualize" for sound and taste
     *   Between, and "between-including"
     *   Opposite of "improvement"
@@ -176,7 +176,7 @@ This work is licensed under the [Creative Commons Attribution-Noncommercial-Shar
  [1]: http://creativecommons.org/licenses/by-nc-sa/4.0/
  [2]: &#109;&#x61;&#105;&#x6c;&#116;&#x6f;:&#109;&#x65;&#64;&#x65;&#118;&#x61;n&#104;&#x61;&#104;&#x6e;&#46;&#x63;o&#109;
  [3]: http://creativecommons.org/licenses/by-nc/3.0/
- [4]: https://encrypteverything.ca/index.php/Main_Page
+ [4]: https://www.encrypteverything.ca/index.php?title=Main_Page
  [5]: http://bountyforcode.com/
  [6]: http://evanhahn.github.io/English-text-highlighting/
  [7]: http://elm-lang.org/
