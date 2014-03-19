@@ -3,8 +3,6 @@ title: Douglas Crockford on making JSON a standard
 author: Evan Hahn
 layout: post
 permalink: /douglas-crockford-on-making-json-a-standard/
-categories:
-  - Uncategorized
 ---
 Douglas Crockford, "discoverer" of the JSON standard, in [an interview about JSON][1]:
 

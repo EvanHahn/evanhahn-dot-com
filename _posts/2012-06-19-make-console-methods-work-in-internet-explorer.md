@@ -3,8 +3,6 @@ title: Make console methods work in Internet Explorer
 author: Evan Hahn
 layout: post
 permalink: /make-console-methods-work-in-internet-explorer/
-categories:
-  - Uncategorized
 ---
 **Update: use [Paul Miller's solution][1], not mine.**
 

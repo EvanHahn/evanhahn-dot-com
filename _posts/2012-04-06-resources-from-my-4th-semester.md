@@ -3,13 +3,11 @@ title: Resources from my 4th semester
 author: Evan Hahn
 layout: post
 permalink: /resources-from-my-4th-semester/
-categories:
-  - Uncategorized
 ---
 A couple of assignments in my 4th semester had me producing things that I think the web might be able to use. I didn't put a ton of time into preparing some of these for the web nor can I guarantee accuracy, but:
 
 *   From Discrete Mathematics (EECS 203)...
-    
+
     *   [Chapter 1 summary][1] - covers basic logic stuff.
     *   [English ways to express conditionals][2]
     *   [Exam #1 study guide][3] - Covers propositions, operations, conditionals, quantifiers, inference, and sets.

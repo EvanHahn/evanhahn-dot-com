@@ -3,8 +3,6 @@ title: A couple of resources from my 3rd semester
 author: Evan Hahn
 layout: post
 permalink: /a-couple-of-resources-from-my-3rd-semester/
-categories:
-  - Uncategorized
 ---
 A couple of assignments in my 3rd semester had me producing things that I think the web might be able to use. Here they are:
 

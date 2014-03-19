@@ -3,8 +3,6 @@ title: Inventing on principle
 author: Evan Hahn
 layout: post
 permalink: /inventing-on-principle/
-categories:
-  - Uncategorized
 ---
 [Bret Victor's "Inventing on Principle" talk][1] is a brilliant 50 minutes in two distinct parts. In short, go watch it.
 

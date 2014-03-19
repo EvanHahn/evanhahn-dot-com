@@ -3,8 +3,6 @@ title: On big libraries
 author: Evan Hahn
 layout: post
 permalink: /on-big-libraries/
-categories:
-  - Uncategorized
 ---
 *In short: it's not about big or small frameworks as much as it is about extensibility.*
 

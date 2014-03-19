@@ -3,8 +3,6 @@ title: 'Vim&#8217;s killer feature'
 author: Evan Hahn
 layout: post
 permalink: /vims-killer-feature/
-categories:
-  - Uncategorized
 ---
 From ["Vim speed is not really the point"](http://wrongsideofmemphis.com/2013/03/27/vim-speed-is-not-really-the-point/):
 

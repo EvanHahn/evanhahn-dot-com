@@ -3,8 +3,6 @@ title: Is it worth cheating Caltrain?
 author: Evan Hahn
 layout: post
 permalink: /is-it-worth-cheating-caltrain/
-categories:
-  - Uncategorized
 ---
 *In short: Caltrain checks tickets enough that you cheating the system isn't worth it.*
 

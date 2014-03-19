@@ -3,8 +3,6 @@ title: Apple and the majority
 author: Evan Hahn
 layout: post
 permalink: /apple-and-the-majority/
-categories:
-  - Uncategorized
 ---
 From [MacStories][1]:
 

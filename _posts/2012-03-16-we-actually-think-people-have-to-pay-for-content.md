@@ -3,8 +3,6 @@ title: '&#8220;We actually think people have to pay for content.&#8221;'
 author: Evan Hahn
 layout: post
 permalink: /we-actually-think-people-have-to-pay-for-content/
-categories:
-  - Uncategorized
 ---
 From [a TechCrunch TV interview with Jonathan Klein][1], CEO of Getty Images:
 

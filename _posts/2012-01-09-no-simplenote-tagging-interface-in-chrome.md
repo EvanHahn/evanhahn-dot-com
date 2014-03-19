@@ -3,8 +3,6 @@ title: No Simplenote tagging interface in Chrome
 author: Evan Hahn
 layout: post
 permalink: /no-simplenote-tagging-interface-in-chrome/
-categories:
-  - Uncategorized
 ---
 Use the [Stylebot Chrome extension][1] and then [apply my style][2] to disable the tagging interface in Chrome.
 

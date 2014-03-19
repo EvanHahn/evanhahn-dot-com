@@ -3,8 +3,6 @@ title: '&#8220;Technology itself does not transform anything&#8221;'
 author: Evan Hahn
 layout: post
 permalink: /technology-itself-does-not-transform-anything/
-categories:
-  - Uncategorized
 ---
 From [a story about One Laptop Per Child's failure in Peru][1]:
 

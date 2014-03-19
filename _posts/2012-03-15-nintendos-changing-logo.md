@@ -3,8 +3,6 @@ title: 'Nintendo&#8217;s changing logo'
 author: Evan Hahn
 layout: post
 permalink: /nintendos-changing-logo/
-categories:
-  - Uncategorized
 ---
 [Very interesting article][1] about Nintendo and how their logo has changed since their start in 1889. I like some of the old logos better than their current one!
 

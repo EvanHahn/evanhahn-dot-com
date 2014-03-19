@@ -3,8 +3,6 @@ title: My rules of thumb for extending JavaScript native objects
 author: Evan Hahn
 layout: post
 permalink: /my-rules-of-thumb-for-extending-javascript-native-objects/
-categories:
-  - Uncategorized
 ---
 I have the following rules of thumb for extending JavaScript's native objects:
 

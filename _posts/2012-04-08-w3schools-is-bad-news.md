@@ -3,8 +3,6 @@ title: W3Schools is bad news
 author: Evan Hahn
 layout: post
 permalink: /w3schools-is-bad-news/
-categories:
-  - Uncategorized
 ---
 I think any real web developer will tell you that W3Schools is bad news. [W3Fools][1] aims to correct this:
 

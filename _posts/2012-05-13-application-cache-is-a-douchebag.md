@@ -3,8 +3,6 @@ title: '&#8220;Application Cache is a Douchebag&#8221;'
 author: Evan Hahn
 layout: post
 permalink: /application-cache-is-a-douchebag/
-categories:
-  - Uncategorized
 ---
 ["Application Cache is a Douchebag"][1] is a fantastic and funny article that explains the weird workings of the HTML5 offline manifest files. If you've time to read it, read it. It's a great tutorial.
 

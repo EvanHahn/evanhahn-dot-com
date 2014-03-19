@@ -3,8 +3,6 @@ title: Post-active state for links
 author: Evan Hahn
 layout: post
 permalink: /post-active-state-for-links/
-categories:
-  - Uncategorized
 ---
 In [a 24 Ways article][1], Chris Sealey talks about a post-active state for links, which is something I really like.
 

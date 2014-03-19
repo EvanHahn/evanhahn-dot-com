@@ -3,8 +3,6 @@ title: How to cite a tweet
 author: Evan Hahn
 layout: post
 permalink: /how-to-cite-a-tweet/
-categories:
-  - Uncategorized
 ---
 The Modern Language Association now has [a page about citing tweets][1]. As S.C. Galvan says, a "sign of the times, I guess."
 

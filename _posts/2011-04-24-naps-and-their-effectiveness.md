@@ -3,8 +3,6 @@ title: Naps and their effectiveness
 author: Evan Hahn
 layout: post
 permalink: /naps-and-their-effectiveness/
-categories:
-  - Uncategorized
 ---
 *I wrote this paper for my Psychology 111 class. It got a good grade and I thought it was fairly informative, so I'll post it here. [Grab a PDF if you'd like.][1]*
 

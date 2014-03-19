@@ -3,8 +3,6 @@ title: My programming Pandora station
 author: Evan Hahn
 layout: post
 permalink: /my-programming-pandora-station/
-categories:
-  - Uncategorized
 ---
 *In short: I made a [Pandora station for programming][1] and I've been tweaking it since 2009.*
 

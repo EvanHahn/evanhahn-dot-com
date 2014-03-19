@@ -12,7 +12,7 @@ I split tracking into two categories: commercial and governmental (a distinction
 
 Commercial tracking seems *relatively* benign. It's Google trying to give you better ads. It's businesses trying to improve their services with [Mixpanel][6]. It tracks you without asking (and sometimes a lot -- I count 28 different trackers on [*Merriam-Webster*'s entry for "latin"][7]); this is creepy. It sends your personal data to advertisers; this is creepy. But their end goal is to squeeze every dollar out of you that they can, and they really can't do much of that without your consent. They might be able to sell you things you wouldn't otherwise buy, but this doesn't kill me.
 
-Government tracking seems far less benign. Their end goal seems to be to protect citizens; their method seems *illegal* and certainly unsettling. It's a violation of privacy. To me, it seems flat-out illegal [some states' constitutions][8] and debatably a violation of [the fifth amendment][9]. I have yet to be convinced that this tracking is (1) legal (2) effective (3) done by organizations with citizens' best interests in mind.
+Government tracking seems far less benign. Their end goal seems to be to protect citizens; their method seems *illegal* and certainly unsettling. It's a violation of privacy. To me, it seems flat-out illegal by [some states' constitutions][8] and debatably a violation of [the fifth amendment][9]. I have yet to be convinced that this tracking is (1) legal (2) effective (3) done by organizations with citizens' best interests in mind.
 
 Until I trust the government, I will not trust them to track me responsibly.
 

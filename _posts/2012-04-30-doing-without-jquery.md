@@ -3,8 +3,6 @@ title: Doing without jQuery
 author: Evan Hahn
 layout: post
 permalink: /doing-without-jquery/
-categories:
-  - Uncategorized
 ---
 **Edit: [You Might Not Need jQuery][1] is a great resource that's probably better than mine.**
 
@@ -28,37 +26,37 @@ Selecting by ID:
 
     $('#foo')
     document.getElementById('foo')
-    
+
 
 Selecting by class ([not compatible with IE6-8][4], but good with everything else):
 
     $('.bar')
     document.getElementsByClassName('bar')
-    
+
 
 Selecting by tag name:
 
     $('span')
     document.getElementsByTagName('span')
-    
+
 
 Selecting sub-elements:
 
     $('#foo span')
     document.getElementById('foo').getElementsByTagName('span')
-    
+
 
 Selecting "special" elements:
 
     $('html')
     document.documentElement
-    
+
     $('head')
     document.head
-    
+
     $('body')
     document.body
-    
+
 
 There are a number of libraries that have jQuery's selector functionality; my favorite is the tiny [Qwery][5].
 
@@ -68,28 +66,28 @@ Getting/setting HTML:
 
     $('#foo').html()
     document.getElementById('foo').innerHTML
-    
+
     $('#foo').html('Hello, world!')
     document.getElementById('foo').innerHTML = 'Hello, world!'
-    
+
 
 Dealing with classes:
 
     $('#foo').addClass('bar')
     document.getElementById('foo').className += ' bar '
-    
+
     $('#foo').removeClass('bar')
     document.getElementById('foo').className = document.getElementById('foo').className.replace(/\bbar\b/gi, '')
-    
+
     $('#foo').hasClass('bar')
     document.getElementById('foo').className.search(/\bbar\b/gi) !== -1
-    
+
 
 Getting an input's value:
 
     $('#foo').val()
     document.getElementById('foo').value
-    
+
 
 # Effects
 
@@ -97,16 +95,16 @@ Showing and hiding:
 
     $('#foo').show()
     document.getElementById('foo').style.display = ''
-    
+
     $('#foo').hide()
     document.getElementById('foo').style.display = 'none'
-    
+
 
 Changing CSS:
 
     $('#foo').css('background-color', 'red')
     document.getElementById('foo').style.backgroundColor = 'red'
-    
+
 
 For animation, use the [Morpheus library][6].
 
@@ -123,20 +121,20 @@ First, do it the way MDN does it:
             // DOM is ready!
         }
     };
-    
+
 
 Second, use [domReady][7], a tiny library that's used like this:
 
     domready(function() {
         // DOM is ready!
     });
-    
+
 
 ## Clicks
 
     $('#foo').click(function() { ... })
     document.getElementById('foo').onclick = function() { ... }
-    
+
 
 ## All other events
 
@@ -154,7 +152,7 @@ Parsing JSON:
     JSON.parse(json)
     // The JSON object isn't in older browsers, so you can include it if it's not there.
     // http://github.com/douglascrockford/JSON-js/blob/master/json2.js
-    
+
 
 # Conclusion
 
