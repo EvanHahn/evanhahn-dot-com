@@ -337,7 +337,7 @@ And that's my Jasmine tutorial. Leave a comment if you see anything that's wrong
 
 *All code from this tutorial is free-license under the [Unlicense][8].*
 
- [1]: http://evanhahn.com/?p=181
+ [1]: http://evanhahn.com/how-do-i-jasmine
  [2]: http://jasmine.github.io/
  [3]: https://github.com/pivotal/jasmine/tree/master/dist
  [4]: https://github.com/pivotal/jasmine/wiki/Matchers

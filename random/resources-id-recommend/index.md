@@ -92,7 +92,7 @@ If you'd like to see the kinds of things I use, from the most basic to the most 
  [16]: http://vim-adventures.com/
  [17]: http://jquery.com/
  [18]: http://zeptojs.com/
- [19]: http://evanhahn.com/?p=856
+ [19]: /doing-without-jquery
  [20]: http://underscorejs.org/
  [21]: http://lodash.com/
  [22]: http://sugarjs.com/
