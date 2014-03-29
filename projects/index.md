@@ -26,6 +26,7 @@ JavaScript (browser and Node)
 * [Gopher Node](https://github.com/EvanHahn/gopher-node) lets you write Gopher servers with Node
 * [Gribbagrab](https://github.com/EvanHahn/Gribbagrab) is an asynchronous JavaScript and CSS loader that's meant to be inlined
 * [Humanize Duration](https://github.com/EvanHahn/HumanizeDuration.js) turns milliseconds into English durations, or many other languages
+* [isExpress](https://github.com/EvanHahn/isExpress/tree/master) is a function for detecting Express applications
 * [JSTypes](https://github.com/EvanHahn/JSTypes) is a small JavaScript library that deals with variable types
 * [MiniClass](https://github.com/EvanHahn/MiniClass) is yet another JavaScript library that allows for simple classical OO. It's tiny
 * [nimi mute](http://evanhahn.github.io/nimi-mute/), a dictionary for the [Toki Pona](http://tokipona.org/) language
