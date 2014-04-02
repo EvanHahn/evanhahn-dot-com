@@ -3,7 +3,7 @@ title: About
 author: Evan Hahn
 layout: page
 ---
-<img src="//evanhahn.com/wp-content/themes/v4/mustache-small.jpg" style="float:right;margin:0 0 1em 1em;" />Hi. I'm Evan Hahn. I like web programming and Sriracha sauce. That is not a real mustache.
+Hi. I'm Evan Hahn. I like web programming and Sriracha sauce.
 
 I'm from the fine town of Palo Alto, California, and I'm currently in my fourth year of [computer science at the University of Michigan][1]. I used to tell people that I was from New Zealand (I had a pretty good fake accent) but I've since stopped doing that.
 
@@ -16,7 +16,7 @@ To conclude, some random facts: I don't like chocolate. Red is my favorite color
 Hit me up on [email][16], [Twitter][17] or [GitHub][18].
 
  [1]: http://www.eecs.umich.edu/cse/
- [2]: http://evanhahn.com/?page_id=144
+ [2]: /projects
  [3]: http://shop.oreilly.com/product/0636920028277.do
  [4]: http://jquery.com/
  [5]: http://zeptojs.com/
