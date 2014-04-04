@@ -47,6 +47,7 @@ Everything else
 * [Hide the Facebook news feed](https://github.com/EvanHahn/hide-news-feed)
 * [JSCPP](https://github.com/EvanHahn/JSCPP), a shoddy attempt to port some of JavaScript's standard library to C++
 * [My dotfiles](https://github.com/evanhahn/dotfiles)
+* [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli)
 * [Two-factor authentication list](/tape/two-factor-auth-list/)
 * [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
 
@@ -69,6 +70,7 @@ Some of this stuff is duplicated above.
 * [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [Pocket restyling](http://stylebot.me/styles/1533) for the Stylebot Chrome extension
+* [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli)
 * [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
 * [Two-factor authentication list](/tape/two-factor-auth-list/)
