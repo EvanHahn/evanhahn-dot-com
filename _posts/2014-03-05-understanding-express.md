@@ -223,7 +223,7 @@ One could imagine stringing together some middleware to build an app. Maybe you'
     var http = require("http");
     var app = express();
 
-    app.use(logger);
+    app.use(logger());
 
     // Homepage
     app.use(function(request, response, next) {
