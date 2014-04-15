@@ -43,6 +43,7 @@ JavaScript (browser and Node)
 Everything else
 ---------------
 
+* [My Brainfuck interpreter, in Python](https://github.com/EvanHahn/brainfuck-interpreter/tree/master)
 * [EvanSpec](https://github.com/EvanHahn/EvanSpec) is a souped-up `assert` for C++
 * [Hide the Facebook news feed](https://github.com/EvanHahn/hide-news-feed)
 * [JSCPP](https://github.com/EvanHahn/JSCPP), a shoddy attempt to port some of JavaScript's standard library to C++
