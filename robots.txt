@@ -1,2 +1,4 @@
+# Hello, fellow robot.
+
 User-agent: *
 Disallow: /tape/
