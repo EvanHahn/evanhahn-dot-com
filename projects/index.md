@@ -63,7 +63,9 @@ Real stuff you can use
 
 Some of this stuff is duplicated above.
 
-* [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](http://js1k.com)
+* [Blooming Onion](https://evanhahn.github.io/blooming-onion/) was just a little code doodle I made
+* [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](http://js1k.com) 2013
+* [Dragon Scales](http://js1k.com/2014-dragons/demo/1850) was my entry for JS1k 2014
 * ["Droplets"](/tape/droplets/) is a little webpage for drawing waterfall-like drawings
 * [dw_red.vim](/vim_dw_red)
 * ["Evan Hahn's lil' pages"](/tape/lil/), a collection of little web-based utilities
@@ -83,7 +85,7 @@ Job stuff
 
 * [UniversityNow](http://unow.com/) had me fixing bugs and implementing small features for the first few weeks of my internship, but then I spent the rest of the summer working on their real-time chat feature. I learned [Backbone.js](http://backbonejs.org/) and wrote a whole lot of Jasmine specs. If you'd like, [I wrote a longer post about my time there](/on-my-internship-at-universitynow).
 
-* [Fetchnotes](http://www.fetchnotes.com)'s homepage and web app got a redesign by a brilliant designer, and I coded them both up! I bumbled my way through [Ember.js](http://emberjs.com/) to make it work. Soon after, a [TechCrunch story](http://techcrunch.com/2012/04/12/fetchnotes-launches-a-simple-cloud-based-note-taking-service-that-twitter-users-will-love/) was written and it got tens of thousands of hits! And it worked! Scary stuff. It's somewhat different now, but a lot of my code is still there.
+* [Fetchnotes](http://www.fetchnotes.com)'s homepage and web app got a redesign by a brilliant designer, and I coded them both up! I bumbled my way through [Ember.js](http://emberjs.com/) to make it work. Soon after, a [TechCrunch story](http://techcrunch.com/2012/04/12/fetchnotes-launches-a-simple-cloud-based-note-taking-service-that-twitter-users-will-love/) was written and it got tens of thousands of hits! And it worked! Scary stuff. It's pretty different now, but I worked on it back in the day!
 
 * [RockMelt](http://rockmelt.com/)'s Quick Guide was assigned to me when I worked there (I suppose [they're Yahoo now](http://yahoo.tumblr.com/post/57166940839/)). They gave me a PNG and I gave them their Quick Guide! I also did some other pages for them (such as their What's New page or some fixes on their homepage) and a lot of internal JavaScript unit tests.
 
