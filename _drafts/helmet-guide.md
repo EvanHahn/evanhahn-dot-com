@@ -1,5 +1,5 @@
 ---
-title: "Securing your Express apps with Helmet"
+title: Securing your Express apps with Helmet
 layout: post
 permalink: /node-helmet-tutorial
 ---
