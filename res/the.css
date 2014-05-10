@@ -279,6 +279,10 @@ footer {
     line-height: 1.5em;
   }
 
+  .site-header nav {
+    margin-bottom: 1em;
+  }
+
   .site-header nav ul li {
     display: block;
     text-align: center;
@@ -338,7 +342,7 @@ footer {
 @media screen and (max-width: 700px) {
 
   .site-header {
-    padding: 2em 0;
+    padding-top: 1em;
     background-color: #f0f0f0;
   }
 
@@ -358,6 +362,7 @@ footer {
 
   .site-header nav {
     text-align: center;
+    padding-bottom: 1em;
   }
 
   .site-header nav ul li {
@@ -403,4 +408,35 @@ footer {
     display: none;
   }
 
+}
+
+/* Temporary stuff */
+
+.sti-banner {
+  display: block;
+  padding: .5em;
+  text-align: center;
+  background: #000;
+  color: #FF9F08;
+  font-family: "Oswald", sans-serif;
+}
+
+.sti-banner:hover {
+  border-bottom: 0;
+}
+
+.sti-banner img {
+  width: 100%;
+  margin-bottom: .5em;
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  background: transparent;
+}
+
+@media print {
+  .sti-banner {
+    display: none;
+  }
 }
