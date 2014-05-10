@@ -16,25 +16,25 @@ Kind of cool! If you're interested in how I made this work...
 
 1. First, we grab [the bitcoin prices from Coinbase](https://coinbase.com/api/v1/prices/historical) with curl.
 
-       curl -sSL {{coinbase_url}} | ..
+        curl -sSL {{coinbase_url}} | ..
 
    We pass three arguments to curl. The lowercase `s` runs curl silently, and the capital `S` shows errors if any happen. The `L` flag tells curl to follow redirects, should any appear.
 
 2. The prices from Coinbase are in a long-ass file, so we only want the first line:
 
-       .. | head -n 1 | ..
+        .. | head -n 1 | ..
 
    Now we'll have an output like `2014-04-20T04:20:69-07:00,420.0`. The price is in there, but we need to clean it up to make it readable.
 
 3. Next, we use `sed` to remove everything up until the first comma and replace it with a dollar sign (because these prices are in USD).
 
-       .. | sed "s|^.*,|$|" | ..
+        .. | sed "s|^.*,|$|" | ..
 
    Now we'll have something like `$420.0` -- really close! If the price has two digits after the decimal (like `$420.69`), then the next step doesn't do anything. But if so...
 
 4. We have to make sure the decimal has two digits after it.
 
-       .. | sed "s|\(\.[0-9]$\)|\10|"
+        .. | sed "s|\(\.[0-9]$\)|\10|"
 
    This again uses `sed` to find something that ends in ".1", or ".2", or whatever. If it finds that, it appends a zero.
 
