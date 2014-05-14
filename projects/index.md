@@ -14,12 +14,14 @@ JavaScript (browser and Node)
 -----------------------------
 
 * [backbone-getnset](https://github.com/EvanHahn/backbone-getnset) adds custom getters and setters to Backbone.js models
+* [Blooming Onion](https://evanhahn.github.io/blooming-onion/) is a little code doodle that makes a bunch of colorful pixels
 * [BrowserIs](https://github.com/EvanHahn/BrowserIs) asks questions about Node.js requests useragents. Made for Express
 * [Canvas to favicon](https://github.com/EvanHahn/canvas-to-favicon) sends a 16x16 &lt;canvas&gt; to the favicon
 * [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](http://js1k.com)
 * [connect-appcache](https://github.com/EvanHahn/connect-appcache) adds Appcache middleware to Connect/Express
 * [cyborg.txt](https://github.com/EvanHahn/cyborg.txt) is a collection of robots.txt utilities for Node
-* ["Droplets"](/tape/droplets/) is a little webpage for drawing waterfall-like drawings
+* [Dragon Scales](http://js1k.com/2014-dragons/demo/1850) was my entry for JS1k 2014
+* ["Droplets"](/tape/droplets/) is a little doodle for drawing waterfall-like drawings
 * [dw_red.vim](/vim_dw_red)
 * [Flood](/tape/flood/) is a game I didn't invent but did implement. A friend didn't like the version she was playing, so I made one that she liked
 * [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
@@ -29,12 +31,15 @@ JavaScript (browser and Node)
 * [isExpress](https://github.com/EvanHahn/isExpress/tree/master) is a function for detecting Express applications
 * [JSTypes](https://github.com/EvanHahn/JSTypes) is a small JavaScript library that deals with variable types
 * [MiniClass](https://github.com/EvanHahn/MiniClass) is yet another JavaScript library that allows for simple classical OO. It's tiny
+* [MouseTracker.js](https://github.com/EvanHahn/MouseTracker.js) creates an object called `mouse` and keeps its `x` and `y` properties updated
 * [nimi mute](http://evanhahn.github.io/nimi-mute/), a dictionary for the [Toki Pona](http://tokipona.org/) language
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
+* [Ring Tones](https://evanhahn.github.io/blooming-onion/) is a code doodle that lets you play music in a trippy ring of colors
 * [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
 * [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](http://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
 * [startInterval](https://github.com/EvanHahn/startInterval) is like JavaScript's `setInterval` but it starts immediately. It was made for [a guide](/make-an-npm-baby/)
+* [Ticker](https://github.com/EvanHahn/ticker) is a lightweight wrapper around `requestAnimationFrame`
 * [Truth table generator](https://github.com/EvanHahn/truth-table) for CoffeeScript. Made to take the tedium out of a homework assignment
 * [The TypeScript Grunt skeleton](https://github.com/EvanHahn/TypeScript-Grunt-skeleton)
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
@@ -49,8 +54,10 @@ Everything else
 * [JSCPP](https://github.com/EvanHahn/JSCPP), a shoddy attempt to port some of JavaScript's standard library to C++
 * [My dotfiles](https://github.com/evanhahn/dotfiles)
 * [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli)
+* [Time in Korea](https://github.com/EvanHahn/time-in-korea) is a simple Android app that tells you the time in South Korea
 * [Two-factor authentication list](/tape/two-factor-auth-list/)
 * [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
+* [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with Python
 
 Words
 =====
@@ -73,10 +80,12 @@ Some of this stuff is duplicated above.
 * [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [Pocket restyling](http://stylebot.me/styles/1533) for the Stylebot Chrome extension
-* [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli)
-* [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
+* [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/)
+* [QR It](http://evanhahn.github.io/QRIt/) easily turns text into QR
+* [Ring Tones](https://evanhahn.github.io/blooming-onion/) is a code doodle that lets you play music in a trippy ring of colors
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
 * [Two-factor authentication list](/tape/two-factor-auth-list/)
+* [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with the command line
 
 Job stuff
 =========
