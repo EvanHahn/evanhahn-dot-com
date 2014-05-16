@@ -409,34 +409,3 @@ footer {
   }
 
 }
-
-/* Temporary stuff */
-
-.sti-banner {
-  display: block;
-  padding: .5em;
-  text-align: center;
-  background: #000;
-  color: #FF9F08;
-  font-family: "Oswald", sans-serif;
-}
-
-.sti-banner:hover {
-  border-bottom: 0;
-}
-
-.sti-banner img {
-  width: 100%;
-  margin-bottom: .5em;
-  display: block;
-}
-
-@media screen and (max-width: 700px) {
-  background: transparent;
-}
-
-@media print {
-  .sti-banner {
-    display: none;
-  }
-}
