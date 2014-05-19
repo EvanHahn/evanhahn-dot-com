@@ -1,0 +1,13 @@
+{
+  "name": "use-versus-all",
+  "author": "Evan Hahn",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "coffee app.coffee"
+  },
+  "dependencies": {
+    "coffee-script": "1.7.x",
+    "express": "4.2.x",
+    "morgan": "1.1.x"
+  }
+}
