@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "coffee app.coffee"
+  },
+  "dependencies": {
+    "coffee-script": "1.7.x",
+    "express": "4.3.0"
+  }
+}
