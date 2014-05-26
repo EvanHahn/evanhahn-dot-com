@@ -40,6 +40,7 @@ JavaScript (browser and Node)
 * [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](http://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
 * [startInterval](https://github.com/EvanHahn/startInterval) is like JavaScript's `setInterval` but it starts immediately. It was made for [a guide](/make-an-npm-baby/)
 * [Ticker](https://github.com/EvanHahn/ticker) is a lightweight wrapper around `requestAnimationFrame`
+* [toki pona to hex](https://github.com/EvanHahn/toki-pona-to-hex) converts the Toki Pona language to and from hex
 * [Truth table generator](https://github.com/EvanHahn/truth-table) for CoffeeScript. Made to take the tedium out of a homework assignment
 * [The TypeScript Grunt skeleton](https://github.com/EvanHahn/TypeScript-Grunt-skeleton)
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
