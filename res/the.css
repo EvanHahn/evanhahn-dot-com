@@ -76,6 +76,15 @@ sub {
   behavior: url(http://evanhahn.com/wp-content/themes/8/js/pie.htc); /* TODO */
 }
 
+.header-ad, .header-ad:hover, .header-ad:active {
+  border: 0;
+  position: static;
+}
+
+.header-ad img {
+  width: 100%;
+}
+
 /* Pagination */
 
 .pagination {
@@ -216,9 +225,11 @@ footer {
   line-height: 1.5em;
 }
 
-/* Large screen */
+/* Big screen */
 
 @media screen and (min-width: 700px) {
+
+  .small-only { display: none }
 
   body {
     margin: 0 auto;
@@ -340,6 +351,8 @@ footer {
 /* Small screen */
 
 @media screen and (max-width: 700px) {
+
+  .big-only { display: none }
 
   .site-header {
     padding-top: 1em;
