@@ -107,7 +107,7 @@ By default, the static middleware (not *send* any more) will redirect you with a
 
 Now, if you visit `/comedy_pix` without the trailing slash, the middleware will never happen.
 
-It's probably not important, but this only works if you pass in false as `false`; you can't pass `0` or `null` or `new Boolean(false)` or other falsy values. Probably not an issue!
+It's probably not important, but this only works if you pass in false as `false`; you can't pass `0` or `null` or `new Boolean(false)` or other falsy values. There's no good reason that you should be doing this anyway!
 
 Exposing hidden files
 =====================
