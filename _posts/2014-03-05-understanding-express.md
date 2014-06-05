@@ -391,7 +391,7 @@ Most of the stuff in this post is conceptual, but let me push you in the right d
 You can install Express as an executable in your terminal. It spits out boilerplate code that's very helpful for starting your app. Install it globally with npm:
 
     # You'll probably need `sudo` for this:
-    npm install -g express
+    npm install -g express-generator
 
 If you need help, use `express --help`. It spits out some options. For example, let's say I want to use EJS templating and LESS for CSS. My app is called "myApp". Here's what I'd type to get started:
 
