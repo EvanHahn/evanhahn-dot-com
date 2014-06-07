@@ -25,6 +25,7 @@ JavaScript (browser and Node)
 * [dw_red.vim](/vim_dw_red)
 * [Flood](/tape/flood/) is a game I didn't invent but did implement. A friend didn't like the version she was playing, so I made one that she liked
 * [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
+* [glowing octo bear](https://evanhahn.github.io/glowing-octo-bear/) was randomly named by GitHub and is a code doodle that lets you draw ephemeral circles. Only works in Chrome, regrettably.
 * [Gopher Node](https://github.com/EvanHahn/gopher-node) lets you write Gopher servers with Node
 * [Gribbagrab](https://github.com/EvanHahn/Gribbagrab) is an asynchronous JavaScript and CSS loader that's meant to be inlined
 * [Humanize Duration](https://github.com/EvanHahn/HumanizeDuration.js) turns milliseconds into English durations, or many other languages
