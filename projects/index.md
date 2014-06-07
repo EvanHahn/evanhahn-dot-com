@@ -35,7 +35,7 @@ JavaScript (browser and Node)
 * [nimi mute](http://evanhahn.github.io/nimi-mute/), a dictionary for the [Toki Pona](http://tokipona.org/) language
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
-* [Ring Tones](https://evanhahn.github.io/blooming-onion/) is a code doodle that lets you play music in a trippy ring of colors
+* [Ring Tones](https://evanhahn.github.io/ring-tones/) is a code doodle that lets you play music in a trippy ring of colors
 * [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
 * [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](http://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
 * [startInterval](https://github.com/EvanHahn/startInterval) is like JavaScript's `setInterval` but it starts immediately. It was made for [a guide](/make-an-npm-baby/)
