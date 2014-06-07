@@ -19,6 +19,7 @@ JavaScript (browser and Node)
 * [Canvas to favicon](https://github.com/EvanHahn/canvas-to-favicon) sends a 16x16 &lt;canvas&gt; to the favicon
 * [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](http://js1k.com)
 * [connect-appcache](https://github.com/EvanHahn/connect-appcache) adds Appcache middleware to Connect/Express
+* [context.clear](https://github.com/EvanHahn/context-dot-clear) is a small library for clearing a HTML5 canvas
 * [cyborg.txt](https://github.com/EvanHahn/cyborg.txt) is a collection of robots.txt utilities for Node
 * [Dragon Scales](http://js1k.com/2014-dragons/demo/1850) was my entry for JS1k 2014
 * ["Droplets"](/tape/droplets/) is a little doodle for drawing waterfall-like drawings
