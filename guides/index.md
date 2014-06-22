@@ -25,6 +25,8 @@ I've written a number of guides and how-tos. Here they are, in order of coolness
 
 * [Disable JSHint for a file](/disable-jshint-for-a-file)
 
+* [Install Node Version Manager without the "source" line](/install-nvm-without-source-line)
+
 * [How to code Tic-Tac-Toe (and a Lua implementation)](/how-to-code-tic-tac-toe-and-a-lua-implementation)
 
 * [Start Vim and temporarily ignore your .vimrc](/ignore-vimrc-with-vim)
