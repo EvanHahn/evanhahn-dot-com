@@ -10,6 +10,8 @@ Somebody asked me if I could figure out how to disable copy-paste on their websi
 
 *Update, January 9, 2013: Added a ton of stuff and made many corrections.*
 
+*Update, June 22, 2014: Added IE6 toolbar info and some library version changes.*
+
 # In short: disabling *all* copy-paste, for the non-technical
 
 You can't do it perfectly, but you can stop some people. To do so, add the following somewhere inside your `<head>` tag:
@@ -18,7 +20,7 @@ You can't do it perfectly, but you can stop some people. To do so, add the follo
     .nonselectable{-webkit-user-select:none;-khtml-user-drag:none;-khtml-user-select:none;-moz-user-select:none;-moz-user-select:-moz-none;-ms-user-select:none;user-select:none}
     .selectable{-webkit-user-select:auto;-khtml-user-drag:auto;-khtml-user-select:auto;-moz-user-select:auto;-ms-user-select:auto;user-select:auto}
     </style>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
     $('html').addClass('nonselectable');
     $.fn.ready(function(){var b=$(".nonselectable"),c=$(".selectable");b.on("dragstart, selectstart",function(a){a.preventDefault()});c.on("dragstart, selectstart",function(a){a.stopPropagation()});b.find("*").andSelf().attr("unselectable","on");c.find("*").andSelf().removeAttr("unselectable")});
@@ -37,13 +39,13 @@ Let's explore how this solution is achieved.
 There's a CSS property called `user-select` that lets you do this with CSS (awesome!). Because it's not fully compatible, it's got a bunch of vendor-prefixed declarations. Adding the following to your CSS will make `.my-element` unselectable:
 
     .my-element {
-        -webkit-user-select: none;
-        -khtml-user-drag: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -moz-user-select: -moz-none;
-        -ms-user-select: none;
-        user-select: none;
+      -webkit-user-select: none;
+      -khtml-user-drag: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -moz-user-select: -moz-none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
 Here's what I can piece together about the compatibility of this:
@@ -79,7 +81,7 @@ There are two JavaScript events called `onselectstart` and `ondragstart`, which 
 If you're using jQuery, here's how you use it:
 
     $('.nonselectable').on('dragstart, selectstart', function(evt) {
-        evt.preventDefault();
+      evt.preventDefault();
     });
 
 You can do this without jQuery, too. It's even more of a nightmare, and I wouldn't recommend it. Go spend time with your family or something.
@@ -115,7 +117,7 @@ If you aren't using jQuery, here's a solution that [looks like](http://www.aptan
 
     var elements = document.getElementsByTagName('*');  // change this if you don't want to kill all elements
     for (var i = 0, l = elements.length; i < l; i ++) {
-        elements[i].setAttribute('unselectable', 'on');
+      elements[i].setAttribute('unselectable', 'on');
     }
 
 If you don't care about Opera but *do* care about IE, use the solutions above.
@@ -129,14 +131,14 @@ And now I shall explain my solution I skimmed over in the "in short" section.
 First, add this CSS:
 
     .nonselectable {
-        -webkit-user-select: none;
-        -khtml-user-drag: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -moz-user-select: -moz-none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
+      -webkit-user-select: none;
+      -khtml-user-drag: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -moz-user-select: -moz-none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
     }
 
 This will cover Chrome, Firefox, Safari, and IE10. All you have to do is add the class `nonselectable` to elements that shouldn't be selectable. You can also use one of the preprocessor mixins in sections above.
@@ -161,6 +163,8 @@ Finally, *use this stuff sparingly* and remember that it won't work too often. I
 * Nothing stops people from viewing the page's source and lifting your text. There are also a bunch of other ways it could be copied -- web inspectors are in all modern browsers; [OCR](http://en.wikipedia.org/wiki/Optical_character_recognition); working around these admittedly shoddy-at-best hacks.
 
 * You might want to change the cursor with CSS (`cursor: default`). Depends on how you want things.
+
+* IE6 has a toolbar when you hover over images. This toolbar lets you do things like saving the image. [You can disable it.](http://www.thesitewizard.com/webdesign/imagetoolbar.shtml).
 
 * You could make your text hard to copy-paste in other ways. You could make your text into an image. You could render the text inside a canvas. A crazy idea for a crazy person: you could *make* a font that copy-pastes badly (the character code is the one for capital A but it renders a lowercase R). These are all horrible ideas and you should forget that I even brought them up.
 
