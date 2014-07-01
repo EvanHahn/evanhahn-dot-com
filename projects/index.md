@@ -15,6 +15,7 @@ JavaScript (browser and Node)
 
 * [backbone-getnset](https://github.com/EvanHahn/backbone-getnset) adds custom getters and setters to Backbone.js models
 * [Blooming Onion](https://evanhahn.github.io/blooming-onion/) is a little code doodle that makes a bunch of colorful pixels
+* [BREACH helper for Node](https://github.com/EvanHahn/node-breach-helper) helps to mitigate BREACH attacks by adding a random-length HTML comment helper
 * [BrowserIs](https://github.com/EvanHahn/BrowserIs) asks questions about Node.js requests useragents. Made for Express
 * [Canvas to favicon](https://github.com/EvanHahn/canvas-to-favicon) sends a 16x16 &lt;canvas&gt; to the favicon
 * [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](http://js1k.com)
