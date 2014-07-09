@@ -32,6 +32,7 @@ JavaScript (browser and Node)
 * [Gribbagrab](https://github.com/EvanHahn/Gribbagrab) is an asynchronous JavaScript and CSS loader that's meant to be inlined
 * [Humanize Duration](https://github.com/EvanHahn/HumanizeDuration.js) turns milliseconds into English durations, or many other languages
 * [isExpress](https://github.com/EvanHahn/isExpress/tree/master) is a function for detecting Express applications
+* [ISO 3166 country list](https://github.com/EvanHahn/iso-3166-country-list) maps things like "DE" to "Germany" and vice-versa
 * [JSTypes](https://github.com/EvanHahn/JSTypes) is a small JavaScript library that deals with variable types
 * [MiniClass](https://github.com/EvanHahn/MiniClass) is yet another JavaScript library that allows for simple classical OO. It's tiny
 * [MouseTracker.js](https://github.com/EvanHahn/MouseTracker.js) creates an object called `mouse` and keeps its `x` and `y` properties updated
