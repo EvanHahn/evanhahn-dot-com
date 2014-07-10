@@ -15,6 +15,8 @@ I've written a number of guides and how-tos. Here they are, in order of coolness
 
 * [Private members in CoffeeScript](/private-members-in-coffeescript)
 
+* [A quick romp through default values in CoffeeScript](/default-values-in-coffeescript)
+
 * [Publishing a simple package to npm](/make-an-npm-baby)
 
 * [Disabling selection and copy-paste on the web](/how-to-disable-copy-paste-on-your-website)
