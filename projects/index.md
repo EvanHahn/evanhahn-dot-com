@@ -47,6 +47,7 @@ JavaScript (browser and Node)
 * [toki pona to hex](https://github.com/EvanHahn/toki-pona-to-hex) converts the Toki Pona language to and from hex
 * [Truth table generator](https://github.com/EvanHahn/truth-table) for CoffeeScript. Made to take the tedium out of a homework assignment
 * [The TypeScript Grunt skeleton](https://github.com/EvanHahn/TypeScript-Grunt-skeleton)
+* [Try EJS](https://evanhahn.github.io/try-EJS/)
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
 * [ZoomContext](https://github.com/EvanHahn/ZoomContext) lets you pan and zoom around an HTML5 canvas
 
@@ -88,6 +89,7 @@ Some of this stuff is duplicated above.
 * [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/)
 * [QR It](http://evanhahn.github.io/QRIt/) easily turns text into QR
 * [Ring Tones](https://evanhahn.github.io/blooming-onion/) is a code doodle that lets you play music in a trippy ring of colors
+* [Try EJS](https://evanhahn.github.io/try-EJS/)
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
 * [Two-factor authentication list](/tape/two-factor-auth-list/)
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with the command line
