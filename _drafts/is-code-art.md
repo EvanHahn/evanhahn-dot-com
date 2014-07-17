@@ -58,4 +58,4 @@ From ["On Poetry and Programming"](http://women2.com/poetry-programming/):
 
 <http://www.paulgraham.com/hp.html>
 
-
+<http://pallthayer.dyndns.org/microcodes/>
