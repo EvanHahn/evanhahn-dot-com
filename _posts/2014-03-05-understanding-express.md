@@ -7,6 +7,8 @@ permalink: /understanding-express/
 
 *This guide is for the newly-released Express 4. If you're looking to learn about Express 3.x, take a look at [my guide for the previous version](http://evanhahn.com/understanding-express-3/).*
 
+*If this isn't in-depth enough for you, I'm working on a book about Express. Go take a look at [Express.js In Action](http://manning.com/hahn/?a_aid=express-in-action&a_bid=fe3fcff7) if you thirst for more!*
+
 [Express.js](http://expressjs.com/) describes itself better than I can: "a minimal and flexible node.js web application framework". It helps you build web apps. If you've used [Sinatra](http://www.sinatrarb.com/) in the Ruby world, a lot of this will be familiar.
 
 Like any abstraction, Express hides difficult bits and says "don't worry, you don't need to understand this part". It does things for you so that you don't have to bother. In other words, it's magic.
@@ -412,6 +414,6 @@ I thirst for more
 
 Is there no satisfying you? You _glutton_. You make me _sick_. Soon you're gonna be sitting in an opium den, eyes half-open, drooling out the last drop of your programming talent.
 
-Just like Rails is the de-facto way to build web apps with Ruby and _demonic masochism_ is the de-facto way to build web apps in PHP, I get the impression that Express is the de-facto way to build web apps in Node. But unlike Rails, Express is much lower-level. It seems like no high-level Node library has stuck out. I think this might change. Keep your eyes out.
+I have to shamelessly self-promote my book on the topic, [*Express.js In Action*](http://manning.com/hahn/?a_aid=express-in-action&a_bid=fe3fcff7). I hope this tutorial gives you a good understanding of how Express works, but the book goes a lot more in depth and talks about lots of other things, too. Go give it a read if you're interested!
 
 I won't go into them here, but people have built things on top of Express. [The Express wiki lists them](https://github.com/visionmedia/express/wiki#wiki-frameworks-built-with-express) and many of them are Pretty Cool. You can use these frameworks if you'd prefer, or you can stick to the lower-level Express. Either way, go build cool stuff!
