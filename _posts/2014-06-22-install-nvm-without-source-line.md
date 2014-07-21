@@ -7,7 +7,7 @@ I like the [Node Version Manager](https://github.com/creationix/nvm) for, well, 
 
 It's pretty easy, it turns out; you just tell it to redirect that source line elsewhere, like so:
 
-    curl https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh | PROMPT=/dev/null sh
+    curl https://raw.githubusercontent.com/creationix/nvm/{{LATEST NVM VERSION HERE}}/install.sh | PROMPT=/dev/null sh
 
 The install script looks for a variable called "PROMPT" and adds the `source` line to that, so setting it to `/dev/null` adds the line to nothing!
 
