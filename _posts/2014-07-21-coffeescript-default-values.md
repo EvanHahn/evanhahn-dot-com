@@ -32,13 +32,16 @@ CoffeeScript's existential operator can be used to set default values.
 You can also set another variable using a sexier version of a ternary operator.
 
     # this...
-    message = evilMessage ? "Humans, stop poisoning our universe"
+    message = evilMessage ? "Exterminate!"
 
     # ...is equivalent to this:
-    if message?
+    if evilMessage?
        message = evilMessage
     else
-       message = "Humans, stop poisoning our universe"
+       message = "Exterminate!"
+
+    # ...or this:
+    message = if evilMessage? then evilMessage else "Exterminate!"
 
 The ternary operator makes sure that the variable isn't `undefined` and isn't `null`.
 
