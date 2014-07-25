@@ -1,4 +1,5 @@
 express = require "express"
+logger = require "morgan"
 resolve = require("path").resolve
 
 app = express()
@@ -6,6 +7,8 @@ app = express()
 use = (name, options = {}) ->
   path = resolve(__dirname, "static")
   app.use "/#{name}", express.static(path, options)
+
+app.use logger("dev")
 
 use "normal"
 
@@ -18,6 +21,11 @@ use "otherindex", { index: "other-index.html" }
 use "priorityindex", { index: ["index.html", "other-index.html"] }
 
 use "hidden", { hidden: yes }
+
+use "customs",
+  setHeaders: (res, path) ->
+    res.attachment(path)
+    res.removeHeader('Cache-Control')
 
 app.use (req, res) ->
   res.type "text"

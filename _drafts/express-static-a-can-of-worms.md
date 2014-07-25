@@ -1,130 +1,230 @@
 ---
-title: "Express's static middleware: a whole can of worms"
+title: A deep dive into Express's static middleware
 layout: post
-permalink: /express-dot-static-is-worms/
+permalink: /express-dot-static-deep-dive/
 ---
-*This guide assumes you know how to use [Express](http://expressjs.com/) and have used its static middleware. No need to have done anything complex with it, though! This guide was last updated for Express 4.3.0.*
 
-If you're like me, you like Express. And if you're like me, you've used its static middleware, `express.static`. And if you're like me, you thought it was *easy peasy*. But this feature is only mentioned offhandedly in the documentation and it has a *ton* of not-well-documented features. Get ready, maggots. We're going to go nerd spelunking.
+*This guide assumes you know how to use [Express](http://expressjs.com/) and have used its static middleware. No need to have done anything complex with it, though! If you need help, you can check out [my intro to Express](/understanding-express) or [my book on the topic](http://manning.com/hahn/?a_aid=express-in-action&a_bid=fe3fcff7). This guide was last updated for Express 4.6.1.*
 
-First, the stack
-================
+If you're like me, you like Express. And if you're like me, you've used its static middleware, `express.static`. And if you're like me, you thought it was *easy peasy*. But this feature is only mentioned offhandedly in the documentation and it has a *ton* of not-well-documented features.
 
-If you go grepping for the word "static" in the Express source, you basically find it in [one place](https://github.com/visionmedia/express/blob/master/lib/express.js#L60), and it looks like this:
+Get ready, maggots. We're going to go nerd spelunking.
 
-    exports.static = require('serve-static');
+Explaining the stack
+====================
 
-That means that `express.static` is really an alias for the [*serve-static*](https://github.com/expressjs/serve-static) module. If you go spelunking in *serve-static*, you'll find that it depends on another module, called [*send*](https://github.com/visionmedia/send).
+If you go looking for the word "static" in the Express source, you basically find it in one place, basically aliases `express.static` to a module called [*serve-static*](https://github.com/expressjs/serve-static). If you go spelunking in *serve-static*, you'll find that it depends on another module, called [*send*](https://github.com/visionmedia/send).
 
 At a high level, here's how it's all put together:
 
-1. *send* is basically a function that takes an HTTP request, an HTTP response, a file that you requested, and a folder to send it from. (It's a little more than a simple function, but not much more.) For a sense of scope, it's about 600 lines of code.
+1. *send* basically exposes one function that sends a file over HTTP. To get a bit more technical, *send* takes an HTTP request and a path, and it returns a stream that you pipe to your HTTP response. For a sense of scope, it's about 600 lines of code.
 2. *serve-static* wraps *send* up into generic middleware and adds a couple of options. It's what you think of as `express.static`. It's smaller, at about 150 lines of code, but it still does a fair bit.
-3. `express.static` is just an alias for *serve-static*; there's one line of code here.
+3. `express.static` is just an alias for *serve-static*; there's just one line of code here.
 
-Also worth noting that [`res.sendfile`](http://expressjs.com/4x/api.html#res.sendfile) also uses *send* (and never touches *serve-static*, because that's middleware!).
+Worth noting that Express's [`res.sendfile`](http://expressjs.com/4x/api.html#res.sendfile) also uses *send* (and never touches *serve-static*, because that's middleware!).
 
-With these three parts, you can customize the hell out of your static middleware. Some of the options are dealt with in *serve-static* while others get passed down into *send*.
+With these three parts, you can customize the hell out of your static middleware. Some of the options are dealt with in *serve-static* while others get passed down into *send*. In any case, there are _way_ more options than I expected.
 
-Cache money dollars
-===================
+Caching options
+===============
 
 The static middleware does [no server-side caching](https://github.com/visionmedia/send#caching) (this is at the *send* level) (I thought that it did!), but it does let you do two methods of *client*-side caching: ETag and Max-Age. If you don't know what those are, get ready to learn.
 
-ETag
-----
+ETags
+-----
 
 [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) is a horrible name and is short for "entity tag", a name that is even worse. It's one way to do caching, and here's how it works:
 
-Let's say I'm a web browser and I'm loading *jokes.edu/offensive.html* for the first time. When I get the response back, I display it to the user. If the server does the whole ETags thing, it sends an ETag HTTP header that might look something like this:
+Let's say I'm a web browser and I'm loading *jokes.edu/offensive.html* for the first time. When I get the response back, I display it to the user. The server might also send an HTTP header that looks like this:
 
     ETag: 1234567
 
-The *next* time I load *jokes.edu/offensive.html*, things have changed. I have a cached version that I loaded before, and I have the ETag for it. I send an HTTP header with my request that looks like this:
+If the browser sees the ETag, it will cache *offensive.html* and say that its corresponding ETag is "1234567".
+
+The *next* time the browser loads *jokes.edu/offensive.html*, the browser asks, "is the ETag still '1234567'?" It does this by setting the following header in the request:
 
     If-None-Match: 1234567
 
-Nobody's edited *offensive.html*, so it's exactly the same. Instead of sending *all the bytes* again, it just sends an HTTP 304 status code (which means "not modified") and saves a bunch of bandwidth.
+If nobody's edited *offensive.html*, then the file is exactly the same, and so is its ETag. Instead of sending *all the bytes* again, the server responds with an HTTP 304 status code (which means "not modified") and saves a bunch of bandwidth.
 
-But if we change *offensive.html* (maybe it's about an event considered "not funny to even joke about"), then the server recalculates the ETag and sends a new one. Then, if the client's cached ETag isn't the same, it'll
+But if we change *offensive.html*, then the server recalculates the ETag and sends a new one, and it has to send the new file.
 
-Servers can recalculate ETags however they please, often by using a checksum or hash function or whatever you want to call it. Express (*send*, really) uses a checksum standard called CRC32, but [that may change](https://github.com/visionmedia/send/issues/44).
+Servers can recalculate ETags however they please, often by using a checksum or hash function or whatever you want to call it. For your reference, Express (*send*, really) uses the MD5 hash function, because those rarely have collisions and are fast to calculate.
 
 By default, the static middleware has ETags enabled. It'll set the ETag header (unless you set them sometime beforehand). To disable it, you can do something like this:
 
-    app.use(express.static(myStaticPath, { etag: false }))
+    app.use(express.static(myStaticPath, {
+      etag: false
+    }))
 
 You might not want this for a few reasons:
 
-1. You don't want any kind of caching, even of assets.
-2. You don't trust Express's implementation.
-3. You want strong ETags; *send* only supports weak ones ([which may change](https://github.com/visionmedia/send/issues/45)).
+1. You don't want *any* kind of caching, even of static files. This caching is pretty reliable, though, so don't worry about that.
+1. You want strong ETags; *send* only supports weak ones. If you don't know what these are, you probably don't need strong ETags.
+1. You don't trust Express's implementation for some weird reason. Maybe you're worried about rare MD5 hash collisions?
 
 I'd recommend that you leave this alone, because the above reasons aren't compelling (at least to me), but it's your call.
 
 Max-Age
 -------
 
-[Max-Age](TODO) is another fun caching mechanism that Express supports. TODO
+Max-Age is another fun caching mechanism that Express supports, and it's a little different from ETags.
 
-Setting this property to `Infinity` sets the max-age to 365 days.
+With ETags, we can reduce the amount of bytes sent over the wire, but clients still have to make an HTTP request every time, just to make sure their cache is still valid. With Max-Age, the server basically says, "Here's a resource, and you don't even need to come back for it unless a week (or some specified amount of time) has passed". On one hand, it saves bandwidth, but on the other hand, the people making the server had better be pretty sure that the content will be good for a certain amount of time!
 
-A note: *send* doesn't support capital-A `maxAge` as an option, but *send-static* does. To be safe, I'd stick with the all-lowercase `maxage`.
+Unlike ETags, Max-Age isn't itself an HTTP header. It tags along with a header called Cache-Control. If a server wanted to tell the client to cache something for one day (86400 seconds), it'd send a header like this:
+
+    Cache-Control: public, max-age=86400
+
+Cache-Control turns out to be a pretty complicated HTTP header; it's got [a long spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9). But Express's static middleware only deals with a small subset of it, like so:
+
+    var oneDay = 86400000; // in milliseconds    app.use(express.static(myStaticPath, {
+      maxage: oneDay
+    }))
+
+This code example will set the max-age to just one day, just like the bit above. Now, a browser will only request a resource once a day.
+
+Notice that the time is in specified milliseconds, not seconds like the header above. This is because almost everything in JavaScript is millisecond-based, not second-based; *send* will do the conversion for you.
+
+You can also pass times as strings (which internally uses the [*ms* module](https://github.com/guille/ms.js)):
+
+    app.use(express.static(myStaticPath, {
+      maxage: '2h'
+    }))
+
+This sets the max-age to two hours, as you might expect.
+
+A couple of notes about this option:
+
+- The maximum max-age (internally called `maxMaxAge`) is 365 days.
+- Passing a negative number will 
+- As you can see, you're passing a property called `maxage`. The static middleware also supports `maxAge`, too. *send*, however, doesn't support capital-A `maxAge`. To be safe, I'd stick with the all-lowercase `maxage`.
+
+If you're pretty sure resources won't be updated for an amount of time, I'd recommend adding a max-age to your files. There are asset helpers that modify the filenames so that browsers don't cache old assets; I won't cover those here, but things like [connect-assets](https://github.com/adunkman/connect-assets) can help with this.
+
+Personally, I find ETags to be slightly less performant but much less developer headache. Your call!
 
 The index
 =========
 
 Ugh, caching is hard. Let's do something easy: serving the index.
 
-You've undoubtedly encountered the wonderful world of `index.html` sometime in your career; when you visit a directory, it's often the case that `index.html` is served to you. *But did you know that the static middleware can change all that?* Call it shocking, call it terrifying, call it exciting; we're going to change all that.
+You've undoubtedly encountered the wonderful world of `index.html` sometime in your life; when you visit a directory, it's often the case that `index.html` is served to you. *But did you know that the static middleware can change all that?* Call it shocking, call it terrifying, call it exciting; we're going to change things up.
 
-By default, *send* serves up a file called `index.html`. It's as if you did this:
+By default, the static middleware (via *send*) serves up a file called `index.html`. It's as if you did this:
 
-    app.use(express.static(myStaticPath, { index: 'index.html' })
+    app.use(express.static(myStaticPath, {
+      index: 'index.html'
+    }))
 
 As you might imagine, you can change it. Let's say you want the filename to be different:
 
-    app.use(express.static(myStaticPath, { index: 'jokes.txt' })
+    app.use(express.static(myStaticPath, {
+      index: 'jokes.txt'
+    }))
 
 You can also make an array. If it finds the first file, it'll send that as the index. If not, it'll send the second file, and the third, and so on. If it never finds it, it'll forge ahead.
 
-    app.use(express.static(myStaticPath, { index: ['jokes.txt', 'index.html'] })
+    app.use(express.static(myStaticPath, {
+      index: ['jokes.txt', 'index.html']
+    })
 
 You can also ignore the index completely. In that case, the only way to see a file called `index.html` is to visit `index.html` directly.
 
-    app.use(express.static(myStaticPath, { index: false })
+    app.use(express.static(myStaticPath, {
+      index: false
+    }))
+
+In this case, trying to visit the root will give a 404 error.
 
 Not too crazy, and pretty useful!
 
-Classic misdirection
-====================
+Setting custom headers
+======================
+
+The static middleware supports a `setHeaders` property, which is a function that's called right before HTTP response headers are set. Let's quickly look at a couple of examples of its usage to see how it's used and why we'd want to use it.
+
+If your browser sees `Content-Disposition: attachment` in the HTTP response headers, it'll open a download dialog rather than trying to display the response in the browser. If you've ever clicked "download this file" and wondered why your browser doesn't just try to render the file, it's because of Content-Disposition.
+
+If you want to serve _all_ static files as attachments, you can combine that with Express's `res.attachment`
+
+    app.use(express.static(myAttachmentsPath, {
+      setHeaders: function(res, path) {
+        res.attachment(path)
+      }
+    }))
+
+This basically sets `Content-Disposition: attachment` for your files. This is perhaps the most common case.
+
+You might also want to do this selectively. Let's say we want to send the file as an attachment if the word "download" is in the path. Here's how we might do that:
+
+    app.use(express.static(myAttachmentsPath, {
+      setHeaders: function(res, path) {
+        if (path.indexOf("download") !== -1) {
+          res.attachment(path)
+        }
+      }
+    }))
+
+You might also use this method to log things or set special debug headers, though I think the attachment recipe is the most common.
+
+Trailing slashes on directories
+===============================
 
 Imagine a world where you have your static files in a directory called `static`, and within *that* directory is another folder called `comedy_pix`. If I visited `/comedy_pix/`, I'm obviously visiting the directory. But what if I'm visiting `/comedy_pix` without the trailing slash?
 
 By default, the static middleware (not *send* any more) will redirect you with a nice 303 "see other" HTTP request. If you want to disable that behavior, you can!
 
-    app.use(express.static(myStaticPath, { redirect: false })
+    app.use(express.static(myStaticPath, {
+      redirect: false
+    }))
 
 Now, if you visit `/comedy_pix` without the trailing slash, the middleware will never happen.
 
+I think this is a pretty obscure feature. You might want to do this if you have a folder called `comedy_pix` *and* a separate route that maps to `comedy_pix`, for example. It's there in case you need it, but you likely don't.
+
 It's probably not important, but this only works if you pass in false as `false`; you can't pass `0` or `null` or `new Boolean(false)` or other falsy values. There's no good reason that you should be doing this anyway!
 
-Exposing hidden files
-=====================
+Exposing hidden dot files
+=========================
 
-You probably know about *hidden files*. On OS X and Linux, a file starting with a period is hidden. On Windows, it's a little different, but *send* only supports the POSIX-style way. This property could be renamed to "showFilesThatStartWithPeriod", because it's not necessarily hidden files on Windows. TODO
+You probably know about [hidden files](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory): files considered "hidden" don't show up in most listings by default. On OS X and Linux, a file starting with a period is considered hidden, and is sometimes called a "dotfile" because it starts with a dot. On Windows, it's a little different, but the middleware doesn't support this.
 
-If you want to serve hidden files for some reason (which can put you in the Danger Zone):
+The middleware supports sending these dotfiles. By default, though, they're ignored. It's as if you specified this option:
 
-    app.use(express.static(myStaticPath, { hidden: true })
+    app.use(express.static(myStaticPath, {
+      dotfiles: 'ignore'
+    }))
 
-This is sensibly disabled by default.
+If you want to serve hidden files for some reason (which can put you in the Danger Zone, because these files are usually hidden for a reason):
 
-Some other Fun Facts
+    app.use(express.static(myStaticPath, {
+      dotfiles: 'allow'
+    }))
+
+You can also choose to send a 403 Forbidden error when trying to access a dotfile. Clients will know that there's a dotfile there, but they won't be able to get inside:
+
+    app.use(express.static(myStaticPath, {
+      dotfiles: 'deny'
+    }))
+
+This is sensibly disabled by default, and I can't think of a great reason to change it.
+
+Some other Fun Facts™
 ====================
 
-- *send* (and therefore everything else) will set a bunch of headers *if they're not already specified*: Accept-Ranges, Date, Cache-Control (for max-age stuff), Last-Modified, and ETag (unless you disable it). You can't disable them elegantly.
+- *send* (and therefore everything else) will set a bunch of headers *if they're not already specified*: Accept-Ranges, Date, Cache-Control (for max-age stuff), Last-Modified, and ETag (unless you disable it). You can't disable them elegantly, as far as I know; all you can do is overwrite them with other values in earlier middleware.
 
-- A `root` property in the options will override the previously-specified root (in the first argument to the middleware). This is probably not what you meant to do, anyway.
+- *send* supports a `root` property, but I wouldn't set it unless you're using *send* directly. A `root` property in the options will override the previously-specified root. You can do horrible things this way:
 
-- All three parts of this stack expose the [*mime*](TODO) module as an alias, so `express.static.mime` will work.
+        // don't do this!!
+        app.use("/path-foo", express.static(myStaticPath, {
+          root: "/path-bar"
+        }))
+
+- All three parts of this stack expose the [*mime*](https://github.com/broofa/node-mime) module as an alias, so `express.static.mime` will work.
+
+All done!
+=========
+
+I don't know about you, but I didn't expect
