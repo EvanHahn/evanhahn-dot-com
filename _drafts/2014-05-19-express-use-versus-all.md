@@ -7,22 +7,27 @@ permalink: /express-use-versus-all/
 
 You may recall `app.router` from the days of Express 3, but Express 4 said ["begone, beast!"](https://github.com/visionmedia/express/wiki/New-features-in-4.x#no-more-appuseapprouter) and so it was gone. Express 4 changed a lot about the behavior of routing, and one of the subtler things that changed was the relationship between two methods: `app.use` and `app.all`.
 
-You've undoubtedly used `app.use` for middleware, but you might not have touched `app.all`. If you find yourself doing something like this:
+You've likely used `app.use` for middleware, but you may not have mounted it at a path. This is a pretty useful feature. For example, the below mounts `express.static` at `/static`:
+
+    app.use("/static", express.static(myStaticPath))
+
+Now, the middleware will only be invoked when you visit `/static/something`. If you visit `/foobar`, this middleware will never run. This matches all HTTP verbs, as you may know.
+
+A slightly more obscure Express feature is `app.all`. If you find yourself doing something like this:
 
     app.get("/im-so-fancy", function(req, res) { /* ... */ })
     app.post("/im-so-fancy", function(req, res) { /* ... */ })
-    app.put("/im-so-fancy", function(req, res) { /* ... */ })
     app.delete("/im-so-fancy", function(req, res) { /* ... */ })
     app.head("/im-so-fancy", function(req, res) { /* ... */ })
     // ...and so on, for all the HTTP verbs
 
-Then you should be using `app.all`.
+Then you should be using `app.all`. This does the same thing:
 
     app.all("/im-so-fancy", function(req, res) { /* ... */ })
 
 But if you're like me, a question might arise: if `use` matches all HTTP verbs and `all` matches all HTTP verbs...what's the difference?
 
-I did a little digging, and I found out that they're pretty similar. The main difference is how URLs are matched and how they appear inside the function.
+I did a little digging, and I found out that they're pretty similar. The main difference is how URLs are matched and how these URLs appear inside the function.
 
 Difference 1: how URIs are matched
 ==================================
@@ -63,6 +68,8 @@ To quote the Express documentation, `app.all` "functions just like the `app.VERB
     // matches /remember-my-name/bout-to/blow
 
 Notice the key difference. `app.all` functions pretty much as you'd expect; you can think of it as a simple equality check or regular expression adventure. `app.use`, on the other hand, allows you to mount a prefix.
+
+TODO is it different for `params`?
 
 Difference 2: grabbing the route
 ================================
