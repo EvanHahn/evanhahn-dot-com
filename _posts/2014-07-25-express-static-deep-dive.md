@@ -78,7 +78,8 @@ Unlike ETags, Max-Age isn't itself an HTTP header. It tags along with a header c
 
 Cache-Control turns out to be a pretty complicated HTTP header; it's got [a long spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9). But Express's static middleware only deals with a small subset of it, like so:
 
-    var oneDay = 86400000; // in milliseconds    app.use(express.static(myStaticPath, {
+    var oneDay = 86400000; // in milliseconds
+    app.use(express.static(myStaticPath, {
       maxage: oneDay
     }))
 
@@ -220,8 +221,8 @@ Some other Fun Facts™
 - *send* supports a `root` property, but I wouldn't set it unless you're using *send* directly. A `root` property in the options will override the previously-specified root. You can do horrible things this way:
 
         // don't do this!!
-        app.use("/path-foo", express.static(myStaticPath, {
-          root: "/path-bar"
+        app.use('/path-foo', express.static(myStaticPath, {
+          root: '/path-bar'
         }))
 
 - All three parts of this stack expose the [*mime*](https://github.com/broofa/node-mime) module as an alias, so `express.static.mime` will work.
@@ -229,4 +230,6 @@ Some other Fun Facts™
 All done!
 =========
 
-I don't know about you, but I didn't expect
+I don't know about you, but I didn't expect Express's static middleware to be so complicated! Luckily, I think they've done a good job choosing sensible defaults so that you don't have to worry about this stuff 99% of the time.
+
+Hopefully you've enjoyed this little dive into the wonders of serving static files with Express!
