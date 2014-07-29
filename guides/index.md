@@ -23,6 +23,8 @@ I've written a number of guides and how-tos. Here they are, in order of coolness
 
 * [Smoothing out setTimeout in CoffeeScript](/smoothing-out-settimeout-in-coffeescript)
 
+* [A deep dive into Express's static middleware](/express-dot-static-deep-dive)
+
 * [Nicer committing with Vim](/nicer-committing-with-vim)
 
 * [Disable JSHint for a file](/disable-jshint-for-a-file)
