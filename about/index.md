@@ -5,7 +5,7 @@ layout: page
 ---
 Hi. I'm Evan Hahn. I like web programming and Sriracha sauce.
 
-I'm from the fine town of Palo Alto, California, and I'm currently in my fourth year of [computer science at the University of Michigan][1]. I used to tell people that I was from New Zealand (I had a pretty good fake accent) but I've since stopped doing that.
+I'm from the fine town of Palo Alto, California, and I'm currently in my final semester of [computer science at the University of Michigan][1]. I used to tell people that I was from New Zealand (I had a pretty good fake accent) but I've since stopped doing that.
 
 If you'd like, take a look at [my projects][2] to get a better idea of the kind of things I've made. I'm probably most proud of [the book I published on O'Reilly][3] -- I think I might be the first published author who is also illiterate.
 
