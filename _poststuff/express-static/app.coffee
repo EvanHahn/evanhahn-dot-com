@@ -1,6 +1,7 @@
 express = require "express"
 logger = require "morgan"
 resolve = require("path").resolve
+noheaders = require "./noheaders"
 
 app = express()
 
@@ -26,6 +27,8 @@ use "customs",
   setHeaders: (res, path) ->
     res.attachment(path)
     res.removeHeader('Cache-Control')
+
+app.use "/noheaders", noheaders
 
 app.use (req, res) ->
   res.type "text"

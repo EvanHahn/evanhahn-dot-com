@@ -6,7 +6,8 @@
   "dependencies": {
     "coffee-script": "1.7.x",
     "express": "~4.8.6",
-    "morgan": "^1.2.0"
+    "morgan": "^1.2.0",
+    "on-headers": "~1.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.2.1"

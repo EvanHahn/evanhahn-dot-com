@@ -103,7 +103,7 @@ A couple of notes about this option:
 
 If you're pretty sure resources won't be updated for an amount of time, I'd recommend adding a max-age to your files. There are asset helpers that modify the filenames so that browsers don't cache old assets; I won't cover those here, but things like [connect-assets](https://github.com/adunkman/connect-assets) can help with this.
 
-Personally, I find max-age to be *slightly* less performant but much less developer headache. Once again: your call!
+Personally, I usually omit max-age. Leaving it out is *slightly* less performant but much less developer headache. Once again: your call!
 
 The index
 =========
@@ -216,7 +216,7 @@ This is sensibly disabled by default, and I can't think of a great reason to cha
 Some other Fun Facts™
 ====================
 
-- *send* (and therefore everything else) will set a bunch of headers *if they're not already specified*: Accept-Ranges, Date, Cache-Control (for max-age stuff), Last-Modified, and ETag (unless you disable it). You can't disable them elegantly, as far as I know; all you can do is overwrite them with other values in earlier middleware.
+- *send* (and therefore everything else) will set a bunch of headers *if they're not already specified*: Accept-Ranges, Date, Cache-Control (for max-age stuff), Last-Modified, and ETag (unless you disable it). If you want to remove those headers, check out [this simple example](https://gist.github.com/EvanHahn/38f08f40a23e0cb9f4b0) which uses the [*on-headers* module](https://github.com/jshttp/on-headers).
 
 - *send* supports a `root` property, but I wouldn't set it unless you're using *send* directly. A `root` property in the options will override the previously-specified root. You can do horrible things this way:
 
