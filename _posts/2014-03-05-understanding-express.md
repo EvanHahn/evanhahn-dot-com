@@ -332,7 +332,6 @@ One nicety they give you is a `redirect` method. Here are some examples:
 
     response.redirect("/hello/anime");
     response.redirect("http://www.myanimelist.net");
-    response.redirect(301, "http://www.anime.org");  // HTTP status code 301
 
 This isn't in vanilla Node, but Express adds this stuff. It adds things like `sendFile` which lets you just send a whole file:
 
