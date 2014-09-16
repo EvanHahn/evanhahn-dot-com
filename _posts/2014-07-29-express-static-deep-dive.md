@@ -21,7 +21,7 @@ At a high level, here's how the three modules are put together:
 2. *serve-static* wraps *send* up into generic middleware and adds a couple of options. It's what you think of as `express.static`. It's smaller, at about 150 lines of code, but it still does a fair bit.
 3. `express.static` is just an alias for *serve-static*; there's just one line of code here.
 
-Worth noting that Express's [`res.sendfile`](http://expressjs.com/4x/api.html#res.sendfile) also uses *send* (and never touches *serve-static*, because that's middleware!).
+Worth noting that Express's [`res.sendFile`](http://expressjs.com/4x/api.html#res.sendFile) also uses *send* (and never touches *serve-static*, because that's middleware!).
 
 With these three parts, you can customize the hell out of your static middleware. Some of the options are dealt with in *serve-static* while others get passed down into *send*. In any case, there are _way_ more options than I expected.
 
