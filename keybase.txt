@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/evanhahn
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://evanhahn.com
+  * I am evanhahn (https://keybase.io/evanhahn) on keybase.
+  * I have a public key with fingerprint C3AB 6FA7 DC98 0294 2D89  C540 4329 0CC8 681B 62EB
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "c3ab6fa7dc9802942d89c54043290cc8681b62eb",
+            "host": "keybase.io",
+            "key_id": "43290cc8681b62eb",
+            "uid": "325fc3fe16fb1798abcebb4322c4a600",
+            "username": "evanhahn"
+        },
+        "service": {
+            "hostname": "evanhahn.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1411062196,
+    "expire_in": 157680000,
+    "prev": "40f5bc405f696581314eec41e84fd79d2d7a0240370168264a7cc1b98777193b",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.0.5
+Comment: https://keybase.io/crypto
+
+yMHlAnicbZFdSBRRFMfXr1DLjAqkorQbSdhqc2dn78ys0MdLhaRJ2UMSrTN37rij
+ObPOfpQttqjgQ4V9IAnC5oaWgiHiRwuCYupD9OGTZVlhYCIIUrbUQ/bQHamX6L5c
+7jm///+cc89URpItPQG9zayKah9Qwovx1YCtbNeOoRCQDaUOuEKgmqxfqqZXEtNr
+arofuAB2SDJSJV7BosCwIscqgoidHMM5WJHBWEAClBFLZGAHHsNnKaiNLPlIgWbQ
+GH24NYVG/8MH1hMO1qlih0ogUmXIi4IkYyLLFGcxJyGGsUAfMXWphlCaBCXdI3l0
+UG8HNBrUMLF6tkr/QxRgo4ZqvabhN7BxiWY8fr/XZQn9dV6LvExk9x8Pt6zpCp2b
+CoLE9GmGDlyQktivWaaQg5BBLBSRHZArXs0kbs0inDwSGHqsMiRoTcmoThlzjFNF
+InIK0AE5QjAHicCpCi8qrMJLDMsxDp6BSGARJ/EYQ1kUeJ6HosP6FR+p1Q3g4mib
+UiW19GmVuuQPmATUT4xfSLYlpNs2pCRam7Olp235u08pL9V2szpWv9AR8npeh3qK
+arvefYw9zSy788wY9vbEGo58m9O0ruMzwx0paT/wq6+NpeFhoy1noefgXN/FbbMv
+n5/Nig/1z01UgOymnHuzn3ea2d2Fo4L+hXiip5tyfg39HN+9MN0bPPCQjURnDi+X
+d4YD3fmnVu7D9pG1PbHzm0b7+4oCraWLyfsnswbI2Nre9qLBmtxARdtYyXIMHJLy
+3wx0rk1dez9f3Hys8Mnj/dm5sZZ9R8tXSvomw8tK88jS9rvlzq2uYGrXyveUxvm8
+B5HEhoGTt2pbUlvPRDJR9NxSuGSxd2r1RmL8ekFLxmZ78XTyRNLVwXg8svHRp9vu
+qhO/AUUpFTA=
+=6RAb
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/evanhahn
+
+==================================================================
