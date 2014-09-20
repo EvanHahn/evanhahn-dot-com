@@ -59,3 +59,5 @@ From ["On Poetry and Programming"](http://women2.com/poetry-programming/):
 <http://www.paulgraham.com/hp.html>
 
 <http://pallthayer.dyndns.org/microcodes/>
+
+> "Virtually everyone agrees that today programming is an art, not a science. Many -- although somewhat fewer -- people would contend that programming can (and should) be made into a science." Jean Sammet
