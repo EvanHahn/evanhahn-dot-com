@@ -6,6 +6,8 @@ permalink: /express-dot-static-deep-dive/
 
 *This guide assumes you know how to use [Express](http://expressjs.com/) and have used its static middleware. No need to have done anything complex with it, though! If you need help, you can check out [my intro to Express](/understanding-express) or [my book on the topic](http://manning.com/hahn/?a_aid=express-in-action&a_bid=fe3fcff7). This guide was last updated for Express 4.6.1.*
 
+**This guide is a little bit outdated; check out [the new docs](https://github.com/expressjs/serve-static).**
+
 If you're like me, you like Express. And if you're like me, you've used its static middleware, `express.static`. And if you're like me, you thought it was that simple. But this feature is only mentioned offhandedly in the documentation and it has a *ton* of not-well-documented features.
 
 Get ready, maggots. We're going to go nerd spelunking.
