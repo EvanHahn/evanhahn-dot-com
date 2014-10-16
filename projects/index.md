@@ -39,6 +39,7 @@ JavaScript (browser and Node)
 * [MouseTracker.js](https://github.com/EvanHahn/MouseTracker.js) creates an object called `mouse` and keeps its `x` and `y` properties updated
 * [nimi mute](http://evanhahn.github.io/nimi-mute/), a dictionary for the [Toki Pona](http://tokipona.org/) language
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
+* [Percentage.js](https://github.com/EvanHahn/percentage.js) is a simple function to convert numbers to percentages, like 0.12 to 12%
 * [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
 * [Ring Tones](https://evanhahn.github.io/ring-tones/) is a code doodle that lets you play music in a trippy ring of colors
 * [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
@@ -57,12 +58,14 @@ Everything else
 
 * [My Brainfuck interpreter, in Python](https://github.com/EvanHahn/brainfuck-interpreter/tree/master)
 * [EvanSpec](https://github.com/EvanHahn/EvanSpec) is a souped-up `assert` for C++
+* [haha.sh](https://github.com/EvanHahn/haha.sh) is a simple shell script that generates hearty laughter
 * [Hide the Facebook news feed](https://github.com/EvanHahn/hide-news-feed)
+* [iscp](https://github.com/EvanHahn/iscp) is an interactive scp, because I always forget the syntax
 * [JSCPP](https://github.com/EvanHahn/JSCPP), a shoddy attempt to port some of JavaScript's standard library to C++
 * [My dotfiles](https://github.com/evanhahn/dotfiles)
 * [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli)
 * [Time in Korea](https://github.com/EvanHahn/time-in-korea) is a simple Android app that tells you the time in South Korea
-* [Two-factor authentication list](/tape/two-factor-auth-list/)
+* [Two-factor authentication list](/2fa/)
 * [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with Python
 
@@ -71,12 +74,14 @@ Words
 
 * [A number of guides](/guides)
 * [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do), an O'Reilly book
+* [*Express.js In Action*](http://manning.com/hahn/?a_aid=express-in-action&a_bid=fe3fcff7), a Manning book
 
 Real stuff you can use
 ======================
 
 Some of this stuff is duplicated above.
 
+* [4chan thread scraper](https://github.com/EvanHahn/4chan-thread-scraper)
 * [Blooming Onion](https://evanhahn.github.io/blooming-onion/) was just a little code doodle I made
 * [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](http://js1k.com) 2013
 * [Dragon Scales](http://js1k.com/2014-dragons/demo/1850) was my entry for JS1k 2014
@@ -85,6 +90,8 @@ Some of this stuff is duplicated above.
 * ["Evan Hahn's lil' pages"](/tape/lil/), a collection of little web-based utilities
 * [Flood](/tape/flood/) is a game I didn't invent but did implement. A friend didn't like the version she was playing, so I made one that she liked
 * [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
+* [haha.sh](https://github.com/EvanHahn/haha.sh) is a simple shell script that generates hearty laughter
+* [iscp](https://github.com/EvanHahn/iscp) is an interactive scp, because I always forget the syntax
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [Pocket restyling](http://stylebot.me/styles/1533) for the Stylebot Chrome extension
 * [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/)
@@ -92,7 +99,7 @@ Some of this stuff is duplicated above.
 * [Ring Tones](https://evanhahn.github.io/blooming-onion/) is a code doodle that lets you play music in a trippy ring of colors
 * [Try EJS](https://evanhahn.github.io/try-EJS/)
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
-* [Two-factor authentication list](/tape/two-factor-auth-list/)
+* [Two-factor authentication list](/2fa/)
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with the command line
 
 Job stuff
