@@ -65,6 +65,7 @@ Everything else
 * [My dotfiles](https://github.com/evanhahn/dotfiles)
 * [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli)
 * [Time in Korea](https://github.com/EvanHahn/time-in-korea) is a simple Android app that tells you the time in South Korea
+* [Two's complement utility](https://github.com/EvanHahn/twos-complement-util) for converting from two's complement numbers
 * [Two-factor authentication list](/2fa/)
 * [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with Python
@@ -99,6 +100,7 @@ Some of this stuff is duplicated above.
 * [Ring Tones](https://evanhahn.github.io/blooming-onion/) is a code doodle that lets you play music in a trippy ring of colors
 * [Try EJS](https://evanhahn.github.io/try-EJS/)
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
+* [Two's complement utility](https://github.com/EvanHahn/twos-complement-util) for converting from two's complement numbers
 * [Two-factor authentication list](/2fa/)
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with the command line
 
