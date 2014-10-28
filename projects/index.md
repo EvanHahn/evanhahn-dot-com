@@ -30,6 +30,7 @@ JavaScript (browser and Node)
 * [glowing octo bear](https://evanhahn.github.io/glowing-octo-bear/) was randomly named by GitHub and is a code doodle that lets you draw ephemeral circles. Only works in Chrome, regrettably.
 * [Gopher Node](https://github.com/EvanHahn/gopher-node) lets you write Gopher servers with Node
 * [Gribbagrab](https://github.com/EvanHahn/Gribbagrab) is an asynchronous JavaScript and CSS loader that's meant to be inlined
+* [Helmet](https://github.com/evilpacket/helmet/) is a collection of security middleware for Express
 * [HTML Pack](https://github.com/EvanHahn/node-html-pack) inlines CSS and JavaScript for an HTML page and then minifies everything
 * [Humanize Duration](https://github.com/EvanHahn/HumanizeDuration.js) turns milliseconds into English durations, or many other languages
 * [isExpress](https://github.com/EvanHahn/isExpress/tree/master) is a function for detecting Express applications
