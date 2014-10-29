@@ -57,7 +57,8 @@ JavaScript (browser and Node)
 Everything else
 ---------------
 
-* [My Brainfuck interpreter, in Python](https://github.com/EvanHahn/brainfuck-interpreter/tree/master)
+* [Brainfuck interpreter, in Python](https://github.com/EvanHahn/brainfuck-interpreter/tree/master)
+* [Brainfuck syntax highlighting for Atom](https://github.com/EvanHahn/atom-language-brainfuck)
 * [EvanSpec](https://github.com/EvanHahn/EvanSpec) is a souped-up `assert` for C++
 * [haha.sh](https://github.com/EvanHahn/haha.sh) is a simple shell script that generates hearty laughter
 * [Hide the Facebook news feed](https://github.com/EvanHahn/hide-news-feed)
