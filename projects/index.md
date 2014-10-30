@@ -99,12 +99,8 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [toki pona to hex](https://github.com/EvanHahn/toki-pona-to-hex) converts the Toki Pona language to and from hex
 * [Truth table generator](https://github.com/EvanHahn/truth-table) for CoffeeScript. Made to take the tedium out of a homework assignment
 * [Try EJS](https://evanhahn.github.io/try-EJS/)
-* [Try EJS](https://evanhahn.github.io/try-EJS/)
-* [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
 * [Two-factor authentication list](/2fa/)
-* [Two-factor authentication list](/2fa/)
-* [Two's complement utility](https://github.com/EvanHahn/twos-complement-util) for converting from two's complement numbers
 * [Two's complement utility](https://github.com/EvanHahn/twos-complement-util) for converting from two's complement numbers
 * [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
 * [What if the English language had syntax highlighting?](http://evanhahn.github.io/English-text-highlighting/)
