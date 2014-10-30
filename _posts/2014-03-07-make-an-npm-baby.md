@@ -141,7 +141,7 @@ I'm going to assume you know how to make a GitHub repository and push code to it
 
         "bugs": "https://github.com/EvanHahn/startInterval/issues"
 
-  You can also [add more information](https://github.com/EvanHahn/startInterval/issues) like an email address if you want.
+  You can also add more information like an email address if you want.
 
 Making it work in browsers
 --------------------------
@@ -152,7 +152,7 @@ Someone could come across your package outside of the Node world -- maybe they'r
       module.exports = startInterval;
     }
 
-Now, without any extra work (like [Browserify](http://browserify.org/)), someone can use `startInterval` on their website. If you're in a browser environment, `startInterval` will be in the global namespace. But if you're in Node, it'll export the function.
+Now, without any extra work (like having to use [Browserify](http://browserify.org/)), someone can drop `startinterval.js` on their website. If you're in a browser environment, `startInterval` will be in the global namespace. But if you're in Node, it'll export the function.
 
 Testing with Mocha and Chai and Sinon
 =====================================
