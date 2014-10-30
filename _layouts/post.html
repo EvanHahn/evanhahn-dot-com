@@ -5,20 +5,20 @@ layout: default
 
 <div class="post pagination">
 
+  {% if page.previous %}
   <div>
-    {% if page.previous %}
-      <a href="{{ page.previous.url }}" class="previous">
-        Previous post: {{ page.previous.title }}
-      </a>
-    {% endif %}
+    <a href="{{ page.previous.url }}" class="previous">
+      Previous post: {{ page.previous.title }}
+    </a>
   </div>
+  {% endif %}
 
+  {% if page.next %}
   <div>
-    {% if page.next %}
-      <a href="{{ page.next.url }}" class="next">
-        Next post: {{ page.next.title }}
-      </a>
-    {% endif %}
+    <a href="{{ page.next.url }}" class="next">
+      Next post: {{ page.next.title }}
+    </a>
   </div>
+  {% endif %}
 
 </div>
