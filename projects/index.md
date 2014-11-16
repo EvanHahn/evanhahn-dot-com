@@ -46,6 +46,7 @@ Open source libraries
 I like open source and I cannot lie. I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
 
 * [4chan thread scraper](https://github.com/EvanHahn/4chan-thread-scraper)
+* [arraywrap.js](https://github.com/EvanHahn/arraywrap.js) wraps an element in an array if it isn't one already
 * [backbone-getnset](https://github.com/EvanHahn/backbone-getnset) adds custom getters and setters to Backbone.js models
 * [Brainfuck interpreter, in Python](https://github.com/EvanHahn/brainfuck-interpreter/tree/master)
 * [Brainfuck syntax highlighting for Atom](https://github.com/EvanHahn/atom-language-brainfuck)
