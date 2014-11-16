@@ -40,14 +40,15 @@ It's true. I've been employed. I'm _about_ to decide where my first "real" job i
 
 * [_The Paly Voice_](http://palyvoice.com/) is the online journalism hub for [Palo Alto High School](http://www.paly.net/). I was the webmaster of the _Voice_ for over two years and an editor-in-chief for one. It's completely different now, but it's still my baby. While I was coding this in high school, I learned a lot of JavaScript and jQuery and PHP and mySQL (for better or for worse). (This technically wasn't an employment; I was a high school student.)
 
-Open source libraries
-=====================
+Open source stuff
+=================
 
 I like open source and I cannot lie. I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
 
 * [4chan thread scraper](https://github.com/EvanHahn/4chan-thread-scraper)
 * [arraywrap.js](https://github.com/EvanHahn/arraywrap.js) wraps an element in an array if it isn't one already
 * [backbone-getnset](https://github.com/EvanHahn/backbone-getnset) adds custom getters and setters to Backbone.js models
+* [Bits Required](https://github.com/EvanHahn/bits-required) implements "how many bits do we need to represent integer X?" in various languages
 * [Brainfuck interpreter, in Python](https://github.com/EvanHahn/brainfuck-interpreter/tree/master)
 * [Brainfuck syntax highlighting for Atom](https://github.com/EvanHahn/atom-language-brainfuck)
 * [Brainfuck2000](https://github.com/EvanHahn/BRAINFUCK2000), a powerful JavaScript Brainfuck interpreter
