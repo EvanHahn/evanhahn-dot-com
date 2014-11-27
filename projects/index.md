@@ -79,6 +79,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [isExpress](https://github.com/EvanHahn/isExpress/tree/master) is a function for detecting Express applications
 * [ISO 3166 country list](https://github.com/EvanHahn/iso-3166-country-list) maps things like "DE" to "Germany" and vice-versa
 * [JavaScript/CoffeeScript sleepsort](/javascript-sleepsort)
+* [journ](https://github.com/EvanHahn/journ), a command-line journal
 * [JSCPP](https://github.com/EvanHahn/JSCPP), a shoddy attempt to port some of JavaScript's standard library to C++
 * [JSTypes](https://github.com/EvanHahn/JSTypes) is a small JavaScript library that deals with variable types
 * [Lil' pages](/tape/lil/), a collection of little web-based utilities
