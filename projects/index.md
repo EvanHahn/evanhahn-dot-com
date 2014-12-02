@@ -91,6 +91,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Percentage.js](https://github.com/EvanHahn/percentage.js) is a simple function to convert numbers to percentages, like 0.12 to 12%
 * [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/)
 * [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
+* [rename](https://github.com/EvanHahn/rename) is an interactive version of the `mv` command
 * [RTS camera for Unity](https://github.com/EvanHahn/Unity-RTS-camera) is a little utility for RTS games in Unity. Made it for a course
 * [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
 * [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](http://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
