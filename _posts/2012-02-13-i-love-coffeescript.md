@@ -4,6 +4,9 @@ author: Evan Hahn
 layout: post
 permalink: /i-love-coffeescript/
 ---
+
+**Edit:** I've rethought some of these opinions in ["Thoughts on CoffeeScript after ECMAScript 6"](/coffeescript-and-ecmascript-6/).
+
 In short:
 
 CoffeeScript is just a better language than JavaScript. It's on par speed-wise. It's more readable and writeable. Fewer characters have to be written for the same result. Less code and better readability means fewer bugs. CoffeeScript is a better language than JavaScript.
