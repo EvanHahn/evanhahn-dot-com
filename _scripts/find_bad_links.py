@@ -10,7 +10,7 @@ def check(filename):
         for link in links:
             href = link.get('href')
             if href[0:4] == 'http':
-                code = requests.get(href).status_code
+                code = requests.get(href, verify=False).status_code
                 if code != 200:
                     print str(code) + ' in ' + filename
 
@@ -25,10 +25,10 @@ def crawl(folder):
 
 if __name__ == '__main__':
 
-    build_code = os.system('(cd .. && exec jekyll build > /dev/null)')
-    if build_code != 0:
-        print 'Jekyll build failed!'
-        exit(build_code)
+    #build_code = os.system('(cd .. && exec jekyll build > /dev/null)')
+    #if build_code != 0:
+    #    print 'Jekyll build failed!'
+    #    exit(build_code)
 
     start_directory = os.path.relpath('../_site/')
 

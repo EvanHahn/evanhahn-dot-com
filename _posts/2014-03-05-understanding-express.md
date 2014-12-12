@@ -13,7 +13,7 @@ permalink: /understanding-express/
 
 Like any abstraction, Express hides difficult bits and says "don't worry, you don't need to understand this part". It does things for you so that you don't have to bother. In other words, it's magic.
 
-It's good magic, too. [Express catalogs some people using it](http://expressjs.com/applications.html), and there are some big names: MySpace, Klout, and even some stuff _I've_ made. _Me_. I'm a _huge_ deal. I've got a _blog_.
+It's good magic, too. [Express catalogs some people using it](http://expressjs.com/resources/applications.html), and there are some big names: MySpace, Klout, and even some stuff _I've_ made. _Me_. I'm a _huge_ deal. I've got a _blog_.
 
 But [all magic comes at a price](http://shapeshed.com/all-magic-comes-with-a-price/): you might not understand the inner workings of Express. This is like driving a car; I drive a car just fine without intimate knowledge of its workings, but I'd be better off with that knowledge. What if things break? What if you want to get all the performance you can out of the car? What if you have an _insatiable thirst for knowledge_?
 

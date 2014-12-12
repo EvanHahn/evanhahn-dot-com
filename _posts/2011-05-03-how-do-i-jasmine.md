@@ -4,9 +4,9 @@ author: Evan Hahn
 layout: post
 permalink: /how-do-i-jasmine/
 ---
-_[Jasmine](http://pivotal.github.com/jasmine/) is a behavior-driven testing framework for JavaScript. It's pretty cool, but I couldn't find a good tutorial. So I learned it and made a tutorial. This tutorial is intended for people that are familiar with some more advanced JavaScript (callbacks, object-oriented programming) and want to start testing. This tutorial was last updated for Jasmine version 1.2.0._
+_[Jasmine](https://jasmine.github.io/) is a behavior-driven testing framework for JavaScript. It's pretty cool, but I couldn't find a good tutorial. So I learned it and made a tutorial. This tutorial is intended for people that are familiar with some more advanced JavaScript (callbacks, object-oriented programming) and want to start testing. This tutorial was last updated for Jasmine version 1.2.0._
 
-_I also wrote a book about this! If you want more detail, take a look at [*JavaScript Testing with Jasmine*](http://oreilly.com/catalog/9781449356378)._
+_I also wrote a book about this! If you want more detail, take a look at [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do)._
 
 # What is Jasmine?
 
@@ -31,7 +31,7 @@ Bam. It's Jasmine time.
 Let's say you're making a program that has one function, which says hello to the _entire world_. It would look like this:
 
     function helloWorld() {
-        return "Hello world!";
+      return "Hello world!";
     }
 
 ## The spec
@@ -43,9 +43,9 @@ Easy peasy. First, put this lovely file into the `/src` directory. Let's call it
 Okay, next is the spec. Easy peasy. It's gonna look like this; I'll explain it in just a minute.
 
     describe("Hello world", function() {
-        it("says hello", function() {
-            expect(helloWorld()).toEqual("Hello world!");
-        });
+      it("says hello", function() {
+        expect(helloWorld()).toEqual("Hello world!");
+      });
     });
 
 Okay, so this is a little less easy peasy, but it's not awful. Lemme explain:
@@ -96,17 +96,17 @@ Let's use some `beforeEach()` magic to make things happen for us. This example a
 
     describe('Hello world', function() {
 
-        beforeEach(function() {
-            this.addMatchers({
-                toBeDivisibleByTwo: function() {
-                    return (this.actual % 2) === 0;
-                }
-            });
+      beforeEach(function() {
+        this.addMatchers({
+          toBeDivisibleByTwo: function() {
+            return (this.actual % 2) === 0;
+          }
         });
+      });
 
-        it('is divisible by 2', function() {
-            expect(gimmeANumber()).toBeDivisibleByTwo();
-        });
+      it('is divisible by 2', function() {
+        expect(gimmeANumber()).toBeDivisibleByTwo();
+      });
 
     });
 
@@ -144,7 +144,7 @@ So let's say you have a class called a Person. It can say hello in general, and 
 
     Person.prototype.sayHello = function() {
 	    return "Hello";
-	};
+    };
 
 Pretty simple. We've got a couple of methods that do a couple of things. Easy peasy. Now, let's say we want to make sure it calls the `sayHello()` function when we call the `helloSomeone()` function. Here's what our suite will look like:
 
@@ -154,7 +154,7 @@ Pretty simple. We've got a couple of methods that do a couple of things. Easy pe
 		    spyOn(fakePerson, "sayHello");
     		fakePerson.helloSomeone("world");
 	    	expect(fakePerson.sayHello).toHaveBeenCalled();
-        });
+      });
     });
 
 Let's go through this, line by line:
@@ -224,13 +224,11 @@ But there's no pleasing you. You always need more. You can even give your spy fu
 	    return "bonjour";
     });
 
-<a href="https://github.com/pivotal/jasmine/wiki/Spies">The documentation</a> talks about a few other things, such as throwing exceptions and more. Take a look if you're interested.
-
 That was a lot less interesting than James Bond, but probably more useful to you as a programmer in the end. Still, you should help yourself to a Vodka Martini. Shaken, not stirred. Because you are now a master of the spies.
 
 # Wrangling some asynchronous stuff
 
-To quote <a href="https://github.com/pivotal/jasmine/wiki/Asynchronous-specs">Jasmine's documentation</a>: "You may be thinking, 'That's all very nice, but what's this about asynchronous tests?'" You probably weren't thinking that, but I'll tell you about Jasmine's support for asynchronicity anyway.
+To quote Jasmine's documentation: "You may be thinking, 'That's all very nice, but what's this about asynchronous tests?'" You probably weren't thinking that, but I'll tell you about Jasmine's support for asynchronicity anyway.
 
 There are two Jasmine functions that help you with asynchronicity: `run()` and `waitsFor()`.
 
@@ -293,4 +291,4 @@ The above code waits for the calculator to return `true` on `calc.answerHasBeenC
 
 # Bam. Jasmine.
 
-And that's my Jasmine tutorial. If this wasn't enough and you're itching for more Jasmine, take a look at my book [*JavaScript Testing with Jasmine*](http://oreilly.com/catalog/9781449356378) or [explore the Jasmine wiki](https://github.com/pivotal/jasmine/wiki).
+And that's my Jasmine tutorial. If this wasn't enough and you're itching for more Jasmine, take a look at my book [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do) or [explore the Jasmine  docs](https://jasmine.github.io/1.3/introduction.html).

@@ -52,7 +52,7 @@ Here's what I can piece together about the compatibility of this:
 
 * Chrome: Compatible with all versions because all versions are built on WebKit, but requires the prefix.
 
-* Firefox: Compatible with Firefox 1+; [this page](http://www.aptana.com/reference/html/api/CSS.field.-moz-user-select.html) says it's compatible with Netscape 6.0+, which was [apparently built on Firefox 0.6](http://en.wikipedia.org/wiki/Netscape_6).
+* Firefox: Compatible with Firefox 1+, according to [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select).
 
 * Safari: [According to the Safari documentation](http://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-user-select), `-webkit-user-select` is compatible with Safari 3+, and it was called `-khtml-user-drag` in Safari 2.
 
@@ -66,7 +66,7 @@ Solved so far: Chrome, Firefox, Safari, IE10.
 
 ## Mixins!
 
-I made `user-select` mixins for SCSS, LESS, and Stylus. Many things already have these mixins without that (to name a few: [Compass](http://compass-style.org/reference/compass/css3/user_interface/#mixin-user-select), [Bourbon](http://bourbon.io/#user-select), [Bootstrap](https://github.com/twitter/bootstrap/blob/master/less/mixins.less#L343), [LESS Elements](https://github.com/dmitryf/elements/blob/master/elements.less#L124), [LESSHat](http://lesshat.com/#user-select), and [Nib](https://github.com/visionmedia/nib/blob/master/lib/nib/vendor.styl#L105)), but mine are *ever so slightly* more thorough than theirs. Ha!
+I made `user-select` mixins for SCSS, LESS, and Stylus. Many things already have these mixins without that (to name a few: [Compass](http://compass-style.org/reference/compass/css3/user_interface/#mixin-user-select), [Bourbon](http://bourbon.io/#user-select), [Bootstrap](https://github.com/twbs/bootstrap/blob/master/less/mixins/vendor-prefixes.less), [LESS Elements](https://github.com/dmitryf/elements/blob/master/elements.less#L123), [LESSHat](https://github.com/madebysource/lesshat/blob/master/README.md#user-select), and [Nib](https://github.com/tj/nib/blob/master/lib/nib/vendor.styl#L64), but mine are *ever so slightly* more thorough than theirs. Ha!
 
 * [LESS](http://evanhahn.com/wp-content/uploads/2011/08/user-select.less)
 * [SCSS](http://evanhahn.com/wp-content/uploads/2011/08/user-select.scss)
@@ -76,7 +76,7 @@ They're pretty straightforward mixins. Usage instructions are found inside.
 
 # JavaScript events for IE, Safari, and Chrome
 
-There are two JavaScript events called `onselectstart` and `ondragstart`, which are [apparently](http://www.aptana.com/reference/html/api/HTML.event.onselectstart.html) [compatible](http://www.aptana.com/reference/html/api/HTML.event.ondragstart.html) with IE4+ and all versions of Safari, and Chrome, from what I can tell.
+There are two JavaScript events called `onselectstart` and `ondragstart`, which are apparently compatible with IE4+ and all versions of Safari, and Chrome, from what I can tell.
 
 If you're using jQuery, here's how you use it:
 
@@ -164,7 +164,7 @@ Finally, *use this stuff sparingly* and remember that it won't work too often. I
 
 * You might want to change the cursor with CSS (`cursor: default`). Depends on how you want things.
 
-* IE6 has a toolbar when you hover over images. This toolbar lets you do things like saving the image. [You can disable it.](http://www.thesitewizard.com/webdesign/imagetoolbar.shtml).
+* IE6 has a toolbar when you hover over images. This toolbar lets you do things like saving the image. [You can disable it.](http://www.thesitewizard.com/webdesign/imagetoolbar.shtml)
 
 * You could make your text hard to copy-paste in other ways. You could make your text into an image. You could render the text inside a canvas. A crazy idea for a crazy person: you could *make* a font that copy-pastes badly (the character code is the one for capital A but it renders a lowercase R). These are all horrible ideas and you should forget that I even brought them up.
 

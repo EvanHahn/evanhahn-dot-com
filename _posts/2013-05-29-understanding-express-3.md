@@ -12,7 +12,7 @@ permalink: /understanding-express-3/
 
 Like any abstraction, Express hides difficult bits and says "don't worry, you don't need to understand this part". It does things for you so that you don't have to bother. In other words, it's magic.
 
-It's good magic, too. [Express catalogs some people using it](http://expressjs.com/applications.html), and there are some big names: MySpace, Klout, and even some stuff _I've_ made. _Me_. I'm a _huge_ deal. I've got a _blog_.
+It's good magic, too. [Express catalogs some people using it](http://expressjs.com/resources/applications.html), and there are some big names: MySpace, Klout, and even some stuff _I've_ made. _Me_. I'm a _huge_ deal. I've got a _blog_.
 
 But [all magic comes at a price](http://shapeshed.com/all-magic-comes-with-a-price/): you might not understand the inner workings of Express. This is like driving a car; I drive a car just fine without intimate knowledge of its workings, but I'd be better off with that knowledge. What if things break? What if you want to get all the performance you can out of the car? What if you have an _insatiable thirst for knowledge_?
 
@@ -309,7 +309,7 @@ But Express is smarter than that. Express gives us something called "routing" wh
 
 After the basic requires, we say "every request goes through this function" with `app.all`. And that function looks an awful lot like middleware, don't it?
 
-The three calls to `app.get` are Express's routing system. They could also be `app.post`, which respond to POST requests, or PUT, or any of the HTTP verbs. The first argument is a path, like `/about` or `/`. The second argument is a request handler similar to what we've seen before. To quote [the Express documentation](http://expressjs.com/api.html#app.VERB):
+The three calls to `app.get` are Express's routing system. They could also be `app.post`, which respond to POST requests, or PUT, or any of the HTTP verbs. The first argument is a path, like `/about` or `/`. The second argument is a request handler similar to what we've seen before. To quote [the Express documentation](http://expressjs.com/3x/api.html#app.VERB):
 
 > [These request handlers] behave just like middleware, with the one exception that these callbacks may invoke `next('route')` to bypass the remaining route callback(s). This mechanism can be used to perform pre-conditions on a route then pass control to subsequent routes when there is no reason to proceed with the route matched.
 
@@ -326,7 +326,7 @@ Restart your server and visit `localhost:1337/hello/animelover69` for the follow
 
 > Hello, animelover69.
 
-[The docs](http://expressjs.com/api.html#app.VERB) also show an example that uses regular expressions, and you can do lots of other stuff with this routing. For a conceptual understanding, I've said enough.
+[The docs](http://expressjs.com/3x/api.html#app.VERB) also show an example that uses regular expressions, and you can do lots of other stuff with this routing. For a conceptual understanding, I've said enough.
 
 But it gets cooler.
 
@@ -335,7 +335,7 @@ Cool feature 2: request handling
 
 Routing would be enough, but Express is absolutely ruthless.
 
-Express augments the request and response objects that you're passed in every request handler. The old stuff is still there, but they add some new stuff too! [The API docs](http://expressjs.com/api.html) explain everything, but let's look at a couple of examples.
+Express augments the request and response objects that you're passed in every request handler. The old stuff is still there, but they add some new stuff too! [The API docs](http://expressjs.com/3x/api.html) explain everything, but let's look at a couple of examples.
 
 One nicety they give you is a `redirect` method. Here are some examples:
 
@@ -349,7 +349,7 @@ This isn't in vanilla Node and it's also absent from Connect, but Express adds t
 
 The request gets a number of cool properties, like `request.ip` to get the IP address and `request.files` to get uploaded files.
 
-Conceptually, there's not much to know, other than the fact that Express extends the request and response. For everything Express gives you, check out [the API docs](http://expressjs.com/api.html).
+Conceptually, there's not much to know, other than the fact that Express extends the request and response. For everything Express gives you, check out [the API docs](http://expressjs.com/3x/api.html).
 
 Cool feature 3: views
 ---------------------
@@ -428,14 +428,14 @@ If you need help, use `express --help`. It spits out some options. For example, 
 
 It'll generate a bunch of files and then tell you to go into that directory and `npm install`. If you do that, you'll have a basic app running with `node app`! I'd recommend looking through the generated files to see some boilerplate, and then messing with it a bunch. It's hardly a full app, but I found it very helpful to poke through these files and mess with them when getting started.
 
-Also helpful are the [many official examples on GitHub](https://github.com/visionmedia/express/tree/master/examples).
+Also helpful are the [many official examples on GitHub](https://github.com/strongloop/express/tree/master/examples).
 
 Some concluding miscellany
 --------------------------
 
-* If you love CoffeeScript [like I do](http://evanhahn.com/i-love-coffeescript/), you should know that all of this stuff works with CoffeeScript. You don't even need to compile it! Instead of starting your server with `node app.js`, start it with `coffee app.coffee`. This is what I do in my apps. _Me_. I'm a big deal. I've got a _blog_.
+* If you like CoffeeScript, you should know that all of this stuff works with CoffeeScript. You don't even need to compile it! Instead of starting your server with `node app.js`, start it with `coffee app.coffee`. This is what I do in my apps. _Me_. I'm a big deal. I've got a _blog_.
 * I was confused when I saw `app.use(app.router)` -- doesn't Express _always_ use a router? The short answer is that `app.router` is Express's routing middleware, and it's implicitly included when you define a route. You can *explicitly* include it because you want the router middleware to come before other stuff, which is sometimes desirable. [This StackOverflow answer explains it well.](http://stackoverflow.com/a/12695813/804100)
-* This guide was written for Express 3, and version 4 has a lot of changes (most notably, Connect is removed!). As I mentioned earlier, go check out my [my updated tutorial](http://evanhahn.com/understanding-express/) if you'd like to learn about Express 4.
+* This guide was written for Express 3, and version 4 has a lot of changes (most notably, Connect is removed!). As I mentioned earlier, go check out my [my updated tutorial](/understanding-express/) if you'd like to learn about Express 4.
 
 I thirst for more
 =================
@@ -444,4 +444,4 @@ Is there no satisfying you? You _glutton_. You make me _sick_. Soon you're gonna
 
 Just like Rails is the de-facto way to build web apps with Ruby and _demonic masochism_ is the de-facto way to build web apps in PHP, I get the impression that Express is the de-facto way to build web apps in Node. But unlike Rails, Express is much lower-level. It seems like no high-level Node library has stuck out. I think this might change. Keep your eyes out.
 
-I won't go into them here, but just as Express was built on Connect and Connect on Node, people have built things on top of Express. [The Express wiki lists them](https://github.com/visionmedia/express/wiki#wiki-frameworks-built-with-express) and many of them are Pretty Cool. You can use these frameworks if you'd prefer, or you can stick to the lower-level Express. Either way, go build cool stuff!
+I won't go into them here, but just as Express was built on Connect and Connect on Node, people have built things on top of Express. [The Express wiki lists them](https://github.com/strongloop/express/wiki#frameworks-built-with-express) and many of them are Pretty Cool. You can use these frameworks if you'd prefer, or you can stick to the lower-level Express. Either way, go build cool stuff!

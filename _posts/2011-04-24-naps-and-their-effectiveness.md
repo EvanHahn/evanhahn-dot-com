@@ -20,4 +20,4 @@ A sleepy reader might ask how to apply this nap-related knowledge. If one only h
 
 *[References are in the PDF.][1]*
 
- [1]: http://evanhahn.com/wp-content/uploads/2011/04/naps_and_their_effectiveness.pdf
+ [1]: /uploads/naps_and_their_effectiveness.pdf

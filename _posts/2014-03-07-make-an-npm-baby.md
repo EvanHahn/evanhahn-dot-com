@@ -5,7 +5,7 @@ permalink: /make-an-npm-baby/
 ---
 *This guide expects you to have used Node and npm before, but you don't have to be an expert! You should also know how to publish an open source repository on GitHub and a bit about testing.*
 
-It's time. You've been mooching off of [npm](https://npmjs.org/) for awhile now, and you want to make an open source package. Let me be your spirit guide.
+It's time. You've been mooching off of [npm](https://npmjs.com/) for awhile now, and you want to make an open source package. Let me be your spirit guide.
 
 [Go check out the finished source on GitHub](https://github.com/EvanHahn/startInterval) if you'd like to see all of this together. Unfortunately, you won't be able to publish a package called "startinterval" because I've already done it. It might be best to follow along but to avoid polluting npm with example packages.
 
@@ -31,7 +31,7 @@ There's a _lot_ of stuff you can do for an npm package. Let's start with a respe
 package dot json
 ----------------
 
-Every npm module has a file called `package.json` inside. It's a simple JSON document that's got [a lot of options](https://npmjs.org/doc/files/package.json.html). We won't explore all of them, but if you need help, check out [Nodejitsu's interactive guide](http://package.json.nodejitsu.com/).
+Every npm module has a file called `package.json` inside. It's a simple JSON document that's got [a lot of options](https://docs.npmjs.com/files/package.json). We won't explore all of them, but if you need help, check out [Nodejitsu's interactive guide](http://browsenpm.org/package.json).
 
 (Oh hey: make sure you've made a new directory when you're doing this stuff.)
 
@@ -75,7 +75,7 @@ Associate an npm account
 
 If you've already done these two steps, you don't need to do them again:
 
-1. [Sign up for an npm account](https://npmjs.org/signup) if you haven't already
+1. [Sign up for an npm account](https://npmjs.com/signup) if you haven't already
 2. Run `npm adduser` and log in on your computer
 
 Feel the thrill.
@@ -128,7 +128,7 @@ I'm going to assume you know how to make a GitHub repository and push code to it
 
 - You don't want certain things getting in your GitHub repository (log files and included dependencies, for example), so make a [gitignore](https://help.github.com/articles/ignoring-files). I use [GitHub's Node.js gitignore file](https://github.com/github/gitignore/blob/master/Node.gitignore), and you should too!
 
-- In addition to your gitignore, you might also want to make a file called `.npmignore`. It's a similar idea, but when people install your package from npm, they don't need all your unit tests. We'll keep them for such a small package, but you should [read more about it](https://www.npmjs.org/doc/developers.html#Keeping-files-out-of-your-package) when you have tons of non-essential files. (Thanks to [brtt3000 of Reddit](http://www.reddit.com/user/brtt3000) for reminding me about this!)
+- In addition to your gitignore, you might also want to make a file called `.npmignore`. It's a similar idea, but when people install your package from npm, they don't need all your unit tests. We'll keep them for such a small package, but you should [read more about it](https://docs.npmjs.com/misc/developers) when you have tons of non-essential files. (Thanks to [brtt3000 of Reddit](http://www.reddit.com/user/brtt3000) for reminding me about this!)
 
 - Now that your package is on GitHub, you should add a repository field to your `package.json`. It'll look something like this:
 
@@ -159,14 +159,14 @@ Testing with Mocha and Chai and Sinon
 
 I'm not going to preach the benefits of testing your code. There are already enough assholes in the world making you feel bad. But let's test it.
 
-Just like a lot of things in JavaScript, there are a million different libraries that do what we want. There's [Jasmine](http://jasmine.github.io/) and [Vows](http://vowsjs.org/) or [Assert](http://nodejs.org/api/assert.html) and [Should](https://github.com/visionmedia/should.js)...I'd go crazy trying to explain all of them to you. Know that there are other options out there, and if you don't like these, there's a lot of good shopping to do.
+Just like a lot of things in JavaScript, there are a million different libraries that do what we want. There's [Jasmine](http://jasmine.github.io/) and [Vows](http://vowsjs.org/) or [Assert](http://nodejs.org/api/assert.html) and [Should](https://github.com/tj/should.js)...I'd go crazy trying to explain all of them to you. Know that there are other options out there, and if you don't like these, there's a lot of good shopping to do.
 
-Today, we're going to use three testing libraries: [Mocha](http://visionmedia.github.io/mocha/), [Chai](http://chaijs.com/), and [Sinon](http://sinonjs.org/).
+Today, we're going to use three testing libraries: [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/), and [Sinon](http://sinonjs.org/).
 
 What are these things?
 ----------------------
 
-If you don't know much about testing, let me steal a line from [another guide of mine](http://evanhahn.com/how-do-i-jasmine/):
+If you don't know much about testing, let me steal a line from [another guide of mine](/how-do-i-jasmine/):
 
 > Testing in a nutshell: basically, your program will have a bunch of functions and classes. You want to make sure that, no matter what you throw at them, they'll perform how you want them to. For example, this function should always return a string that says `"hello"` in it. Testing ensures that everything goes down exactly how you planned. It's like you're God...but it's probably a little more boring because it's code.
 

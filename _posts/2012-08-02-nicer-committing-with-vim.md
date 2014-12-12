@@ -4,7 +4,7 @@ author: Evan Hahn
 layout: post
 permalink: /nicer-committing-with-vim/
 ---
-Add this to your .vimrc to automatically start in Insert mode when committing in Git. This will also enable spellchecking.
+Add this to your `.vimrc` to automatically start in Insert mode when committing in Git. This will also enable spellchecking.
 
     if has('autocmd')
       if has('spell')
@@ -14,5 +14,3 @@ Add this to your .vimrc to automatically start in Insert mode when committing in
     endif
 
 Of course, you'll need to make sure you're using Vim as your editor when committing.
-
-If you like this tip, [give it an upvote on Vimbits](http://vimbits.com/bits/391).
