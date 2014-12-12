@@ -41,6 +41,8 @@ I've written a number of guides and how-tos. Here they are, in order of coolness
 
 * [Newline necessary at the end of JavaScript files?](/newline-necessary-at-the-end-of-javascript-files)
 
+* [Disable the beer emoji in Homebrew](/disable-homebrew-emoji/)
+
 * [Choose by weight](/choose-by-weight)
 
 * [Detect RockMelt browser](/javascript-detect-if-your-browser-is-rockmelt)
