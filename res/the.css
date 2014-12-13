@@ -152,7 +152,7 @@ article ul,
 article ol,
 article blockquote,
 article pre {
-  line-height: 1.5em;
+  line-height: 1.75em;
   margin-bottom: 1em;
 }
 
@@ -165,9 +165,7 @@ article strong {
 }
 
 article code {
-  padding: .25em;
   font-family: SourceCodePro, Inconsolata, Consolas, Monaco, monospace;
-  background-color: #f0f0f0;
 }
 
 article .body h1 {
