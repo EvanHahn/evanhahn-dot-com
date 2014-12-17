@@ -77,6 +77,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [HumanizeDuration.js](https://github.com/EvanHahn/HumanizeDuration.js) turns milliseconds into English durations, or many other languages
 * [iscp](https://github.com/EvanHahn/iscp) is an interactive scp, because I always forget the syntax
 * [isExpress](https://github.com/EvanHahn/isExpress/tree/master) is a function for detecting Express applications
+* [Is GitHub Up?](https://github.com/EvanHahn/is-GitHub-up) is a command-line tool that tels you if GitHub is online
 * [ISO 3166 country list](https://github.com/EvanHahn/iso-3166-country-list) maps things like "DE" to "Germany" and vice-versa
 * [JavaScript/CoffeeScript sleepsort](/javascript-sleepsort)
 * [journ](https://github.com/EvanHahn/journ), a command-line journal
