@@ -27,6 +27,8 @@ I've written a number of guides and how-tos. Here they are, in order of coolness
 
 * [Nicer committing with Vim](/nicer-committing-with-vim)
 
+* [Install a list of Atom packages from a file](/atom-apm-install-list)
+
 * [Disable JSHint for a file](/disable-jshint-for-a-file)
 
 * [Install Node Version Manager without the "source" line](/install-nvm-without-source-line)
