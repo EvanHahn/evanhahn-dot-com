@@ -80,10 +80,10 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Is GitHub Up?](https://github.com/EvanHahn/is-GitHub-up) is a command-line tool that tels you if GitHub is online
 * [ISO 3166 country list](https://github.com/EvanHahn/iso-3166-country-list) maps things like "DE" to "Germany" and vice-versa
 * [JavaScript/CoffeeScript sleepsort](/javascript-sleepsort)
-* [journ](https://github.com/EvanHahn/journ), a command-line journal
-* [JSCPP](https://github.com/EvanHahn/JSCPP), a shoddy attempt to port some of JavaScript's standard library to C++
+* [journ](https://github.com/EvanHahn/journ) is a command-line journal
+* [JSCPP](https://github.com/EvanHahn/JSCPP) is a shoddy attempt to port some of JavaScript's standard library to C++
 * [JSTypes](https://github.com/EvanHahn/JSTypes) is a small JavaScript library that deals with variable types
-* [Lil' pages](/tape/lil/), a collection of little web-based utilities
+* [Lil' pages](/tape/lil/) is a collection of little web-based utilities
 * [Meme.js](https://github.com/BuddyMeme/Meme.js) is a canvas-based meme generator I worked on for [Buddy Meme](http://www.buddymeme.com/). They put a horrible picture of me on [their About page](http://www.buddymeme.com/about) without asking, which I thought was appropriate
 * [MiniClass](https://github.com/EvanHahn/MiniClass) is yet another JavaScript library that allows for simple classical OO. It's tiny
 * [MouseTracker.js](https://github.com/EvanHahn/MouseTracker.js) creates an object called `mouse` and keeps its `x` and `y` properties updated
@@ -109,6 +109,8 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Two's complement utility](https://github.com/EvanHahn/twos-complement-util) for converting from two's complement numbers
 * [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
 * [What if the English language had syntax highlighting?](http://evanhahn.github.io/English-text-highlighting/)
+* [wren-please](https://github.com/EvanHahn/wren-pelase) is an assertion library for Wren
+* [wren-vector](https://github.com/EvanHahn/wren-vector3d) is a 3D vector library for Wren
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with Python
 * [ZoomContext](https://github.com/EvanHahn/ZoomContext) lets you pan and zoom around an HTML5 canvas
 
