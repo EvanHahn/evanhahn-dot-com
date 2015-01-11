@@ -51,4 +51,6 @@ I've written a number of guides and how-tos. Here they are, in order of coolness
 
 * [Randomly generate either -1 or 1](/randomly-generate-either-1-or-1)
 
+* [Skip the header of a file with Python's CSV reader](/python-skip-header-csv-reader)
+
 Enjoy!
