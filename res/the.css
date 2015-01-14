@@ -216,7 +216,9 @@ article pre code {
 }
 
 article img {
-  max-width: 100%;
+  display: block;
+  margin: 2em auto;
+  max-width: 90%;
 }
 
 footer {
