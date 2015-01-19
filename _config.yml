@@ -1,9 +1,9 @@
 url: http://evanhahn.com
 name: Evan Hahn
 description: I love Sriracha sauce and websites.
-
-permalink: ':title'
-
+timezone: America/Los_Angeles
+future: false
+lsi: false
+permalink: :title
 markdown: redcarpet
-
 paginate: 5
