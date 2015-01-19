@@ -26,19 +26,19 @@ In addition to the words you're reading right now, I've written _hundreds_ of ot
 Job experiences
 ===============
 
-It's true. I've been employed. I'm _about_ to decide where my first "real" job is, but I've had a few internships between summers of college. In reverse chronological order:
+The rumors are true: I'm employed right now. I've also had some jobs in the past. In reverse chronological order:
+
+* [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I start work in February!
 
 * [Counsyl](https://www.counsyl.com/) aims to give everybody "access to vital information about their bodies to help them confidently make choices about their lives". They did this by doing complicated genetic tests and presenting them to patients in accessible ways. I wrote a lot of [Django](https://www.djangoproject.com/) and Python code for them, and even programmed a small robot! One of the coolest parts of the internship was seeing all of the people in white lab coats, something I will likely never wear. Fun fact: they were my third internship in a row that had a nearly-boundless supply of string cheese.
 
-* [Sencha](http://www.sencha.com/) is big in the HTML5 space. They had me working on their [Sencha Architect](http://www.sencha.com/products/architect) team. Architect describes itself as a "visual app builder", and I'd describe it as a _huge_, powerful JavaScript application that I helped to work on. I learned a bunch about [Sencha Touch](http://www.sencha.com/products/touch/) and [Ext JS](http://www.sencha.com/products/extjs/), and spent a few weeks deep in [Node](http://nodejs.org/) as well.
+* [Sencha](http://www.sencha.com/) is big in the HTML5 space, providing frameworks for building cross-platform applications. They had me working on their [Sencha Architect](http://www.sencha.com/products/architect) team. Architect describes itself as a "visual app builder", and I'd describe it as a _huge_, powerful JavaScript application that I helped to work on. I learned a bunch about [Sencha Touch](http://www.sencha.com/products/touch/) and [Ext JS](http://www.sencha.com/products/extjs/), and spent a few weeks deep in [Node](http://nodejs.org/) as well.
 
 * [UniversityNow](http://unow.com/) provides affordable, accredited online higher education. The first weeks of my internship were fixing bugs and implementing small features in [Rails](http://rubyonrails.org/), but then I spent the rest of the summer working on their real-time chat feature. I learned [Backbone.js](http://backbonejs.org/) and wrote a whole lot of Jasmine specs. If you'd like, [I wrote a longer post about my time there](/on-my-internship-at-universitynow).
 
 * [Fetchnotes](http://www.fetchnotes.com) is a note-taking app that aims to be "your mind's best friend". Their homepage and web app got a redesign by a brilliant designer, and I coded them both up! I bumbled my way through [Ember.js](http://emberjs.com/) to make it work. Soon after, a [TechCrunch story](http://techcrunch.com/2012/04/12/fetchnotes-launches-a-simple-cloud-based-note-taking-service-that-twitter-users-will-love/) was written and it got tens of thousands of hits! And it worked! Scary stuff. It's a pretty different app now, but still alive and kicking.
 
 * [Rockmelt](http://rockmelt.com/) used to be called RockMelt when I interned there, and they were [acquired by Yahoo](http://yahoo.tumblr.com/post/57166940839/) awhile after I left. While I was there, they built a social browser; a fork of Google Chrome that baked things like Facebook and Twitter right into the browser. I worked on some internal help pages. Designers gave me PNGs and I gave them their "Quick Guide"! I also did some other pages for them (such as their What's New page or some fixes on their homepage) and a lot of internal JavaScript unit tests.
-
-* [_The Paly Voice_](http://palyvoice.com/) is the online journalism hub for [Palo Alto High School](http://www.paly.net/). I was the webmaster of the _Voice_ for over two years and an editor-in-chief for one. It's completely different now, but it's still my baby. While I was coding this in high school, I learned a lot of JavaScript and jQuery and PHP and mySQL (for better or for worse). (This technically wasn't an employment; I was a high school student.)
 
 Open source stuff
 =================
@@ -65,7 +65,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [dw_red.vim](/vim_dw_red) is a Vim colorscheme
 * [Euler Method calculator in C++](/euler-method-calculator)
 * [EvanSpec](https://github.com/EvanHahn/EvanSpec) is a souped-up `assert` for C++
-* [Facebook autopoker Chrome extension](/wp-content/uploads/2012/09/pokey/pokey.zip) ([or the source](/wp-content/uploads/2012/09/pokey/src/)
+* [Facebook autopoker Chrome extension](/wp-content/uploads/2012/09/pokey/pokey.zip) ([or the source](/wp-content/uploads/2012/09/pokey/src/))
 * [Flood](/tape/flood/) is a game I didn't invent but did implement. A friend didn't like the version she was playing, so I made one that she liked
 * [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
 * [Gopher Node](https://github.com/EvanHahn/gopher-node) lets you write Gopher servers with Node
