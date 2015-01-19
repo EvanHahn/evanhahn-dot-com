@@ -15,7 +15,7 @@ Once you've installed `dels`, you'll need to authenticate by just running `dels`
 
 We'll combine these three commands, like this:
 
-    dels -aj | jq '.[] | .href' | xargs wget --page-requisites --convert-links --timestamping --adjust-extension --quiet --show-progress
+    dels -aj | jq '.[] | .href' | xargs -L 1 wget --page-requisites --convert-links --timestamping --adjust-extension --quiet --show-progress
 
 That command above scrapes all of your bookmarks into the current directory. If you want to blindly trust me, just run that command. If you'd like an explanation, read on.
 
@@ -57,10 +57,10 @@ Now we want to scrape all of these, and we'll use `wget` for that. We'll combine
 
 To pipe each URL to wget, we'll use `xargs`. We'll pipe it like this:
 
-    ... | xargs wget --page-requisites ...
+    ... | xargs -L 1 wget --page-requisites ...
 
-And that's everything! Once again, here's the full command:
+The `-L 1` runs `wget` on each line. And that's everything! Once again, here's the full command:
 
-    dels -aj | jq '.[] | .href' | xargs wget --page-requisites --convert-links --timestamping --adjust-extension --quiet --show-progress
+    dels -aj | jq '.[] | .href' | xargs -L 1 wget --page-requisites --convert-links --timestamping --adjust-extension --quiet --show-progress
 
 Run this and scrape your Delicious bookmarks!
