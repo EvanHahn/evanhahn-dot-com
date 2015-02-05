@@ -28,7 +28,7 @@ Job experiences
 
 The rumors are true: I'm employed right now. I've also had some jobs in the past. In reverse chronological order:
 
-* [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I start work in February!
+* [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I work on their front-end team and just started recently. It's great so far!
 
 * [Counsyl](https://www.counsyl.com/) aims to give everybody "access to vital information about their bodies to help them confidently make choices about their lives". They did this by doing complicated genetic tests and presenting them to patients in accessible ways. I wrote a lot of [Django](https://www.djangoproject.com/) and Python code for them, and even programmed a small robot! One of the coolest parts of the internship was seeing all of the people in white lab coats, something I will likely never wear. Fun fact: they were my third internship in a row that had a nearly-boundless supply of string cheese.
 
