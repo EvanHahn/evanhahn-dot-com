@@ -28,7 +28,7 @@ Job experiences
 
 The rumors are true: I'm employed right now. I've also had some jobs in the past. In reverse chronological order:
 
-* [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I work on their front-end team and just started recently. It's great so far!
+* [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I work on the front-end SDK team and just started recently. It's great so far and I'm learning a lot!
 
 * [Counsyl](https://www.counsyl.com/) aims to give everybody "access to vital information about their bodies to help them confidently make choices about their lives". They did this by doing complicated genetic tests and presenting them to patients in accessible ways. I wrote a lot of [Django](https://www.djangoproject.com/) and Python code for them, and even programmed a small robot! One of the coolest parts of the internship was seeing all of the people in white lab coats, something I will likely never wear. Fun fact: they were my third internship in a row that had a nearly-boundless supply of string cheese.
 
@@ -62,7 +62,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [cyborg.txt](https://github.com/EvanHahn/cyborg.txt) is a collection of robots.txt utilities for Node
 * [Dotfiles](https://github.com/evanhahn/dotfiles)
 * [Dragon Scales](http://js1k.com/2014-dragons/demo/1850) was my entry for JS1k 2014
-* [dw_red.vim](/vim_dw_red) is a Vim colorscheme
+* [dw_red.vim](/vim_dw_red) is a red-heavy Vim colorscheme
 * [Euler Method calculator in C++](/euler-method-calculator)
 * [EvanSpec](https://github.com/EvanHahn/EvanSpec) is a souped-up `assert` for C++
 * [Facebook autopoker Chrome extension](/wp-content/uploads/2012/09/pokey/pokey.zip) ([or the source](/wp-content/uploads/2012/09/pokey/src/))
@@ -90,6 +90,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [nimi mute](http://evanhahn.github.io/nimi-mute/) is a dictionary for the [Toki Pona](http://tokipona.org/) mini-language
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [Percentage.js](https://github.com/EvanHahn/percentage.js) is a simple function to convert numbers to percentages, like 0.12 to 12%
+* [Pie Time](http://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
 * [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/)
 * [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
 * [rename](https://github.com/EvanHahn/rename) is an interactive version of the `mv` command
