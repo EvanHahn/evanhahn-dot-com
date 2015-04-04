@@ -420,7 +420,7 @@ footer {
 /* And finally, print styles */
 
 @media print {
-  .site-header {
+  .site-header, .pagination {
     display: none;
   }
 }
