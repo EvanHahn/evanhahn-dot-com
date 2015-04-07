@@ -84,7 +84,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [JSCPP](https://github.com/EvanHahn/JSCPP) is a shoddy attempt to port some of JavaScript's standard library to C++
 * [JSTypes](https://github.com/EvanHahn/JSTypes) is a small JavaScript library that deals with variable types
 * [Lil' pages](/tape/lil/) is a collection of little web-based utilities
-* [Meme.js](https://github.com/BuddyMeme/Meme.js) is a canvas-based meme generator I worked on for [Buddy Meme](http://www.buddymeme.com/). They put a horrible picture of me on [their About page](http://www.buddymeme.com/about) without asking, which I thought was appropriate
+* [Meme.js](https://github.com/BuddyMeme/Meme.js) is a canvas-based meme generator I worked on for now-defunct Buddy Meme
 * [MiniClass](https://github.com/EvanHahn/MiniClass) is yet another JavaScript library that allows for simple classical OO. It's tiny
 * [MouseTracker.js](https://github.com/EvanHahn/MouseTracker.js) creates an object called `mouse` and keeps its `x` and `y` properties updated
 * [nimi mute](http://evanhahn.github.io/nimi-mute/) is a dictionary for the [Toki Pona](http://tokipona.org/) mini-language
