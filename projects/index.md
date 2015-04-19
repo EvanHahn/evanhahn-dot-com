@@ -60,6 +60,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [connect-appcache](https://github.com/EvanHahn/connect-appcache) adds Appcache middleware to Connect/Express
 * [context.clear](https://github.com/EvanHahn/context-dot-clear) is a small library for clearing a HTML5 canvas
 * [cyborg.txt](https://github.com/EvanHahn/cyborg.txt) is a collection of robots.txt utilities for Node
+* [document.head shim for CommonJS](https://github.com/EvanHahn/document.head)
 * [Dotfiles](https://github.com/evanhahn/dotfiles)
 * [Dragon Scales](http://js1k.com/2014-dragons/demo/1850) was my entry for JS1k 2014
 * [dw_red.vim](/vim_dw_red) is a red-heavy Vim colorscheme
