@@ -121,6 +121,7 @@ Non-code stuff
 
 Pretty much all of the above is code-related, but I've done a few other things here and there when I can tear myself away. They are, in no order:
 
+* [Single Color Image](http://www.singlecolorimage.com/) lets you generate a PNG that's just one color. It's a simple app with a simple API
 * [A very short poem called "Camera"](http://issuu.com/netspencer/docs/calliope?mode=window&pageNumber=12)
 * [A wallpaper from a NASA photo](/wp-content/uploads/2013/02/astro/)
 * [Evan Hahn's 100 dope beats of the day](/dbotd/)
