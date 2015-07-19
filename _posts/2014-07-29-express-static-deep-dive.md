@@ -49,7 +49,7 @@ The *next* time the browser loads *jokes.edu/offensive.html*, the browser asks, 
 
 If nobody's edited *offensive.html*, then the file is exactly the same, and so is its ETag. Instead of sending *all the bytes* again, the server responds with an HTTP 304 status code (which means "not modified") and saves a bunch of bandwidth.
 
-But if someone has *offensive.html*, then the file will have a different ETag, and so everything will be sent over the wire.
+But if someone has edited *offensive.html*, then the file will have a different ETag, and so everything will be sent over the wire.
 
 Servers can recalculate ETags however they please, often by using a checksum or hash function or whatever you want to call it. For your reference, Express (*send*, really) uses the MD5 hash function, because those rarely have collisions and are fast to calculate.
 
