@@ -94,6 +94,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Pie Time](http://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
 * [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/)
 * [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
+* [random-word](https://github.com/EvanHahn/random-word) is a CLI tool to pick a random word from a file
 * [rename](https://github.com/EvanHahn/rename) is an interactive version of the `mv` command
 * [RTS camera for Unity](https://github.com/EvanHahn/Unity-RTS-camera) is a little utility for RTS games in Unity. Made it for a course
 * [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
