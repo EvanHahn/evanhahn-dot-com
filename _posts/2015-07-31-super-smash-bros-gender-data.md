@@ -23,15 +23,15 @@ This looks a bit bleak. Perhaps things have been getting better over the years? 
 
 You see a different trend depending on what numbers you look at. On one hand, the number of female characters increased from 1 to 8 and the number of "choose" characters increased from 0 to 5. On the other hand, the first game was 75% male, Melee was 65% male, Brawl was back up to 76%, and Smash 4 was 62% male. It's hard to see a strong positive trend.
 
-Nintendo should rename the game to "Smash" and make things more diverse. Nobody calls it "Super Smash Brothers" anyway; it's Smash.
+Nintendo should rename the game to "Smash" and have more diverse characters!
 
 ## Footnotes
 
 I made a number of assumptions while going through this data. Unless you're quite interested in the minute details of this post, I'd skip this:
 
+- I didn't include any of Smash 4's DLC characters.
 - Duck Hunt: The [Smash Wiki entry](http://www.ssbwiki.com/Duck%20Hunt) says that the off-screen hunter "is supposed to represent the player" and therefore varies with gender, so I placed Duck Hunt in the androgenous category. The dog is male, so you could argue that I mis-categorized.
 - Ice Climbers: players can choose which character is controlled, so I placed Ice Climbers in the "choose" category. This could be in the androgenous category, or its very own category.
-- Mewtwo: I didn't include Mewtwo for Smash 4 because it is not released at the time of this writing. This would add one more androgenous character to Smash 4.
 - Pokémon: while some Pokémon are considered masculine or feminine by some, their genders are unspecified in the Smash games.
 - Pokémon Trainer: I counted Brawl's Pokémon Trainer as one male character, but one could consider this three androgenous characters.
 - R.O.B.: I didn't think R.O.B. had a gender but [the SmashWiki says he's male](http://www.ssbwiki.com/R.O.B.).
