@@ -57,6 +57,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Caesar shift in JavaScript and CoffeeScript](/caesar-shift-in-javascript)
 * [Canvas to favicon](https://github.com/EvanHahn/canvas-to-favicon) sends a &lt;canvas&gt; to the favicon
 * [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](http://js1k.com)
+* [coinflip.js](https://github.com/EvanHahn/coinflip.js) randomly returns `true` or `false`
 * [connect-appcache](https://github.com/EvanHahn/connect-appcache) adds Appcache middleware to Connect/Express
 * [context.clear](https://github.com/EvanHahn/context-dot-clear) is a small library for clearing a HTML5 canvas
 * [cyborg.txt](https://github.com/EvanHahn/cyborg.txt) is a collection of robots.txt utilities for Node
