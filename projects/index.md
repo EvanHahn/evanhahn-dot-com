@@ -70,6 +70,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Facebook autopoker Chrome extension](/wp-content/uploads/2012/09/pokey/pokey.zip) ([or the source](/wp-content/uploads/2012/09/pokey/src/))
 * [Flood](/tape/flood/) is a game I didn't invent but did implement. A friend didn't like the version she was playing, so I made one that she liked
 * [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
+* [functional state machine](https://github.com/EvanHahn/functional-state-machine.js) is a small JavaScript state machine that's purely functional
 * [Gopher Node](https://github.com/EvanHahn/gopher-node) lets you write Gopher servers with Node
 * [Gribbagrab](https://github.com/EvanHahn/Gribbagrab) is an asynchronous JavaScript and CSS loader that's meant to be inlined
 * [haha.sh](https://github.com/EvanHahn/haha.sh) is a simple shell script that generates hearty laughter
