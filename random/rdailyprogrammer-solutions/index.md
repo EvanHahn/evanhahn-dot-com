@@ -28,6 +28,7 @@ The [dailyprogrammer subreddit][1] posts daily programming challenges, some of w
 * #134 - easy, [Ruby][26]
 * #136 - easy, [Ruby][27]
 * #158 - easy, [Brainfuck](http://www.reddit.com/r/dailyprogrammer/comments/230m05/4142014_challenge_158_easy_the_torn_number/cgso126)
+* #232 - intermediate, [Wren](https://github.com/EvanHahn/dailyprogrammer-232)
 
 This isn't in the right place, but I also did [an r/tinycode programming challenge][28] in 25 characters of CoffeeScript, which is [right here][29].
 
