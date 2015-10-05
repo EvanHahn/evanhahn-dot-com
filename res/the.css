@@ -22,12 +22,12 @@ html {
 
 a {
   text-decoration: none;
-  color: #85242f;
+  color: #b4045f;
   border-bottom: 1px solid #f0f0f0;
 }
 
 a:hover {
-  border-bottom: 2px solid #85242f;
+  border-bottom: 2px solid #b4045f;
 }
 
 a:active {
@@ -38,11 +38,11 @@ a:active {
 
 ::selection {
   color: #fff;
-  background-color: #85242f;
+  background-color: #b4045f;
 }
 ::-moz-selection {
   color: #fff;
-  background-color: #85242f;
+  background-color: #b4045f;
 }
 
 sub, sup {
@@ -276,7 +276,7 @@ footer {
 
   .site-header .logo:hover img {
     transform: rotate(360deg);
-    background-color: #85242f;
+    background-color: #b4045f;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
@@ -323,8 +323,8 @@ footer {
   }
 
   .site-header nav ul li a:hover {
-    color: #85242f;
-    border-bottom: 1px solid #85242f;
+    color: #b4045f;
+    border-bottom: 1px solid #b4045f;
   }
 
   .site-content {
@@ -369,7 +369,7 @@ footer {
 
   .site-header .logo img {
     width: 128px;
-    background-color: #85242f;
+    background-color: #b4045f;
   }
 
   .site-header .description {
@@ -395,7 +395,7 @@ footer {
   }
 
   .site-header nav ul li a:hover {
-    color: #85242f;
+    color: #b4045f;
   }
 
   article header h1 {
