@@ -79,7 +79,7 @@ If you'd like to see the kinds of things I use, from the most basic to the most 
  [3]: http://www.codeschool.com/courses/try-ruby
  [4]: http://www.codeschool.com/courses/rails-for-zombies-redux
  [5]: http://www.2ality.com/2012/08/guide-jslang.html
- [6]: http://ruby.railstutorial.org/ruby-on-rails-tutorial-book
+ [6]: https://www.railstutorial.org/
  [7]: http://css-tricks.com/all-about-floats/
  [8]: http://css-tricks.com/centering-in-the-unknown/
  [9]: http://designshack.net/articles/css/how-to-center-anything-with-css/
