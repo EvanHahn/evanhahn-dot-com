@@ -8,3 +8,5 @@ I like [JSHint](http://jshint.com/), but [sometimes](http://js1k.com/) you just 
     // jshint ignore: start
 
 And you're done! JSHint won't complain about your file any more. (Don't take this as an excuse to write bad code!)
+
+See also: [how to disable ESLint for a file](/disable-eslint-for-a-file/).
