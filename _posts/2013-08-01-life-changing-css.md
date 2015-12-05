@@ -19,10 +19,10 @@ The CSS box model is funky. If I give something a width of 400px and a 10px padd
 Enter `box-sizing: border-box`. My website has the following code, at [Paul Irish's recommendation](http://www.paulirish.com/2012/box-sizing-border-box-ftw/):
 
     * {
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
     }
 
 I add padding _recklessly_, not worrying that my element's going to be destroyed. Very helpful when you want to size things _like you're sane_. This little bit of CSS has probably saved me _millenia_.
@@ -31,6 +31,8 @@ For more, check out [CSS Tricks's article about box sizing](http://css-tricks.co
 
 display: table
 ==============
+
+*Update: The "right way" to do this stuff is now with [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).*
 
 It's pretty well-known that you don't use tables for layout; you use CSS. But let's be real: table-based layouts were _easier_. Want two things to be the same height _and_ aligned horizontally? Don't want to use tables? _Welcome to hell._
 
@@ -41,21 +43,21 @@ Most notably, it lets you do vertical centering _real nice_ ([here's a demo](htt
 The HTML:
 
     <div class="outer-container">
-        <div class="inner-container">
-            This text is going to be vertically <em>and</em> horizontally centered. Get on this level
-        </div>
+      <div class="inner-container">
+        This text is going to be vertically <em>and</em> horizontally centered. Get on this level
+      </div>
     </div>
 
 The CSS:
 
     .outer-container {
-        display: table;
+      display: table;
     }
 
     .outer-container .inner-container {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
     }
 
 _Sweet damn._ Don't tell me that CSS doesn't _cut you to the core_.
@@ -69,7 +71,7 @@ For those who don't know, a polyfill is some code you include on your page that 
 
 While this isn't really a CSS trick, it _does_ give you "permission" to use _Super Cool CSS3 Features_ and not fear that older browsers will buckle.
 
-Sexy Bonus Tip™: use a preprocessor
+Cool Bonus Tip™: use a preprocessor
 ===================================
 
 If you aren't using [SASS](http://sass-lang.com/) or [LESS](http://lesscss.org/) or [Stylus](http://learnboost.github.io/stylus/) or [Roole](http://roole.org/), start _today_. I don't even...I don't even want to talk about it. Trust me. It will save you more time than any of the other tips.
