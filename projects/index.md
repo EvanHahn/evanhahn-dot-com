@@ -75,7 +75,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [get the latest Node version from Node](https://github.com/EvanHahn/get-latest-node-version/)
 * [Gopher Node](https://github.com/EvanHahn/gopher-node) lets you write Gopher servers with Node
 * [Gribbagrab](https://github.com/EvanHahn/Gribbagrab) is an asynchronous JavaScript and CSS loader that's meant to be inlined
-* [haha.sh](https://github.com/EvanHahn/haha.sh) is a simple shell script that generates hearty laughter
+* [haha.sh](https://evanhahn.github.io/haha.sh/) is a simple shell script that generates hearty laughter
 * [Helmet](https://github.com/evilpacket/helmet/) is a collection of security middleware for Express
 * [Hide the Facebook news feed](https://github.com/EvanHahn/hide-news-feed)
 * [HTML Pack](https://github.com/EvanHahn/node-html-pack) inlines CSS and JavaScript for an HTML page and then minifies everything
