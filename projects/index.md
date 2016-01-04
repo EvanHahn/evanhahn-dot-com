@@ -135,7 +135,7 @@ Pretty much all of the above is code-related, but I've done a few other things h
 * ["Is it worth cheating Caltrain?"](/is-it-worth-cheating-caltrain)
 * [Naps and their effectiveness](/naps-and-their-effectiveness)
 * Study guides from Michigan: [semester 3](/a-couple-of-resources-from-my-3rd-semester), [semester 4](/resources-from-my-4th-semester), [semester 5](/resources-from-my-5th-semester), and [semester 6](/semester-6-resources)
-* [Custom Steam icon for Zineth](http://evanhahn.com/tape/zineth.png)
+* Custom Steam icons for [Zineth](http://evanhahn.com/tape/zineth.png), [Lode Runner 2](http://evanhahn.com/tape/loderunner2.png)
 * [Reddit's dailyprogrammer challenge solutions](/random/rdailyprogrammer-solutions) (okay, this is code too)
 
 And that's it! That's pretty much everything I've done.
