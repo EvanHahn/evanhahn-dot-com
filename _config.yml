@@ -7,3 +7,4 @@ lsi: false
 permalink: :title
 markdown: redcarpet
 paginate: 5
+gems: [jekyll-paginate]
