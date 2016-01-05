@@ -27,6 +27,8 @@ I've written a number of guides and how-tos. Here they are, in order of coolness
 
 * [Remove one element by index from JavaScript array](/remove-one-element-by-index-from-javascript-array)
 
+* [Parse URLs with `<a>` tags in JavaScript](/parse-urls-with-a-tags/)
+
 * [Nicer committing with Vim](/nicer-committing-with-vim)
 
 * [Install a list of Atom packages from a file](/atom-apm-install-list)
