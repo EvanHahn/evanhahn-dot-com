@@ -46,6 +46,7 @@ Open source stuff
 I like open source and I cannot lie. I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
 
 * [4chan thread scraper](https://github.com/EvanHahn/4chan-thread-scraper)
+* [americas_dj](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations. You can find the source [here](https://github.com/EvanHahn/us-military-dj-names).
 * [arraywrap.js](https://github.com/EvanHahn/arraywrap.js) wraps an element in an array if it isn't one already
 * [backbone-getnset](https://github.com/EvanHahn/backbone-getnset) adds custom getters and setters to Backbone.js models
 * [Bits Required](https://github.com/EvanHahn/bits-required) implements "how many bits do we need to represent integer X?" in various languages
@@ -80,9 +81,9 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Hide the Facebook news feed](https://github.com/EvanHahn/hide-news-feed)
 * [HTML Pack](https://github.com/EvanHahn/node-html-pack) inlines CSS and JavaScript for an HTML page and then minifies everything
 * [HumanizeDuration.js](https://evanhahn.github.io/HumanizeDuration.js/) turns milliseconds into English durations, or many other languages
+* [Is GitHub Up?](https://github.com/EvanHahn/is-GitHub-up) is a command-line tool that tels you if GitHub is online
 * [iscp](https://github.com/EvanHahn/iscp) is an interactive scp, because I always forget the syntax
 * [isExpress](https://github.com/EvanHahn/isExpress/tree/master) is a function for detecting Express applications
-* [Is GitHub Up?](https://github.com/EvanHahn/is-GitHub-up) is a command-line tool that tels you if GitHub is online
 * [ISO 3166 country list](https://github.com/EvanHahn/iso-3166-country-list) maps things like "DE" to "Germany" and vice-versa
 * [JavaScript/CoffeeScript sleepsort](/javascript-sleepsort)
 * [journ](https://github.com/EvanHahn/journ) is a command-line journal
@@ -92,6 +93,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [mailtolink.js](https://github.com/EvanHahn/mailtolink.js) creates `mailto:` links from JavaScript
 * [Meme.js](https://github.com/BuddyMeme/Meme.js) is a canvas-based meme generator I worked on for now-defunct Buddy Meme
 * [MiniClass](https://github.com/EvanHahn/MiniClass) is yet another JavaScript library that allows for simple classical OO. It's tiny
+* [minidots](https://github.com/EvanHahn/minidots) are a couple of dotfiles I use when SSHing or in VMs
 * [MouseTracker.js](https://github.com/EvanHahn/MouseTracker.js) creates an object called `mouse` and keeps its `x` and `y` properties updated
 * [nimi mute](http://evanhahn.github.io/nimi-mute/) is a dictionary for the [Toki Pona](http://tokipona.org/) mini-language
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
@@ -109,6 +111,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Tic Tac Toe in Lua](https://gist.github.com/1135851)
 * [Ticker](https://github.com/EvanHahn/ticker) is a lightweight wrapper around `requestAnimationFrame`
 * [Time in Korea](https://github.com/EvanHahn/time-in-korea) is a simple Android app that tells you the time in South Korea
+* [tiny "coming soon" page](https://github.com/EvanHahn/tiny-coming-soon-page)
 * [toki pona to hex](https://github.com/EvanHahn/toki-pona-to-hex) converts the Toki Pona language to and from hex
 * [Truth table generator](https://github.com/EvanHahn/truth-table) for CoffeeScript. Made to take the tedium out of a homework assignment
 * [Try EJS](https://evanhahn.github.io/try-EJS/)
@@ -128,6 +131,7 @@ Non-code stuff
 Pretty much all of the above is code-related, but I've done a few other things here and there when I can tear myself away. They are, in no order:
 
 * [Single Color Image](http://www.singlecolorimage.com/) lets you generate a PNG that's just one color. It's a simple app with a simple API
+* [americas_dj](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations
 * [A very short poem called "Camera"](http://issuu.com/netspencer/docs/calliope?mode=window&pageNumber=12)
 * [A wallpaper from a NASA photo](/wp-content/uploads/2013/02/astro/)
 * [Evan Hahn's 100 dope beats of the day](/dbotd/)
