@@ -3,11 +3,6 @@ title: Projects
 author: Evan Hahn
 layout: page
 ---
-I've been alive for several days now, and I've got a little bit to show for it. Let's peruse.
-
-The big stuff
-=============
-
 If I were to compress my *entire life so far* into four personal projects, I think I'd highlight the following:
 
 1. [*Express.js in Action*](http://manning.com/hahn/?a_aid=express-in-action&a_bid=fe3fcff7), an upcoming book (a "beta" of which you can buy now). If you wanted to hear me ramble about Express.js and its surrounding ecosystem, now's your chance!
@@ -15,10 +10,12 @@ If I were to compress my *entire life so far* into four personal projects, I thi
 3. ["Code doodles"](https://evanhahn.github.io/code-doodles/) is a set of little visualizations that I make in my free time.
 4. [HumanizeDuration.js](https://evanhahn.github.io/HumanizeDuration.js/), a rather simple library for turning 361,000 milliseconds into "6 minutes, 1 second". Lots of people have submitted patches!
 
+The rest of this page is a fat list that attempts to cover everything I've done. It's pretty boring.
+
 Various words
 =============
 
-In addition to the words you're reading right now, I've written _hundreds_ of other words. You can check out [my numerous guides and tutorials](/guides), or read one of the two books I've published:
+In addition to the words you're reading right now, I've written _hundreds_ of other words. You can check out [my guides and tutorials](/guides), or read one of the two books I've published:
 
 * [*Express.js In Action*](http://manning.com/hahn/?a_aid=express-in-action&a_bid=fe3fcff7), a Manning book (still in progress, but you can get a "beta" now!)
 * [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do), an O'Reilly book
