@@ -122,6 +122,15 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with Python
 * [ZoomContext](https://github.com/EvanHahn/ZoomContext) lets you pan and zoom around an HTML5 canvas
 
+Code stuff that isn't open source
+=================================
+
+There's some code stuff that isn't open source for whatever reason. Those things include:
+
+* [Single Color Image](http://www.singlecolorimage.com/) lets you generate a PNG that's just one color. It's a simple app with a simple API
+* [My StackOverflow profile](https://stackoverflow.com/users/804100/evan-hahn)
+* [Reddit's /r/dailyprogrammer challenge solutions](/random/rdailyprogrammer-solutions)
+
 Non-code stuff
 ==============
 
@@ -137,6 +146,5 @@ Pretty much all of the above is code-related, but I've done a few other things h
 * [Naps and their effectiveness](/naps-and-their-effectiveness)
 * Study guides from Michigan: [semester 3](/a-couple-of-resources-from-my-3rd-semester), [semester 4](/resources-from-my-4th-semester), [semester 5](/resources-from-my-5th-semester), and [semester 6](/semester-6-resources)
 * Custom Steam icons for [Zineth](http://evanhahn.com/tape/zineth.png), [Lode Runner 2](http://evanhahn.com/tape/loderunner2.png)
-* [Reddit's dailyprogrammer challenge solutions](/random/rdailyprogrammer-solutions) (okay, this is code too)
 
 And that's it! That's pretty much everything I've done.
