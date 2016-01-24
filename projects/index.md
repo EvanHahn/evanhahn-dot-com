@@ -66,6 +66,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [dw_red.vim](/vim_dw_red) is a red-heavy Vim colorscheme
 * [Euler Method calculator in C++](/euler-method-calculator)
 * [EvanSpec](https://github.com/EvanHahn/EvanSpec) is a souped-up `assert` for C++
+* [Expecting.js](https://github.com/EvanHahn/expecting.js) is an assertion module for JavaScript
 * [Facebook autopoker Chrome extension](/wp-content/uploads/2012/09/pokey/pokey.zip) ([or the source](/wp-content/uploads/2012/09/pokey/src/))
 * [Flood](/tape/flood/) is a game I didn't invent but did implement. A friend didn't like the version she was playing, so I made one that she liked
 * [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
