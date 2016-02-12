@@ -19,12 +19,14 @@ Here's how I did it:
 
         adb backup -f ~/back.ab -noapk 'jp.co.hit_point.nekoatsume'
 
+     Some people have found problems with the single quotes around `jp.co.hit_point.nekoatsume`. If things don't work for you, try removing the quotes.
+
 6. When that's done, unplug the first phone and plug in the next one (the one you want to transfer your save to).
 7. Make sure the game is installed on this phone. Launch it to make sure it runs, then close the app.
 8. Run this command to transfer your backup to the new phone:
 
         adb restore back.ab
 
-That's it! Your nekos should be safe.
+That's it! Your nekos should be safe. If this doesn't work for you, try out similar instructions on [this Reddit comment](https://www.reddit.com/r/nekoatsume/comments/3uovaq/help_with_syncing_my_game_data_from_phone_to/cxhyyuf).
 
 This should, in theory, work on many apps. I only tried it on Neko Atsume but I'm sure it will work with many other apps.
