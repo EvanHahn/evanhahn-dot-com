@@ -20,7 +20,7 @@ Jasmine is a testing framework for JavaScript. Let's learn all of her secrets.
 
 # Get Jasmine
 
-First thing you need to do is get Jasmine on your computer. Easy peasy. [Grab the latest standalone version](https://github.com/pivotal/jasmine/downloads), unzip it, and empty out the `/spec` and `/src` directories. They're examples, you don't need 'em.
+First thing you need to do is get Jasmine on your computer. Easy peasy. [Grab the latest standalone version](https://github.com/jasmine/jasmine/releases), unzip it, and empty out the `/spec` and `/src` directories. They're examples, you don't need 'em.
 
 Bam. It's Jasmine time.
 
