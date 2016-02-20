@@ -117,6 +117,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
 * [Two-factor authentication list](/2fa/)
 * [Two's complement utility](https://github.com/EvanHahn/twos-complement-util) for converting from two's complement numbers
+* [untouched](https://github.com/EvanHahn/untouched) gets pristine copies of built-in objects (like Array or JSON) even if they've been modified
 * [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
 * [What if the English language had syntax highlighting?](http://evanhahn.github.io/English-text-highlighting/)
 * [wren-please](https://github.com/EvanHahn/wren-pelase) is an assertion library for Wren
