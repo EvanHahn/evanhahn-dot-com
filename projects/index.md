@@ -68,6 +68,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [EvanSpec](https://github.com/EvanHahn/EvanSpec) is a souped-up `assert` for C++
 * [Expecting.js](https://github.com/EvanHahn/expecting.js) is an assertion module for JavaScript
 * [Facebook autopoker Chrome extension](/wp-content/uploads/2012/09/pokey/pokey.zip) ([or the source](/wp-content/uploads/2012/09/pokey/src/))
+* [Fireworks](http://js1k.com/2016-elemental/demo/2584) was my entry to [JS1k 2016](http://js1k.com/2016-elemental/)
 * [Flood](/tape/flood/) is a game I didn't invent but did implement. A friend didn't like the version she was playing, so I made one that she liked
 * [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
 * [functional state machine](https://github.com/EvanHahn/functional-state-machine.js) is a small JavaScript state machine that's purely functional
