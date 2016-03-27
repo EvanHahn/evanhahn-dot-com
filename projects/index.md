@@ -104,6 +104,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [rename](https://github.com/EvanHahn/rename) is an interactive version of the `mv` command
 * [RTS camera for Unity](https://github.com/EvanHahn/Unity-RTS-camera) is a little utility for RTS games in Unity. Made it for a course
 * [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
+* [setAttributes](https://github.com/EvanHahn/setAttributes) helps you call `.setAttribute` on a DOM node more easily
 * [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](http://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
 * [startInterval](https://github.com/EvanHahn/startInterval) is like JavaScript's `setInterval` but it starts immediately. It was made for [a guide](/make-an-npm-baby/)
 * [The TypeScript Grunt skeleton](https://github.com/EvanHahn/TypeScript-Grunt-skeleton)
@@ -120,6 +121,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [untouched](https://github.com/EvanHahn/untouched) gets pristine copies of built-in objects (like Array or JSON) even if they've been modified
 * [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
 * [What if the English language had syntax highlighting?](http://evanhahn.github.io/English-text-highlighting/)
+* [when-file-exists](https://github.com/EvanHahn/node-when-file-exists) calls a callback when a file is created
 * [wren-please](https://github.com/EvanHahn/wren-pelase) is an assertion library for Wren
 * [wren-vector](https://github.com/EvanHahn/wren-vector3d) is a 3D vector library for Wren
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with Python
