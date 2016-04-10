@@ -42,14 +42,14 @@ Open source stuff
 
 I like open source and I cannot lie. I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
 
-* [4chan thread scraper](https://github.com/EvanHahn/4chan-thread-scraper)
 * [americas_dj](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations. You can find the source [here](https://github.com/EvanHahn/us-military-dj-names).
 * [arraywrap.js](https://github.com/EvanHahn/arraywrap.js) wraps an element in an array if it isn't one already
 * [backbone-getnset](https://github.com/EvanHahn/backbone-getnset) adds custom getters and setters to Backbone.js models
 * [Bits Required](https://github.com/EvanHahn/bits-required) implements "how many bits do we need to represent integer X?" in various languages
 * [Brainfuck interpreter, in Python](https://github.com/EvanHahn/brainfuck-interpreter/tree/master)
 * [Brainfuck syntax highlighting for Atom](https://github.com/EvanHahn/atom-language-brainfuck)
-* [Brainfuck2000](https://github.com/EvanHahn/BRAINFUCK2000), a powerful JavaScript Brainfuck interpreter
+* [Brainfuck web app](https://github.com/EvanHahn/brainfuck-web-app), a simple web app written in Brainfuck
+* [BRAINFUCK2000](https://github.com/EvanHahn/BRAINFUCK2000), a powerful JavaScript Brainfuck interpreter for the stars
 * [BREACH helper for Node](https://github.com/EvanHahn/node-breach-helper) helps to mitigate BREACH attacks by adding a random-length HTML comment helper
 * [BrowserIs](https://github.com/EvanHahn/BrowserIs) asks questions about Node.js requests useragents. Made for Express
 * [Caesar shift in JavaScript and CoffeeScript](/caesar-shift-in-javascript)
@@ -76,7 +76,8 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Gopher Node](https://github.com/EvanHahn/gopher-node) lets you write Gopher servers with Node
 * [Gribbagrab](https://github.com/EvanHahn/Gribbagrab) is an asynchronous JavaScript and CSS loader that's meant to be inlined
 * [haha.sh](https://evanhahn.github.io/haha.sh/) is a simple shell script that generates hearty laughter
-* [Helmet](https://github.com/evilpacket/helmet/) is a collection of security middleware for Express
+* [Helmet](https://github.com/helmetjs/helmet/) is a collection of security middlewares for Express
+* [Helmet for Crystal](https://github.com/EvanHahn/crystal-helmet) is a collection of security handlers for the Crystal programming language
 * [Hide the Facebook news feed](https://github.com/EvanHahn/hide-news-feed)
 * [HTML Pack](https://github.com/EvanHahn/node-html-pack) inlines CSS and JavaScript for an HTML page and then minifies everything
 * [HumanizeDuration.js](https://evanhahn.github.io/HumanizeDuration.js/) turns milliseconds into English durations, or many other languages
@@ -99,11 +100,11 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [Percentage.js](https://github.com/EvanHahn/percentage.js) is a simple function to convert numbers to percentages, like 0.12 to 12%
 * [Pie Time](http://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
-* [Pushbullet CLI](https://github.com/EvanHahn/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/)
+* [Pushbullet CLI](https://github.com/r-darwish/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/). I'm no longer the maintainer
 * [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
 * [random-word](https://github.com/EvanHahn/random-word) is a CLI tool to pick a random word from a file
 * [rename](https://github.com/EvanHahn/rename) is an interactive version of the `mv` command
-* [RTS camera for Unity](https://github.com/EvanHahn/Unity-RTS-camera) is a little utility for RTS games in Unity. Made it for a course
+* [RTS camera for Unity](https://github.com/EvanHahn/Unity-RTS-camera) is a little utility for RTS games in Unity. Made it for a university course
 * [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
 * [setAttributes](https://github.com/EvanHahn/setAttributes) helps you call `.setAttribute` on a DOM node more easily
 * [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](http://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
