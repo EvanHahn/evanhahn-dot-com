@@ -4,7 +4,7 @@ layout: post
 permalink: /express-dot-static-deep-dive/
 ---
 
-*This guide assumes you know how to use [Express](http://expressjs.com/) and have used its static middleware. No need to have done anything complex with it, though! If you need help, you can check out [my intro to Express](/understanding-express) or [my book on the topic](http://manning.com/hahn/?a_aid=express-in-action&a_bid=fe3fcff7). This guide was last updated for Express 4.6.1.*
+*This guide assumes you know how to use [Express](http://expressjs.com/) and have used its static middleware. No need to have done anything complex with it, though! If you need help, you can check out [my intro to Express](/understanding-express) or [my book on the topic](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action). This guide was last updated for Express 4.6.1.*
 
 **This guide is a little bit outdated; check out [the new docs](https://github.com/expressjs/serve-static).**
 

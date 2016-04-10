@@ -5,7 +5,7 @@ layout: page
 ---
 I've written a number of guides and how-tos. Here they are, in order of coolness:
 
-* [Understanding Express.js](/understanding-express) (and [a guide for the previous version](/understanding-express-3)) or the in-progress book [*Express.js In Action*](http://manning.com/hahn/?a_aid=express-in-action&a_bid=fe3fcff7)
+* [Understanding Express.js](/understanding-express) (and [a guide for the previous version](/understanding-express-3)) or the book [*Express.js In Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action)
 
 * [How do I Jasmine: a tutorial](/how-do-i-jasmine) or the book [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do)
 
