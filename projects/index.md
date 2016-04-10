@@ -5,7 +5,7 @@ layout: page
 ---
 If I were to compress my *entire life so far* into four personal projects, I think I'd highlight the following:
 
-1. [*Express.js in Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), an upcoming book (a "beta" of which you can buy now). If you wanted to hear me ramble about Express.js and its surrounding ecosystem, now's your chance!
+1. [*Express.js in Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a book about Express.js and its surrounding ecosystem.
 2. [Helmet](https://github.com/helmetjs/helmet), a set of middleware for securing Express.js web applications. It's a pretty mature project!
 3. ["Code doodles"](https://evanhahn.github.io/code-doodles/) is a set of little visualizations that I make in my free time.
 4. [HumanizeDuration.js](https://evanhahn.github.io/HumanizeDuration.js/), a rather simple library for turning 361,000 milliseconds into "6 minutes, 1 second". Lots of people have submitted patches!
