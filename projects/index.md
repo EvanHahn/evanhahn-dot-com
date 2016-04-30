@@ -60,6 +60,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Content Security Policy sandbox](https://github.com/EvanHahn/Content-Security-Policy-sandbox) is a little test app for playing around with Content Security Policy
 * [context.clear](https://github.com/EvanHahn/context-dot-clear) is a small library for clearing a HTML5 canvas
 * [cyborg.txt](https://github.com/EvanHahn/cyborg.txt) is a collection of robots.txt utilities for Node
+* [Deep Proxy](https://github.com/EvanHahn/deep-proxy) uses JavaScript proxies to allow deep property access
 * [document.head shim for CommonJS](https://github.com/EvanHahn/document.head)
 * [Dotfiles](https://github.com/evanhahn/dotfiles)
 * [Dragon Scales](http://js1k.com/2014-dragons/demo/1850) was my entry for JS1k 2014
@@ -100,6 +101,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [nimi mute](http://evanhahn.github.io/nimi-mute/) is a dictionary for the [Toki Pona](http://tokipona.org/) mini-language
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [Percentage.js](https://github.com/EvanHahn/percentage.js) is a simple function to convert numbers to percentages, like 0.12 to 12%
+* [Persisted JSON objects](https://github.com/EvanHahn/node-persisted-json-object) are plain JavaScript objects that save themselves to the file system after every change
 * [Pie Time](http://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
 * [Pushbullet CLI](https://github.com/r-darwish/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/). I'm no longer the maintainer
 * [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
