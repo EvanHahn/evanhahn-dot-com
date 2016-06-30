@@ -17,7 +17,7 @@ Various words
 
 In addition to the words you're reading right now, I've written _hundreds_ of other words. You can check out [my guides and tutorials](/guides), or read one of the two books I've published:
 
-* [*Express.js In Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a Manning book (still in progress, but you can get a "beta" now!)
+* [*Express.js In Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a Manning book
 * [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do), an O'Reilly book
 
 Job experiences
