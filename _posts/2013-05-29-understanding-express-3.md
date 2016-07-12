@@ -365,14 +365,14 @@ Express can handle views. It's not too bad. Here's what the setup looks like:
     // Set the view directory to /views
     app.set("views", __dirname + "/views");
 
-    // Let's use the Jade templating language
-    app.set("view engine", "jade");
+    // Let's use the Pug templating language
+    app.set("view engine", "Pug");
 
-The first block is the same as always. Then we say "our views are in a folder called 'views'". Then we say "use Jade". [Jade](http://jade-lang.com/) is a templating language. We'll see how it works in just a second!
+The first block is the same as always. Then we say "our views are in a folder called 'views'". Then we say "use Pug". [Pug](https://github.com/pugjs/pug) is a templating language. We'll see how it works in just a second!
 
 Now, we've set up these views. How do we use them?
 
-Let's start by making a file called `index.jade` and put it into a directory called `views`. It might look like this:
+Let's start by making a file called `index.pug` and put it into a directory called `views`. It might look like this:
 
     doctype 5
     html
@@ -388,9 +388,9 @@ We need to render the view from within Express. Here's what that looks like:
       response.render("index", { message: "I love anime" });
     });
 
-Express adds a method to `response`, called `render`. It does a bunch of smart stuff, but it basically looks at the view engine and views directory (the stuff we defined earlier) and renders `index.jade`.
+Express adds a method to `response`, called `render`. It does a bunch of smart stuff, but it basically looks at the view engine and views directory (the stuff we defined earlier) and renders `index.pug`.
 
-The last step (I suppose it could be the first step) is to install Jade, because it's not bundled with Express. Add it to your `package.json` or `npm install` it.
+The last step (I suppose it could be the first step) is to install Pug, because it's not bundled with Express. Add it to your `package.json` or `npm install` it.
 
 If you get all of this set up, you'll see [this page](http://evanhahn.com/wp-content/uploads/2013/05/anime.html). [Here's all the source code.](https://gist.github.com/EvanHahn/5673968)
 
