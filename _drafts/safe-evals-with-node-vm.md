@@ -14,7 +14,7 @@ The core issue of `eval` is that it can wreak havoc. Here's an example:
     console.log("You're eating a " + food + "!");
     // You're eating a burrito!
 
-Now, I *love* burritos, but this is dangerous. The stuff inside `eval` has access to `food`, which you'd love to be out of scope.
+Now, I *love* burritos, but this is dangerous. The stuff inside `eval` has access to the `food` variable, which you'd love to be out of scope.
 
 Node provides us with an alternative to `eval`: the [`vm` module](http://nodejs.org/api/vm.html). The `vm` module lets us safely evaluate JavaScript strings! There's one thing we need to understand before we can use it, though...
 
