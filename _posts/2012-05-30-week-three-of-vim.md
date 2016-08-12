@@ -30,6 +30,6 @@ Hopefully, I'll be a full-bearded Vim wizard by the end of this summer! Wish me 
  [8]: http://blog.sanctum.geek.nz/
  [9]: http://blog.sanctum.geek.nz/vim-anti-patterns/
  [10]: http://vim.wikia.com/wiki/Using_the_mouse_for_Vim_in_an_xterm
- [11]: http://evanhahn.com/wp-content/uploads/2012/05/vim_no_arrow_keys.txt
+ [11]: https://evanhahn.com/wp-content/uploads/2012/05/vim_no_arrow_keys.txt
  [12]: https://github.com/search?q=dotfiles&start_value=1&type=Repositories
  [13]: http://skwp.github.com/dotfiles/

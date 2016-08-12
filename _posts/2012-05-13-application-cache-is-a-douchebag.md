@@ -9,4 +9,4 @@ permalink: /application-cache-is-a-douchebag/
 If you don't want to read the whole thing, [you can read my notes][2].
 
  [1]: http://www.alistapart.com/articles/application-cache-is-a-douchebag/
- [2]: http://evanhahn.com/wp-content/uploads/2012/05/how-to-appcache.txt
+ [2]: https://evanhahn.com/wp-content/uploads/2012/05/how-to-appcache.txt

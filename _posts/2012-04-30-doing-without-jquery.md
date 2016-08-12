@@ -160,7 +160,7 @@ If this shows you anything, it's that jQuery saves you from a fair bit of headac
 
  [1]: http://youmightnotneedjquery.com/
  [2]: http://zeptojs.com/
- [3]: http://evanhahn.com/wp-content/uploads/2012/04/doing-without-jquery.txt
+ [3]: https://evanhahn.com/wp-content/uploads/2012/04/doing-without-jquery.txt
  [4]: http://caniuse.com/#feat=getelementsbyclassname
  [5]: http://github.com/ded/qwery
  [6]: http://github.com/ded/morpheus

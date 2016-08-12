@@ -8,7 +8,7 @@ I had a homework assignment about the [Euler method](http://en.wikipedia.org/wik
 
 It's not the most user-friendly thing in the world -- the CPP must be modified and compiled -- but if you know what you're doing, it can be useful. If you want to mess with it and make it easier to use (perhaps a JavaScript version?), go ahead!
 
-**[Download it here.](http://evanhahn.com/wp-content/uploads/2011/02/euler_method_calulator.cpp)**
+**[Download it here.](/wp-content/uploads/2011/02/euler_method_calulator.cpp)**
 
 In order to use it, you need to change a few configuration variables (like initial *x* values, step sizes) and then you're off.
 

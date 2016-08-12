@@ -30,7 +30,7 @@ This will keep some people from copy-pasting things off of your site, but it *wo
 
 # In short, for the technical
 
-My recommended solution: add the class `nonselectable` to anything you want to be nonselectable, and include [this CSS](http://evanhahn.com/wp-content/uploads/2011/08/nonselect.css) and [this JavaScript](http://evanhahn.com/wp-content/uploads/2011/08/nonselect.js) (requires jQuery). If you want a sub-element of a nonselectable element to be selectable, give it the class `selectable`. And use it sparingly!
+My recommended solution: add the class `nonselectable` to anything you want to be nonselectable, and include [this CSS](/wp-content/uploads/2011/08/nonselect.css) and [this JavaScript](/wp-content/uploads/2011/08/nonselect.js) (requires jQuery). If you want a sub-element of a nonselectable element to be selectable, give it the class `selectable`. And use it sparingly!
 
 Let's explore how this solution is achieved.
 
@@ -68,9 +68,9 @@ Solved so far: Chrome, Firefox, Safari, IE10.
 
 I made `user-select` mixins for SCSS, LESS, and Stylus. Many things already have these mixins without that (to name a few: [Compass](http://compass-style.org/reference/compass/css3/user_interface/#mixin-user-select), [Bourbon](http://bourbon.io/#user-select), [Bootstrap](https://github.com/twbs/bootstrap/blob/master/less/mixins/vendor-prefixes.less), [LESS Elements](https://github.com/dmitryf/elements/blob/master/elements.less#L123), [LESSHat](https://github.com/madebysource/lesshat/blob/master/README.md#user-select), and [Nib](https://github.com/tj/nib/blob/master/lib/nib/vendor.styl#L64), but mine are *ever so slightly* more thorough than theirs. Ha!
 
-* [LESS](http://evanhahn.com/wp-content/uploads/2011/08/user-select.less)
-* [SCSS](http://evanhahn.com/wp-content/uploads/2011/08/user-select.scss)
-* [Stylus](http://evanhahn.com/wp-content/uploads/2011/08/user-select.styl)
+* [LESS](/wp-content/uploads/2011/08/user-select.less)
+* [SCSS](/wp-content/uploads/2011/08/user-select.scss)
+* [Stylus](/wp-content/uploads/2011/08/user-select.styl)
 
 They're pretty straightforward mixins. Usage instructions are found inside.
 
@@ -153,8 +153,8 @@ My complete solution adds one extra feature: any sub-element marked `selectable`
 
 So here it is, my masterpiece:
 
-* [The CSS](http://evanhahn.com/wp-content/uploads/2011/08/nonselect.css), covering Chrome, Firefox, Safari, IE10
-* [The JavaScript](http://evanhahn.com/wp-content/uploads/2011/08/nonselect.js), covering Opera, IE4+
+* [The CSS](/wp-content/uploads/2011/08/nonselect.css), covering Chrome, Firefox, Safari, IE10
+* [The JavaScript](/wp-content/uploads/2011/08/nonselect.js), covering Opera, IE4+
 
 Finally, *use this stuff sparingly* and remember that it won't work too often. I mostly use this on logos and buttons, not paragraphs!
 

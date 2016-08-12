@@ -14,6 +14,6 @@ There's an [HTML tag stripper][3], a [Markdown parser][2], and more. I will like
 
 As far as the technical implementation went, I have a few remarks. First, I made these for myself, so I didn't worry about weird browser compatibility issues. Second, these aren't particularly polished -- the JavaScript code isn't stunning and I probably could've done without jQuery. Third, I used PHP to spit out the pages (there's a little server-side templating), and I have no excuse for that.
 
- [1]: http://evanhahn.com/tape/lil/
- [2]: http://evanhahn.com/tape/lil/markdown.php
- [3]: http://evanhahn.com/tape/lil/html_strip.php
+ [1]: https://evanhahn.com/tape/lil/
+ [2]: https://evanhahn.com/tape/lil/markdown.php
+ [3]: https://evanhahn.com/tape/lil/html_strip.php
