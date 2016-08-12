@@ -18,3 +18,5 @@ Here's what that looks like:
 ![Screenshot of "Empty Cache and Hard Reload" in Chrome](/uploads/2016-04-30-empty-cache-and-hard-reload.png)
 
 I haven't seen this concisely documented anywhere, so I thought I'd write this post!
+
+*Edit:* A reader sent [Clear Cache](https://chrome.google.com/webstore/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn?hl=en), a simple Chrome extension that can do this too.
