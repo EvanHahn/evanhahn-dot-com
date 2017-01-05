@@ -10,19 +10,19 @@ permalink: /prevent-homebrew-from-gathering-analytics/
 
 You can disable Homebrew's analytics in one of two ways:
 
-1. With a command:
+With a command:
 
-   ```sh
-   brew analytics off
-   ```
+```sh
+brew analytics off
+```
 
-2. With an environment variable:
+Or with an environment variable:
 
-   ```sh
-   export HOMEBREW_NO_ANALYTICS=1
-   ```
+```sh
+export HOMEBREW_NO_ANALYTICS=1
+```
 
-   You can set this in your shell startup (your `.bashrc`, for example).
+You can set this in your shell startup (your `.bashrc`, for example).
 
 To see whether Homebrew is gathering data, you can run this command to print whether it's enabled:
 
