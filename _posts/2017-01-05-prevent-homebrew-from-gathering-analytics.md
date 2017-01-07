@@ -27,5 +27,5 @@ You can set this in your shell startup (your `.bashrc`, for example).
 To see whether Homebrew is gathering data, you can run this command to print whether it's enabled:
 
 ```sh
-brew anlaytics
+brew analytics
 ```
