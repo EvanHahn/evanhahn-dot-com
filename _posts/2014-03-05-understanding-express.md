@@ -5,7 +5,7 @@ permalink: /understanding-express/
 ---
 *This is aimed at people who have some familiarity with Node.js. They know how to run Node scripts and can install packages with npm. You don't have to be an expert, though -- I promise. This guide was last updated for Express 4.0.0. It's an introduction and mostly deals with concepts.*
 
-*This guide is for the newly-released Express 4. If you're looking to learn about Express 3.x, take a look at [my guide for the previous version](http://evanhahn.com/understanding-express-3/).*
+*This guide is for Express 4. If you're looking to learn about Express 3.x, take a look at [my guide for the previous version](http://evanhahn.com/understanding-express-3/).*
 
 *If this isn't in-depth enough for you, I've written a book about Express. Go take a look at [Express.js In Action](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action) if you thirst for more!*
 
@@ -61,7 +61,6 @@ Whenever we make a request to the server, that request handler function is calle
 `request` is a request that comes from the client. In many apps, you'll see this shortened to `req`. Let's look at it. To do that, we'll modify the above request handler a bit:
 
     var app = http.createServer(function(request, response) {
-
       // Build the answer
       var answer = "";
       answer += "Request URL: " + request.url + "\n";
@@ -71,7 +70,6 @@ Whenever we make a request to the server, that request handler function is calle
       // Send answer
       response.writeHead(200, { "Content-Type": "text/plain" });
       response.end(answer);
-
     });
 
 Restart the server and reload `localhost:1337`. You'll see what URL you're requesting, that it's a GET request, and that you've sent a number of cool headers like the user-agent and more complicated HTTP stuff! If you visit `localhost:1337/what_is_anime`, you'll see the request URL change. If you visit it with a different browser, the user-agent will change. If you send it a POST request, you'll see the method change.
@@ -94,15 +92,14 @@ One could imagine taking these APIs and turning them into something cool. You co
     var http = require("http");
 
     http.createServer(function(req, res) {
-
       // Homepage
-      if (req.url == "/") {
+      if (req.url === "/") {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.end("Welcome to the homepage!");
       }
 
       // About page
-      else if (req.url == "/about") {
+      else if (req.url === "/about") {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.end("Welcome to the about page!");
       }
@@ -112,7 +109,6 @@ One could imagine taking these APIs and turning them into something cool. You co
         res.writeHead(404, { "Content-Type": "text/plain" });
         res.end("404 error! File not found.");
       }
-
     }).listen(1337, "localhost");
 
 You could clean this up and make it pretty, or you could be hardcore [like the npm.org folks](https://github.com/isaacs/npm-www#design-philosophy) and tough it out with vanilla Node. But you could also build a framework...a framework like Express.
@@ -229,7 +225,7 @@ One could imagine stringing together some middleware to build an app. Maybe you'
 
     // Homepage
     app.use(function(request, response, next) {
-      if (request.url == "/") {
+      if (request.url === "/") {
         response.writeHead(200, { "Content-Type": "text/plain" });
         response.end("Welcome to the homepage!\n");
         // The middleware stops here.
@@ -240,7 +236,7 @@ One could imagine stringing together some middleware to build an app. Maybe you'
 
     // About page
     app.use(function(request, response, next) {
-      if (request.url == "/about") {
+      if (request.url === "/about") {
         response.writeHead(200, { "Content-Type": "text/plain" });
         response.end("Welcome to the about page!\n");
         // The middleware stops here.
