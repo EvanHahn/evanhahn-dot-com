@@ -1,5 +1,5 @@
 ---
-title: '"Won't Somebody Please Think of the Journalists?"'
+title: Think of the journalists
 layout: post
 permalink:-/wont-somebody-please-think-of-the-journalists/
 ---
