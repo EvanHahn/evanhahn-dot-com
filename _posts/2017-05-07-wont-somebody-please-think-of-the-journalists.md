@@ -1,7 +1,7 @@
 ---
 title: Think of the journalists
 layout: post
-permalink:-/wont-somebody-please-think-of-the-journalists/
+permalink: /wont-somebody-please-think-of-the-journalists/
 ---
 From ["Won't Somebody Please Think of the Journalists?", a talk](https://www.usenix.org/conference/enigma2017/conference-program/presentation/lowenthal):
 
