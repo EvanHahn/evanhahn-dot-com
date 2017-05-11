@@ -11,7 +11,7 @@ In short:
 
 CoffeeScript is just a better language than JavaScript. It's on par speed-wise. It's more readable and writeable. Fewer characters have to be written for the same result. Less code and better readability means fewer bugs. CoffeeScript is a better language than JavaScript.
 
-Debugging it is a pain if you don't know JavaScript (and even if you do). Getting initially set up is annoying. You need to know JavaScript in order to use it well (even [its creator says so](http://www.readwriteweb.com/hack/2011/01/interview-coffeescript-jeremy-ashkenas.php)).
+Debugging it is a pain if you don't know JavaScript (and even if you do). Getting initially set up is annoying. You need to know JavaScript in order to use it well.
 
 **Edit:** There are also features of ECMAScript 6 that won't be supported by CoffeeScript, which is a drag. Another disadvantage.
 
