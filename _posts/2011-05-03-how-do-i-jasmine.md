@@ -4,7 +4,7 @@ author: Evan Hahn
 layout: post
 permalink: /how-do-i-jasmine/
 ---
-_[Jasmine](https://jasmine.github.io/) is a behavior-driven testing framework for JavaScript. It's pretty cool, but I couldn't find a good tutorial. So I learned it and made a tutorial. This tutorial is intended for people that are familiar with some more advanced JavaScript features (callbacks, basic object-oriented programming) and want to start testing. This tutorial was last updated for Jasmine version 1.2.0._
+_[Jasmine](https://jasmine.github.io/) is a behavior-driven testing framework for JavaScript. This tutorial is intended for people that are familiar with some more advanced JavaScript features (callbacks, basic object-oriented programming) and want to start testing. This tutorial was last updated for Jasmine version 1.2.0, which means **this tutorial is fairly out of date**._
 
 _I also wrote a book about this! If you want more detail, take a look at [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do)._
 
