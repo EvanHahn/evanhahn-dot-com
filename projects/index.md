@@ -18,7 +18,7 @@ Various words
 In addition to the words you're reading right now, I've written _hundreds_ of other words. You can check out [my guides and tutorials](/guides), or read one of the two books I've published:
 
 * [*Express.js In Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a Manning book
-* [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do), an O'Reilly book
+* [*JavaScript Testing with Jasmine*](https://shop.oreilly.com/product/0636920028277.do), an O'Reilly book
 
 Job experiences
 ===============
@@ -29,11 +29,11 @@ The rumors are true: I'm employed right now. I've also had some jobs in the past
 
 * [Counsyl](https://www.counsyl.com/) aims to give everybody "access to vital information about their bodies to help them confidently make choices about their lives". They did this by doing complicated genetic tests and presenting them to patients in accessible ways. I wrote a lot of [Django](https://www.djangoproject.com/) and Python code for them, and even programmed a small robot! One of the coolest parts of the internship was seeing all of the people in white lab coats, something I will likely never wear. Fun fact: they were my third internship in a row that had a nearly-boundless supply of string cheese.
 
-* [Sencha](https://www.sencha.com/) is big in the HTML5 space, providing frameworks for building cross-platform applications. They had me working on their [Sencha Architect](https://www.sencha.com/products/architect) team. Architect describes itself as a "visual app builder", and I'd describe it as a _huge_, powerful JavaScript application that I helped to work on. I learned a bunch about [Sencha Touch](http://www.sencha.com/products/touch/) and [Ext JS](http://www.sencha.com/products/extjs/), and spent a few weeks deep in [Node](http://nodejs.org/) as well.
+* [Sencha](https://www.sencha.com/) is big in the HTML5 space, providing frameworks for building cross-platform applications. They had me working on their [Sencha Architect](https://www.sencha.com/products/architect) team. Architect describes itself as a "visual app builder", and I'd describe it as a _huge_, powerful JavaScript application that I helped to work on. I learned a bunch about [Sencha Touch](https://www.sencha.com/products/touch/) and [Ext JS](https://www.sencha.com/products/extjs/), and spent a few weeks deep in [Node](https://nodejs.org/) as well.
 
 * [UniversityNow](http://unow.com/) provided affordable, accredited online higher education. The first weeks of my internship were fixing bugs and implementing small features in [Rails](http://rubyonrails.org/), but then I spent the rest of the summer working on their real-time chat feature. I learned [Backbone.js](http://backbonejs.org/) and wrote a whole lot of Jasmine specs. If you'd like, [I wrote a longer post about my time there](/on-my-internship-at-universitynow).
 
-* Fetchnotes was a note-taking app that aims to be "your mind's best friend". Their homepage and web app got a redesign by a brilliant designer, and I coded them both up! I bumbled my way through [Ember.js](http://emberjs.com/) to make it work. Soon after, a [TechCrunch story](https://techcrunch.com/2012/04/12/fetchnotes-launches-a-simple-cloud-based-note-taking-service-that-twitter-users-will-love/) was written and it got tens of thousands of hits! And it worked! Scary stuff. The service is no longer around.
+* Fetchnotes was a note-taking app that aims to be "your mind's best friend". Their homepage and web app got a redesign by a brilliant designer, and I coded them both up! I bumbled my way through [Ember.js](https://emberjs.com/) to make it work. Soon after, a [TechCrunch story](https://techcrunch.com/2012/04/12/fetchnotes-launches-a-simple-cloud-based-note-taking-service-that-twitter-users-will-love/) was written and it got tens of thousands of hits! And it worked! Scary stuff. The service is no longer around.
 
 * [Rockmelt](https://en.wikipedia.org/wiki/RockMelt) was [acquired by Yahoo](http://yahoo.tumblr.com/post/57166940839/) awhile after I left. While I was there, they built a social browser; a fork of Google Chrome that baked things like Facebook and Twitter right into the browser. I worked on some internal help pages. Designers gave me PNGs and I gave them their "Quick Guide"! I also did some other pages for them (such as their What's New page or some fixes on their homepage) and a lot of internal JavaScript unit tests.
 
@@ -54,7 +54,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [BrowserIs](https://github.com/EvanHahn/BrowserIs) asks questions about Node.js requests useragents. Made for Express
 * [Caesar shift in JavaScript and CoffeeScript](/caesar-shift-in-javascript)
 * [Canvas to favicon](https://github.com/EvanHahn/canvas-to-favicon) sends a &lt;canvas&gt; to the favicon
-* [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](http://js1k.com)
+* [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](https://js1k.com)
 * [coinflip.js](https://github.com/EvanHahn/coinflip.js) randomly returns `true` or `false`
 * [connect-appcache](https://github.com/EvanHahn/connect-appcache) adds Appcache middleware to Connect/Express
 * [Content Security Policy sandbox](https://github.com/EvanHahn/Content-Security-Policy-sandbox) is a little test app for playing around with Content Security Policy
@@ -63,16 +63,16 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Deep Proxy](https://github.com/EvanHahn/deep-proxy) uses JavaScript proxies to allow deep property access
 * [document.head shim for CommonJS](https://github.com/EvanHahn/document.head)
 * [Dotfiles](https://github.com/evanhahn/dotfiles)
-* [Dragon Scales](http://js1k.com/2014-dragons/demo/1850) was my entry for JS1k 2014
+* [Dragon Scales](https://js1k.com/2014-dragons/demo/1850) was my entry for JS1k 2014
 * [dw_red.vim](/vim_dw_red) is a red-heavy Vim colorscheme
 * [Euler Method calculator in C++](/euler-method-calculator)
 * [EvanSpec](https://github.com/EvanHahn/EvanSpec) is a souped-up `assert` for C++
 * [Expecting.js](https://github.com/EvanHahn/expecting.js) is an assertion module for JavaScript
 * [Facebook autopoker Chrome extension](/wp-content/uploads/2012/09/pokey/pokey.zip) ([or the source](/wp-content/uploads/2012/09/pokey/src/))
 * [ffmpeg buddy](https://evanhahn.github.io/ffmpeg-buddy/) helps you build ffmpeg commands
-* [Fireworks](http://js1k.com/2016-elemental/demo/2584) was my entry to [JS1k 2016](http://js1k.com/2016-elemental/)
+* [Fireworks](https://js1k.com/2016-elemental/demo/2584) was my entry to [JS1k 2016](https://js1k.com/2016-elemental/)
 * [Flood](/tape/flood/) is a game I didn't invent but did implement. A friend didn't like the version she was playing, so I made one that she liked
-* [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](http://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
+* [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](https://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
 * [functional state machine](https://github.com/EvanHahn/functional-state-machine.js) is a small JavaScript state machine that's purely functional
 * [get the latest Node version from Node](https://github.com/EvanHahn/get-latest-node-version/)
 * [Gopher Node](https://github.com/EvanHahn/gopher-node) lets you write Gopher servers with Node
@@ -102,9 +102,9 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [Percentage.js](https://github.com/EvanHahn/percentage.js) is a simple function to convert numbers to percentages, like 0.12 to 12%
 * [Persisted JSON objects](https://github.com/EvanHahn/node-persisted-json-object) are plain JavaScript objects that save themselves to the file system after every change
-* [Pie Time](http://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
+* [Pie Time](https://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
 * [Pushbullet CLI](https://github.com/r-darwish/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/). I'm no longer the maintainer
-* [QR It](http://evanhahn.github.io/QRIt/) turns text into QR
+* [QR It](https://evanhahn.github.io/QRIt/) turns text into QR
 * [random-word](https://github.com/EvanHahn/random-word) is a CLI tool to pick a random word from a file
 * [rename](https://github.com/EvanHahn/rename) is an interactive version of the `mv` command
 * [RTS camera for Unity](https://github.com/EvanHahn/Unity-RTS-camera) is a little utility for RTS games in Unity. Made it for a university course
@@ -120,12 +120,12 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [toki pona to hex](https://github.com/EvanHahn/toki-pona-to-hex) converts the Toki Pona language to and from hex
 * [Truth table generator](https://github.com/EvanHahn/truth-table) for CoffeeScript. Made to take the tedium out of a homework assignment
 * [Try EJS](https://evanhahn.github.io/try-EJS/)
-* [Try LiScript](http://evanhahn.github.com/Try-LiScript/)
+* [Try LiScript](https://evanhahn.github.com/Try-LiScript/)
 * [Two's complement utility](https://github.com/EvanHahn/twos-complement-util) for converting from two's complement numbers
 * [Two-factor authentication list](/2fa/)
 * [untouched](https://github.com/EvanHahn/untouched) gets pristine copies of built-in objects (like Array or JSON) even if they've been modified
 * [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
-* [What if the English language had syntax highlighting?](http://evanhahn.github.io/English-text-highlighting/)
+* [What if the English language had syntax highlighting?](https://evanhahn.github.io/English-text-highlighting/)
 * [when-file-exists](https://github.com/EvanHahn/node-when-file-exists) calls a callback when a file is created
 * [wren-please](https://github.com/EvanHahn/wren-pelase) is an assertion library for Wren
 * [wren-vector](https://github.com/EvanHahn/wren-vector3d) is a 3D vector library for Wren
@@ -155,6 +155,6 @@ Pretty much all of the above is code-related, but I've done a few other things h
 * ["Is it worth cheating Caltrain?"](/is-it-worth-cheating-caltrain)
 * [Naps and their effectiveness](/naps-and-their-effectiveness)
 * Study guides from Michigan: [semester 3](/a-couple-of-resources-from-my-3rd-semester), [semester 4](/resources-from-my-4th-semester), [semester 5](/resources-from-my-5th-semester), and [semester 6](/semester-6-resources)
-* Custom Steam icons for [Zineth](http://evanhahn.com/tape/zineth.png), [Lode Runner 2](http://evanhahn.com/tape/loderunner2.png)
+* Custom Steam icons for [Zineth](https://evanhahn.com/tape/zineth.png), [Lode Runner 2](https://evanhahn.com/tape/loderunner2.png)
 
 And that's it! That's pretty much everything I've done.
