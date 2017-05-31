@@ -54,6 +54,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [BrowserIs](https://github.com/EvanHahn/BrowserIs) asks questions about Node.js requests useragents. Made for Express
 * [Caesar shift in JavaScript and CoffeeScript](/caesar-shift-in-javascript)
 * [Canvas to favicon](https://github.com/EvanHahn/canvas-to-favicon) sends a &lt;canvas&gt; to the favicon
+* [Check ECMAScript Version Compatibility](https://github.com/EvanHahn/check-ecmascript-version-compatibility) checks that your JavaScript is compatible with the right version of ECMAScript
 * [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](https://js1k.com)
 * [coinflip.js](https://github.com/EvanHahn/coinflip.js) randomly returns `true` or `false`
 * [connect-appcache](https://github.com/EvanHahn/connect-appcache) adds Appcache middleware to Connect/Express
@@ -104,10 +105,12 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Persisted JSON objects](https://github.com/EvanHahn/node-persisted-json-object) are plain JavaScript objects that save themselves to the file system after every change
 * [Pie Time](https://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
 * [Pushbullet CLI](https://github.com/r-darwish/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/). I'm no longer the maintainer
+* [python -m json.tool for JavaScript](https://github.com/EvanHahn/pythonlike-json-tool.js) emulates Python's `json.tool` in pure JavaScript
 * [QR It](https://evanhahn.github.io/QRIt/) turns text into QR
 * [random-word](https://github.com/EvanHahn/random-word) is a CLI tool to pick a random word from a file
 * [rename](https://github.com/EvanHahn/rename) is an interactive version of the `mv` command
 * [RTS camera for Unity](https://github.com/EvanHahn/Unity-RTS-camera) is a little utility for RTS games in Unity. Made it for a university course
+* [scrabbler](https://github.com/EvanHahn/scrabbler) is a small Scrabble cheater written in Python
 * [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
 * [setAttributes](https://github.com/EvanHahn/setAttributes) helps you call `.setAttribute` on a DOM node more easily
 * [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](http://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
@@ -124,7 +127,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Two's complement utility](https://github.com/EvanHahn/twos-complement-util) for converting from two's complement numbers
 * [Two-factor authentication list](/2fa/)
 * [untouched](https://github.com/EvanHahn/untouched) gets pristine copies of built-in objects (like Array or JSON) even if they've been modified
-* [VimL syntax highlighting for Atom](https://github.com/EvanHahn/atom-vimL)
+* [VimL syntax highlighting for Atom](https://github.com/Alhadis/language-viml)
 * [What if the English language had syntax highlighting?](https://evanhahn.github.io/English-text-highlighting/)
 * [when-file-exists](https://github.com/EvanHahn/node-when-file-exists) calls a callback when a file is created
 * [wren-please](https://github.com/EvanHahn/wren-pelase) is an assertion library for Wren
