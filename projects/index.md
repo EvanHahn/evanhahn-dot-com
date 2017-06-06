@@ -23,9 +23,11 @@ In addition to the words you're reading right now, I've written _hundreds_ of ot
 Job experiences
 ===============
 
-The rumors are true: I'm employed right now. I've also had some jobs in the past. In reverse chronological order:
+The rumors are true: I'm employed right now.
 
 * [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I'm on the [Contextual Commerce](https://www.braintreepayments.com/products/contextual-commerce) team where I do a lot of Clojure and Ruby. Before that, I spent a lot of time building Braintree's SDKs. Perhaps the biggest project I've worked on so far is [Hosted Fields](https://www.braintreepayments.com/features/hosted-fields), a fancy way to accept credit cards on a webpage. It's a lot of fun!
+
+I've also had some jobs in the past. In reverse chronological order:
 
 * [Counsyl](https://www.counsyl.com/) aims to give everybody "access to vital information about their bodies to help them confidently make choices about their lives". They did this by doing complicated genetic tests and presenting them to patients in accessible ways. I wrote a lot of [Django](https://www.djangoproject.com/) and Python code for them, and even programmed a small robot! One of the coolest parts of the internship was seeing all of the people in white lab coats, something I will likely never wear. Fun fact: they were my third internship in a row that had a nearly-boundless supply of string cheese.
 
@@ -105,6 +107,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Persisted JSON objects](https://github.com/EvanHahn/node-persisted-json-object) are plain JavaScript objects that save themselves to the file system after every change
 * [Pie Time](https://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
 * [Pushbullet CLI](https://github.com/r-darwish/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/). I'm no longer the maintainer
+* [pwgen](https://evanhahn.github.io/pwgen) is a little webpage for generating passwords
 * [python -m json.tool for JavaScript](https://github.com/EvanHahn/pythonlike-json-tool.js) emulates Python's `json.tool` in pure JavaScript
 * [QR It](https://evanhahn.github.io/QRIt/) turns text into QR
 * [random-word](https://github.com/EvanHahn/random-word) is a CLI tool to pick a random word from a file
