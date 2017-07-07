@@ -112,6 +112,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [QR It](https://evanhahn.github.io/QRIt/) turns text into QR
 * [random-word](https://github.com/EvanHahn/random-word) is a CLI tool to pick a random word from a file
 * [rename](https://github.com/EvanHahn/rename) is an interactive version of the `mv` command
+* [ring-secure-headers](https://github.com/EvanHahn/ring-secure-headers) adds security HTTP headers to Ring apps (for Clojure)
 * [RTS camera for Unity](https://github.com/EvanHahn/Unity-RTS-camera) is a little utility for RTS games in Unity. Made it for a university course
 * [scrabbler](https://github.com/EvanHahn/scrabbler) is a small Scrabble cheater written in Python
 * [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
