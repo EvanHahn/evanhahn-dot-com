@@ -45,7 +45,7 @@ You could write a version of `zero?` that works like `nil?`, which won't throw o
 
 ```
 (defn safe-zero? [x]
- (and (number? x) (zero? x)))
+  (and (number? x) (zero? x)))
 
 (safe-zero? 0)      ;; true
 (safe-zero? 0.0)    ;; true
