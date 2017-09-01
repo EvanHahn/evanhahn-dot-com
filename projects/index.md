@@ -106,6 +106,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Percentage.js](https://github.com/EvanHahn/percentage.js) is a simple function to convert numbers to percentages, like 0.12 to 12%
 * [Persisted JSON objects](https://github.com/EvanHahn/node-persisted-json-object) are plain JavaScript objects that save themselves to the file system after every change
 * [Pie Time](https://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
+* [Potions](http://js1k.com/2017-magic/demo/2902) was my entry to JS1k 2017
 * [Pushbullet CLI](https://github.com/r-darwish/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/). I'm no longer the maintainer
 * [pwgen](https://evanhahn.github.io/pwgen) is a little webpage for generating passwords
 * [python -m json.tool for JavaScript](https://github.com/EvanHahn/pythonlike-json-tool.js) emulates Python's `json.tool` in pure JavaScript
