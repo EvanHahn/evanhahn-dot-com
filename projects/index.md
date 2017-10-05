@@ -140,6 +140,13 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with Python
 * [ZoomContext](https://github.com/EvanHahn/ZoomContext) lets you pan and zoom around an HTML5 canvas
 
+Significant open source contributions
+=====================================
+
+I've made a bunch of small pull requests to various open source projects. Most of them are tiny, but here are some slightly more notable ones:
+
+* [clj-http: Allow `RequestConfig` and `HttpClientContext` to be injected](https://github.com/dakrone/clj-http/pull/375)
+
 Code stuff that isn't open source
 =================================
 
