@@ -146,6 +146,8 @@ Significant open source contributions
 I've made a bunch of small pull requests to various open source projects. Most of them are tiny, but here are some slightly more notable ones:
 
 * [clj-http: Allow `RequestConfig` and `HttpClientContext` to be injected](https://github.com/dakrone/clj-http/pull/375)
+* [Tab Center Redux: bugfix: clear favicon when the favicon is removed](https://github.com/eoger/tabcenter-redux/pull/252)
+* [Arrow: Throw TypeError when passing booleans to arrow.get](https://github.com/crsmithdev/arrow/pull/259)
 
 Code stuff that isn't open source
 =================================
