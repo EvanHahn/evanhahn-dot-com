@@ -154,6 +154,7 @@ Code stuff that isn't open source
 
 There's some code stuff that isn't open source for whatever reason. Those things include:
 
+* [The ChiPy Mentorship Program](https://chipymentor.org/) had me as a mentor in the Fall 2017 cohort
 * [Single Color Image](http://www.singlecolorimage.com/) lets you generate a PNG that's just one color. It's a simple app with a simple API
 * [My StackOverflow profile](https://stackoverflow.com/users/804100/evan-hahn)
 * [Reddit's /r/dailyprogrammer challenge solutions](/random/rdailyprogrammer-solutions)
