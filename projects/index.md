@@ -37,7 +37,7 @@ I've also had some jobs in the past. In reverse chronological order:
 
 * Fetchnotes was a note-taking app that aims to be "your mind's best friend". Their homepage and web app got a redesign by a brilliant designer, and I coded them both up! I bumbled my way through [Ember.js](https://emberjs.com/) to make it work. Soon after, a [TechCrunch story](https://techcrunch.com/2012/04/12/fetchnotes-launches-a-simple-cloud-based-note-taking-service-that-twitter-users-will-love/) was written and it got tens of thousands of hits! And it worked! Scary stuff. The service is no longer around.
 
-* [Rockmelt](https://en.wikipedia.org/wiki/RockMelt) was [acquired by Yahoo](http://yahoo.tumblr.com/post/57166940839/) awhile after I left. While I was there, they built a social browser; a fork of Google Chrome that baked things like Facebook and Twitter right into the browser. I worked on some internal help pages. Designers gave me PNGs and I gave them their "Quick Guide"! I also did some other pages for them (such as their What's New page or some fixes on their homepage) and a lot of internal JavaScript unit tests.
+* [Rockmelt](https://en.wikipedia.org/wiki/Rockmelt) was [acquired by Yahoo](http://yahoo.tumblr.com/post/57166940839/) awhile after I left. While I was there, they built a social browser; a fork of Google Chrome that baked things like Facebook and Twitter right into the browser. I worked on some internal help pages. Designers gave me PNGs and I gave them their "Quick Guide"! I also did some other pages for them (such as their What's New page or some fixes on their homepage) and a lot of internal JavaScript unit tests.
 
 Open source stuff
 =================
