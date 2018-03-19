@@ -23,11 +23,9 @@ In addition to the words you're reading right now, I've written _hundreds_ of ot
 Job experiences
 ===============
 
-The rumors are true: I'm employed right now.
+I start my next job soon, but I'm currently taking some sweet time off. I've had some other jobs in the past, though. In reverse chronological order:
 
-* [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I'm on the [Contextual Commerce](https://www.braintreepayments.com/products/contextual-commerce) team where I do a lot of Clojure and Ruby. Before that, I spent a lot of time building Braintree's SDKs. Perhaps the biggest project I've worked on so far is [Hosted Fields](https://www.braintreepayments.com/features/hosted-fields), a fancy way to accept credit cards on a webpage. It's a lot of fun!
-
-I've also had some jobs in the past. In reverse chronological order:
+* [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I was on the [Contextual Commerce](https://www.braintreepayments.com/products/contextual-commerce) team where I did a lot of Clojure and Ruby. Before that, I spent a lot of time building Braintree's SDKs. Perhaps the biggest project I've worked on so far is [Hosted Fields](https://www.braintreepayments.com/features/hosted-fields), a fancy way to accept credit cards on a webpage. It's a lot of fun!
 
 * [Counsyl](https://www.counsyl.com/) aims to give everybody "access to vital information about their bodies to help them confidently make choices about their lives". They did this by doing complicated genetic tests and presenting them to patients in accessible ways. I wrote a lot of [Django](https://www.djangoproject.com/) and Python code for them, and even programmed a small robot! One of the coolest parts of the internship was seeing all of the people in white lab coats, something I will likely never wear. Fun fact: they were my third internship in a row that had a nearly-boundless supply of string cheese.
 
