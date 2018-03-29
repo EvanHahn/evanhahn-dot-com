@@ -137,6 +137,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [wren-please](https://github.com/EvanHahn/wren-pelase) is an assertion library for Wren
 * [wren-vector](https://github.com/EvanHahn/wren-vector3d) is a 3D vector library for Wren
 * [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with Python
+* [Zap](https://twitter.com/js1k/status/976200980114083840) was my entry to JS1k 2018. It was an [honorable mention](https://twitter.com/js1k/status/976200980114083840)—[read my post about it](/my-entry-to-js1k-2018-zap/)
 * [ZoomContext](https://github.com/EvanHahn/ZoomContext) lets you pan and zoom around an HTML5 canvas
 
 Significant open source contributions
