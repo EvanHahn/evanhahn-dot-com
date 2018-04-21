@@ -23,7 +23,9 @@ In addition to the words you're reading right now, I've written _hundreds_ of ot
 Job experiences
 ===============
 
-I start my next job soon, but I'm currently taking some sweet time off. I've had some other jobs in the past, though. In reverse chronological order:
+I currently work at [Airtable](https://airtable.com) which is rad. Go take a look at the product—it was really cool before I joined and I'm honored I get to work on it!
+
+I've had some other jobs in the past, too. In reverse chronological order:
 
 * [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I was on the [Contextual Commerce](https://www.braintreepayments.com/products/contextual-commerce) team where I did a lot of Clojure and Ruby. Before that, I spent a lot of time building Braintree's SDKs. Perhaps the biggest project I've worked on so far is [Hosted Fields](https://www.braintreepayments.com/features/hosted-fields), a fancy way to accept credit cards on a webpage. It's a lot of fun!
 
