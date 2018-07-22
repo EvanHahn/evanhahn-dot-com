@@ -23,7 +23,7 @@ In addition to the words you're reading right now, I've written _hundreds_ of ot
 Job experiences
 ===============
 
-I currently work at [Airtable](https://airtable.com) which is rad. Go take a look at the product—it was really cool before I joined and I'm honored I get to work on it!
+I currently work at [Airtable](https://airtable.com), a tool to organize anything. It's a small enough company that everyone does a little of everything, but I've been working on the API a lot.
 
 I've had some other jobs in the past, too. In reverse chronological order:
 
