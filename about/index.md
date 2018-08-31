@@ -12,4 +12,7 @@ I'm Evan Hahn.
 
 If you'd like, take a look at [my projects](/projects) to get a better idea of the kind of things I've made. I know JavaScript and the web stack best, but I've been able to embarrass myself in other things too.
 
-Hit me up on [email](mailto:me@evanhahn.com), [Twitter](https://twitter.com/EvanHahn) or [GitHub](https://github.com/EvanHahn).
+- Email: [me@evanhahn.com](mailto:me@evanhahn.com)
+- Mastodon: [@EvanHahn@bigshoulders.city](https://bigshoulders.city/@EvanHahn)
+- Twitter: [@EvanHahn](https://twitter.com/EvanHahn)
+- GitHub: [EvanHahn](https://github.com/EvanHahn)
