@@ -86,6 +86,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Hide the Facebook news feed](https://github.com/EvanHahn/hide-news-feed)
 * [HTML Pack](https://github.com/EvanHahn/node-html-pack) inlines CSS and JavaScript for an HTML page and then minifies everything
 * [HumanizeDuration.js](https://evanhahn.github.io/HumanizeDuration.js/) turns milliseconds into English durations, or many other languages
+* [image to table](https://github.com/EvanHahn/image-to-table) converts images to all-HTML `<table>` tags
 * [Is GitHub Up?](https://github.com/EvanHahn/is-GitHub-up) is a command-line tool that tels you if GitHub is online
 * [iscp](https://github.com/EvanHahn/iscp) is an interactive scp, because I always forget the syntax
 * [isExpress](https://github.com/EvanHahn/isExpress/tree/master) is a function for detecting Express applications
