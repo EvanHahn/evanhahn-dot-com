@@ -57,6 +57,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Caesar shift in JavaScript and CoffeeScript](/caesar-shift-in-javascript)
 * [Canvas to favicon](https://github.com/EvanHahn/canvas-to-favicon) sends a &lt;canvas&gt; to the favicon
 * [Check ECMAScript Version Compatibility](https://github.com/EvanHahn/check-ecmascript-version-compatibility) checks that your JavaScript is compatible with the right version of ECMAScript
+* [ChicagoCTA](https://botsin.space/@ChicagoCTA) is a Mastodon bot that tweets alerts from Chicago public transit
 * [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](https://js1k.com)
 * [coinflip.js](https://github.com/EvanHahn/coinflip.js) randomly returns `true` or `false`
 * [connect-appcache](https://github.com/EvanHahn/connect-appcache) adds Appcache middleware to Connect/Express
