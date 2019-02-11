@@ -3,19 +3,19 @@ title: Understanding Express.js
 layout: post
 permalink: /understanding-express/
 ---
-*This is aimed at people who have some familiarity with Node.js. They know how to run Node scripts and can install packages with npm. You don't have to be an expert, though -- I promise. This guide was last updated for Express 4.0.0. It's an introduction and mostly deals with concepts.*
+*This is aimed at people who have some familiarity with Node.js. They know how to run Node scripts and can install packages with npm. You don't have to be an expert, though, I promise. This guide was last updated for Express 4.16.4. It's an introduction and mostly deals with concepts.*
 
-*This guide is for Express 4. If you're looking to learn about Express 3.x, take a look at [my guide for the previous version](http://evanhahn.com/understanding-express-3/).*
+*This guide is for Express 4. If you're looking to learn about Express 3.x, take a look at [my guide for the previous version](/understanding-express-3/).*
 
 *If this isn't in-depth enough for you, I've written a book about Express. Go take a look at [Express.js In Action](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action) if you thirst for more!*
 
-[Express.js](http://expressjs.com/) describes itself better than I can: "a minimal and flexible node.js web application framework". It helps you build web apps. If you've used [Sinatra](http://www.sinatrarb.com/) in the Ruby world, a lot of this will be familiar.
+[Express.js](https://expressjs.com/) describes itself better than I can: "a minimal and flexible node.js web application framework". It helps you build web apps. If you've used [Sinatra](http://www.sinatrarb.com/) or [Flask](http://flask.pocoo.org/) in other languages, a lot of this will be familiar.
 
 Like any abstraction, Express hides difficult bits and says "don't worry, you don't need to understand this part". It does things for you so that you don't have to bother. In other words, it's magic.
 
-It's good magic, too. [Express catalogs some people using it](http://expressjs.com/resources/applications.html), and there are some big names: MySpace, Klout, and even some stuff _I've_ made. _Me_. I'm a _huge_ deal. I've got a _blog_.
+It's good magic, too. Famous companies like PayPal, Netflix, Airtable, and MySpace use it. But lots of people use it for building...well, almost anything!
 
-But [all magic comes at a price](http://shapeshed.com/all-magic-comes-with-a-price/): you might not understand the inner workings of Express. This is like driving a car; I drive a car just fine without intimate knowledge of its workings, but I'd be better off with that knowledge. What if things break? What if you want to get all the performance you can out of the car? What if you have an _insatiable thirst for knowledge_?
+But [all magic comes at a price](https://shapeshed.com/all-magic-comes-with-a-price/): you might not understand the inner workings of Express. This is like driving a car; I drive a car just fine without intimate knowledge of its workings, but I'd be better off with that knowledge. What if things break? What if you want to get all the performance you can out of the car? What if you have an _insatiable thirst for knowledge_?
 
 So let's understand Express from the bottom, with Node.
 
