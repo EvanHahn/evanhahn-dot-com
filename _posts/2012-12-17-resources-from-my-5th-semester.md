@@ -12,7 +12,7 @@ During my 5th semester, I produced some things that people might be able to use.
 
 # Data Structures and Algorithms (EECS 281)
 
-* [Exam 1 study guide](https://evanhahn.com/?page_id=1408) - covers complexity (big-Oh notation and the like), some sorting algorithms, some C++ STL containers, searches
+* [Exam 1 study guide](/wp-content/uploads/2012/10/eecs281exam1.txt) - covers complexity (big-O notation and the like), some sorting algorithms, some C++ STL containers, searches
 * A number of my classmates and I worked on a [final exam study guide](https://docs.google.com/document/d/1yckyobmm251vll-lKJrNAba8SYnBCcKPSxU27QCh3-Q/edit), which was pretty sweet.
 * To study algorithms, I implemented some of them in CoffeeScript.
    * [Bubble sort](https://gist.github.com/3855313)
