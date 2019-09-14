@@ -15,6 +15,8 @@ I've written a number of guides and how-tos. Here they are, in order of coolness
 
 * [Doing without jQuery](/doing-without-jquery)
 
+* [Gotchas with Express query parsing (and how to avoid them)](/gotchas-with-express-query-parsing-and-how-to-avoid-them)
+
 * [A deep dive into Express's static middleware](/express-dot-static-deep-dive)
 
 * [Private members in CoffeeScript](/private-members-in-coffeescript)
