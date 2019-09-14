@@ -3,62 +3,81 @@ title: Guides
 author: Evan Hahn
 layout: page
 ---
-I've written a number of guides and how-tos. Here they are, in order of coolness:
+I've written a number of guides and how-tos.
 
-* [Understanding Express.js](/understanding-express) (and [a guide for the previous version](/understanding-express-3)) or the book [*Express.js In Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action)
+JavaScript
+==========
 
-* [How do I Jasmine: a tutorial](/how-do-i-jasmine) or the book [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do)
-
-* [Four CSS tips that have changed me as a man](/life-changing-css)
+* [Understanding Express.js](/understanding-express) or the book [*Express.js In Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action)
 
 * [Publishing a simple package to npm](/make-an-npm-baby)
-
-* [Doing without jQuery](/doing-without-jquery)
 
 * [Gotchas with Express query parsing (and how to avoid them)](/gotchas-with-express-query-parsing-and-how-to-avoid-them)
 
 * [A deep dive into Express's static middleware](/express-dot-static-deep-dive)
 
-* [Private members in CoffeeScript](/private-members-in-coffeescript)
-
-* [A quick romp through default values in CoffeeScript](/default-values-in-coffeescript)
-
-* [Disabling selection and copy-paste on the web](/how-to-disable-copy-paste-on-your-website)
-
-* [Smoothing out setTimeout in CoffeeScript](/smoothing-out-settimeout-in-coffeescript)
-
-* [Remove one element by index from JavaScript array](/remove-one-element-by-index-from-javascript-array)
-
-* [Parse URLs with `<a>` tags in JavaScript](/parse-urls-with-a-tags/)
-
-* [Nicer committing with Vim](/nicer-committing-with-vim)
-
-* [Install a list of Atom packages from a file](/atom-apm-install-list)
-
 * [Disable ESLint for a file](/disable-eslint-for-a-file)
 
 * [Disable JSHint for a file](/disable-jshint-for-a-file)
 
-* [Overwriting document.head in strict mode on Safari](/document-dot-head-on-safari-strict-mode/)
+* [Parse URLs with `<a>` tags in JavaScript](/parse-urls-with-a-tags/)
 
-* [Install Node Version Manager without the "source" line](/install-nvm-without-source-line)
+* [Doing without jQuery](/doing-without-jquery)
 
-* [How to code Tic-Tac-Toe (and a Lua implementation)](/how-to-code-tic-tac-toe-and-a-lua-implementation)
+* [Remove one element by index from JavaScript array](/remove-one-element-by-index-from-javascript-array)
 
-* [Start Vim and temporarily ignore your .vimrc](/ignore-vimrc-with-vim)
-
-* [Cancel a git-flow branch](/cancel-a-git-flow-branch)
-
-* [Newline necessary at the end of JavaScript files?](/newline-necessary-at-the-end-of-javascript-files)
-
-* [Disable the beer emoji in Homebrew](/disable-homebrew-emoji/)
-
-* [Choose by weight](/choose-by-weight)
+* [How do I Jasmine: a tutorial](/how-do-i-jasmine) or the book [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do)
 
 * [Randomly generate either -1 or 1](/randomly-generate-either-1-or-1)
 
-* [Skip the header of a file with Python's CSV reader](/python-skip-header-csv-reader)
-
 * [Detect RockMelt browser](/javascript-detect-if-your-browser-is-rockmelt)
 
-Enjoy!
+* [Newline necessary at the end of JavaScript files?](/newline-necessary-at-the-end-of-javascript-files)
+
+CoffeeScript
+------------
+
+* [Smoothing out setTimeout in CoffeeScript](/smoothing-out-settimeout-in-coffeescript)
+
+* [A quick romp through default values in CoffeeScript](/default-values-in-coffeescript)
+
+* [Private members in CoffeeScript](/private-members-in-coffeescript)
+
+General web
+===========
+
+* [Disabling selection and copy-paste on the web](/how-to-disable-copy-paste-on-your-website)
+
+* [Four CSS tips that have changed me as a man](/life-changing-css)
+
+* [Overwriting document.head in strict mode on Safari](/document-dot-head-on-safari-strict-mode/)
+
+Tools
+=====
+
+Vim
+---
+
+* [Nicer committing with Vim](/nicer-committing-with-vim)
+
+* [Start Vim and temporarily ignore your .vimrc](/ignore-vimrc-with-vim)
+
+Other
+-----
+
+* [Disable the beer emoji in Homebrew](/disable-homebrew-emoji/)
+
+* [Install Node Version Manager without the "source" line](/install-nvm-without-source-line)
+
+* [Install a list of Atom packages from a file](/atom-apm-install-list)
+
+* [Cancel a git-flow branch](/cancel-a-git-flow-branch)
+
+Grab bag
+========
+
+* [Choose by weight](/choose-by-weight)
+
+* [How to code Tic-Tac-Toe (and a Lua implementation)](/how-to-code-tic-tac-toe-and-a-lua-implementation)
+
+* [Skip the header of a file with Python's CSV reader](/python-skip-header-csv-reader)
