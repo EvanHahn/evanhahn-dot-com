@@ -174,7 +174,7 @@ The core of this issue, as with many programming issues, is that there are a lot
 
 We have several options to avoid these issues—I'll talk about four.
 
-### Option 1: handle every edge case
+## Option 1: handle every edge case
 
 If you need all the features that Express's default query parser provides, then you'll need to handle strings, and `undefined`, and objects (which could be nested), and arrays (which could contain objects or arrays or strings). That could turn out to be a lot of code, but if you need the power that `qs` provides, you should do this to avoid errors.
 
@@ -194,7 +194,7 @@ Depending on your use case, you'll need to do different validation of the incomi
 
 But what if you don't need all of those bells and whistles?
 
-### Option 2: disable query string parsing completely
+## Option 2: disable query string parsing completely
 
 Express has a few [app-level settings](https://expressjs.com/en/4x/api.html#app.settings.table). We already saw one earlier—`json spaces`. We can use the `query parser` option to configure—you guessed it—Express's query parser.
 
@@ -206,7 +206,7 @@ This will set `req.query` to an empty object (`{}`) every time. If you can get a
 
 But if you're reading this, you probably *do* need to do some query parsing. So what can you do?
 
-### Option 3: use Node's built-in, simpler query string parser
+## Option 3: use Node's built-in, simpler query string parser
 
 You might have some luck with the simple query parser, which is also configured with the `query parser` option:
 
@@ -226,7 +226,7 @@ This is certainly simpler, but you'll still need to remember to check the type o
 
 Wouldn't it be nice if there were a way to deal with query parameters very explicitly? And wouldn't it be _extra_ nice if this tool was standard JavaScript and built right into Node?
 
-### Option 4: use `URLSearchParams`
+## Option 4: use `URLSearchParams`
 
 `URLSearchParams` is a [standard JavaScript object](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) available in Node and in modern browsers. It has a clear interface for handling query parameters which should help us avoid some of the gotchas. If you need to deal with arrays, you can, but if you just need to deal with one string at a time, you can do that too—it's all made explicit.
 
