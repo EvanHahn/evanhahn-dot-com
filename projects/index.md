@@ -149,10 +149,18 @@ Significant open source contributions
 
 I've made a bunch of small pull requests to various open source projects. Most of them are tiny, but here are some slightly more notable ones:
 
-* [clj-http: Allow `RequestConfig` and `HttpClientContext` to be injected](https://github.com/dakrone/clj-http/pull/375)
-* [deno_std: update mime-db to 1.38.0](https://github.com/denoland/deno_std/pull/238)
-* [Tab Center Redux: bugfix: clear favicon when the favicon is removed](https://github.com/eoger/tabcenter-redux/pull/252)
-* [Arrow: Throw TypeError when passing booleans to arrow.get](https://github.com/crsmithdev/arrow/pull/259)
+* [clj-http](https://github.com/dakrone/clj-http)
+  * [Allow `RequestConfig` and `HttpClientContext` to be injected](https://github.com/dakrone/clj-http/pull/375)
+* [deno_std](https://github.com/denoland/deno_std)
+  * [Update mime-db to 1.38.0](https://github.com/denoland/deno_std/pull/238)
+* [Tab Center Redux](https://github.com/eoger/tabcenter-redux)
+  * [Bugfix: clear favicon when the favicon is removed](https://github.com/eoger/tabcenter-redux/pull/252)
+* [Arrow](https://arrow.readthedocs.io/en/latest/)
+  * [Arrow: Throw TypeError when passing booleans to arrow.get](https://github.com/crsmithdev/arrow/pull/259)
+* [350.org's Climate Strike Poster generator](https://github.com/350org/strikes-poster-generator)
+  * [Fix border loading issues](https://github.com/350org/strikes-poster-generator/pull/11)
+  * [Add starter ESLint config](https://github.com/350org/strikes-poster-generator/pull/10)
+  * Dependency updates ([wdm](https://github.com/350org/strikes-poster-generator/pull/7), [Backbone and Underscore](https://github.com/350org/strikes-poster-generator/pull/8), and [Middleman](https://github.com/350org/strikes-poster-generator/pull/9))
 
 Code stuff that isn't open source
 =================================
