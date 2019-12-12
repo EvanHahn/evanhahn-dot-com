@@ -59,6 +59,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Check ECMAScript Version Compatibility](https://github.com/EvanHahn/check-ecmascript-version-compatibility) checks that your JavaScript is compatible with the right version of ECMAScript
 * [ChicagoCTA](https://botsin.space/@ChicagoCTA) is a Mastodon bot that tweets alerts from Chicago public transit
 * [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](https://js1k.com)
+* [Close the popups](https://js1k.com/2019-x/demo/4236) was my entry to [JS1k 2019](https://js1k.com/2019-x/)
 * [coinflip.js](https://github.com/EvanHahn/coinflip.js) randomly returns `true` or `false`
 * [connect-appcache](https://github.com/EvanHahn/connect-appcache) adds Appcache middleware to Connect/Express
 * [Content Security Policy sandbox](https://github.com/EvanHahn/Content-Security-Policy-sandbox) is a little test app for playing around with Content Security Policy
