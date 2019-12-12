@@ -155,7 +155,7 @@ I've made a bunch of small pull requests to various open source projects. Most o
   * [Add starter ESLint config](https://github.com/350org/strikes-poster-generator/pull/10)
   * Dependency updates ([wdm](https://github.com/350org/strikes-poster-generator/pull/7), [Backbone and Underscore](https://github.com/350org/strikes-poster-generator/pull/8), and [Middleman](https://github.com/350org/strikes-poster-generator/pull/9))
 * [Arrow](https://arrow.readthedocs.io/en/latest/)
-  * [Arrow: Throw TypeError when passing booleans to arrow.get](https://github.com/crsmithdev/arrow/pull/259)
+  * [Throw TypeError when passing booleans to arrow.get](https://github.com/crsmithdev/arrow/pull/259)
 * [bash-guide](https://github.com/Idnan/bash-guide/pull/63)
   * [Remove gendered language](https://github.com/Idnan/bash-guide/pull/63)
 * [clj-http](https://github.com/dakrone/clj-http)
