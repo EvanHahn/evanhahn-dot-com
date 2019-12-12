@@ -135,6 +135,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Two's complement utility](https://github.com/EvanHahn/twos-complement-util) for converting from two's complement numbers
 * [Two-factor authentication list](/2fa/)
 * [untouched](https://github.com/EvanHahn/untouched) gets pristine copies of built-in objects (like Array or JSON) even if they've been modified
+* [User Agent Bag](https://github.com/EvanHahn/user-agent-bag) parses user agents per [RFC7231](https://tools.ietf.org/html/rfc7231#section-5.5.3)
 * [VimL syntax highlighting for Atom](https://github.com/Alhadis/language-viml)
 * [What if the English language had syntax highlighting?](https://evanhahn.github.io/English-text-highlighting/)
 * [when-file-exists](https://github.com/EvanHahn/node-when-file-exists) calls a callback when a file is created
