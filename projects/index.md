@@ -156,6 +156,8 @@ I've made a bunch of small pull requests to various open source projects. Most o
   * Dependency updates ([wdm](https://github.com/350org/strikes-poster-generator/pull/7), [Backbone and Underscore](https://github.com/350org/strikes-poster-generator/pull/8), and [Middleman](https://github.com/350org/strikes-poster-generator/pull/9))
 * [Arrow](https://arrow.readthedocs.io/en/latest/)
   * [Arrow: Throw TypeError when passing booleans to arrow.get](https://github.com/crsmithdev/arrow/pull/259)
+* [bash-guide](https://github.com/Idnan/bash-guide/pull/63)
+  * [Remove gendered language](https://github.com/Idnan/bash-guide/pull/63)
 * [clj-http](https://github.com/dakrone/clj-http)
   * [Allow `RequestConfig` and `HttpClientContext` to be injected](https://github.com/dakrone/clj-http/pull/375)
 * [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
@@ -163,8 +165,11 @@ I've made a bunch of small pull requests to various open source projects. Most o
   * `connect` changes and code reviews ([#24883](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/24883), [#40409](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/40409), [#40776](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/40776))
 * [deno_std](https://github.com/denoland/deno_std)
   * [Update mime-db to 1.38.0](https://github.com/denoland/deno_std/pull/238)
+* [flow-typed](https://github.com/flow-typed/flow-typed)
+  * [express: correct `is` method return type on requests](https://github.com/flow-typed/flow-typed/pull/3464)
 * [Tab Center Redux](https://github.com/eoger/tabcenter-redux)
   * [Bugfix: clear favicon when the favicon is removed](https://github.com/eoger/tabcenter-redux/pull/252)
+  * [Use === instead of == across the codebase](https://github.com/eoger/tabcenter-redux/pull/259)
 
 Code stuff that isn't open source
 =================================
