@@ -40,10 +40,6 @@ a:active {
   color: #fff;
   background-color: #902;
 }
-::-moz-selection {
-  color: #fff;
-  background-color: #902;
-}
 
 sub, sup {
   position: relative;
@@ -77,7 +73,7 @@ sub {
   -webkit-border-radius: 999px;
   -khtml-border-radius: 999px;
   -moz-border-radius: 999px;
-  behavior: url(http://evanhahn.com/wp-content/themes/8/js/pie.htc); /* TODO */
+  behavior: url(/wp-content/themes/8/js/pie.htc);
 }
 
 .header-ad, .header-ad:hover, .header-ad:active {
@@ -250,10 +246,6 @@ footer {
 
   .site-header .logo {
     margin-bottom: 3em;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
   }
 
   .site-header .logo img {
@@ -262,24 +254,13 @@ footer {
     background-color: #333;
     display: block;
     margin: 0 auto;
-    transition: all .25s ease-in-out;
+    transition: transform .25s ease-in-out;
     transform: rotate(0deg);
-    -webkit-transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    -o-transition: all .25s ease-in-out;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
   }
 
   .site-header .logo:hover img {
     transform: rotate(360deg);
     background-color: #902;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
   }
 
   .site-header .logo:active img {
@@ -308,22 +289,8 @@ footer {
     padding: .5em;
     text-align: center;
     font-weight: 900;
-    color: #999;
     text-transform: uppercase;
-    border-bottom: 1px solid transparent;
-    transition: all .075s ease-in;
-    -webkit-transition: all .075s ease-in;
-    -moz-transition: all .075s ease-in;
-    -o-transition: all .075s ease-in;
-  }
-
-  .site-header:hover nav ul li a {
-    color: #999;
-  }
-
-  .site-header nav ul li a:hover {
-    color: #902;
-    border-bottom: 1px solid #902;
+    border-bottom-width: 2px;
   }
 
   .site-content {
@@ -333,7 +300,6 @@ footer {
     padding-top: 1em;
     max-width: 800px;
     vertical-align: top;
-    background-color: #fff;
   }
 
   article .body pre {
@@ -357,7 +323,6 @@ footer {
 
   .site-header {
     padding-top: 1em;
-    background-color: #f0f0f0;
   }
 
   .site-header .logo {
@@ -405,78 +370,38 @@ footer {
 
   footer {
     margin-top: 1em;
-    background-color: #f0f0f0;
   }
 }
 
-/* HLJS Monokai */
-/* Monokai style - ported by Luigi Maselli - http://grigio.org */
+/* Dark mode */
 
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #272822; color: #ddd;
-}
+@media (prefers-color-scheme: dark) {
+  html {
+    color: #fff;
+    background: #000;
+  }
 
-.hljs-tag,
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-strong,
-.hljs-name {
-  color: #f92672;
-}
+  a {
+    color: #f78;
+    border-bottom: 1px solid #333;
+  }
 
-.hljs-code {
-  color: #66d9ef;
-}
+  a:hover {
+    border-bottom: 2px solid #f78;
+  }
 
-.hljs-class .hljs-title {
-  color: white;
-}
+  ::selection {
+    color: #000;
+    background-color: #f78;
+  }
 
-.hljs-attribute,
-.hljs-symbol,
-.hljs-regexp,
-.hljs-link {
-  color: #bf79db;
-}
+  article blockquote {
+    border-left: 5px solid #333;
+  }
 
-.hljs-string,
-.hljs-bullet,
-.hljs-subst,
-.hljs-title,
-.hljs-section,
-.hljs-emphasis,
-.hljs-type,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-addition,
-.hljs-variable,
-.hljs-template-tag,
-.hljs-template-variable {
-  color: #a6e22e;
-}
-
-.hljs-comment,
-.hljs-quote,
-.hljs-deletion,
-.hljs-meta {
-  color: #75715e;
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-doctag,
-.hljs-title,
-.hljs-section,
-.hljs-type,
-.hljs-selector-id {
-  font-weight: bold;
+  article header time:hover {
+    color: #fff;
+  }
 }
 
 /* And finally, print styles */
