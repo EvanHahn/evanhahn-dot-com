@@ -135,8 +135,7 @@ We've shown that crashes are possible, but you could also cause unintended behav
     // NOTE: This has problems!
     app.get('/', (req, res) => {
       if (req.query.name && req.query.name.length <= 12) {
-        const nameYelled = req.query.name.toUpperCase()
-        res.send('Hello, ' + nameYelled)
+        res.send('Hello, ' + req.query.name)
       } else {
         res.status(400)
         res.send('Invalid name.')
@@ -153,8 +152,8 @@ If you pass strings, everything is fine:
 
 But if you pass an array, you can trick the validation logic.
 
-    curl 'http://localhost:3000/?name[]=MyVeryVeryLongName'
-    # => Hello, MYVERYVERYLONGNAME
+    curl 'http://localhost:3000/?name[]=MyVeryVeryVeryVeryLongName'
+    # => Hello, MyVeryVeryVeryVeryLongName.
 
 Why is all of this happening?
 
