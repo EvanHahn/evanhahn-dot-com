@@ -164,6 +164,7 @@ I've made a bunch of small pull requests to various open source projects. Most o
 * [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
   * Various Helmet-related changes and code reviews ([#8818](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/8818), [#8820](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/8820), [#9017](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9017), [#9018](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9018), [#9162](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9162), [#9248](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9248), [#9273](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9273), [#39673](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/39673))
   * `connect` changes and code reviews ([#24883](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/24883), [#40409](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/40409), [#40776](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/40776))
+  * `keygrip` tidying ([#41152](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/41152))
 * [deno_std](https://github.com/denoland/deno_std)
   * [Update mime-db to 1.38.0](https://github.com/denoland/deno_std/pull/238)
 * [flow-typed](https://github.com/flow-typed/flow-typed)
