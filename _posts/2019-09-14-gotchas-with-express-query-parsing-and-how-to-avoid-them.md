@@ -5,11 +5,11 @@ permalink: /gotchas-with-express-query-parsing-and-how-to-avoid-them/
 ---
 *This post assumes you're familiar with Express and the basics of query strings. It was last updated for Express 4.17.1.*
 
-*In short, Express's [default query string parser module](https://www.npmjs.com/package/qs) has some edge cases that can cause unexpected behavior or errors. You can either handle these edge cases or change the default query string parser to something simpler.*
+*In short, Express's [default query string parser](https://www.npmjs.com/package/qs) has some edge cases that can cause unexpected behavior or errors. You can either handle these edge cases or change the default query string parser.*
 
 Everything has its quirks. Even the best of us have our idiosyncrasies and rough edges. Express, a well-designed framework, is no exception.
 
-In this post, we'll talk about a potentially-surprising quirk in Express's query parser so you can watch out for it, and some recommendations for how to avoid problems. Its behavior isn't necessarily *wrong*, but it's not obvious to everyone. It certainly wasn't obvious to me when *I* first started with Express!
+In this post, we'll look at quirks in Express's query parser. We'll also make some recommendations for how to avoid problems. Its behavior isn't *wrong*, but it's not obvious to everyone. It certainly wasn't obvious to me when *I* first started with Express!
 
 First, the happy path
 =====================
@@ -47,7 +47,7 @@ If you don't set the `name` parameter at all, you'll get an error because `req.q
     # => TypeError: Cannot read property 'toUpperCase' of undefined
     #    ...
 
-We're getting `Cannot read property 'toUpperCase' of undefined` because `req.query.name` isn't defined, so we can't call `toUpperCase` on it. I don't personally think this behavior is too surprising, but it's worth keeping in mind.
+We're getting `Cannot read property 'toUpperCase' of undefined` because `req.query.name` isn't defined, so we can't call `toUpperCase` on it. I don't find this behavior is too surprising, but it's worth keeping in mind.
 
 Let's update our code to handle the case where the `name` parameter is missing:
 
@@ -70,12 +70,12 @@ Good! Now we should be able to make requests with and without the parameter.
     curl 'http://localhost:3000/'
     # => No name provided!
 
-Unfortunately, we can still crash this code; let's see how.
+Unfortunately, we can still crash this code. Let's see how.
 
 The surprise
 ============
 
-What if we send the `name` parameter not once, but twice:
+What if we send the `name` parameter not once, but twice?
 
     curl 'http://localhost:3000/?name=Bing&name=Bong'
     # => TypeError: req.query.name.toUpperCase is not a function
