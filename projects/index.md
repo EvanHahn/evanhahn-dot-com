@@ -46,7 +46,7 @@ Open source stuff
 
 I like open source and I cannot lie. I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
 
-* [americas_dj](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations. You can find the source [here](https://github.com/EvanHahn/us-military-dj-names).
+* [America's DJ](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations. You can find the source [here](https://github.com/EvanHahn/us-military-dj-names).
 * [arraywrap.js](https://github.com/EvanHahn/arraywrap.js) wraps an element in an array if it isn't one already
 * [backbone-getnset](https://github.com/EvanHahn/backbone-getnset) adds custom getters and setters to Backbone.js models
 * [Bits Required](https://github.com/EvanHahn/bits-required) implements "how many bits do we need to represent integer X?" in various languages
@@ -191,7 +191,7 @@ Non-code stuff
 
 Pretty much all of the above is code-related, but I've done a few other things here and there when I can tear myself away. They are, in no order:
 
-* [americas_dj](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations
+* [America's DJ](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations
 * [A very short poem called "Camera"](http://issuu.com/netspencer/docs/calliope?mode=window&pageNumber=12)
 * [A wallpaper from a NASA photo](/wp-content/uploads/2013/02/astro/)
 * [Evan Hahn's 100 dope beats of the day](/dbotd/)
