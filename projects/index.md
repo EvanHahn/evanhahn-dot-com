@@ -23,9 +23,11 @@ In addition to the words you're reading right now, I've written _hundreds_ of ot
 Job experiences
 ===============
 
-I currently work at [Airtable](https://airtable.com), a tool to organize anything. It's a small enough company that everyone does a little of everything!
+I'm currently volunteering for a few organizations helping to mitigate climate change. It's early days so I don't have much more to share yet!
 
-I've had some other jobs in the past, too. In reverse chronological order:
+I've had some jobs in the past, too. In reverse chronological order:
+
+* [Airtable](https://airtable.com) is a tool to organize anything. I was on the Platform team where I worked on the [API](https://airtable.com/api), [Blocks](https://airtable.com/blocks), and much more. Though I'd used it for personal projects, it was my first time working with [TypeScript](https://www.typescriptlang.org/) professionally. I learned a ton about programming, prioritization, and puppies.
 
 * [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I was on the Contextual Commerce (now called [Extend](https://www.braintreepayments.com/products/braintree-extend)) team where I did a lot of Clojure and Ruby. Before that, I spent a lot of time building Braintree's SDKs. Perhaps the biggest project I've worked on so far was [Hosted Fields](https://www.braintreepayments.com/features/seamless-checkout/custom-ui), a fancy way to accept credit cards on a webpage. It was a lot of fun!
 

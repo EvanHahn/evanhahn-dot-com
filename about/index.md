@@ -5,7 +5,7 @@ layout: page
 ---
 I'm Evan Hahn.
 
-- I'm a software developer currently working at [Airtable](https://airtable.com/).
+- I'm a software developer currently volunteering for climate change.
 - I maintain [Helmet](https://helmetjs.github.io/), a set of middleware for securing Express.js web applications.
 - I've written [a book about Express.js](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a Node.js web framework.
 - I live in a haunted mansion.
