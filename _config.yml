@@ -5,6 +5,6 @@ timezone: America/Chicago
 future: false
 lsi: false
 permalink: :title
-markdown: redcarpet
+markdown: kramdown
 paginate: 5
 plugins: [jekyll-paginate]
