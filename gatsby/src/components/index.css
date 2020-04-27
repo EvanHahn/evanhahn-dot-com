@@ -1,0 +1,118 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+:root {
+  --text-color: #000;
+  --inverted-text-color: #fff;
+  --background-color: #fff0f0;
+  --primary-color: #902;
+  --logo-color: var(--primary-color);
+  --logo-border-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fff;
+    --inverted-text-color: #000;
+    --background-color: #221f22;
+    --primary-color: #f68;
+    --logo-color: #902;
+    --logo-border-color: #fff;
+  }
+
+  .MastodonIconM {
+    fill: var(--background-color);
+  }
+}
+
+html {
+  font-family: Lato, "DejaVu Sans", "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
+  font-size: 16pt;
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+body {
+  line-height: 2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  position: relative;
+  top: 1px;
+}
+
+::selection {
+  color: var(--inverted-text-color);
+  background: var(--primary-color);
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.IndexPage {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.IndexPage header {
+  text-align: center;
+}
+
+.IconLinks {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.IconLinks:last-child {
+  margin-bottom: 0;
+}
+
+.IconLink {
+  margin-right: 2rem;
+}
+
+.IconLink:last-child {
+  margin-right: 0;
+}
+
+.IconLink a {
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+.IconLink img, .IconLink svg {
+  height: 1.5em;
+  margin-right: 0.3rem;
+}
+
+.Logo {
+  width: 100%;
+  max-width: 200px;
+  border: 3px solid var(--logo-border-color);
+  border-radius: 100%;
+  background: var(--logo-color);
+}
