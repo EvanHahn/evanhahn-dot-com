@@ -31,10 +31,8 @@ const IndexPage = () => (
 
     <header>
       <Logo />
-      <h1>
-        I'm Evan Hahn,
-        <br />a programmer.
-      </h1>
+      {/* TODO: use the site description */}
+      <h1>I'm Evan Hahn, a programmer.</h1>
     </header>
 
     <IconLinks>
@@ -42,7 +40,7 @@ const IndexPage = () => (
         About me
       </IconLink>
       <IconLink href="/guides" icon={<MenuBookIcon />}>
-        Guides and books
+        Books and guides
       </IconLink>
       <IconLink href="/projects" icon={<CodeIcon />}>
         Projects

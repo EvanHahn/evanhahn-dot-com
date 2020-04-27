@@ -14,7 +14,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     --text-color: #fff;
     --inverted-text-color: #000;
     --background-color: #221f22;
-    --primary-color: #f68;
+    --primary-color: #fff;
     --logo-color: #902;
     --logo-border-color: #fff;
   }
@@ -22,6 +22,10 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   .MastodonIconM {
     fill: var(--background-color);
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -43,11 +47,12 @@ strong {
 
 a {
   color: var(--primary-color);
-  text-decoration: none;
+  text-decoration: dotted underline;
+  text-decoration-thickness: 1px;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration-style: solid;
 }
 
 a:active {
@@ -68,8 +73,8 @@ h1 {
 
 .IndexPage {
   display: flex;
-  width: 100vw;
   min-height: 100vh;
+  padding: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -80,25 +85,29 @@ h1 {
 }
 
 .IconLinks {
+  width: 100%;
+  max-width: 900px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .IconLinks {
+    flex-direction: column;
+  }
 }
 
 .IconLinks:last-child {
   margin-bottom: 0;
 }
 
-.IconLink {
-  margin-right: 2rem;
-}
-
-.IconLink:last-child {
-  margin-right: 0;
-}
-
 .IconLink a {
   display: flex;
+  padding: 0.5rem;
+  flex-wrap: wrap;
   align-items: center;
   border-bottom: none;
   font-weight: bold;
