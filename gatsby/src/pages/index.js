@@ -14,16 +14,14 @@ import "../components/index.css"
 
 const IconLinks = ({ children }) => <ul className="IconLinks">{children}</ul>
 
-const IconLink = ({ href, target, icon, children }) => {
-  return (
-    <li className="IconLink">
-      <a href={href} target={target} rel="noreferrer noopener">
-        {icon}
-        <span>{children}</span>
-      </a>
-    </li>
-  )
-}
+const IconLink = ({ href, target, icon, children }) => (
+  <li className="IconLink">
+    <a href={href} target={target} rel="noreferrer noopener">
+      {icon}
+      <span>{children}</span>
+    </a>
+  </li>
+)
 
 const IndexPage = () => (
   <div className="IndexPage">
