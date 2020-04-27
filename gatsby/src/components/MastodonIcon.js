@@ -1,5 +1,4 @@
 import React from "react"
-  // <svg width="61.076954mm" height="65.47831mm" viewBox="0 0 216.4144 232.00976" {...props}>
 
 const MastodonIcon = (props) => (
   <svg viewBox="0 0 216.4144 232.00976" focusable={false} aria-hidden={true} style={{fill: 'currentColor'}} {...props}>
