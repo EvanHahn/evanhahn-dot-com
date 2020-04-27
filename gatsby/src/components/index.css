@@ -19,6 +19,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     --logo-border-color: #fff;
   }
 
+  /* This should be transparent, but I didn't want to edit the SVG. */
   .MastodonIconM {
     fill: var(--background-color);
   }
