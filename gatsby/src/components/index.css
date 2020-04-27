@@ -13,7 +13,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   :root {
     --text-color: #fff;
     --inverted-text-color: #000;
-    --background-color: #221f22;
+    --background-color: #000;
     --primary-color: #fff;
     --logo-color: transparent;
     --logo-border-color: #fff;
@@ -42,7 +42,7 @@ body {
 }
 
 strong {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 em {
