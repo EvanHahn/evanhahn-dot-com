@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   --text-color: #000;
   --inverted-text-color: #fff;
   --background-color: #fff0f0;
-  --primary-color: #902;
+  --primary-color: #000;
   --logo-color: var(--primary-color);
   --logo-border-color: transparent;
 }
@@ -15,7 +15,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     --inverted-text-color: #000;
     --background-color: #221f22;
     --primary-color: #fff;
-    --logo-color: #902;
+    --logo-color: transparent;
     --logo-border-color: #fff;
   }
 
@@ -30,7 +30,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 html {
   font-family: Lato, "DejaVu Sans", "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
-  font-size: 16pt;
+  font-size: 18pt;
   color: var(--text-color);
   background: var(--background-color);
 }
@@ -45,10 +45,17 @@ strong {
   font-weight: bold;
 }
 
+em {
+  font-style: italic;
+}
+
+code, pre {
+  font-family: SourceCodePro, Inconsolata, Consolas, Monaco, Ubuntu Mono, monospace;
+}
+
 a {
   color: var(--primary-color);
   text-decoration: dotted underline;
-  text-decoration-thickness: 1px;
 }
 
 a:hover {
@@ -124,4 +131,100 @@ h1 {
   border: 3px solid var(--logo-border-color);
   border-radius: 100%;
   background: var(--logo-color);
+}
+
+.ContentPage {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 960px;
+}
+
+.ContentPageHeader {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  margin-left: 2rem;
+}
+
+.ContentPageHeader .Logo {
+  width: 150px;
+  transition: transform 0.05s ease-in;
+}
+
+.ContentPageHeader .Logo:hover {
+  transform: scale(1.1);
+}
+
+.ContentPageHeader .IconLinks {
+  flex-direction: column;
+  width: auto;
+}
+
+.ContentPageHeader .IconLink a {
+  flex-wrap: nowrap;
+}
+
+.ContentPageMain {
+  flex-grow: 5;
+  padding: 2rem 0;
+}
+
+.ContentPageMain h2,
+.ContentPageMain h3,
+.ContentPageMain h4,
+.ContentPageMain h5,
+.ContentPageMain h6,
+.ContentPageMain p,
+.ContentPageMain ul,
+.ContentPageMain ol,
+.ContentPageMain blockquote,
+.ContentPageMain pre {
+  line-height: 1.75em;
+  margin-bottom: 1em;
+}
+
+.ContentPageMain ul, .ContentPageMain ol {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.ContentPageMain ul > li {
+  list-style-type: square;
+}
+
+.ContentPageMain ol > li {
+  list-style-type: decimal;
+}
+
+@media screen and (max-width: 700px) {
+  .ContentPage {
+    flex-direction: column;
+  }
+
+  .ContentPageHeader {
+    border-top: 1px dotted #666;
+    margin: 2rem 0;
+  }
+
+  .ContentPageHeader .Logo {
+    width: 100px;
+  }
+
+  .ContentPageHeader .IconLink a {
+    padding: 0.25rem 1rem;
+  }
+
+  .ContentPageHeader .IconLink img,
+  .ContentPageHeader .IconLink svg {
+    display: none;
+  }
+
+  .ContentPageMain {
+    padding: 0;
+  }
 }

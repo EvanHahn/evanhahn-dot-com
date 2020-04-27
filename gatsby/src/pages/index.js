@@ -1,4 +1,6 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { IconLinks, IconLink } from "../components/iconlinks"
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail"
 import GithubIcon from "@material-ui/icons/GitHub"
 import TwitterIcon from "@material-ui/icons/Twitter"
@@ -12,76 +14,77 @@ import Logo from "../components/logo"
 import MastodonIcon from "../components/MastodonIcon"
 import "../components/index.css"
 
-const IconLinks = ({ children }) => <ul className="IconLinks">{children}</ul>
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+        }
+      }
+    }
+  `)
 
-const IconLink = ({ href, target, icon, children }) => (
-  <li className="IconLink">
-    <a href={href} target={target} rel="noreferrer noopener">
-      {icon}
-      <span>{children}</span>
-    </a>
-  </li>
-)
+  return (
+    <div className="IndexPage">
+      <SEO title={data.site.siteMetadata.title} />
 
-const IndexPage = () => (
-  <div className="IndexPage">
-    <SEO title="Evan Hahn" />
+      <header>
+        <Logo />
+        <h1>{data.site.siteMetadata.description}</h1>
+      </header>
 
-    <header>
-      <Logo />
-      {/* TODO: use the site description */}
-      <h1>I'm Evan Hahn, a programmer.</h1>
-    </header>
+      <IconLinks>
+        <IconLink href="/about" icon={<AccountCircleIcon />}>
+          About me
+        </IconLink>
+        <IconLink href="/projects" icon={<CodeIcon />}>
+          Projects
+        </IconLink>
+        <IconLink href="/guides" icon={<MenuBookIcon />}>
+          Guides
+        </IconLink>
+        <IconLink href="/blog" icon={<ListIcon />}>
+          Blog
+        </IconLink>
+      </IconLinks>
 
-    <IconLinks>
-      <IconLink href="/about" icon={<AccountCircleIcon />}>
-        About me
-      </IconLink>
-      <IconLink href="/guides" icon={<MenuBookIcon />}>
-        Books and guides
-      </IconLink>
-      <IconLink href="/projects" icon={<CodeIcon />}>
-        Projects
-      </IconLink>
-      <IconLink href="/blog" icon={<ListIcon />}>
-        Blog
-      </IconLink>
-    </IconLinks>
-
-    <IconLinks>
-      <IconLink href="mailto:me@evanhahn.com" icon={<AlternateEmailIcon />}>
-        Email
-      </IconLink>
-      <IconLink
-        href="https://bigshoulders.city/@EvanHahn"
-        target="_blank"
-        icon={<MastodonIcon />}
-      >
-        Mastodon
-      </IconLink>
-      <IconLink
-        href="https://twitter.com/EvanHahn"
-        target="_blank"
-        icon={<TwitterIcon />}
-      >
-        Twitter
-      </IconLink>
-      <IconLink
-        href="https://github.com/EvanHahn"
-        target="_blank"
-        icon={<GithubIcon />}
-      >
-        GitHub
-      </IconLink>
-      <IconLink
-        href="https://keybase.io/EvanHahn"
-        target="_blank"
-        icon={<KeybaseIcon />}
-      >
-        Keybase
-      </IconLink>
-    </IconLinks>
-  </div>
-)
+      <IconLinks>
+        <IconLink href="mailto:me@evanhahn.com" icon={<AlternateEmailIcon />}>
+          Email
+        </IconLink>
+        <IconLink
+          href="https://bigshoulders.city/@EvanHahn"
+          target="_blank"
+          icon={<MastodonIcon />}
+        >
+          Mastodon
+        </IconLink>
+        <IconLink
+          href="https://twitter.com/EvanHahn"
+          target="_blank"
+          icon={<TwitterIcon />}
+        >
+          Twitter
+        </IconLink>
+        <IconLink
+          href="https://github.com/EvanHahn"
+          target="_blank"
+          icon={<GithubIcon />}
+        >
+          GitHub
+        </IconLink>
+        <IconLink
+          href="https://keybase.io/EvanHahn"
+          target="_blank"
+          icon={<KeybaseIcon />}
+        >
+          Keybase
+        </IconLink>
+      </IconLinks>
+    </div>
+  )
+}
 
 export default IndexPage

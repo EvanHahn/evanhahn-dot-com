@@ -1,42 +1,38 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Logo from "./logo"
+import { IconLinks, IconLink } from "./iconlinks"
+import AlternateEmailIcon from "@material-ui/icons/AlternateEmail"
+import AccountCircleIcon from "@material-ui/icons/AccountCircle"
+import MenuBookIcon from "@material-ui/icons/MenuBook"
+import ListIcon from "@material-ui/icons/List"
+import CodeIcon from "@material-ui/icons/Code"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+export default function ContentPageHeader() {
+  // TODO: rename this file to ContentPageHeader
+  return (
+    <header className="ContentPageHeader">
+      <a href="/">
+        <Logo />
+      </a>
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+      <IconLinks>
+        <IconLink href="/about" icon={<AccountCircleIcon />}>
+          About
+        </IconLink>
+        <IconLink href="/contact" icon={<AlternateEmailIcon />}>
+          Contact
+        </IconLink>
+        <IconLink href="/projects" icon={<CodeIcon />}>
+          Projects
+        </IconLink>
+        <IconLink href="/guides" icon={<MenuBookIcon />}>
+          Guides
+        </IconLink>
+        <IconLink href="/blog" icon={<ListIcon />}>
+          Blog
+        </IconLink>
+      </IconLinks>
+    </header>
+  )
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
