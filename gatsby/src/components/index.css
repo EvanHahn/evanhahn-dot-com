@@ -135,11 +135,17 @@ h1 {
 }
 
 .ContentPage {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
   width: 95%;
   max-width: 960px;
+}
+
+.ContentPageHeaderAndMainWrapper {
+  display: flex;
 }
 
 .ContentPageHeader {
@@ -200,6 +206,14 @@ h1 {
 
 .ContentPageMain ol > li {
   list-style-type: decimal;
+}
+
+.ContentPageFooter {
+  line-height: 1.2em;
+  padding: 1rem 0;
+  font-size: 80%;
+  text-align: center;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 700px) {

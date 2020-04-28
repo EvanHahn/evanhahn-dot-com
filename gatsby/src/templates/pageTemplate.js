@@ -11,12 +11,24 @@ export default function ContentPageTemplate({ data }) {
     <div className="ContentPage">
       <SEO title={frontmatter.title} />
 
-      <main className="ContentPageMain">
-        <h1>{frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </main>
+      <div className="ContentPageHeaderAndMainWrapper">
+        <main className="ContentPageMain">
+          <h1>{frontmatter.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </main>
 
-      <ContentPageHeader />
+        <ContentPageHeader />
+      </div>
+
+      <footer className="ContentPageFooter">
+        Unless noted otherwise, content is licensed under the{" "}
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          Creative Commons Attribution License
+        </a>{" "}
+        and code under the <a href="https://unlicense.org/">Unlicense</a>. The
+        logo was created by <a href="http://luluspice.com/">Lulu Tang</a>.
+        Please come back soon!
+      </footer>
     </div>
   )
 }
