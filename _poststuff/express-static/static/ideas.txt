@@ -1,4 +1,0 @@
-- flashlight app
-- fart app
-- maybe something for sending email
-- a social network for dogs
