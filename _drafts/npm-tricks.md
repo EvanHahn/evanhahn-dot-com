@@ -1,3 +1,0 @@
-- `npm i -S` and other shorthands
-- `npm run` will list everything in `scripts`
-- `npm outdated --depth 0`
