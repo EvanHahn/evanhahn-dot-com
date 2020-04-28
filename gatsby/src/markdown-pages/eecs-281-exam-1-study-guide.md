@@ -1,7 +1,6 @@
 ---
 title: EECS 281 exam 1 study guide
-author: Evan Hahn
-layout: page
+path: /random/eecs-281-exam-1-study-guide
 ---
 *This study guide is also available as [Markdown-formatted plain text][1].*
 
@@ -106,4 +105,4 @@ These come from the end of lecture 3.
 9.  Perform an amortized complexity analysis of an automatically-resizable container with double policy.
 10. Pointers and references for container classes. Pros: do not have to pass large objects; Cons: easy to lose pointers.
 
- [1]: http://evanhahn.com/wp-content/uploads/2012/10/eecs281exam1.txt
+ [1]: https://evanhahn.com/wp-content/uploads/2012/10/eecs281exam1.txt
