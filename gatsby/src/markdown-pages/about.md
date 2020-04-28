@@ -1,7 +1,8 @@
 ---
 title: About Evan Hahn
-path: /about/
+path: /about
 ---
+
 I'm Evan Hahn, a programmer.
 
 I grew up in Silicon Valley and now live in Chicago in a haunted mansion.

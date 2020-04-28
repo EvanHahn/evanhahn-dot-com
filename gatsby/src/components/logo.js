@@ -15,10 +15,6 @@ export default function Logo() {
   `)
 
   return (
-    <img
-      className="Logo"
-      alt=""
-      src={data.file.childImageSharp.fixed.src}
-    />
+    <img className="Logo" alt="" src={data.file.childImageSharp.fixed.src} />
   )
 }

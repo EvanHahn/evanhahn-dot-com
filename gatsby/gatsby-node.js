@@ -1,5 +1,8 @@
 const path = require("path")
+const assert = require("assert")
 
+// TODO: Old posts from Jekyll have different frontmatter.
+// We should Make things consistent.
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
@@ -13,6 +16,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               path
             }
+            fileAbsolutePath
           }
         }
       }

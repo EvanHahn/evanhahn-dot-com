@@ -3,10 +3,42 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import ContentPageHeader from "../components/header"
 import "../components/index.css"
+import * as path from "path"
+import format from "date-fns/format"
+
+function getDateFromPath(fileAbsolutePath) {
+  const basename = path.basename(fileAbsolutePath)
+
+  if (!/^2[0-9]{3}-[01][0-9]-[0-3][0-9]-/.test(basename)) {
+    return null
+  }
+
+  const date = new Date(basename.substr(0, 10))
+  if (Number.isNaN(date.valueOf())) {
+    return null
+  }
+
+  return date
+}
+
+function ContentPageDate({ date }) {
+  return (
+    <p className="ContentPageDate">
+      Posted on{" "}
+      <time datetime={format(date, "yyyy-MM-dd")}>
+        {format(date, "MMMM do, yyyy")}
+      </time>
+      .
+    </p>
+  )
+}
 
 // TODO: rename this file to match
 export default function ContentPageTemplate({ data }) {
-  const { frontmatter, html } = data.markdownRemark
+  const { fileAbsolutePath, frontmatter, html } = data.markdownRemark
+
+  const date = getDateFromPath(fileAbsolutePath)
+
   return (
     <div className="ContentPage">
       <SEO title={frontmatter.title} />
@@ -15,6 +47,7 @@ export default function ContentPageTemplate({ data }) {
         <main className="ContentPageMain">
           <h1>{frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: html }} />
+          {date && <ContentPageDate date={date} />}
         </main>
 
         <ContentPageHeader />
@@ -41,6 +74,7 @@ export const pageQuery = graphql`
         path
         title
       }
+      fileAbsolutePath
     }
   }
 `
