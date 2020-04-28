@@ -75,7 +75,7 @@ a:active {
 
 h1 {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 2rem 0;
 }
 
@@ -90,6 +90,10 @@ h1 {
 
 .IndexPage header {
   text-align: center;
+}
+
+.IndexPage h1 {
+  font-size: 2rem;
 }
 
 .IconLinks {
@@ -193,6 +197,11 @@ h1 {
 .ContentPageMain pre {
   line-height: 1.75em;
   margin-bottom: 1em;
+}
+
+.ContentPageMain h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
 .ContentPageMain ul, .ContentPageMain ol {

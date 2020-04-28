@@ -1,35 +1,35 @@
 ---
 title: Projects
-author: Evan Hahn
-layout: page
+path: /projects
 ---
-If I were to compress my *entire life so far* into four personal projects, I think I'd highlight the following:
+This is a giant list of projects I've worked on.
 
-1. [*Express.js in Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a book about Express.js and its surrounding ecosystem.
-2. [Helmet](https://github.com/helmetjs/helmet), a set of middleware for securing Express.js web applications. It's a pretty mature project!
-3. ["Code doodles"](https://evanhahn.github.io/code-doodles/) is a set of little visualizations that I make in my free time.
-4. [HumanizeDuration.js](https://evanhahn.github.io/HumanizeDuration.js/), a rather simple library for turning 361,000 milliseconds into "6 minutes, 1 second". Lots of people have submitted patches!
+Some highlights:
 
-The rest of this page is a fat list that attempts to cover everything I've done. It's pretty boring.
+* [Helmet](https://github.com/helmetjs/helmet) is a module to help secure Express web applications. It was originally created by [Adam Baldwin](https://evilpacket.net/) and I've been the primary maintainer since 2013. It had [27.7 million downloads in 2019](https://npm-stat.com/charts.html?package=helmet).
+* [*Express.js in Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action) is a book I wrote about Express and its ecosystem. It was published in April 2016—a lifetime ago—but despite some of it being a little outdated, I'm still proud of it.
+* [HumanizeDuration.js](https://evanhahn.github.io/HumanizeDuration.js/) is a library that turns durations to strings. For example, it turns 361,000 milliseconds into "6 minutes, 1 second". Dozens of contributors have localized it into 41 different languages.
 
-Various words
-=============
+The rest of this page is a list that attempts to cover everything I've done. It's pretty boring but aims to be exhaustive.
 
-In addition to the words you're reading right now, I've written _hundreds_ of other words. You can check out [my guides and tutorials](/guides), or read one of the two books I've published:
+## Various words
+
+I've written many [guides, tutorials, and how-tos](/guides). Two of those got turned into books:
 
 * [*Express.js In Action*](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a Manning book
 * [*JavaScript Testing with Jasmine*](https://shop.oreilly.com/product/0636920028277.do), an O'Reilly book
 
-Job experiences
-===============
+## Jobs
 
 I'm currently volunteering for a few organizations helping to mitigate climate change. It's early days so I don't have much more to share yet!
 
-I've had some jobs in the past, too. In reverse chronological order:
+I've had two full-time jobs:
 
-* [Airtable](https://airtable.com) is a tool to organize anything. I was on the Platform team where I worked on the [API](https://airtable.com/api), [Blocks](https://airtable.com/blocks), and much more. Though I'd used it for personal projects, it was my first time working with [TypeScript](https://www.typescriptlang.org/) professionally. I learned a ton about programming, prioritization, and puppies.
+* [Airtable](https://airtable.com) is a tool to organize anything. I was on the Platform team where I worked on the [API](https://airtable.com/api), [Blocks](https://airtable.com/blocks), and much more. I learned a ton about programming, prioritization, product, and puppies.
 
-* [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I was on the Contextual Commerce (now called [Extend](https://www.braintreepayments.com/products/braintree-extend)) team where I did a lot of Clojure and Ruby. Before that, I spent a lot of time building Braintree's SDKs. Perhaps the biggest project I've worked on so far was [Hosted Fields](https://www.braintreepayments.com/features/seamless-checkout/custom-ui), a fancy way to accept credit cards on a webpage. It was a lot of fun!
+* [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I was on the Contextual Commerce (now called [Extend](https://www.braintreepayments.com/products/braintree-extend)) team where I did a lot of Clojure and Ruby. Before that, I spent a lot of time building Braintree's SDKs. My biggest project was [Hosted Fields](https://www.braintreepayments.com/features/seamless-checkout/custom-ui), a fancy way to accept credit cards on a webpage. We even got [a patent for it](http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=10565596.PN.&OS=PN/10565596&RS=PN/10565596), which I have mixed feelings about.
+
+Before graduating college, I had a few other part-time jobs, mostly internships:
 
 * Counsyl, now [Myriad Women's Health](https://myriadwomenshealth.com/), aimed to give everybody "access to vital information about their bodies to help them confidently make choices about their lives". They did this by doing complicated genetic tests and presenting them to patients in accessible ways. I wrote a lot of [Django](https://www.djangoproject.com/) and Python code for them, and even programmed a small robot! One of the coolest parts of the internship was seeing all of the people in white lab coats, something I will likely never wear. Fun fact: they were my third internship in a row that had a nearly-boundless supply of string cheese.
 
@@ -41,10 +41,9 @@ I've had some jobs in the past, too. In reverse chronological order:
 
 * [Rockmelt](https://en.wikipedia.org/wiki/Rockmelt) was [acquired by Yahoo](https://yahoo.tumblr.com/post/57166940839/) awhile after I left. While I was there, they built a social browser; a fork of Google Chrome that baked things like Facebook and Twitter right into the browser. I worked on some internal help pages. Designers gave me PNGs and I gave them their "Quick Guide"! I also did some other pages for them (such as their What's New page or some fixes on their homepage) and a lot of internal JavaScript unit tests.
 
-Open source stuff
-=================
+## Open source stuff
 
-I like open source and I cannot lie. I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
+I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
 
 * [America's DJ](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations. You can find the source [here](https://github.com/EvanHahn/us-military-dj-names).
 * [arraywrap.js](https://github.com/EvanHahn/arraywrap.js) wraps an element in an array if it isn't one already
@@ -57,7 +56,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [BREACH helper for Node](https://github.com/EvanHahn/node-breach-helper) helps to mitigate BREACH attacks by adding a random-length HTML comment helper
 * [BrowserIs](https://github.com/EvanHahn/BrowserIs) asks questions about Node.js requests useragents. Made for Express
 * [Caesar shift in JavaScript and CoffeeScript](/caesar-shift-in-javascript)
-* [Canvas to favicon](https://github.com/EvanHahn/canvas-to-favicon) sends a &lt;canvas&gt; to the favicon
+* [Canvas to favicon](https://github.com/EvanHahn/canvas-to-favicon) sends a `<canvas>` to the favicon
 * [Check ECMAScript Version Compatibility](https://github.com/EvanHahn/check-ecmascript-version-compatibility) checks that your JavaScript is compatible with the right version of ECMAScript
 * [ChicagoCTA](https://botsin.space/@ChicagoCTA) is a Mastodon bot that tweets alerts from Chicago public transit
 * [Circles 1K](/circles-1k) is 639 bytes of trippy and was an entry to [JS1k](https://js1k.com)
@@ -106,7 +105,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [MiniClass](https://github.com/EvanHahn/MiniClass) is yet another JavaScript library that allows for simple classical OO. It's tiny
 * [minidots](https://github.com/EvanHahn/minidots) are a couple of dotfiles I use when SSHing or in VMs
 * [MouseTracker.js](https://github.com/EvanHahn/MouseTracker.js) creates an object called `mouse` and keeps its `x` and `y` properties updated
-* [nimi mute](http://evanhahn.github.io/nimi-mute/) is a dictionary for the [Toki Pona](http://tokipona.org/) mini-language
+* [nimi mute](https://evanhahn.github.io/nimi-mute/) is a dictionary for the [Toki Pona](http://tokipona.org/) mini-language
 * [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 * [Percentage.js](https://github.com/EvanHahn/percentage.js) is a simple function to convert numbers to percentages, like 0.12 to 12%
 * [Persisted JSON objects](https://github.com/EvanHahn/node-persisted-json-object) are plain JavaScript objects that save themselves to the file system after every change
@@ -148,8 +147,7 @@ I like open source and I cannot lie. I've published a number of modules and pack
 * [Zap](https://js1k.com/2018-coins/demo/3159) was my entry to JS1k 2018. It was an [honorable mention](https://twitter.com/js1k/status/976200980114083840)—[read my post about it](/my-entry-to-js1k-2018-zap/)
 * [ZoomContext](https://github.com/EvanHahn/ZoomContext) lets you pan and zoom around an HTML5 canvas
 
-Significant open source contributions
-=====================================
+## Significant open source contributions
 
 I've made a bunch of small pull requests to various open source projects. Most of them are tiny, but here are some slightly more notable ones:
 
@@ -164,7 +162,7 @@ I've made a bunch of small pull requests to various open source projects. Most o
 * [clj-http](https://github.com/dakrone/clj-http)
   * [Allow `RequestConfig` and `HttpClientContext` to be injected](https://github.com/dakrone/clj-http/pull/375)
 * [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
-  * Various Helmet-related changes and code reviews ([#8818](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/8818), [#8820](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/8820), [#9017](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9017), [#9018](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9018), [#9162](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9162), [#9248](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9248), [#9273](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9273), [#39673](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/39673))
+  * Various Helmet-related changes and code reviews ([#8818](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/8818), [#8820](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/8820), [#9017](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9017), [#9018](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9018), [#9162](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9162), [#9248](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9248), [#9273](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/9273), [#39673](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/39673), [#44235](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/44235), [#44228](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/44228))
   * `connect` changes and code reviews ([#24883](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/24883), [#40409](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/40409), [#40776](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/40776))
   * `keygrip` tidying ([#41152](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/41152))
 * [deno_std](https://github.com/denoland/deno_std)
@@ -175,8 +173,7 @@ I've made a bunch of small pull requests to various open source projects. Most o
   * [Bugfix: clear favicon when the favicon is removed](https://github.com/eoger/tabcenter-redux/pull/252)
   * [Use === instead of == across the codebase](https://github.com/eoger/tabcenter-redux/pull/259)
 
-Code stuff that isn't open source
-=================================
+## Code stuff that isn't open source
 
 There's some code stuff that isn't open source for whatever reason. Those things include:
 
@@ -186,8 +183,7 @@ There's some code stuff that isn't open source for whatever reason. Those things
 * [My StackOverflow profile](https://stackoverflow.com/users/804100/evan-hahn)
 * [Reddit's /r/dailyprogrammer challenge solutions](/random/rdailyprogrammer-solutions)
 
-Non-code stuff
-==============
+## Non-code stuff
 
 Pretty much all of the above is code-related, but I've done a few other things here and there when I can tear myself away. They are, in no order:
 
