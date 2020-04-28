@@ -196,7 +196,7 @@ h1 {
 .ContentPageMain blockquote,
 .ContentPageMain pre {
   line-height: 1.75em;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .ContentPageMain h2 {
