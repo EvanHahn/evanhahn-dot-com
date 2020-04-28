@@ -1,5 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 export default function Logo() {
   const data = useStaticQuery(graphql`
@@ -12,9 +12,9 @@ export default function Logo() {
         }
       }
     }
-  `)
+  `);
 
   return (
     <img className="Logo" alt="" src={data.file.childImageSharp.fixed.src} />
-  )
+  );
 }

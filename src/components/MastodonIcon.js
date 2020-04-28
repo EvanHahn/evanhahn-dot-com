@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-const MastodonIcon = props => (
+const MastodonIcon = (props) => (
   <svg
     viewBox="0 0 216.4144 232.00976"
     focusable={false}
@@ -15,6 +15,6 @@ const MastodonIcon = props => (
       fill="#fff"
     />
   </svg>
-)
+);
 
-export default MastodonIcon
+export default MastodonIcon;

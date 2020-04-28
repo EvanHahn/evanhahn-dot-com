@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
 export const IconLinks = ({ children }) => (
   <ul className="IconLinks">{children}</ul>
-)
+);
 
 export const IconLink = ({ href, target, icon, children }) => (
   <li className="IconLink">
@@ -11,4 +11,4 @@ export const IconLink = ({ href, target, icon, children }) => (
       <span>{children}</span>
     </a>
   </li>
-)
+);

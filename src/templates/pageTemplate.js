@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
-import ContentPage from "../components/ContentPage"
-import { getDateFromPath } from "../lib/util"
+import React from "react";
+import { graphql } from "gatsby";
+import ContentPage from "../components/ContentPage";
+import { getDateFromPath } from "../lib/util";
 
 // TODO: rename this file to match
 export default function ContentPageTemplate({ data }) {
-  const { fileAbsolutePath, frontmatter, html } = data.markdownRemark
+  const { fileAbsolutePath, frontmatter, html } = data.markdownRemark;
 
   return (
     <ContentPage
@@ -14,7 +14,7 @@ export default function ContentPageTemplate({ data }) {
     >
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </ContentPage>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -28,4 +28,4 @@ export const pageQuery = graphql`
       fileAbsolutePath
     }
   }
-`
+`;

@@ -1,15 +1,15 @@
-import React from "react"
-import SEO from "../components/seo"
-import ContentPageHeader from "../components/header"
-import DateElement from "../components/DateElement"
-import "../components/index.css"
+import React from "react";
+import SEO from "../components/seo";
+import ContentPageHeader from "../components/header";
+import DateElement from "../components/DateElement";
+import "../components/index.css";
 
 function ContentPageDate({ date }) {
   return (
     <p className="ContentPageDate">
       Posted on <DateElement date={date} />.
     </p>
-  )
+  );
 }
 
 export default function ContentPage({ pageTitle, title, date, children }) {
@@ -37,5 +37,5 @@ export default function ContentPage({ pageTitle, title, date, children }) {
         Please come back soon!
       </footer>
     </div>
-  )
+  );
 }

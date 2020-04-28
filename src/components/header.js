@@ -1,12 +1,12 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Logo from "./logo"
-import { IconLinks, IconLink } from "./iconlinks"
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail"
-import AccountCircleIcon from "@material-ui/icons/AccountCircle"
-import MenuBookIcon from "@material-ui/icons/MenuBook"
-import ListIcon from "@material-ui/icons/List"
-import CodeIcon from "@material-ui/icons/Code"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Logo from "./logo";
+import { IconLinks, IconLink } from "./iconlinks";
+import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import MenuBookIcon from "@material-ui/icons/MenuBook";
+import ListIcon from "@material-ui/icons/List";
+import CodeIcon from "@material-ui/icons/Code";
 
 export default function ContentPageHeader() {
   // TODO: rename this file to ContentPageHeader
@@ -34,5 +34,5 @@ export default function ContentPageHeader() {
         </IconLink>
       </IconLinks>
     </header>
-  )
+  );
 }

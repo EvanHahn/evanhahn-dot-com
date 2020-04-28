@@ -1,8 +1,8 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import DateElement from "../components/DateElement"
-import ContentPage from "../components/ContentPage"
-import { getDateFromPath } from "../lib/util"
+import React from "react";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import DateElement from "../components/DateElement";
+import ContentPage from "../components/ContentPage";
+import { getDateFromPath } from "../lib/util";
 
 export default function BlogPage() {
   const data = useStaticQuery(graphql`
@@ -19,16 +19,16 @@ export default function BlogPage() {
         }
       }
     }
-  `)
+  `);
 
   const blogLinks = data.allMarkdownRemark.edges
     .map(({ node }) => ({
       ...node,
       date: getDateFromPath(node.fileAbsolutePath),
     }))
-    .filter(node => Boolean(node.date))
+    .filter((node) => Boolean(node.date))
     .sort((a, b) => b.date - a.date)
-    .map(node => (
+    .map((node) => (
       <li key={node.frontmatter.path}>
         <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
         <br />
@@ -36,11 +36,11 @@ export default function BlogPage() {
           <DateElement date={node.date} />
         </small>
       </li>
-    ))
+    ));
 
   return (
     <ContentPage title="Blog">
       <ul>{blogLinks}</ul>
     </ContentPage>
-  )
+  );
 }

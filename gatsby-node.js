@@ -1,11 +1,11 @@
-const path = require("path")
+const path = require("path");
 
 // TODO: Old posts from Jekyll have different frontmatter.
 // We should make things consistent.
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const pageTemplate = path.resolve("src/templates/pageTemplate.js")
+  const pageTemplate = path.resolve("src/templates/pageTemplate.js");
 
   const result = await graphql(`
     {
@@ -20,11 +20,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `)
+  `);
 
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -32,6 +32,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: node.frontmatter.path,
       component: pageTemplate,
       context: {},
-    })
-  })
-}
+    });
+  });
+};

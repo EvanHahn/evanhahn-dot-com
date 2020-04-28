@@ -18,26 +18,26 @@ I start a lot of my [code doodles](https://evanhahn.github.io/code-doodles/) wit
 
 ```javascript
 // Create an array of entities (populated elsewhere).
-const entities = []
+const entities = [];
 
 // This function will be called on every frame.
-let lastTime
+let lastTime;
 function tick(t) {
   // Calculate ∆t, the number of milliseconds since the last frame.
-  const dt = lastTime ? lastTime - t : 0
-  lastTime = t
+  const dt = lastTime ? lastTime - t : 0;
+  lastTime = t;
 
   // `tick` each entity with ∆t.
-  entities.forEach(entity => {
-    entity.tick(dt)
-  })
+  entities.forEach((entity) => {
+    entity.tick(dt);
+  });
 
   // Request the next tick.
-  requestAnimationFrame(tick)
+  requestAnimationFrame(tick);
 }
 
 // Request the first tick.
-requestAnimationFrame(tick)
+requestAnimationFrame(tick);
 ```
 
 This is effectively a [game loop](http://gameprogrammingpatterns.com/game-loop.html), whether you're making a game or a visualization.
@@ -47,8 +47,8 @@ I modified some of the specifics of this design (shortening names and things) to
 A key component of this design is the `dt` variable. Every bit of movement is relative to this variable in some way. For example, when a ball moves across the screen, you should write something like this:
 
 ```javascript
-this.x += (this.velocityX * dt) / 1000
-this.y += (this.velocityY * dt) / 1000
+this.x += (this.velocityX * dt) / 1000;
+this.y += (this.velocityY * dt) / 1000;
 
 // Instead of something like this:
 // this.x += this.velocityX

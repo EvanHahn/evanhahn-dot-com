@@ -1,18 +1,18 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { IconLinks, IconLink } from "../components/iconlinks"
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail"
-import GithubIcon from "@material-ui/icons/GitHub"
-import TwitterIcon from "@material-ui/icons/Twitter"
-import KeybaseIcon from "@material-ui/icons/VpnKey"
-import AccountCircleIcon from "@material-ui/icons/AccountCircle"
-import MenuBookIcon from "@material-ui/icons/MenuBook"
-import ListIcon from "@material-ui/icons/List"
-import CodeIcon from "@material-ui/icons/Code"
-import SEO from "../components/seo"
-import Logo from "../components/logo"
-import MastodonIcon from "../components/MastodonIcon"
-import "../components/index.css"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { IconLinks, IconLink } from "../components/iconlinks";
+import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
+import GithubIcon from "@material-ui/icons/GitHub";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import KeybaseIcon from "@material-ui/icons/VpnKey";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import MenuBookIcon from "@material-ui/icons/MenuBook";
+import ListIcon from "@material-ui/icons/List";
+import CodeIcon from "@material-ui/icons/Code";
+import SEO from "../components/seo";
+import Logo from "../components/logo";
+import MastodonIcon from "../components/MastodonIcon";
+import "../components/index.css";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -24,7 +24,7 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className="IndexPage">
@@ -84,7 +84,7 @@ const IndexPage = () => {
         </IconLink>
       </IconLinks>
     </div>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
