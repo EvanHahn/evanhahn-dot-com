@@ -1,5 +1,5 @@
 ---
-title: "&#8220;Technology itself does not transform anything&#8221;"
+title: '"Technology itself does not transform anything"'
 author: Evan Hahn
 layout: post
 path: /technology-itself-does-not-transform-anything/

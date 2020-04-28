@@ -1,5 +1,5 @@
 ---
-title: "Dealing with the useragent of Python's Requests library"
+title: "Dealing with the User-Agent of Python's Requests library"
 layout: post
 path: /python-requests-library-useragent
 ---

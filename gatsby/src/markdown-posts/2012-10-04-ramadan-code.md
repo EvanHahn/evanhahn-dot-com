@@ -1,5 +1,5 @@
 ---
-title: "&#8220;Ramadan code&#8221;"
+title: '"Ramadan code"'
 author: Evan Hahn
 layout: post
 path: /ramadan-code/

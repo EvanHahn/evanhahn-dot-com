@@ -1,5 +1,5 @@
 ---
-title: "LinkedIn&#8217;s app is HTML5"
+title: LinkedIn's app is HTML5
 author: Evan Hahn
 layout: post
 path: /linkedins-app-is-html5/

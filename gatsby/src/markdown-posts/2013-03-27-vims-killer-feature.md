@@ -1,6 +1,6 @@
 ---
-title: "Vim&#8217;s killer feature"
-author: Evan Hahn
+title: >
+  "Vim's killer feature"
 layout: post
 path: /vims-killer-feature/
 ---

@@ -1,5 +1,5 @@
 ---
-title: Is jQuery too big for mobile?
+title: '"Is jQuery too big for mobile?"'
 layout: post
 path: /is-jquery-too-big-for-mobile/
 ---

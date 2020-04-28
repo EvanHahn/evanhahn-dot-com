@@ -1,5 +1,5 @@
 ---
-title: About Feminism
+title: '"About Feminism"'
 layout: post
 path: /aboutfeminism-dot-me/
 ---

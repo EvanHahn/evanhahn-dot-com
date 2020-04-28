@@ -1,5 +1,5 @@
 ---
-title: "&#8220;Traditional&#8221; for loops in CoffeeScript"
+title: '"Traditional" for loops in CoffeeScript'
 author: Evan Hahn
 layout: post
 path: /traditional-for-loops-in-coffeescript/

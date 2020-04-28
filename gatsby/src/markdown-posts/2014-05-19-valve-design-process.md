@@ -1,5 +1,5 @@
 ---
-title: "Writing the code was typically less than half the problem"
+title: '"Writing the code was typically less than half the problem"'
 layout: post
 path: /writing-code-typically-less-than-half/
 ---

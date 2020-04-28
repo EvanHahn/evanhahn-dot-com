@@ -1,5 +1,5 @@
 ---
-title: "Use text-to-speech if you can&#8217;t proofread aloud"
+title: Use text-to-speech if you can't proofread aloud
 author: Evan Hahn
 layout: post
 path: /use-text-to-speech-if-you-cant-proofread-aloud/

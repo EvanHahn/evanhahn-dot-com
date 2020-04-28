@@ -1,5 +1,5 @@
 ---
-title: "Evan Hahn&#8217;s lil&#8217; pages"
+title: Evan Hahn's lil' pages
 author: Evan Hahn
 layout: post
 path: /evan-hahns-lil-pages/

@@ -1,5 +1,5 @@
 ---
-title: "We Are All Intelligence Officers Now"
+title: '"We Are All Intelligence Officers Now"'
 layout: post
 path: /we-are-all-intelligence-officers-now/
 ---

@@ -1,5 +1,5 @@
 ---
-title: Euler method calculator
+title: Euler method calculator in C++
 author: Evan Hahn
 layout: post
 path: /euler-method-calculator/

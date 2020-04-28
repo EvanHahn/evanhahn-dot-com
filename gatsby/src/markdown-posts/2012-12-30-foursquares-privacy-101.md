@@ -1,5 +1,6 @@
 ---
-title: "Foursquare&#8217;s &#8220;Privacy 101&#8243;"
+title: >
+  Foursquare's "Privacy 101"
 author: Evan Hahn
 layout: post
 path: /foursquares-privacy-101/

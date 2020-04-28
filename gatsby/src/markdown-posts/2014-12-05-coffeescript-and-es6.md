@@ -4,6 +4,8 @@ layout: post
 path: /coffeescript-and-ecmascript-6/
 ---
 
+_Note: this post is now out of date._
+
 Back in 2012, I wrote ["I love CoffeeScript"](/i-love-coffeescript/), a short post about how I thought that CoffeeScript was a better language than JavaScript. I hadn't changed my opinion much since then; I still thought it was a great language and far more pleasant than writing JavaScript.
 
 Then I decided to give ECMAScript 6 a try (using [6to5](https://6to5.github.io/)), and it changed the game. ES6 isn't released yet, but it's already _really_ nice to use.

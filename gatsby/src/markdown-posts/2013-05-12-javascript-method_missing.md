@@ -5,6 +5,8 @@ layout: post
 path: /javascript-method_missing/
 ---
 
+*Note: this post is outdated; try `async` and `await`.*
+
 [Callback Hell is a real place](http://callbackhell.com/), for better or worse. Asynchronous programming is _sweet_, though; it's not the asynchronicity that bothers me, but the syntax.
 
 I wanted to solve the ugliness of asynchronous syntax in browser-based script loaders like [RequireJS](http://requirejs.org/) and [LABjs](http://labjs.com/). We can _barely_ solve it. And only in Firefox. Please be kind.

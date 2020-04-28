@@ -21,4 +21,6 @@ I figured that a version in a scripting language would be slow, but after I saw 
 
 After thinking about it at it, 58,000 words isn't _that_ many; I should've realized that it was okay to use a slower language. I also learned a bit more about C. And most importantly, I put to rest my question: there are only 386 alphabetical words.
 
-_Update: This has now been [posted as a challenge](http://www.reddit.com/r/dailyprogrammer/comments/101m7y/9172012_challenge_99_easy_words_with_letters_in/) on the dailyprogrammer subreddit. Go there to see other solutions!_
+_Update: This has now been [posted as a challenge][0] on the dailyprogrammer subreddit. Go there to see other solutions!_
+
+[0]: http://www.reddit.com/r/dailyprogrammer/comments/101m7y/9172012_challenge_99_easy_words_with_letters_in/

@@ -1,5 +1,5 @@
 ---
-title: "&#8220;All magic comes with a price&#8221;"
+title: '"All magic comes with a price"'
 author: Evan Hahn
 layout: post
 path: /all-magic-comes-with-a-price/

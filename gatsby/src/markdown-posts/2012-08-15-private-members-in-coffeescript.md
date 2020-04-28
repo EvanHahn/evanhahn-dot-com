@@ -5,7 +5,7 @@ layout: post
 path: /private-members-in-coffeescript/
 ---
 
-_In short: stick to the JavaScript convention of prefixing private members with `_` because private members don't work very well._
+_In short: stick to the JavaScript convention of prefixing private members with underscores because private members don't work very well._
 
 CoffeeScript can implement private functions, but not other variables. It's a big can of worms and is only elegant in very simple cases. I'll warn you: this gets hairy, and I'd recommend using the JavaScript convention of prefixing private members with `_` and calling it a day.
 

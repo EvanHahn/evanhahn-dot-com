@@ -8,8 +8,6 @@ _This is aimed at people who have some familiarity with Node.js. They know how t
 
 _This guide is for Express 4. If you're looking to learn about Express 3.x, take a look at [my guide for the previous version](/understanding-express-3/)._
 
-_If this isn't in-depth enough for you, I've written a book about Express. Go take a look at [Express.js In Action](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action) if you thirst for more!_
-
 [Express.js](https://expressjs.com/) describes itself better than I can: "a minimal and flexible node.js web application framework". It helps you build web apps. If you've used [Sinatra](http://www.sinatrarb.com/) or [Flask](http://flask.pocoo.org/) in other languages, a lot of this will be familiar.
 
 Like any abstraction, Express hides difficult bits and says "don't worry, you don't need to understand this part". It does things for you so that you don't have to bother. In other words, it's magic.

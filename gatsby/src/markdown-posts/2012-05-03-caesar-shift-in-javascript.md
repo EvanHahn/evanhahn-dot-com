@@ -15,7 +15,7 @@ Go check out my [JavaScript implementation](https://gist.github.com/2587465) and
 
 Call it like this:
 
-    caesarShift('Attack at dawn!',  12);    // Returns "Mffmow mf pmiz!"
+    caesarShift('Attack at dawn!', 12);    // Returns "Mffmow mf pmiz!"
 
 And reverse it like this:
 

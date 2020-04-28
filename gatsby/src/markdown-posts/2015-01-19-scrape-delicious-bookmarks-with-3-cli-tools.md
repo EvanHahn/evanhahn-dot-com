@@ -4,6 +4,8 @@ layout: post
 path: /scrape-delicious-bookmarks-with-3-cli-tools/
 ---
 
+_I'm leaving this post up for posterity even though Delicious is long gone._
+
 I use [Delicious](https://delicious.com/) for syncing my bookmarks. I wanted to have my bookmarks offline. I didn't want to wrestle the Delicious API, so I tried writing a Bash one-liner. Every problem can be solved by an unwieldy Bash one-liner, right?
 
 First, you'll need to install three things.

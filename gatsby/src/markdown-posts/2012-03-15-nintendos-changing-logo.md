@@ -1,5 +1,5 @@
 ---
-title: "Nintendo&#8217;s changing logo"
+title: Nintendo's changing logo
 author: Evan Hahn
 layout: post
 path: /nintendos-changing-logo/

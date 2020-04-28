@@ -7,6 +7,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   --primary-color: #000;
   --logo-color: var(--primary-color);
   --logo-border-color: transparent;
+  --pre-text-color: #000;
+  --pre-background-color: #edd;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +19,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     --primary-color: #fff;
     --logo-color: transparent;
     --logo-border-color: #fff;
+    --pre-text-color: #fff;
+    --pre-background-color: #222;
   }
 
   /* This should be transparent, but I didn't want to edit the SVG. */
@@ -78,6 +82,10 @@ h1 {
   font-size: 3rem;
   margin: 2rem 0;
   line-height: 1em;
+}
+
+small {
+  font-size: 80%;
 }
 
 .IndexPage {
@@ -187,7 +195,7 @@ h1 {
 
 .ContentPageMain {
   flex-grow: 5;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .ContentPageMain h2,
@@ -222,19 +230,24 @@ h1 {
   list-style-type: decimal;
 }
 
-.ContentPageMain blockquote:before {
-  content: '❠';
-  font-size: 4rem;
-  float: right;
-  font-family: Times, 'Times New Roman', 'Liberation Serif', 'Droid Serif', serif;
-  line-height: 0.5em;
-  font-style: normal;
+.ContentPageMain pre {
+  padding: 1rem;
+  line-height: 1.2em;
+  color: var(--pre-text-color);
+  background: var(--pre-background-color);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .ContentPageMain blockquote {
   border-left: 0.5rem solid var(--primary-color);
   padding-left: 1rem;
   font-style: italic;
+}
+
+.ContentPageMain img {
+  max-width: 100%;
 }
 
 .ContentPageDate {

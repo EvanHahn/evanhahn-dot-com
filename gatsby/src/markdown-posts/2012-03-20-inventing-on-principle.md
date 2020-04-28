@@ -1,5 +1,5 @@
 ---
-title: Inventing on principle
+title: '"Inventing on principle"'
 author: Evan Hahn
 layout: post
 path: /inventing-on-principle/

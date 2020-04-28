@@ -1,5 +1,5 @@
 ---
-title: "&quot;Raising the wall&quot; for open source"
+title: '"Raising the wall" for open source'
 layout: post
 path: /raising-the-wall-for-open-source/
 ---

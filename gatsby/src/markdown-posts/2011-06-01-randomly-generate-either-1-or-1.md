@@ -1,5 +1,5 @@
 ---
-title: Randomly generate either -1 or 1
+title: Randomly generate either -1 or 1 in JavaScript
 author: Evan Hahn
 layout: post
 path: /randomly-generate-either-1-or-1/
