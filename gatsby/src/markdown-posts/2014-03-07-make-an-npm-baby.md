@@ -10,7 +10,7 @@ It's time. You've been mooching off of [npm](https://npmjs.com/) for awhile now,
 
 [Go check out the finished source on GitHub](https://github.com/EvanHahn/startInterval) if you'd like to see all of this together. Unfortunately, you won't be able to publish a package called "startinterval" because I've already done it. It might be best to follow along but to avoid polluting npm with example packages.
 
-# What we'll build
+## What we'll build
 
 JavaScript has had `setInterval` for a long time. It runs a function every so often. Frequently, I find myself doing something like this:
 
@@ -23,11 +23,11 @@ I'd like to build a nearly-identical function that does the same thing as `setIn
 
 This is a pretty simple package, so it'll be helpful when we learn all of the complexities of a sexy npm module.
 
-# A first version
+## A first version
 
 There's a _lot_ of stuff you can do for an npm package. Let's start with a respectable first version.
 
-## package dot json
+### package dot json
 
 Every npm module has a file called `package.json` inside. It's a simple JSON document that's got [a lot of options](https://docs.npmjs.com/files/package.json). We won't explore all of them, but if you need help, check out [Nodejitsu's interactive guide](http://browsenpm.org/package.json).
 
@@ -52,7 +52,7 @@ So there are four keys:
 
 That's a really basic `package.json`. Let's write the code.
 
-## The code
+### The code
 
 The first version of our code is just 5 lines.
 
@@ -67,7 +67,7 @@ Drop this into `index.js`, like we specified in `package.json`.
 
 An aside: there's nothing too special about `index.js` -- you could've called it `squigglebutt.js`, and as long as you changed it in `package.json`, you're good. (`index.js` is a _tiny bit_ special, though -- if you `require('/some/folder/')`, it'll be as if you did `require('/some/folder/index.js')`.)
 
-## Associate an npm account
+### Associate an npm account
 
 If you've already done these two steps, you don't need to do them again:
 
@@ -76,7 +76,7 @@ If you've already done these two steps, you don't need to do them again:
 
 Feel the thrill.
 
-## Publish it!
+### Publish it!
 
 We're ready to publish a first version! My body quivers with excitement.
 
@@ -88,15 +88,15 @@ And you've made a first version! Try making a new project and using it with `req
 
 It's not finished, though. Read on to make a more "mature" npm package.
 
-# The little things in life
+## The little things in life
 
 There are a lot of little things we can do right now to make our project _really special_.
 
-## Add a readme
+### Add a readme
 
 npm will give you (and anyone who installs your package) a warning if you don't have a file in your root directory called `README.md`. It's a [Markdown](http://daringfireball.net/projects/markdown/)-formatted readme. Go ahead and make one to describe your package!
 
-## Add a license
+### Add a license
 
 You'll want to license your code so that people can legally use it (unless your intended users are _the hardest of criminals_). If you need help choosing a license, I'd recommend GitHub's [ChooseALicense dot com](http://choosealicense.com/) (although I should add the disclaimer that I'm not a lawyer and nothing I say is legal advice).
 
@@ -111,7 +111,7 @@ Two things you'll want to do:
         "license": "WTFPL"
         // ...
 
-## Put this sucker on GitHub
+### Put this sucker on GitHub
 
 Nearly every respectable npm package I've seen is on GitHub somewhere. You can publish your package as an open source project so that everyone can see how weird your coding style is (we'll get to that in a minute).
 
@@ -134,7 +134,7 @@ I'm going to assume you know how to make a GitHub repository and push code to it
 
   You can also add more information like an email address if you want.
 
-## Making it work in browsers
+### Making it work in browsers
 
 Someone could come across your package outside of the Node world -- maybe they're in a browser. To let them, wrap your `module.exports` line in an `if` statement that will only use `module.exports` if it can.
 
@@ -144,7 +144,7 @@ Someone could come across your package outside of the Node world -- maybe they'r
 
 Now, without any extra work (like having to use [Browserify](http://browserify.org/)), someone can drop `startinterval.js` on their website. If you're in a browser environment, `startInterval` will be in the global namespace. But if you're in Node, it'll export the function.
 
-# Testing with Mocha and Chai and Sinon
+## Testing with Mocha and Chai and Sinon
 
 I'm not going to preach the benefits of testing your code. There are already enough assholes in the world making you feel bad. But let's test it.
 
@@ -152,7 +152,7 @@ Just like a lot of things in JavaScript, there are a million different libraries
 
 Today, we're going to use three testing libraries: [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/), and [Sinon](http://sinonjs.org/).
 
-## What are these things?
+### What are these things?
 
 If you don't know much about testing, let me steal a line from [another guide of mine](/how-do-i-jasmine/):
 
@@ -164,7 +164,7 @@ _Chai_ is an assertion library. While Mocha lays out the test, Chai (almost lite
 
 _Sinon_ does "spies". This basically lets us define functions that know how many times they've been called (which, for this library, is very useful). It also lets us make fake clocks and _fast-forward time_. We'll get to that in a bit.
 
-## Getting set up
+### Getting set up
 
 The first thing to do is to install Mocha, Chai, and Sinon.
 
@@ -210,7 +210,7 @@ When you go into your project's root directory and type `npm test`, you should s
 
 I won't show it here, but I'd recommend making a _failing_ test (`expect(1).to.equal(2)` or something) to see what that looks like.
 
-## Writing the real tests
+### Writing the real tests
 
 Our project doesn't need to test whether numbers are equal to each other. That's silliness. What we _do_ need to test is our function, `startInterval`! It's been awhile since we talked about that.
 
@@ -262,7 +262,7 @@ Let's write a first _real_ test!
 
 Try running `npm test` to see that things work!
 
-## Cleaning up the tests
+### Cleaning up the tests
 
 This is a pretty simple function with only two tests, but you can see that we have repeated code. `fn` is identical each time, and we're calling `clearInterval` at the end of every test. Let's use Mocha's `beforeEach` and `afterEach` features to clean that up. Here's what the code looks like now:
 
@@ -304,7 +304,7 @@ This is a pretty simple function with only two tests, but you can see that we ha
 
 It's much shorter and clearer now! Well done.
 
-# Continuous integration (CI) with Travis
+## Continuous integration (CI) with Travis
 
 There are a lot of people named Travis, but the one we care about today is named [Travis CI](https://travis-ci.org/). Travis lets you run your tests on every push and every pull request, so you'll quickly know whether your tests are failing. Turns out that this isn't too hard to set up!
 
@@ -322,13 +322,13 @@ There are a lot of people named Travis, but the one we care about today is named
 
 It'll take a few minutes, but if everything goes well, you'll get an email from Travis saying that your build passed! You can then see the output of everything on the homepage. CI is set up!
 
-## Adding the status to your readme
+### Adding the status to your readme
 
 On the Travis page for your package, there's an image at the top right that says "build passing". It's _very fashionable_ and very easy to put that image in your readme, so let's do that. Click on the image to see a popup with a bunch of inputs. You'll want to copy the Markdown text and paste it into `README.md`. (You might want to edit this live on GitHub so you can preview it.)
 
 Now the build status is in your README!
 
-# All done!
+## All done!
 
 We've seen that a even simple function can become a big npm package pretty quickly! Let's do a final update of your package and push it to npm. If you're all ready to "lock in" the API for version 1, update the version in `package.json`:
 

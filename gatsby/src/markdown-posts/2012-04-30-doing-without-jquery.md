@@ -11,7 +11,7 @@ I don't have to tell you that jQuery is fantastic and saves tons of time.
 
 In some cases, you only need a small subset of its features and don't need to load the whole thing. Below is a quick reference for how to do things without jQuery -- sometimes in vanilla JavaScript, sometimes with smaller libraries. This reference is not comprehensive; I omit things because (1) I feel they should be left to jQuery (2) I am lazy.
 
-# In general
+## In general
 
 - [Zepto][2] is a much smaller version of jQuery that is almost indistinguishable, but it drops support for older browsers and IE.
 
@@ -21,7 +21,7 @@ In some cases, you only need a small subset of its features and don't need to lo
 
 - This guide is also [available as plain text][3] (because that's how I keep it!).
 
-# Selectors
+## Selectors
 
 Selecting by ID:
 
@@ -56,7 +56,7 @@ Selecting "special" elements:
 
 There are a number of libraries that have jQuery's selector functionality; my favorite is the tiny [Qwery][5].
 
-# Attributes
+## Attributes
 
 Getting/setting HTML:
 
@@ -82,7 +82,7 @@ Getting an input's value:
     $('#foo').val()
     document.getElementById('foo').value
 
-# Effects
+## Effects
 
 Showing and hiding:
 
@@ -99,9 +99,9 @@ Changing CSS:
 
 For animation, use the [Morpheus library][6].
 
-# Events
+## Events
 
-## Document ready
+### Document ready
 
 If you're like me, the most common event you use is jQuery's `$(document).ready` (or some version of it). Two ways to do this.
 
@@ -119,20 +119,20 @@ Second, use [domReady][7], a tiny library that's used like this:
         // DOM is ready!
     });
 
-## Clicks
+### Clicks
 
     $('#foo').click(function() { ... })
     document.getElementById('foo').onclick = function() { ... }
 
-## All other events
+### All other events
 
 If you don't want to use jQuery, use [Bean][8]. It's good stuff.
 
-# AJAX
+## AJAX
 
 If you don't want to use jQuery, use the [Reqwest library][9].
 
-# Utilities
+## Utilities
 
 Parsing JSON:
 
@@ -141,7 +141,7 @@ Parsing JSON:
     // The JSON object isn't in older browsers, so you can include it if it's not there.
     // http://github.com/douglascrockford/JSON-js/blob/master/json2.js
 
-# Conclusion
+## Conclusion
 
 If this shows you anything, it's that jQuery saves you from a fair bit of headache. If you've thought about it and you still want to avoid jQuery, I hope this reference can help you!
 

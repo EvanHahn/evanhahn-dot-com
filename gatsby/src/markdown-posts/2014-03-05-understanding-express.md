@@ -18,7 +18,7 @@ But [all magic comes at a price](https://shapeshed.com/all-magic-comes-with-a-pr
 
 So let's understand Express from the bottom, with Node.
 
-# Bottom layer: Node's HTTP server
+## Bottom layer: Node's HTTP server
 
 Node has an [HTTP module](http://nodejs.org/api/http.html) which makes a pretty simple abstraction for making a webserver. Here's what that might look like:
 
@@ -49,7 +49,7 @@ The last thing we do is tell the server to listen for requests coming in on port
 
 Okay, back to the request handler function. That thing is _important_.
 
-## The request handler
+### The request handler
 
 Before I start this section, I should say that there's a bunch of cool HTTP stuff in here that I don't think is relevant to learning Express. If you're interested, you can look at the [docs for the HTTP module](https://nodejs.org/api/http.html) because they have a bunch of stuff.
 
@@ -79,7 +79,7 @@ Before you send it out, you'll want to write some headers. In our example, we do
 
 This does two things. First, it sends [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) 200, which means "OK, everything is good". Then, it sets some response headers. In this case, it's saying that we're sending back the plaintext content-type. We could send other things like JSON or HTML.
 
-## I thirst for more
+### I thirst for more
 
 You want more? Okay. You asked nicely.
 
@@ -111,11 +111,11 @@ This works for a small number of pages, but it breaks down as your app gets even
 
 If you wanted to tidy this up, you might build a framework for dealing with this...a framework like Express.
 
-# Middleware, the middle layer
+## Middleware, the middle layer
 
 The middle layer of this JavaScript cake is conveniently called "middleware". Don't go searching "what is middleware" just yet—I'm about to explain it.
 
-## A little bit of Express code
+### A little bit of Express code
 
 Let's say we wanted to write the "hello world" app that we had above, but with Express this time. Don't forget to install Express (`npm install express`). Once you've done that, the app is pretty similar.
 
@@ -149,7 +149,7 @@ Then we create the server and start listening. `http.createServer` took a functi
 
 Okay, now I'm going to explain middleware.
 
-## What is middleware?
+### What is middleware?
 
 I want to start by saying that [Stephen Sugden's description of Connect middleware](https://stephensugden.com/middleware_guide/) is really good and does a better job than I can. (Don't worry that it's for something called "Connect"—replace "Connect" with "Express" and you're good!) If you don't like my explanation, read his.
 
@@ -207,7 +207,7 @@ While you can totally write your own, there's a _ton_ of middleware out there. L
 
 Visit `localhost:1337` and you'll see some logging! Thanks, Morgan.
 
-## I thirst for more
+### I thirst for more
 
 One could imagine stringing together some middleware to build an app. Maybe you'd do it like this:
 
@@ -255,7 +255,7 @@ One could imagine stringing together some middleware to build an app. Maybe you'
 
 The Express folks are smart. They know that this ugliness won't do. They're smart people.
 
-# Top layer: routing
+## Top layer: routing
 
 We've finally arrived at the third act of our nerdy quest. We're at the peak of our abstraction mountain. There is a beautiful sunset. Your beautiful hair waves in the cool breeze.
 
@@ -310,11 +310,11 @@ Restart your server and visit `localhost:1337/hello/animelover69` for the follow
 
 But it gets cooler.
 
-# Cool Express features
+## Cool Express features
 
 Routing would be enough, but Express is absolutely ruthless.
 
-## Request handling
+### Request handling
 
 Express augments the request and response objects that you're passed in every request handler. The old stuff is still there, but they add some new stuff too! [The API docs](https://expressjs.com/en/api.html) explain everything, but let's look at a couple of examples.
 
@@ -331,7 +331,7 @@ The request gets a number of cool properties, like `request.ip` to get the IP ad
 
 Conceptually, there's not much to know, other than the fact that Express extends the request and response. For everything Express gives you, check out [the API docs](https://expressjs.com/en/api.html).
 
-## Views
+### Views
 
 _More_ features?
 
@@ -373,7 +373,7 @@ The last step (I suppose it could be the first step) is to install Pug, because 
 
 If you get all of this set up, you'll see [this page](https://evanhahn.com/wp-content/uploads/2013/05/anime.html). [Here's all the source code.](https://gist.github.com/EvanHahn/5673968)
 
-# Actually building something
+## Actually building something
 
 Most of the stuff in this post is conceptual, but let me push you in the right direction for building something you want to build. I don't want to delve into specifics.
 
@@ -389,7 +389,7 @@ It'll generate a bunch of files and then tell you to go into that directory and 
 
 Also helpful are the [many official examples on GitHub](https://github.com/expressjs/express/tree/master/examples).
 
-# I thirst for more
+## I thirst for more
 
 Is there no satisfying you? You _glutton_. You make me _sick_.
 

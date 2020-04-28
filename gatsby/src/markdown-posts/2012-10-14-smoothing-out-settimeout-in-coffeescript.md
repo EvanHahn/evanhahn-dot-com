@@ -16,7 +16,7 @@ CoffeeScript's syntax is mostly cleaner than JavaScript's, but it's a tad uglier
 
 In this post, I'll quickly explore a few solutions. Note that these problems and solutions also happen with similar functions, like `setInterval`.
 
-# Solution 1: make them one-liners
+## Solution 1: make them one-liners
 
 This doesn't work in all cases, but if your callback is a one-liner, the code isn't so bad:
 
@@ -24,7 +24,7 @@ This doesn't work in all cases, but if your callback is a one-liner, the code is
 
 Of course, this only happens if your callback is one line. And it's not _that_ pretty.
 
-# Solution 2: define callback variables
+## Solution 2: define callback variables
 
 You can also define a callback variable, like so:
 
@@ -33,7 +33,7 @@ You can also define a callback variable, like so:
       # are less ugly now!
     setTimeout(callback, 5000)
 
-# Solution 3: make a new function
+## Solution 3: make a new function
 
 One could simply define a function that does the same thing but switches the arguments.
 
@@ -50,7 +50,7 @@ Some libraries (such as [Underscore](http://underscorejs.org/#delay) and [Sugar]
 
 As always, when passing arguments to the callback, you need [a shim](https://developer.mozilla.org/en-US/docs/DOM/window.setTimeout#Callback_arguments) if you want things to work in pesky Internet Explorer.
 
-# Solution 4: mess with the existing setTimeout function
+## Solution 4: mess with the existing setTimeout function
 
 This one is a little weird and I kind of don't recommend it...but here it is anyway.
 
@@ -74,6 +74,6 @@ This can then be called however you like:
 
 I don't love this solution because it'll confuse people who aren't familiar with your redefinition, which will likely create more problems than it'll solve. It's also worse than defining `delay` in terms of both memory and speed.
 
-# My recommendation
+## My recommendation
 
 I'd recommend that you make your own function and call it something like `delay`.

@@ -13,14 +13,14 @@ Some highlights:
 
 The rest of this page is a list that attempts to cover everything I've done. It's pretty boring but aims to be exhaustive.
 
-## Various words
+### Various words
 
 I've written many [guides, tutorials, and how-tos](/guides). Two of those got turned into books:
 
 - [_Express.js In Action_](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a Manning book
 - [_JavaScript Testing with Jasmine_](https://shop.oreilly.com/product/0636920028277.do), an O'Reilly book
 
-## Jobs
+### Jobs
 
 I'm currently volunteering for a few organizations helping to mitigate climate change. It's early days so I don't have much more to share yet!
 
@@ -42,7 +42,7 @@ Before graduating college, I had a few other part-time jobs, mostly internships:
 
 - [Rockmelt](https://en.wikipedia.org/wiki/Rockmelt) was [acquired by Yahoo](https://yahoo.tumblr.com/post/57166940839/) awhile after I left. While I was there, they built a social browser; a fork of Google Chrome that baked things like Facebook and Twitter right into the browser. I worked on some internal help pages. Designers gave me PNGs and I gave them their "Quick Guide"! I also did some other pages for them (such as their What's New page or some fixes on their homepage) and a lot of internal JavaScript unit tests.
 
-## Open source stuff
+### Open source stuff
 
 I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
 
@@ -148,7 +148,7 @@ I've published a number of modules and packages and libraries and tools and what
 - [Zap](https://js1k.com/2018-coins/demo/3159) was my entry to JS1k 2018. It was an [honorable mention](https://twitter.com/js1k/status/976200980114083840)—[read my post about it](/my-entry-to-js1k-2018-zap/)
 - [ZoomContext](https://github.com/EvanHahn/ZoomContext) lets you pan and zoom around an HTML5 canvas
 
-## Significant open source contributions
+### Significant open source contributions
 
 I've made a bunch of small pull requests to various open source projects. Most of them are tiny, but here are some slightly more notable ones:
 
@@ -174,7 +174,7 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - [Bugfix: clear favicon when the favicon is removed](https://github.com/eoger/tabcenter-redux/pull/252)
   - [Use === instead of == across the codebase](https://github.com/eoger/tabcenter-redux/pull/259)
 
-## Code stuff that isn't open source
+### Code stuff that isn't open source
 
 There's some code stuff that isn't open source for whatever reason. Those things include:
 
@@ -184,7 +184,7 @@ There's some code stuff that isn't open source for whatever reason. Those things
 - [My StackOverflow profile](https://stackoverflow.com/users/804100/evan-hahn)
 - [Reddit's /r/dailyprogrammer challenge solutions](/random/rdailyprogrammer-solutions)
 
-## Non-code stuff
+### Non-code stuff
 
 Pretty much all of the above is code-related, but I've done a few other things here and there when I can tear myself away. They are, in no order:
 

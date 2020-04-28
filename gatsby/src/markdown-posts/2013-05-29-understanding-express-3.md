@@ -19,7 +19,7 @@ But [all magic comes at a price](http://shapeshed.com/all-magic-comes-with-a-pri
 
 So let's understand Express from the bottom, with Node.
 
-# Bottom layer: Node's HTTP server
+## Bottom layer: Node's HTTP server
 
 Node has an [HTTP module](http://nodejs.org/api/http.html) which makes a pretty simple abstraction for making a webserver. Here's what that might look like:
 
@@ -50,7 +50,7 @@ The last thing we do is tell the server to listen for requests coming in on port
 
 Okay, back to the request handler function. That thing is _important_.
 
-## The request handler
+### The request handler
 
 Before I start this section, I should say that there's a bunch of cool HTTP stuff in here that I don't think is relevant to learning Express. If you're interested, you can look at the [docs for the HTTP module](http://nodejs.org/api/http.html) because they have a bunch of stuff.
 
@@ -82,7 +82,7 @@ Before you send it out, you'll want to write some headers. In our example, we do
 
 This does two things. First, it sends [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) 200, which means "OK, everything is good". Then, it sets some response headers. In this case, it's saying that we're sending back the plaintext content-type. We could send other things like JSON or HTML.
 
-## I thirst for more
+### I thirst for more
 
 You want more? Okay. You asked nicely.
 
@@ -114,11 +114,11 @@ One could imagine taking these APIs and turning them into something cool. You co
 
 You could clean this up and make it pretty, or you could be hardcore [like the npm.org folks](https://github.com/isaacs/npm-www#design-philosophy) and tough it out with vanilla Node. But you could also build a framework. That's what Sencha did. And they called it Connect.
 
-# Middle layer: Connect
+## Middle layer: Connect
 
 Fitting that [Connect](http://www.senchalabs.org/connect/) happens to be the middle layer of this JavaScript cake, because it calls itself "a middleware framework for node". Don't go searching "what is middleware" just yet -- I'm about to explain it.
 
-## A little bit of Connect code
+### A little bit of Connect code
 
 Let's say we wanted to write the "hello world" app that we had above, but with Connect this time. Don't forget to install Connect (`npm install`, baby). Once you've done that, the app is pretty similar.
 
@@ -152,7 +152,7 @@ Then we create the server and start listening. `http.createServer` took a functi
 
 Okay, now I'm going to explain middleware.
 
-## What is middleware?
+### What is middleware?
 
 I want to start by saying that [Stephen Sugden's description of Connect middleware](http://stephensugden.com/middleware_guide/) is really good and does a better job than I can. If you don't like my explanation, read his.
 
@@ -208,7 +208,7 @@ While you can totally write your own, Connect comes with a bunch of cool middlew
 
 Visit `localhost:1337` and you'll see some logging!
 
-## I thirst for more
+### I thirst for more
 
 One could imagine stringing together some middleware to build an app. Maybe you'd do it like this:
 
@@ -252,7 +252,7 @@ One could imagine stringing together some middleware to build an app. Maybe you'
 
 Some people saw Connect and they said, "this code can be even easier". And so they built Expresss. (Actually, it seems like they saw [Sinatra](http://www.sinatrarb.com/) and stole it.)
 
-# Top layer: Express
+## Top layer: Express
 
 We've finally arrived at the third act of our nerdy quest. We're at the peak of our abstraction mountain. There is a beautiful sunset. Your long, golden locks wave in the cool breeze.
 
@@ -268,7 +268,7 @@ And so does the end:
 
 But the middle is what's different. Where Connect gives you one cool feature (middleware), I think that Express gives you three cool features: routing, better request handlers, and views. Let's start with routing.
 
-## Cool feature 1: routing
+### Cool feature 1: routing
 
 Routing is a way to map different requests to specific handlers. In many of the above examples, we had a homepage and an about page and a 404 page. We'd basically do this with a bunch of `if` statements in the examples.
 
@@ -322,7 +322,7 @@ Restart your server and visit `localhost:1337/hello/animelover69` for the follow
 
 But it gets cooler.
 
-## Cool feature 2: request handling
+### Cool feature 2: request handling
 
 Routing would be enough, but Express is absolutely ruthless.
 
@@ -342,7 +342,7 @@ The request gets a number of cool properties, like `request.ip` to get the IP ad
 
 Conceptually, there's not much to know, other than the fact that Express extends the request and response. For everything Express gives you, check out [the API docs](http://expressjs.com/3x/api.html).
 
-## Cool feature 3: views
+### Cool feature 3: views
 
 _More_ features? _Oh, Express, I'm blushing._
 
@@ -384,7 +384,7 @@ The last step (I suppose it could be the first step) is to install Pug, because 
 
 If you get all of this set up, you'll see [this page](http://evanhahn.com/wp-content/uploads/2013/05/anime.html). [Here's all the source code.](https://gist.github.com/EvanHahn/5673968)
 
-## Bonus cool feature: everything from Connect and Node
+### Bonus cool feature: everything from Connect and Node
 
 I want to remind you that Express is built on top of Connect which is built on top of Node. This means that all Connect middleware works with Express. This is useful! For example:
 
@@ -401,7 +401,7 @@ I want to remind you that Express is built on top of Connect which is built on t
 
 If you learn one thing from this post, it should be this. If your brain has room for another fun fact: hippo milk is pink!
 
-# Actually building something
+## Actually building something
 
 Most of the stuff in this post is conceptual, but let me push you in the right direction for building something you want to build. I don't want to delve into specifics.
 
@@ -418,13 +418,13 @@ It'll generate a bunch of files and then tell you to go into that directory and 
 
 Also helpful are the [many official examples on GitHub](https://github.com/strongloop/express/tree/master/examples).
 
-## Some concluding miscellany
+### Some concluding miscellany
 
 - If you like CoffeeScript, you should know that all of this stuff works with CoffeeScript. You don't even need to compile it! Instead of starting your server with `node app.js`, start it with `coffee app.coffee`. This is what I do in my apps. _Me_. I'm a big deal. I've got a _blog_.
 - I was confused when I saw `app.use(app.router)` -- doesn't Express _always_ use a router? The short answer is that `app.router` is Express's routing middleware, and it's implicitly included when you define a route. You can _explicitly_ include it because you want the router middleware to come before other stuff, which is sometimes desirable. [This StackOverflow answer explains it well.](http://stackoverflow.com/a/12695813/804100)
 - This guide was written for Express 3, and version 4 has a lot of changes (most notably, Connect is removed!). As I mentioned earlier, go check out my [my updated tutorial](/understanding-express/) if you'd like to learn about Express 4.
 
-# I thirst for more
+## I thirst for more
 
 Is there no satisfying you? You _glutton_. You make me _sick_. Soon you're gonna be sitting in an opium den, eyes half-open, drooling out the last drop of your programming talent.
 

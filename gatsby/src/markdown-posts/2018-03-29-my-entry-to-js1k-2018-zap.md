@@ -12,7 +12,7 @@ My final submission to 2018's JS1k contest was my third idea. I originally made 
 
 I settled on an interactive page where you could control lightning bolts by moving the mouse. [Check it out here!](https://js1k.com/2018-coins/demo/3159)
 
-# The "game loop"
+## The "game loop"
 
 I start a lot of my [code doodles](https://evanhahn.github.io/code-doodles/) with a skeleton that looks something like this:
 
@@ -69,11 +69,11 @@ Now everything will slow way down! To double the speed, you could set `timeSpeed
 
 I used this design in my JS1k demo. The user can press Up or Down on the arrow keys and the equivalent of the `timeSpeed` variable (called `x` in my example to save bytes) will be moved up or down to change the whole visualization.
 
-# Staying under the limit
+## Staying under the limit
 
 This is JS1k, so everything has to be hyper-compressed. I accomplished this in two ways: with tooling and some coding tricks.
 
-## Tooling
+### Tooling
 
 The bulk of the work was done with two tools: [babel-minify](https://github.com/babel/minify) and [RegPack](https://github.com/Siorki/RegPack).
 
@@ -83,7 +83,7 @@ RegPack is a crazier tool. It compresses your code as a string, includes decompr
 
 I wrote [a file](https://gitlab.com/EvanHahn/js1k-2018/blob/594c807f75a9a9e7a3755c6935569d7de2ee8985/src/minify.js) which takes in the raw source and spits out minified output using the above tools.
 
-## Code tricks
+### Code tricks
 
 I typically use [JavaScript Standard Style](https://standardjs.com/) and this submission was no different. I only disabled one of its rules! But there were plenty of cut corners all the same.
 
@@ -100,10 +100,10 @@ Here's a grab bag of other tricks I employed:
 
 There are several spots where I could've done more to compress the code, but I was 13 bytes under the limit and didn't feel the need. For example, my code still has `===` instead of `==`, which is a waste of bytes.
 
-# Making it fun
+## Making it fun
 
 My brother isn't a developer but he sat with me while I worked on this. We iterated on the "doodle" for a couple of hours before we eventually got to the lightning bolts in the final scene. Initially, we had colorful triangles flying around on the screen. Sometimes it hurt our eyes. We experimented with changing the colors as a function of time (cycling slowly through the rainbow) and many other tricks. Eventually we noticed that we were building something that looked like lightning bolts, and we were off to the races.
 
-# ❤︎ JS1k
+## ❤︎ JS1k
 
 Thanks to everyone who runs JS1k—the judges, Peter van der Zee, and the sponsors. I've enjoyed entering in past years and this one was no exception!

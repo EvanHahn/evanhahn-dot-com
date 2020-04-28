@@ -9,7 +9,7 @@ _In short: stick to the JavaScript convention of prefixing private members with 
 
 CoffeeScript can implement private functions, but not other variables. It's a big can of worms and is only elegant in very simple cases. I'll warn you: this gets hairy, and I'd recommend using the JavaScript convention of prefixing private members with `_` and calling it a day.
 
-# Simple functions
+## Simple functions
 
 In simple cases for functions, it works very well. Take a look at the example below:
 
@@ -24,7 +24,7 @@ In simple cases for functions, it works very well. Take a look at the example be
 
 This works just as expected, but it only works for functions that don't talk to `this`. We'll explore how to get things talking to `this` below.
 
-# This fails with non-functions
+## This fails with non-functions
 
 Unfortunately, we can't have private variables. Take a look at this example:
 
@@ -49,7 +49,7 @@ Technically, this behavior is the same for functions, but functions don't really
 
 Many thanks to [Harry Brundage][2] for pointing this out! I had this wrong.
 
-# Getting functions to work
+## Getting functions to work
 
 It's likely that you'll want to have a private function that talks to a class's instance variables. Unfortunately, this won't work:
 
@@ -86,7 +86,7 @@ Even if we define `conjureSpell` with [CoffeeScript's fat arrow][3], it doesn't 
 
 * The way I'd really recommend is abandoning truly private variables altogether and simply prefixing your private stuff with an underscore. That's a JavaScript convention and there's a reason that it's widely used.
 
-# They're private, not protected
+## They're private, not protected
 
 Private members are just that: private. As such, we can't access private members in child classes:
 
@@ -105,7 +105,7 @@ Private members are just that: private. As such, we can't access private members
 
 As far as I know, you can't make protected members with CoffeeScript classes because JavaScript doesn't really have classical inheritance. If you need them, you'll need to make them public and prefix them with an underscore.
 
-# Some concluding notes
+## Some concluding notes
 
 - It's worth noting that this stuff works in JavaScript too. Perhaps the best way to see how these things work is by running them through CoffeeScript's compiler and looking at the compiled JavaScript to get an idea for how it really works.
 

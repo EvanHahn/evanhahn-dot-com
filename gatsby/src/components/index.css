@@ -217,6 +217,23 @@ small {
   font-weight: 900;
 }
 
+.ContentPageMain h3 {
+  font-weight: 900;
+}
+
+.ContentPageMain h4 {
+  text-decoration: underline;
+}
+
+.ContentPageMain h5 {
+  font-size: 80%;
+}
+
+.ContentPageMain h6 {
+  font-size: 80%;
+  font-style: italic;
+}
+
 .ContentPageMain ul, .ContentPageMain ol {
   padding-left: 1em;
   padding-right: 1em;

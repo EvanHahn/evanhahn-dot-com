@@ -9,7 +9,7 @@ _[Jasmine](https://jasmine.github.io/) is a behavior-driven testing framework fo
 
 _I also wrote a book about this! If you want more detail, take a look at [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do)._
 
-# What is Jasmine?
+## What is Jasmine?
 
 Jasmine is an automated testing framework for JavaScript.
 
@@ -17,15 +17,15 @@ Testing in a nutshell: basically, your program will have a bunch of functions an
 
 Jasmine is a testing framework for JavaScript. Let's learn all of its secrets.
 
-# Get Jasmine
+## Get Jasmine
 
 First thing you need to do is get Jasmine on your computer. Easy peasy. [Grab the latest standalone version](https://github.com/jasmine/jasmine/releases), unzip it, and empty out the `/spec` and `/src` directories. They're examples, you don't need 'em.
 
 Bam. It's Jasmine time.
 
-# Beginner's example: hello world
+## Beginner's example: hello world
 
-## What you want to test
+### What you want to test
 
 Let's say you're making a program that has one function, which says hello to the _entire world_. It would look like this:
 
@@ -33,7 +33,7 @@ Let's say you're making a program that has one function, which says hello to the
       return 'Hello world!';
     }
 
-## The spec
+### The spec
 
 Alright. You're pretty sure this works, but you want to run it by Jasmine to see what she thinks. How do we do that?
 
@@ -57,7 +57,7 @@ In this case, we're testing if `helloWorld()` does indeed equal `'Hello world!'`
 
 Save this file as `HelloWorldSpec.js` in the `/spec` directory.
 
-## The spec runner
+### The spec runner
 
 Okay, that was the hard part. This next bit is easy peasy.
 
@@ -67,7 +67,7 @@ When you open this page, it'll be like, "YOU GOT THIS! _Nice._" Except it's a bi
 
 Go into the `helloWorld()` function and make it say something else (like curse words). When you open the spec runner page, Jasmine will be _furious_. That's what you want; Jasmine should tell you when you've done something you didn't want to.
 
-# More matchers
+## More matchers
 
 In the previous example, I was checking to see if `helloWorld()` was indeed equal to `'Hello world!'`. I used the function `toEqual()`. It was all fine and dandy.
 
@@ -87,7 +87,7 @@ There a [few other built-in matchers](https://github.com/pivotal/jasmine/wiki/Ma
 
 `toBe()` versus `toEqual()`: `toEqual()` checks equivalence. `toBe()`, on the other hand, makes sure that they're the _exact same object_.
 
-# Make me my own matcher
+## Make me my own matcher
 
 So it's nice that Jasmine has all of these built-in matchers, but you're not a slave -- you wanna make your _own_ matchers. Easy peasy.
 
@@ -113,7 +113,7 @@ You can see that I defined a matcher called `toBeDivisibleByTwo`, which just ret
 
 Keep in mind that you often have to say `this.actual` instead of just `this` -- you're usually referring to the content of the object, not the instance of the object.
 
-# Before and after
+## Before and after
 
 We just took a look at `beforeEach()` thing; there's also an `afterEach()`. And these are not that bad.
 
@@ -123,7 +123,7 @@ Similarly, if you want something to run _after_ each spec, Jasmine has got you c
 
 I don't really want to go too into detail with this bit, but if you're looking for more, the <a href="https://github.com/pivotal/jasmine/wiki/Before-and-After">Jasmine documentation</a> has a bunch of examples which are sure to make you have a nerdgasm.
 
-# Spies
+## Spies
 
 Jasmine and James Bond. Time for awesome.
 
@@ -131,7 +131,7 @@ As we've learned, Jasmine will let us test if variables are how we want them. Bu
 
 In Jasmine, a **spy** does pretty much what it says: it lets you spy on pieces of your program (and in general, the pieces that aren't just variable checks). Less exciting than James Bond. Still good.
 
-## Example: spying on an existing function that you don't touch, with `spyOn()`
+### Example: spying on an existing function that you don't touch, with `spyOn()`
 
 So let's say you have a class called a Person. It can say hello in general, and it can also say hello to someone. Here's what that might look like:
 
@@ -181,7 +181,7 @@ If you want to ensure that something _isn't_ called, it's a lot like when you're
 
 There are a number of other spy arguments <a href="https://github.com/pivotal/jasmine/wiki/Spies">in the documentation</a>.
 
-## Example: spying on an existing function that you modify: use of `jasmine.createSpy()`
+### Example: spying on an existing function that you modify: use of `jasmine.createSpy()`
 
 In the previous example, we were spying on a function. We weren't doing anything weird to it; we let it function normally and we were just spying on it.
 
@@ -225,7 +225,7 @@ But there's no pleasing you. You always need more. You can even give your spy fu
 
 That was a lot less interesting than James Bond, but probably more useful to you as a programmer in the end. Still, you should help yourself to a Vodka Martini. Shaken, not stirred. Because you are now a master of the spies.
 
-# Wrangling some asynchronous stuff
+## Wrangling some asynchronous stuff
 
 To quote Jasmine's documentation: "You may be thinking, 'That's all very nice, but what's this about asynchronous tests?'" You probably weren't thinking that, but I'll tell you about Jasmine's support for asynchronicity anyway.
 
@@ -288,6 +288,6 @@ The above code waits for the calculator to return `true` on `calc.answerHasBeenC
 
 _Note: older versions of Jasmine had a third asynchronous helper: `waits()`. It was stupid so it was deprecated and then removed._
 
-# Bam. Jasmine.
+## Bam. Jasmine.
 
 And that's my Jasmine tutorial. If this wasn't enough and you're itching for more Jasmine, take a look at my book [_JavaScript Testing with Jasmine_](http://shop.oreilly.com/product/0636920028277.do) or [explore the Jasmine docs](https://jasmine.github.io/1.3/introduction.html).

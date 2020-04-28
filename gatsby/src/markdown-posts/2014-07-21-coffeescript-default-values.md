@@ -10,7 +10,7 @@ Imagine that this sentence is a beautifully-crafted, flowing intro paragraph. "W
 
 _Before you start, make sure you know about undefined, null, and falsy values in JavaScript. [Check this out](http://www.sitepoint.com/javascript-truthy-falsy/) if you need help._
 
-# As a function parameter
+## As a function parameter
 
 To quote the CoffeeScript documentation, functions can have "default values for arguments, which will be used if the incoming argument is missing (`null` or `undefined`)." Here's how you might use it:
 
@@ -19,7 +19,7 @@ To quote the CoffeeScript documentation, functions can have "default values for 
 
 Now, if the first parameter is `undefined` or `null`, it'll be defined as the string "red". If it's anything else (even falsy values like 0 and the empty string), it won't be set to the default value.
 
-# Using the existential operator
+## Using the existential operator
 
 CoffeeScript's existential operator can be used to set default values.
 
@@ -51,7 +51,7 @@ This makes sense, right? Why set a default value for something that's totally un
 
     someUndefinedVariable = "Flee, puny humans" unless someUndefinedVariable?
 
-# Discarding falsy values, too
+## Discarding falsy values, too
 
 If you want to set defaults for _any_ falsy value (not just `undefined` and `null`), you can use `or=`.
 
@@ -71,7 +71,7 @@ If you want to set defaults for _any_ falsy value (not just `undefined` and `nul
 
 The important takeaway here: `?=` only discards `null` and `undefined`, where `or=` filters any falsy value.
 
-# For undefined only
+## For undefined only
 
 Most of CoffeeScript either tests against falsy values or "is it `null` or `undefined`". You might want to set things _only_ if it's `undefined` and nothing else, not even `null`. Here's how you might do that:
 
@@ -86,7 +86,7 @@ While this isn't as built-into-the-language as some of the features above, the f
 
 CoffeeScript makes sure that this works in older browsers (by compiling `undefined` to `void 0` to reliably produce an undefined value).
 
-# A summary
+## A summary
 
 And now, a summary.
 

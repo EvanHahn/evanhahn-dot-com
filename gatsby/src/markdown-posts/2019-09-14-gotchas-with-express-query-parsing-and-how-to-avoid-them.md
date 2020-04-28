@@ -12,7 +12,7 @@ Everything has its quirks. Even the best of us have our idiosyncrasies and rough
 
 In this post, we'll look at quirks in Express's query parser. We'll also make some recommendations for how to avoid problems. Its behavior isn't _wrong_, but it's not obvious to everyone. It certainly wasn't obvious to me when _I_ first started with Express!
 
-# First, the happy path
+## First, the happy path
 
 Express adds a property to every request, [`query`](https://expressjs.com/en/4x/api.html#req.query). Its value is a plain JavaScript object that represents the query string.
 
@@ -72,7 +72,7 @@ Good! Now we should be able to make requests with and without the parameter.
 
 Unfortunately, we can still crash this code. Let's see how.
 
-# The surprise
+## The surprise
 
 What if we send the `name` parameter not once, but twice?
 
@@ -156,7 +156,7 @@ But if you pass an array, you can trick the validation logic.
 
 Why is all of this happening?
 
-# What's happening here?
+## What's happening here?
 
 This behavior comes from Express's default query parser, which uses [the `qs` module](https://www.npmjs.com/package/qs) under the hood. If you read the documentation for that package, you'll see all of the above behavior reflected, and many more edge cases to think about.
 
@@ -164,13 +164,13 @@ This behavior comes from Express's default query parser, which uses [the `qs` mo
 
 So what do we do about all of these edge cases?
 
-# How to avoid problems
+## How to avoid problems
 
 The core of this issue, as with many programming issues, is that there are a lot of possible code paths, and we have to anticipate them all in order for our code to work correctly. Instead of the value of a query parameter being a string or `undefined`, it could be a lot of different things! You'll have to remember to check all of these, and if you forget, you risk unexpected behavior. Likely an error, but possibly an unintended side-effect.
 
 We have several options to avoid these issues—I'll talk about four.
 
-## Option 1: handle every edge case
+### Option 1: handle every edge case
 
 If you need all the features that Express's default query parser provides, then you'll need to handle strings, and `undefined`, and objects (which could be nested), and arrays (which could contain objects or arrays or strings). That could turn out to be a lot of code, but if you need the power that `qs` provides, you should do this to avoid errors.
 
@@ -190,7 +190,7 @@ Depending on your use case, you'll need to do different validation of the incomi
 
 But what if you don't need all of those bells and whistles?
 
-## Option 2: disable query string parsing completely
+### Option 2: disable query string parsing completely
 
 Express has a few [app-level settings](https://expressjs.com/en/4x/api.html#app.settings.table). We already saw one earlier—`json spaces`. We can use the `query parser` option to configure—you guessed it—Express's query parser.
 
@@ -202,7 +202,7 @@ This will set `req.query` to an empty object (`{}`) every time. If you can get a
 
 But if you're reading this, you probably _do_ need to do some query parsing. So what can you do?
 
-## Option 3: use Node's built-in, simpler query string parser
+### Option 3: use Node's built-in, simpler query string parser
 
 You might have some luck with the simple query parser, which is also configured with the `query parser` option:
 
@@ -222,7 +222,7 @@ This is certainly simpler, but you'll still need to remember to check the type o
 
 Wouldn't it be nice if there were a way to deal with query parameters very explicitly? And wouldn't it be _extra_ nice if this tool was standard JavaScript and built right into Node?
 
-## Option 4: use `URLSearchParams`
+### Option 4: use `URLSearchParams`
 
 `URLSearchParams` is a [standard JavaScript object](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) available in Node and in modern browsers. It has a clear interface for handling query parameters which should help us avoid some of the gotchas. If you need to deal with arrays, you can, but if you just need to deal with one string at a time, you can do that too—it's all made explicit.
 

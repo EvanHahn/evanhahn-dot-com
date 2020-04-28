@@ -12,7 +12,7 @@ The bulk of the module is pretty straightforward: just set nine HTTP headers. So
 
 Expect this to be boring.
 
-# Stats
+## Stats
 
 I certainly _feel_ like the CSP part of Helmet is the biggest. I spend the most time working on it and it's the hardest to wrap my head around. But how much bigger is it?
 
@@ -41,7 +41,7 @@ You can think of it this way:
 - CSP code: 223 lines
 - everything else combined: 226 lines
 
-# Why is it so big?
+## Why is it so big?
 
 In short, the size of the CSP module comes from browser sniffing.
 

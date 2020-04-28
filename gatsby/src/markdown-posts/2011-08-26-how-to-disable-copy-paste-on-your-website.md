@@ -13,7 +13,7 @@ _Update, January 9, 2013: Added a ton of stuff and made many corrections._
 
 _Update, June 22, 2014: Added IE6 toolbar info and some library version changes._
 
-# In short: disabling _all_ copy-paste, for the non-technical
+## In short: disabling _all_ copy-paste, for the non-technical
 
 You can't do it perfectly, but you can stop some people. To do so, add the following somewhere inside your `<head>` tag:
 
@@ -29,13 +29,13 @@ You can't do it perfectly, but you can stop some people. To do so, add the follo
 
 This will keep some people from copy-pasting things off of your site, but it _won't stop everyone_ and might annoy some people!
 
-# In short, for the technical
+## In short, for the technical
 
 My recommended solution: add the class `nonselectable` to anything you want to be nonselectable, and include [this CSS](/wp-content/uploads/2011/08/nonselect.css) and [this JavaScript](/wp-content/uploads/2011/08/nonselect.js) (requires jQuery). If you want a sub-element of a nonselectable element to be selectable, give it the class `selectable`. And use it sparingly!
 
 Let's explore how this solution is achieved.
 
-# CSS for some browsers
+## CSS for some browsers
 
 There's a CSS property called `user-select` that lets you do this with CSS (awesome!). Because it's not fully compatible, it's got a bunch of vendor-prefixed declarations. Adding the following to your CSS will make `.my-element` unselectable:
 
@@ -65,7 +65,7 @@ Worth noting that these don't pass W3C validations. The prefixed declarations ma
 
 Solved so far: Chrome, Firefox, Safari, IE10.
 
-## Mixins!
+### Mixins!
 
 I made `user-select` mixins for SCSS, LESS, and Stylus. Many things already have these mixins without that (to name a few: [Compass](http://compass-style.org/reference/compass/css3/user_interface/#mixin-user-select), [Bourbon](http://bourbon.io/#user-select), [Bootstrap](https://github.com/twbs/bootstrap/blob/master/less/mixins/vendor-prefixes.less), [LESS Elements](https://github.com/dmitryf/elements/blob/master/elements.less#L123), [LESSHat](https://github.com/madebysource/lesshat/blob/master/README.md#user-select), and [Nib](https://github.com/tj/nib/blob/master/lib/nib/vendor.styl#L64), but mine are _ever so slightly_ more thorough than theirs. Ha!
 
@@ -75,7 +75,7 @@ I made `user-select` mixins for SCSS, LESS, and Stylus. Many things already have
 
 They're pretty straightforward mixins. Usage instructions are found inside.
 
-# JavaScript events for IE, Safari, and Chrome
+## JavaScript events for IE, Safari, and Chrome
 
 There are two JavaScript events called `onselectstart` and `ondragstart`, which are apparently compatible with IE4+ and all versions of Safari, and Chrome, from what I can tell.
 
@@ -89,7 +89,7 @@ You can do this without jQuery, too. It's even more of a nightmare, and I wouldn
 
 Solved so far: Chrome, Firefox, Safari, IE10, IE4+ with JavaScript.
 
-# Solving things in Opera and IE 5.5+
+## Solving things in Opera and IE 5.5+
 
 We still haven't solved Opera or JavaScript-free IE 5.5+. Prepare to die.
 
@@ -105,7 +105,7 @@ That's all good and dandy, but it's got one major issue: the property isn't inhe
 
 So, in order to make `unselectable` work, you have to make sure to apply it on _every element_ that you don't want to be selected. This is _incredibly_ tedious, but might be alright if you have a small number of unselectable elements.
 
-## A JavaScript solution to this tedium
+### A JavaScript solution to this tedium
 
 You could use JavaScript to go through each HTML element and apply the `unselectable` property. This is _only_ useful for targeting Opera -- we have a shorter, faster, and more compatible version in the "JavaScript events for IE" section above.
 
@@ -125,7 +125,7 @@ If you don't care about Opera but _do_ care about IE, use the solutions above.
 
 Solved so far: Chrome, Firefox, Safari, IE10, IE4, Opera. The last two either require JavaScript or a headache.
 
-# My proposed solution
+## My proposed solution
 
 And now I shall explain my solution I skimmed over in the "in short" section.
 
@@ -159,7 +159,7 @@ So here it is, my masterpiece:
 
 Finally, _use this stuff sparingly_ and remember that it won't work too often. I mostly use this on logos and buttons, not paragraphs!
 
-# Other notes
+## Other notes
 
 - Nothing stops people from viewing the page's source and lifting your text. There are also a bunch of other ways it could be copied -- web inspectors are in all modern browsers; [OCR](http://en.wikipedia.org/wiki/Optical_character_recognition); working around these admittedly shoddy-at-best hacks.
 
@@ -173,7 +173,7 @@ Finally, _use this stuff sparingly_ and remember that it won't work too often. I
 
         .nonselectable::selection { background: transparent; }
 
-# Phew!
+## Phew!
 
 After a lot of research, I think I've compiled all the ways you could possibly suppress selection and copy-paste. I think it's pretty clear that it's a big mess, and I would recommend doing this as little as possible.
 

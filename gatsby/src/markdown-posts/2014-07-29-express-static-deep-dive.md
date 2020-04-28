@@ -12,7 +12,7 @@ If you're like me, you like Express. And if you're like me, you've used its stat
 
 Get ready, maggots. We're going to go nerd spelunking.
 
-# Explaining the stack
+## Explaining the stack
 
 If you go looking for the word "static" in the Express source, you basically find it in one place: aliasing `express.static` to a module called [_serve-static_](https://github.com/expressjs/serve-static). If you go spelunking in _serve-static_, you'll find that it depends on another module, called [_send_](https://github.com/visionmedia/send).
 
@@ -26,11 +26,11 @@ Worth noting that Express's [`res.sendFile`](http://expressjs.com/4x/api.html#re
 
 With these three parts, you can customize the hell out of your static middleware. Some of the options are dealt with in _serve-static_ while others get passed down into _send_. In any case, there are _way_ more options than I expected.
 
-# Caching options
+## Caching options
 
 The static middleware does [no server-side caching](https://github.com/visionmedia/send#caching) (I thought that it did!), but it does let you do two methods of _client_-side caching: ETag and Max-Age. If you don't know what those are, get ready to learn.
 
-## ETags
+### ETags
 
 [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) is a horrible name and is short for "entity tag", a name that is even worse. It's one way to do caching, and here's how it works:
 
@@ -64,7 +64,7 @@ You might want to disable ETags for a few reasons:
 
 I'd recommend that you leave this alone, because the above reasons aren't compelling (at least to me), but it's your call.
 
-## Max-Age
+### Max-Age
 
 Max-Age is another fun caching mechanism that Express supports, and it's a little different from ETags.
 
@@ -103,7 +103,7 @@ If you're pretty sure resources won't be updated for an amount of time, I'd reco
 
 Personally, I usually omit max-age. Leaving it out is _slightly_ less performant but much less developer headache. Once again: your call!
 
-# The index
+## The index
 
 Ugh, caching is hard. Let's do something easy: serving the index.
 
@@ -139,7 +139,7 @@ In this case, trying to visit the root will give a 404 error.
 
 Not too crazy, and pretty useful!
 
-# Setting custom headers
+## Setting custom headers
 
 The static middleware also supports a `setHeaders` property, which is a function that's called right before HTTP response headers are set. Let's quickly look at a couple of examples of its usage to see how it's used and why we'd want to use it.
 
@@ -167,7 +167,7 @@ You might also want to do this selectively. Let's say we want to send the file a
 
 You might also use this method to log things or set special debug headers, though I think the attachment recipe is the most common.
 
-# Trailing slashes on directories
+## Trailing slashes on directories
 
 Imagine a world where you have your static files in a directory called `static`, and within _that_ directory is another folder called `comedy_pix`. If I visited `/comedy_pix/`, I'm obviously visiting the directory. But what if I'm visiting `/comedy_pix` without the trailing slash?
 
@@ -183,7 +183,7 @@ I think this is a pretty obscure feature. You might want to do this if you have 
 
 It's probably not important, but this only works if you pass in false as `false`; you can't pass `0` or `null` or `new Boolean(false)` or other falsy values. There's no good reason that you should be doing this anyway!
 
-# Exposing hidden dot files
+## Exposing hidden dot files
 
 You probably know about [hidden files](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory): files considered "hidden" don't show up in most listings by default. On OS X and Linux, a file starting with a period is considered hidden, and is sometimes called a "dotfile" because it starts with a dot. On Windows, it's a little different, but the middleware doesn't support this.
 
@@ -207,7 +207,7 @@ You can also choose to send a 403 Forbidden error when trying to access a dotfil
 
 This is sensibly disabled by default, and I can't think of a great reason to change it.
 
-# Some other Fun Facts™
+## Some other Fun Facts™
 
 - _send_ (and therefore everything else) will set a bunch of headers _if they're not already specified_: Accept-Ranges, Date, Cache-Control (for max-age stuff), Last-Modified, and ETag (unless you disable it). If you want to remove those headers, check out [this simple example](https://gist.github.com/EvanHahn/38f08f40a23e0cb9f4b0) which uses the [_on-headers_ module](https://github.com/jshttp/on-headers).
 
@@ -220,7 +220,7 @@ This is sensibly disabled by default, and I can't think of a great reason to cha
 
 - All three parts of this stack expose the [_mime_](https://github.com/broofa/node-mime) module as an alias, so `express.static.mime` will work.
 
-# All done!
+## All done!
 
 I don't know about you, but I didn't expect Express's static middleware to be so complicated! Luckily, I think they've done a good job choosing sensible defaults so that you don't have to worry about this stuff 99% of the time.
 
