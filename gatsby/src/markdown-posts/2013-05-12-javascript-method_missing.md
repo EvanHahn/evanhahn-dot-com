@@ -5,7 +5,7 @@ layout: post
 path: /javascript-method_missing/
 ---
 
-*Note: this post is outdated; try `async` and `await`.*
+_Note: this post is outdated; try `async` and `await`._
 
 [Callback Hell is a real place](http://callbackhell.com/), for better or worse. Asynchronous programming is _sweet_, though; it's not the asynchronicity that bothers me, but the syntax.
 
