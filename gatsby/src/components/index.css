@@ -168,7 +168,7 @@ h1 {
 
 .ContentPageHeader .Logo {
   width: 150px;
-  transition: transform 0.05s ease-in;
+  transition: transform 0.1s ease-out;
 }
 
 .ContentPageHeader .Logo:hover {
