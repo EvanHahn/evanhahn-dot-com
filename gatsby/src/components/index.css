@@ -116,6 +116,10 @@ h1 {
   margin-bottom: 0;
 }
 
+.IconLink {
+  list-style-type: none;
+}
+
 .IconLink a {
   display: flex;
   padding: 0.5rem;
@@ -197,6 +201,14 @@ h1 {
 .ContentPageMain pre {
   line-height: 1.75em;
   margin-bottom: 1rem;
+}
+
+.ContentPageMain .IconLink {
+  list-style-type: none;
+}
+
+.ContentPageMain .IconLink a {
+  padding: 0.5rem 0;
 }
 
 .ContentPageMain h2 {
