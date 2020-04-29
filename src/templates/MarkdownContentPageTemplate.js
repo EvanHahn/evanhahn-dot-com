@@ -3,8 +3,7 @@ import { graphql } from "gatsby";
 import ContentPage from "../components/ContentPage";
 import { getDateFromPath } from "../lib/util";
 
-// TODO: rename this file to match
-export default function ContentPageTemplate({ data }) {
+export default function MarkdownContentPageTemplate({ data }) {
   const { fileAbsolutePath, frontmatter, html } = data.markdownRemark;
 
   return (
