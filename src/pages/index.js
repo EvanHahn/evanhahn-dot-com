@@ -1,17 +1,17 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { IconLinks, IconLink } from "../components/iconlinks";
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
-import GithubIcon from "@material-ui/icons/GitHub";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import KeybaseIcon from "@material-ui/icons/VpnKey";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import MenuBookIcon from "@material-ui/icons/MenuBook";
-import ListIcon from "@material-ui/icons/List";
-import CodeIcon from "@material-ui/icons/Code";
 import SEO from "../components/seo";
 import Logo from "../components/logo";
+import AboutIcon from "../components/AboutIcon";
+import BlogIcon from "../components/BlogIcon";
+import BookIcon from "../components/BookIcon";
+import CodeIcon from "../components/CodeIcon";
+import EmailIcon from "../components/EmailIcon";
+import GithubIcon from "../components/GithubIcon";
+import KeybaseIcon from "../components/KeybaseIcon";
 import MastodonIcon from "../components/MastodonIcon";
+import TwitterIcon from "../components/TwitterIcon";
 import "../components/index.css";
 
 const IndexPage = () => {
@@ -36,22 +36,22 @@ const IndexPage = () => {
       </header>
 
       <IconLinks>
-        <IconLink useGatsbyLink href="/about" icon={<AccountCircleIcon />}>
+        <IconLink useGatsbyLink href="/about" icon={<AboutIcon />}>
           About me
         </IconLink>
         <IconLink useGatsbyLink href="/projects" icon={<CodeIcon />}>
           Projects
         </IconLink>
-        <IconLink useGatsbyLink href="/guides" icon={<MenuBookIcon />}>
+        <IconLink useGatsbyLink href="/guides" icon={<BookIcon />}>
           Guides
         </IconLink>
-        <IconLink useGatsbyLink href="/blog" icon={<ListIcon />}>
+        <IconLink useGatsbyLink href="/blog" icon={<BlogIcon />}>
           Blog
         </IconLink>
       </IconLinks>
 
       <IconLinks>
-        <IconLink href="mailto:me@evanhahn.com" icon={<AlternateEmailIcon />}>
+        <IconLink href="mailto:me@evanhahn.com" icon={<EmailIcon />}>
           Email
         </IconLink>
         <IconLink

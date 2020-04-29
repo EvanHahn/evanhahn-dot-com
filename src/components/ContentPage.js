@@ -3,12 +3,12 @@ import { Link } from "gatsby";
 import SEO from "../components/seo";
 import Logo from "./logo";
 import { IconLinks, IconLink } from "./iconlinks";
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import MenuBookIcon from "@material-ui/icons/MenuBook";
-import ListIcon from "@material-ui/icons/List";
-import CodeIcon from "@material-ui/icons/Code";
 import DateElement from "../components/DateElement";
+import AboutIcon from "../components/AboutIcon";
+import BlogIcon from "../components/BlogIcon";
+import BookIcon from "../components/BookIcon";
+import CodeIcon from "../components/CodeIcon";
+import EmailIcon from "../components/EmailIcon";
 import "../components/index.css";
 
 function ContentPageHeader() {
@@ -19,19 +19,19 @@ function ContentPageHeader() {
       </Link>
 
       <IconLinks>
-        <IconLink useGatsbyLink href="/about" icon={<AccountCircleIcon />}>
+        <IconLink useGatsbyLink href="/about" icon={<AboutIcon />}>
           About
         </IconLink>
-        <IconLink useGatsbyLink href="/contact" icon={<AlternateEmailIcon />}>
+        <IconLink useGatsbyLink href="/contact" icon={<EmailIcon />}>
           Contact
         </IconLink>
         <IconLink useGatsbyLink href="/projects" icon={<CodeIcon />}>
           Projects
         </IconLink>
-        <IconLink useGatsbyLink href="/guides" icon={<MenuBookIcon />}>
+        <IconLink useGatsbyLink href="/guides" icon={<BookIcon />}>
           Guides
         </IconLink>
-        <IconLink useGatsbyLink href="/blog" icon={<ListIcon />}>
+        <IconLink useGatsbyLink href="/blog" icon={<BlogIcon />}>
           Blog
         </IconLink>
       </IconLinks>
@@ -68,7 +68,9 @@ export default function ContentPage({ pageTitle, title, date, children }) {
           Creative Commons Attribution License
         </a>{" "}
         and code under the <a href="https://unlicense.org/">Unlicense</a>. The
-        logo was created by <a href="http://luluspice.com/">Lulu Tang</a>.
+        logo was created by <a href="http://luluspice.com/">Lulu Tang</a>. Icons
+        are{" "}
+        <a href="http://www.entypo.com">Entypo pictograms by Daniel Bruce</a>.
         Please come back soon!
       </footer>
     </div>
