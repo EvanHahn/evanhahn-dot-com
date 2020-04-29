@@ -64,14 +64,38 @@ export default function ContentPage({ pageTitle, title, date, children }) {
 
       <footer className="ContentPageFooter">
         Unless noted otherwise, content is licensed under the{" "}
-        <a href="https://creativecommons.org/licenses/by/4.0/">
+        <a
+          href="https://creativecommons.org/licenses/by/4.0/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           Creative Commons Attribution License
         </a>{" "}
-        and code under the <a href="https://unlicense.org/">Unlicense</a>. The
-        logo was created by <a href="http://luluspice.com/">Lulu Tang</a>. Icons
-        are{" "}
-        <a href="http://www.entypo.com">Entypo pictograms by Daniel Bruce</a>.
-        Please come back soon!
+        and code under the{" "}
+        <a
+          href="https://unlicense.org/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Unlicense
+        </a>
+        . The logo was created by{" "}
+        <a
+          href="http://luluspice.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Lulu Tang
+        </a>
+        . Icons are{" "}
+        <a
+          href="http://www.entypo.com"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Entypo pictograms by Daniel Bruce
+        </a>
+        . Please come back soon!
       </footer>
     </div>
   );
