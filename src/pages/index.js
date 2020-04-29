@@ -36,16 +36,16 @@ const IndexPage = () => {
       </header>
 
       <IconLinks>
-        <IconLink href="/about" icon={<AccountCircleIcon />}>
+        <IconLink useGatsbyLink href="/about" icon={<AccountCircleIcon />}>
           About me
         </IconLink>
-        <IconLink href="/projects" icon={<CodeIcon />}>
+        <IconLink useGatsbyLink href="/projects" icon={<CodeIcon />}>
           Projects
         </IconLink>
-        <IconLink href="/guides" icon={<MenuBookIcon />}>
+        <IconLink useGatsbyLink href="/guides" icon={<MenuBookIcon />}>
           Guides
         </IconLink>
-        <IconLink href="/blog" icon={<ListIcon />}>
+        <IconLink useGatsbyLink href="/blog" icon={<ListIcon />}>
           Blog
         </IconLink>
       </IconLinks>

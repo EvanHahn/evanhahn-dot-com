@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 import Logo from "./logo";
 import { IconLinks, IconLink } from "./iconlinks";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
@@ -12,24 +12,24 @@ export default function ContentPageHeader() {
   // TODO: rename this file to ContentPageHeader
   return (
     <header className="ContentPageHeader">
-      <a href="/">
+      <Link to="/">
         <Logo />
-      </a>
+      </Link>
 
       <IconLinks>
-        <IconLink href="/about" icon={<AccountCircleIcon />}>
+        <IconLink useGatsbyLink href="/about" icon={<AccountCircleIcon />}>
           About
         </IconLink>
-        <IconLink href="/contact" icon={<AlternateEmailIcon />}>
+        <IconLink useGatsbyLink href="/contact" icon={<AlternateEmailIcon />}>
           Contact
         </IconLink>
-        <IconLink href="/projects" icon={<CodeIcon />}>
+        <IconLink useGatsbyLink href="/projects" icon={<CodeIcon />}>
           Projects
         </IconLink>
-        <IconLink href="/guides" icon={<MenuBookIcon />}>
+        <IconLink useGatsbyLink href="/guides" icon={<MenuBookIcon />}>
           Guides
         </IconLink>
-        <IconLink href="/blog" icon={<ListIcon />}>
+        <IconLink useGatsbyLink href="/blog" icon={<ListIcon />}>
           Blog
         </IconLink>
       </IconLinks>
