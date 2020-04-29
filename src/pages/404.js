@@ -6,5 +6,5 @@ export default function NotFoundPage() {
     <ContentPage title="404">
       <p>This page doesn't exist, but you do!</p>
     </ContentPage>
-  )
+  );
 }
