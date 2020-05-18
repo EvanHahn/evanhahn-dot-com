@@ -142,7 +142,7 @@ I've published a number of modules and packages and libraries and tools and what
 - [VimL syntax highlighting for Atom](https://github.com/Alhadis/language-viml)
 - [What if the English language had syntax highlighting?](https://evanhahn.github.io/English-text-highlighting/)
 - [when-file-exists](https://github.com/EvanHahn/node-when-file-exists) calls a callback when a file is created
-- [wren-please](https://github.com/EvanHahn/wren-pelase) is an assertion library for Wren
+- [wren-please](https://github.com/EvanHahn/wren-please) is an assertion library for Wren
 - [wren-vector](https://github.com/EvanHahn/wren-vector3d) is a 3D vector library for Wren
 - [XML to text](https://github.com/EvanHahn/xml-to-text) turns XML to plain text with Python
 - [Zap](https://js1k.com/2018-coins/demo/3159) was my entry to JS1k 2018. It was an [honorable mention](https://twitter.com/js1k/status/976200980114083840)—[read my post about it](/my-entry-to-js1k-2018-zap/)
