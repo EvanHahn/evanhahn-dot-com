@@ -148,7 +148,7 @@ I've published a number of modules and packages and libraries and tools and what
 - [Zap](https://js1k.com/2018-coins/demo/3159) was my entry to JS1k 2018. It was an [honorable mention](https://twitter.com/js1k/status/976200980114083840)—[read my post about it](/my-entry-to-js1k-2018-zap/)
 - [ZoomContext](https://github.com/EvanHahn/ZoomContext) lets you pan and zoom around an HTML5 canvas
 
-## Significant open source contributions
+## Open source contributions
 
 I've made a bunch of small pull requests to various open source projects. Most of them are tiny, but here are some slightly more notable ones:
 
@@ -168,6 +168,7 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - `keygrip` tidying ([#41152](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/41152))
 - [Deno](https://deno.land/)
   - [Update mime-db to 1.38.0](https://github.com/denoland/deno_std/pull/238)
+  - [Add `util.callbackify` to the `node` standard library](https://github.com/denoland/deno/pull/5415)
 - [flow-typed](https://github.com/flow-typed/flow-typed)
   - [express: correct `is` method return type on requests](https://github.com/flow-typed/flow-typed/pull/3464)
 - [KineticJS](https://github.com/ericdrowell/KineticJS)
