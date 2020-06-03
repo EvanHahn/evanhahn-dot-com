@@ -19,6 +19,9 @@ function ContentPageHeader() {
       </Link>
 
       <IconLinks>
+        <IconLink href="https://blacklivesmatters.carrd.co" target="_blank" icon={null}>
+          #BlackLivesMatter
+        </IconLink>
         <IconLink useGatsbyLink href="/about" icon={<AboutIcon />}>
           About
         </IconLink>
