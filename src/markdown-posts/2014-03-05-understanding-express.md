@@ -395,6 +395,6 @@ Also helpful are the [many official examples on GitHub](https://github.com/expre
 
 Is there no satisfying you? You _glutton_. You make me _sick_.
 
-I have to self-promote my book on the topic, [_Express.js In Action_](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action). I hope this tutorial gives you a good understanding of how Express works, but the book goes a lot more in depth and talks about lots of other things, too. Go give it a read if you're interested!
+I have to self-promote my book on the topic, [_Express.js in Action_](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action). I hope this tutorial gives you a good understanding of how Express works, but the book goes a lot more in depth and talks about lots of other things, too. Go give it a read if you're interested!
 
 I won't go into them here, but people have built things on top of Express. [The Express wiki lists them](https://github.com/expressjs/express/wiki#frameworks-built-with-express) and many of them are Pretty Cool. You can use these frameworks if you'd prefer, or you can stick to the lower-level Express. Either way, go build cool stuff!

@@ -17,7 +17,7 @@ The rest of this page is a list that attempts to cover everything I've done. It'
 
 I've written many [guides, tutorials, and how-tos](/guides). Two of those got turned into books:
 
-- [_Express.js In Action_](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a Manning book
+- [_Express.js in Action_](https://www.manning.com/books/express-in-action?a_bid=fe3fcff7&a_aid=express-in-action), a Manning book
 - [_JavaScript Testing with Jasmine_](https://shop.oreilly.com/product/0636920028277.do), an O'Reilly book
 
 ## Jobs
