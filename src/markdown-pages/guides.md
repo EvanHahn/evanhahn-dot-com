@@ -13,8 +13,9 @@ I've written a number of guides and how-tos.
 - [Disable JSHint for a file](/disable-jshint-for-a-file)
 - [Remove one element by index from JavaScript array](/remove-one-element-by-index-from-javascript-array)
 - [Randomly generate either -1 or 1](/randomly-generate-either-1-or-1)
-- [Detect RockMelt browser](/javascript-detect-if-your-browser-is-rockmelt)
+- [Should you use semicolons in JavaScript?](/should-you-use-semicolons-in-javascript)
 - [Newline necessary at the end of JavaScript files?](/newline-necessary-at-the-end-of-javascript-files)
+- [Detect RockMelt browser](/javascript-detect-if-your-browser-is-rockmelt)
 
 ### Express
 
