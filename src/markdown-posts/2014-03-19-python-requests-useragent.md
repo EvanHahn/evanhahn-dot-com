@@ -4,7 +4,7 @@ layout: post
 path: /python-requests-library-useragent
 ---
 
-I'm new to the Python world. I found out about the [Requests](http://docs.python-requests.org/) library, and I like it. What useragent does it provide?
+I'm new to the Python world. I found out about the [Requests](https://requests.readthedocs.io/) library, and I like it. What useragent does it provide?
 
 By default, it looks like this:
 
@@ -20,6 +20,6 @@ And on a Linux box with an older version:
 
 To change the useragent, you can specify it when you make a request:
 
-    requests.get("http://example.com", headers={ "user-agent": "The Coolest Useragent" })
+    requests.get("https://example.com", headers={ "user-agent": "The Coolest Useragent" })
 
 And that's it!

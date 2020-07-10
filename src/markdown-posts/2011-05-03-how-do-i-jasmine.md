@@ -7,7 +7,7 @@ path: /how-do-i-jasmine/
 
 _[Jasmine](https://jasmine.github.io/) is a behavior-driven testing framework for JavaScript. This tutorial is intended for people that are familiar with some more advanced JavaScript features (callbacks, basic object-oriented programming) and want to start testing. This tutorial was last updated for Jasmine version 1.2.0, which means **this tutorial is fairly out of date**._
 
-_I also wrote a book about this! If you want more detail, take a look at [*JavaScript Testing with Jasmine*](http://shop.oreilly.com/product/0636920028277.do)._
+_I also wrote a book about this! If you want more detail, take a look at [*JavaScript Testing with Jasmine*](https://shop.oreilly.com/product/0636920028277.do)._
 
 ## What is Jasmine?
 
@@ -290,4 +290,4 @@ _Note: older versions of Jasmine had a third asynchronous helper: `waits()`. It 
 
 ## Bam. Jasmine.
 
-And that's my Jasmine tutorial. If this wasn't enough and you're itching for more Jasmine, take a look at my book [_JavaScript Testing with Jasmine_](http://shop.oreilly.com/product/0636920028277.do) or [explore the Jasmine docs](https://jasmine.github.io/1.3/introduction.html).
+And that's my Jasmine tutorial. If this wasn't enough and you're itching for more Jasmine, take a look at my book [_JavaScript Testing with Jasmine_](https://shop.oreilly.com/product/0636920028277.do) or [explore the Jasmine docs](https://jasmine.github.io/1.3/introduction.html).

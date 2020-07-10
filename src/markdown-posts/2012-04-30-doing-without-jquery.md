@@ -139,7 +139,7 @@ Parsing JSON:
     jQuery.parseJSON(json)
     JSON.parse(json)
     // The JSON object isn't in older browsers, so you can include it if it's not there.
-    // http://github.com/douglascrockford/JSON-js/blob/master/json2.js
+    // https://github.com/douglascrockford/JSON-js/blob/master/json2.js
 
 ## Conclusion
 
@@ -148,9 +148,9 @@ If this shows you anything, it's that jQuery saves you from a fair bit of headac
 [1]: http://youmightnotneedjquery.com/
 [2]: http://zeptojs.com/
 [3]: https://evanhahn.com/wp-content/uploads/2012/04/doing-without-jquery.txt
-[4]: http://caniuse.com/#feat=getelementsbyclassname
-[5]: http://github.com/ded/qwery
-[6]: http://github.com/ded/morpheus
-[7]: http://github.com/ded/domready
-[8]: http://github.com/fat/bean
-[9]: http://github.com/ded/reqwest
+[4]: https://caniuse.com/#feat=getelementsbyclassname
+[5]: https://github.com/ded/qwery
+[6]: https://github.com/ded/morpheus
+[7]: https://github.com/ded/domready
+[8]: https://github.com/fat/bean
+[9]: https://github.com/ded/reqwest

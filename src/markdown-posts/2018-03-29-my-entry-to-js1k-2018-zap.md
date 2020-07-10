@@ -8,7 +8,7 @@ _In short: check out [my entry to JS1k 2018](https://js1k.com/2018-coins/demo/31
 
 [JS1k](https://js1k.com/) is a contest where developers must build something impressive using only one kilobyte of JavaScript. I like coding with constraints so I always enjoy entering.
 
-My final submission to 2018's JS1k contest was my third idea. I originally made a coin-collecting game (source [here](https://gitlab.com/EvanHahn/js1k-2018/blob/63ef27abb6dd267229676fa411a3ba20f8f4ec67/src/js1k.js)) that was inspired by [Kirby Air Ride](http://kirby.wikia.com/wiki/Kirby_Air_Ride), an old GameCube game I love. I couldn't quite get it to fit in the 1 kilobyte limit, but more importantly, I couldn't make it fun! I also abandoned a simple spreadsheet program (source [here](https://gitlab.com/EvanHahn/js1k-2018/blob/spreadsheet/src/js1k.js))—I found it hard to make an impressive spreadsheet at any file size!
+My final submission to 2018's JS1k contest was my third idea. I originally made a coin-collecting game (source [here](https://gitlab.com/EvanHahn/js1k-2018/blob/63ef27abb6dd267229676fa411a3ba20f8f4ec67/src/js1k.js)) that was inspired by [Kirby Air Ride](https://wikirby.com/wiki/Kirby_Air_Ride), an old GameCube game I love. I couldn't quite get it to fit in the 1 kilobyte limit, but more importantly, I couldn't make it fun! I also abandoned a simple spreadsheet program (source [here](https://gitlab.com/EvanHahn/js1k-2018/blob/spreadsheet/src/js1k.js))—I found it hard to make an impressive spreadsheet at any file size!
 
 I settled on an interactive page where you could control lightning bolts by moving the mouse. [Check it out here!](https://js1k.com/2018-coins/demo/3159)
 

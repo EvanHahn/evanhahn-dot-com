@@ -4,7 +4,7 @@ layout: post
 path: /express-dot-static-deep-dive/
 ---
 
-_This guide assumes you know how to use [Express](http://expressjs.com/) and have used its static middleware. No need to have done anything complex with it, though! If you need help, you can check out [my intro to Express](/understanding-express) or [my book on the topic](https://www.manning.com/books/express-in-action). This guide was last updated for Express 4.6.1._
+_This guide assumes you know how to use [Express](https://expressjs.com/) and have used its static middleware. No need to have done anything complex with it, though! If you need help, you can check out [my intro to Express](/understanding-express) or [my book on the topic](https://www.manning.com/books/express-in-action). This guide was last updated for Express 4.6.1._
 
 **This guide is a little bit outdated; check out [the new docs](https://github.com/expressjs/serve-static).**
 
@@ -22,7 +22,7 @@ At a high level, here's how the three modules are put together:
 2. _serve-static_ wraps _send_ up into generic middleware and adds a couple of options. It's what you think of as `express.static`. It's smaller, at about 150 lines of code, but it still does a fair bit.
 3. `express.static` is just an alias for _serve-static_; there's just one line of code here.
 
-Worth noting that Express's [`res.sendFile`](http://expressjs.com/4x/api.html#res.sendFile) also uses _send_ (and never touches _serve-static_, because that's middleware!).
+Worth noting that Express's [`res.sendFile`](https://expressjs.com/4x/api.html#res.sendFile) also uses _send_ (and never touches _serve-static_, because that's middleware!).
 
 With these three parts, you can customize the hell out of your static middleware. Some of the options are dealt with in _serve-static_ while others get passed down into _send_. In any case, there are _way_ more options than I expected.
 
@@ -74,7 +74,7 @@ Unlike ETags, Max-Age isn't itself an HTTP header. It tags along with a header c
 
     Cache-Control: public, max-age=86400
 
-Cache-Control turns out to be a pretty complicated HTTP header; it's got [a long spec](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9). But Express's static middleware only deals with a small subset of it, like so:
+Cache-Control turns out to be a pretty complicated HTTP header; it's got [a long spec](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9). But Express's static middleware only deals with a small subset of it, like so:
 
     var oneDay = 86400000; // in milliseconds
     app.use(express.static(myStaticPath, {

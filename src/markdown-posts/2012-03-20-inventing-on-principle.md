@@ -19,4 +19,4 @@ The second bit is less technical and more of a "how to live your life." He has a
 
 If you've 50 minutes, I'd recommend watching this talk.
 
-[1]: http://vimeo.com/36579366
+[1]: https://vimeo.com/36579366

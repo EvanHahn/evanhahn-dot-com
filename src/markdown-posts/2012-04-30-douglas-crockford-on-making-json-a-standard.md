@@ -11,4 +11,4 @@ Douglas Crockford, "discoverer" of the JSON standard, in [an interview about JSO
 
 And now it's huge!
 
-[1]: http://youtu.be/kc8BAR7SHJI
+[1]: https://youtu.be/kc8BAR7SHJI

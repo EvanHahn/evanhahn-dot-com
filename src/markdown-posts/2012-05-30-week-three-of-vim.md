@@ -27,7 +27,7 @@ Hopefully, I'll be a full-bearded Vim wizard by the end of this summer! Wish me 
 [4]: http://www.tuxfiles.org/linuxhelp/vimcheat.html
 [5]: http://vim-adventures.com/
 [6]: http://vimcasts.org/episodes/archive
-[7]: http://vim.wikia.com/
+[7]: https://vim.wikia.com/
 [8]: http://blog.sanctum.geek.nz/
 [9]: http://blog.sanctum.geek.nz/vim-anti-patterns/
 [10]: http://vim.wikia.com/wiki/Using_the_mouse_for_Vim_in_an_xterm

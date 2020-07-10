@@ -38,7 +38,7 @@ You can make this file yourself, or let `npm init` do it for you. Personally, I 
     {
       "name": "startinterval",
       "description": "setInterval but also calls the function immediately",
-      "author": "Your Name <yourname@example.com> (http://example.com)",
+      "author": "Your Name <yourname@example.com> (https://example.com)",
       "version": "0.1.0",
       "main": "index.js"
     }
@@ -46,8 +46,8 @@ You can make this file yourself, or let `npm init` do it for you. Personally, I 
 So there are four keys:
 
 - **name** is the name of your package. Pretty straightforward, but it doesn't allow spaces or capitals, otherwise I would've capitalized the I.
-- **author** is you! Mine is `"Evan Hahn <me@evanhahn.com> (http://evanhahn.com)"` but that's probably not yours.
-- **version** is the semantic version. You can [read a lot about semantic versioning](http://semver.org/), but here's a quick rundown: there are three positive integers, `A.B.C`. Increment `C` when you fix bugs. Increment `B` when you add features but don't break old code. Increment `A` when you'll break old code. And when `A` is 0, _there are no rules_. For now, there are no rules.
+- **author** is you! Mine is `"Evan Hahn <me@evanhahn.com> (https://evanhahn.com)"` but that's probably not yours.
+- **version** is the semantic version. You can [read a lot about semantic versioning](https://semver.org/), but here's a quick rundown: there are three positive integers, `A.B.C`. Increment `C` when you fix bugs. Increment `B` when you add features but don't break old code. Increment `A` when you'll break old code. And when `A` is 0, _there are no rules_. For now, there are no rules.
 - **main** is the entry point. When you say `require('startinterval')` from another file, it'll point to `index.js`.
 
 That's a really basic `package.json`. Let's write the code.
@@ -94,7 +94,7 @@ There are a lot of little things we can do right now to make our project _really
 
 ### Add a readme
 
-npm will give you (and anyone who installs your package) a warning if you don't have a file in your root directory called `README.md`. It's a [Markdown](http://daringfireball.net/projects/markdown/)-formatted readme. Go ahead and make one to describe your package!
+npm will give you (and anyone who installs your package) a warning if you don't have a file in your root directory called `README.md`. It's a [Markdown](https://daringfireball.net/projects/markdown/)-formatted readme. Go ahead and make one to describe your package!
 
 ### Add a license
 

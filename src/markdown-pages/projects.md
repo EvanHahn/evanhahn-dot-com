@@ -107,12 +107,12 @@ I've published a number of modules and packages and libraries and tools and what
 - [minidots](https://github.com/EvanHahn/minidots) are a couple of dotfiles I use when SSHing or in VMs
 - [MouseTracker.js](https://github.com/EvanHahn/MouseTracker.js) creates an object called `mouse` and keeps its `x` and `y` properties updated
 - [nimi mute](https://evanhahn.github.io/nimi-mute/) is a dictionary for the [Toki Pona](http://tokipona.org/) mini-language
-- [Origin](http://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](http://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
+- [Origin](https://js13kgames.com/entries/origin) won 7th place in the [2013 js13kgames](https://2013.js13kgames.com). I also [wrote a little blog post](/origin-js13kgames/) about it
 - [Percentage.js](https://github.com/EvanHahn/percentage.js) is a simple function to convert numbers to percentages, like 0.12 to 12%
 - [Persisted JSON objects](https://github.com/EvanHahn/node-persisted-json-object) are plain JavaScript objects that save themselves to the file system after every change
 - [Pie Time](https://js1k.com/2015-hypetrain/demo/2169) was my entry to JS1k 2015. I also wrote [a post about it](/js1k-2015/)
 - [Pinboard to Standard Notes Importer](https://evanhahn.com/tape/pinboard-to-standard-notes/) moves [Pinboard](https://pinboard.in/) bookmarks into [Standard Notes](https://standardnotes.org/). See the [source code](https://github.com/EvanHahn/import-pinboard-to-standard-notes)
-- [Potions](http://js1k.com/2017-magic/demo/2902) was my entry to JS1k 2017
+- [Potions](https://js1k.com/2017-magic/demo/2902) was my entry to JS1k 2017
 - [Pushbullet CLI](https://github.com/r-darwish/pushbullet-cli) is a command-line interface to [Pushbullet](https://www.pushbullet.com/). I'm no longer the maintainer
 - [pwgen](https://evanhahn.github.io/pwgen) is a little webpage for generating passwords
 - [python -m json.tool for JavaScript](https://github.com/EvanHahn/pythonlike-json-tool.js) emulates Python's `json.tool` in pure JavaScript
@@ -124,7 +124,7 @@ I've published a number of modules and packages and libraries and tools and what
 - [scrabbler](https://github.com/EvanHahn/scrabbler) is a small Scrabble cheater written in Python
 - [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
 - [setAttributes](https://github.com/EvanHahn/setAttributes) helps you call `.setAttribute` on a DOM node more easily
-- [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](http://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
+- [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](https://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
 - [startInterval](https://github.com/EvanHahn/startInterval) is like JavaScript's `setInterval` but it starts immediately. It was made for [a guide](/make-an-npm-baby/)
 - [The TypeScript Grunt skeleton](https://github.com/EvanHahn/TypeScript-Grunt-skeleton)
 - [Tic Tac Toe in Lua](https://gist.github.com/1135851)

@@ -5,7 +5,7 @@ layout: post
 path: /experimenting-with-english-highlighting/
 ---
 
-_In short: [visit this page](http://evanhahn.github.io/English-text-highlighting/) to see the experiment._
+_In short: [visit this page](https://evanhahn.github.io/English-text-highlighting/) to see the experiment._
 
 Today, I had an idea. Let me bore you with the details of how this idea came to me:
 
@@ -13,7 +13,7 @@ The presenter of [a talk I was watching](http://programming.oreilly.com/2013/10/
 
 ...wait, what if we had that for English? What if text was easier to read because it was color-coded?
 
-So I [coded this up](http://evanhahn.github.io/English-text-highlighting/). It does _simple_ "syntax highlighting" for the English language, by coloring periods and commas and quotes. It dims some common words.
+So I [coded this up](https://evanhahn.github.io/English-text-highlighting/). It does _simple_ "syntax highlighting" for the English language, by coloring periods and commas and quotes. It dims some common words.
 
 [Take a look at the code](https://github.com/EvanHahn/English-text-highlighting) if you'd like! It's not too pretty, but it's just an experiment. Also I'm super sorry that the code is ugly.
 

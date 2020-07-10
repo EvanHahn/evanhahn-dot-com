@@ -4,7 +4,7 @@ layout: post
 path: /six-other-times-the-us-has-banned-immigrants/
 ---
 
-From [an Al Jazeera article](http://www.aljazeera.com/indepth/features/2017/01/times-banned-immigrants-170128183528941.html):
+From [an Al Jazeera article](https://www.aljazeera.com/indepth/features/2017/01/times-banned-immigrants-170128183528941.html):
 
 > ...this is not the first time that the US has banned immigrants from its shores. Over the past 200 years, successive American presidents have placed restrictions on the immigration of certain groups.
 

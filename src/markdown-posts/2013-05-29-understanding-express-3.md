@@ -5,7 +5,7 @@ layout: post
 path: /understanding-express-3/
 ---
 
-**Express version 4 is out and this tutorial is outdated. Please [read my updated tutorial](http://evanhahn.com/understanding-express/) (or stick around if you're using Express 3)!**
+**Express version 4 is out and this tutorial is outdated. Please [read my updated tutorial](/understanding-express/) (or stick around if you're using Express 3)!**
 
 _This is aimed at people who have some familiarity with Node.js. They know how to run Node scripts and can install packages with npm. You don't have to be an expert, though -- I promise. This guide was last updated for Express 3.4.8 (and Connect 2.9.0). It's an introduction and mostly deals with concepts._
 

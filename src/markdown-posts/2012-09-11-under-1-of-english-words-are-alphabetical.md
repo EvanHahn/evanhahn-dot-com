@@ -23,4 +23,4 @@ After thinking about it at it, 58,000 words isn't _that_ many; I should've reali
 
 _Update: This has now been [posted as a challenge][0] on the dailyprogrammer subreddit. Go there to see other solutions!_
 
-[0]: http://www.reddit.com/r/dailyprogrammer/comments/101m7y/9172012_challenge_99_easy_words_with_letters_in/
+[0]: https://www.reddit.com/r/dailyprogrammer/comments/101m7y/9172012_challenge_99_easy_words_with_letters_in/

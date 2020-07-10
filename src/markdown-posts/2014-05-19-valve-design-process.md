@@ -8,4 +8,4 @@ From [an article about Valve's design process](http://www.gamasutra.com/view/fea
 
 > It became very clear the technology itself was only a small part of the work and integration, training, and follow-through were absolutely necessary to make the technology useful to the game. Writing the code was typically less than half the problem.
 
-An echo of the idea that [technology by itself does not transform anything](http://evanhahn.com/technology-itself-does-not-transform-anything/).
+An echo of the idea that [technology by itself does not transform anything](/technology-itself-does-not-transform-anything/).

@@ -5,7 +5,7 @@ layout: post
 path: /linkedins-app-is-html5/
 ---
 
-From [a VentureBeat article](http://venturebeat.com/2012/05/02/linkedin-ipad-app-engineering/) about LinkedIn's "95 percent" HTML5 app:
+From [a VentureBeat article](https://venturebeat.com/2012/05/02/linkedin-ipad-app-engineering/) about LinkedIn's "95 percent" HTML5 app:
 
 > "We did users studies in-house, and I don't think people noticed a big difference. Nobody said, 'Oh that's native,' or 'Oh, that’s web,'" said Prasad. "As long as we can make the experience fast enough, nobody can tell the difference. It still feels right."
 

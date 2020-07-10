@@ -14,4 +14,4 @@ path: /traditional-for-loops-in-coffeescript/
 
 This just requires that you remember that `for` is just syntactic sugar for `while`.
 
-[1]: http://coffeescript.org
+[1]: https://coffeescript.org

@@ -41,4 +41,4 @@ Enjoy!
 [10]: https://evanhahn.com/wp-content/uploads/2012/04/Classic-Civ-376-exam-2-study-guide.txt
 [11]: https://www.facebook.com/events/295140433893135/
 [12]: https://evanhahn.com/?page_id=742
-[13]: http://creativecommons.org/licenses/by/3.0/
+[13]: https://creativecommons.org/licenses/by/3.0/

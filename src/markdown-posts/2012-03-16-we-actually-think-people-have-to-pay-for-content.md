@@ -13,4 +13,4 @@ I agree with this point, and it seems like the "old-fashioned" model especially 
 
 The interview is also ripe with other great quotes and bits of wisdom. Worth a watch!
 
-[1]: http://techcrunch.com/2012/03/16/getty-images-ceo-how-to-build-a-company-that-lasts-tctv/
+[1]: https://techcrunch.com/2012/03/16/getty-images-ceo-how-to-build-a-company-that-lasts-tctv/

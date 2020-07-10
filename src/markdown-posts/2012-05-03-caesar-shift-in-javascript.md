@@ -9,7 +9,7 @@ _In short: I made a Caesar shift [in JavaScript](https://gist.github.com/2587465
 
 For small occasions (like month-anniversaries), I like to make little websites for people that only "unlock" on the right day.
 
-Foolproof security would unlock the page with the server, but I don't want to go through all the effort. I just want to prevent people from opening up "View Source" and seeing what I've written, so I wrote a [Caesar cipher](http://en.wikipedia.org/wiki/Caesar_cipher) to obfuscate the text a bit, which will then reverse when I want the page to unlock.
+Foolproof security would unlock the page with the server, but I don't want to go through all the effort. I just want to prevent people from opening up "View Source" and seeing what I've written, so I wrote a [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher) to obfuscate the text a bit, which will then reverse when I want the page to unlock.
 
 Go check out my [JavaScript implementation](https://gist.github.com/2587465) and my [CoffeeScript solution](https://gist.github.com/2626784).
 

@@ -5,13 +5,13 @@ layout: post
 path: /origin-js13kgames/
 ---
 
-_In short: [click here](http://js13kgames.com/games/origin/index.html) to play my 7th-place entry to [js13kgames 2013](http://2013.js13kgames.com)._
+_In short: [click here](https://js13kgames.com/games/origin/index.html) to play my 7th-place entry to [js13kgames 2013](https://2013.js13kgames.com)._
 
-I'm no good at it, but I've always enjoyed making video games as hobby. When [js13kgames](http://js13kgames.com/) rolled around, I decided to give it a try. I'd been kicking around a simple game idea in my head, and I figured this was the perfect time to implement it.
+I'm no good at it, but I've always enjoyed making video games as hobby. When [js13kgames](https://js13kgames.com/) rolled around, I decided to give it a try. I'd been kicking around a simple game idea in my head, and I figured this was the perfect time to implement it.
 
-So I built [Origin](http://js13kgames.com/games/origin/index.html). Go give it a play! If you're interested, you can also [take a look at the source code](https://github.com/EvanHahn/js13kgames-2013).
+So I built [Origin](https://js13kgames.com/games/origin/index.html). Go give it a play! If you're interested, you can also [take a look at the source code](https://github.com/EvanHahn/js13kgames-2013).
 
-The game [won 7th place](http://2013.js13kgames.com/#winners)! I was honored and surprised and confused.
+The game [won 7th place](https://2013.js13kgames.com/#winners)! I was honored and surprised and confused.
 
 There are some parts of the game that I thought notable:
 
@@ -23,7 +23,7 @@ Polar coordinates let you build a game that's über-responsive: no matter what s
 
 ## The concatenation server
 
-I wanted to be able to have all my files concatenated and spat out, and I wanted a development version and a production version. So I hacked together [a horrible Express web server](https://github.com/EvanHahn/js13kgames-2013/tree/master/server) that really could've been done much better with something like [Grunt](http://gruntjs.com/). I had a bugger of a time finding something that would properly do the minification, and I finally settled on [html-minify](https://npmjs.org/package/html-minify), which worked quite nicely.
+I wanted to be able to have all my files concatenated and spat out, and I wanted a development version and a production version. So I hacked together [a horrible Express web server](https://github.com/EvanHahn/js13kgames-2013/tree/master/server) that really could've been done much better with something like [Grunt](https://gruntjs.com/). I had a bugger of a time finding something that would properly do the minification, and I finally settled on [html-minify](https://npmjs.org/package/html-minify), which worked quite nicely.
 
 Eventually, I had it set up so that I could say `npm start` and it'd run the server. I could visit localhost:8000 and it'd give me an uncompressed build, and I could visit localhost:8000/prod and it'd give me a compressed build. I kept an eye on the size of the production file, because I only had 13 kilobytes to build the game.
 
@@ -68,4 +68,4 @@ Instead of doing the "right" thing, I gave every in-game object a boolean value 
 
 I had a lovely time working on Origin. It wasn't a big enough commitment that I couldn't work on it, but it wasn't simple enough that I didn't learn anything. Maybe I'll use the nightmarish sound stuff in another project.
 
-I hope you enjoy the game! Go [play the others, too](http://2013.js13kgames.com/#winners) -- they're amazing.
+I hope you enjoy the game! Go [play the others, too](https://2013.js13kgames.com/#winners) -- they're amazing.

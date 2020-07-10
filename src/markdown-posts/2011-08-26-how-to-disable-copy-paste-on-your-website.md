@@ -55,9 +55,9 @@ Here's what I can piece together about the compatibility of this:
 
 - Firefox: Compatible with Firefox 1+, according to [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select).
 
-- Safari: [According to the Safari documentation](http://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-user-select), `-webkit-user-select` is compatible with Safari 3+, and it was called `-khtml-user-drag` in Safari 2.
+- Safari: [According to the Safari documentation](https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-user-select), `-webkit-user-select` is compatible with Safari 3+, and it was called `-khtml-user-drag` in Safari 2.
 
-- IE: It looks like [IE10](http://blogs.msdn.com/b/ie/archive/2012/01/11/controlling-selection-with-css-user-select.aspx) is the first version to support `-ms-user-select`. I tried it in IE9 and it doesn't support it.
+- IE: It looks like [IE10](https://blogs.msdn.com/b/ie/archive/2012/01/11/controlling-selection-with-css-user-select.aspx) is the first version to support `-ms-user-select`. I tried it in IE9 and it doesn't support it.
 
 You might notice that the Mozilla solution is `-moz-none`. It also supports the regular `none`, but [Mozilla's documentation](https://developer.mozilla.org/en-US/docs/CSS/user-select) notes an important distinction: this prevents sub-elements from being able to be selectable. The reason that I put both `none` and `-moz-none` is because some browsers (like Netscape 6) _won't_ pick up the `-moz-none` definition, but they _will_ pick up the `none` declaration. (Look at me, all caring about Netscape 6 users.)
 
@@ -161,7 +161,7 @@ Finally, _use this stuff sparingly_ and remember that it won't work too often. I
 
 ## Other notes
 
-- Nothing stops people from viewing the page's source and lifting your text. There are also a bunch of other ways it could be copied -- web inspectors are in all modern browsers; [OCR](http://en.wikipedia.org/wiki/Optical_character_recognition); working around these admittedly shoddy-at-best hacks.
+- Nothing stops people from viewing the page's source and lifting your text. There are also a bunch of other ways it could be copied -- web inspectors are in all modern browsers; [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition); working around these admittedly shoddy-at-best hacks.
 
 - You might want to change the cursor with CSS (`cursor: default`). Depends on how you want things.
 
@@ -177,4 +177,4 @@ Finally, _use this stuff sparingly_ and remember that it won't work too often. I
 
 After a lot of research, I think I've compiled all the ways you could possibly suppress selection and copy-paste. I think it's pretty clear that it's a big mess, and I would recommend doing this as little as possible.
 
-(PS: If you want to copy-paste things from _my_ website, go right ahead! As long as you give credit under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/), it's all yours. And if it's code, it's free for any use, no credit needed.)
+(PS: If you want to copy-paste things from _my_ website, go right ahead! As long as you give credit under the [Creative Commons Attribution License](https://creativecommons.org/licenses/by/3.0/), it's all yours. And if it's code, it's free for any use, no credit needed.)

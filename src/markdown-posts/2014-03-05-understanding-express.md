@@ -8,7 +8,7 @@ _This is aimed at people who have some familiarity with Node.js. They know how t
 
 _This guide is for Express 4. If you're looking to learn about Express 3.x, take a look at [my guide for the previous version](/understanding-express-3/)._
 
-[Express.js](https://expressjs.com/) describes itself better than I can: "a minimal and flexible node.js web application framework". It helps you build web apps. If you've used [Sinatra](http://www.sinatrarb.com/) or [Flask](http://flask.pocoo.org/) in other languages, a lot of this will be familiar.
+[Express.js](https://expressjs.com/) describes itself better than I can: "a minimal and flexible node.js web application framework". It helps you build web apps. If you've used [Sinatra](http://www.sinatrarb.com/) or [Flask](https://flask.palletsprojects.com/) in other languages, a lot of this will be familiar.
 
 Like any abstraction, Express hides difficult bits and says "don't worry, you don't need to understand this part". It does things for you so that you don't have to bother. In other words, it's magic.
 
@@ -20,7 +20,7 @@ So let's understand Express from the bottom, with Node.
 
 ## Bottom layer: Node's HTTP server
 
-Node has an [HTTP module](http://nodejs.org/api/http.html) which makes a pretty simple abstraction for making a webserver. Here's what that might look like:
+Node has an [HTTP module](https://nodejs.org/api/http.html) which makes a pretty simple abstraction for making a webserver. Here's what that might look like:
 
     // Require what we need
     const http = require('http');

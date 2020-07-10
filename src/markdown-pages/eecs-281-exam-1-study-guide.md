@@ -24,7 +24,7 @@ _This study guide is also available as [Markdown-formatted plain text][1]._
 - Priority queue: a queue that holds a sorting method prioritizing elements based on this method (e.g. larger elements come first)
 - Singly-linked list: each node holds a pointer to the next element
 - Doubly-linked list: each node holds a pointer to the next element AND a pointer to the previous element
-- Heaps: <http://youtu.be/v1YUApMYXO4>; a sorted binary tree, basically. To add elements, put it at the end and move it up the tree until its parent is larger, and then stop. To remove top element, delete it and move the last value inside. Then swap it with its larger child until it's larger than its children.
+- Heaps: <https://youtu.be/v1YUApMYXO4>; a sorted binary tree, basically. To add elements, put it at the end and move it up the tree until its parent is larger, and then stop. To remove top element, delete it and move the last value inside. Then swap it with its larger child until it's larger than its children.
 
 - Iterators are protected ways to access the data inside a container
 
@@ -41,20 +41,20 @@ _This study guide is also available as [Markdown-formatted plain text][1]._
 ## Bubble sort
 
 - Swap adjacent values (when appropriate) until you can't swap no more
-- Explanation video: <http://youtu.be/P00xJgWzz2c>
+- Explanation video: <https://youtu.be/P00xJgWzz2c>
 - worst = average = O(n²)
 - best = O(n)
 
 ## Selection sort
 
 - Swap the biggest and smallest, then do the same for the rest
-- Explanation video: <http://youtu.be/6nDMgr0-Yyo>
+- Explanation video: <https://youtu.be/6nDMgr0-Yyo>
 - worst = average = best = O(n²)
 
 ## Insertion sort
 
 - Build a new array by plucking, one by one, out of the array
-- Explanation video: <http://youtu.be/c4BRHC7kTaQ>
+- Explanation video: <https://youtu.be/c4BRHC7kTaQ>
 - worst = average = O(n²)
 - best = O(n)
 - If already sorted, typically fastest of bubble, selection, or insertion.
@@ -62,15 +62,15 @@ _This study guide is also available as [Markdown-formatted plain text][1]._
 ## Merge sort
 
 - Break it down and then build it back up
-- Explanation video (this blew my mind, by the way): <http://youtu.be/GCae1WNvnZM>
-- Explanation GIF: <http://en.wikipedia.org/wiki/File:Merge-sort-example-300px.gif>
+- Explanation video (this blew my mind, by the way): <https://youtu.be/GCae1WNvnZM>
+- Explanation GIF: <https://en.wikipedia.org/wiki/File:Merge-sort-example-300px.gif>
 - worst = average = best = O(n log n)
 - O(1) memory (but can be O(n log n))
 
 ## Quicksort
 
 - Pick a pivot and recurse, recurse (or iterate, iterate)
-- Explanation video: <http://youtu.be/y_G9BkAm6B8>
+- Explanation video: <https://youtu.be/y_G9BkAm6B8>
 - worst = O(n²)
 - average = best = O(n log n)
 - O(n log n) memory.

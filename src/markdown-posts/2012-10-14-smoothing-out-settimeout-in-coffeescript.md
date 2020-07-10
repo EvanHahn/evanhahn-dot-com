@@ -46,7 +46,7 @@ Then you can call it like this:
       # multi-line callbacks aren't
       # ugly with a new function!
 
-Some libraries (such as [Underscore](http://underscorejs.org/#delay) and [Sugar](http://sugarjs.com/api/Function/delay)) already define such a function, which you can use if you like how that looks. Because defining your own function is so easy, I'd recommend doing that, because it probably looks better than whatever the library supports.
+Some libraries (such as [Underscore](https://underscorejs.org/#delay) and [Sugar](https://sugarjs.com/api/Function/delay)) already define such a function, which you can use if you like how that looks. Because defining your own function is so easy, I'd recommend doing that, because it probably looks better than whatever the library supports.
 
 As always, when passing arguments to the callback, you need [a shim](https://developer.mozilla.org/en-US/docs/DOM/window.setTimeout#Callback_arguments) if you want things to work in pesky Internet Explorer.
 
