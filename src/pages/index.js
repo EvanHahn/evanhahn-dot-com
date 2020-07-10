@@ -9,7 +9,6 @@ import BookIcon from "../components/BookIcon";
 import CodeIcon from "../components/CodeIcon";
 import EmailIcon from "../components/EmailIcon";
 import GithubIcon from "../components/GithubIcon";
-import KeybaseIcon from "../components/KeybaseIcon";
 import MastodonIcon from "../components/MastodonIcon";
 import TwitterIcon from "../components/TwitterIcon";
 import "../components/index.css";
@@ -74,13 +73,6 @@ const IndexPage = () => {
           icon={<GithubIcon />}
         >
           GitHub
-        </IconLink>
-        <IconLink
-          href="https://keybase.io/EvanHahn"
-          target="_blank"
-          icon={<KeybaseIcon />}
-        >
-          Keybase
         </IconLink>
       </IconLinks>
     </div>
