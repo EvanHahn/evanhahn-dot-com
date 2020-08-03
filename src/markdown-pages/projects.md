@@ -47,6 +47,7 @@ Before graduating college, I had a few other part-time jobs, mostly internships:
 I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
 
 - [America's DJ](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations. You can find the source [here](https://github.com/EvanHahn/us-military-dj-names).
+- [American police shooting countdown](https://js1024.fun/results/2020#41), my entry to JS1024 2020
 - [arraywrap.js](https://github.com/EvanHahn/arraywrap.js) wraps an element in an array if it isn't one already
 - [backbone-getnset](https://github.com/EvanHahn/backbone-getnset) adds custom getters and setters to Backbone.js models
 - [Bits Required](https://github.com/EvanHahn/bits-required) implements "how many bits do we need to represent integer X?" in various languages
