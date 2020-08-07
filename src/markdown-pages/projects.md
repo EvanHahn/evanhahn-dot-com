@@ -190,7 +190,7 @@ There's some code stuff that isn't open source for whatever reason. Those things
 
 - [The ChiPy Mentorship Program](https://chipymentor.org/) had me as a mentor in the Fall 2017 cohort
 - [JavaScript Jabber episode 311: "Securing Express Apps with Helmet.js with Evan Hahn"](https://devchat.tv/js-jabber/jsj-311-securing-express-apps-with-helmet-js-with-evan-hahn)
-- [Single Color Image](http://www.singlecolorimage.com/) lets you generate a PNG that's just one color. It's a simple app with a simple API
+- [Single Color Image](https://singlecolorimage.com/) lets you generate a PNG that's just one color. It's a simple app with a simple API
 - [My StackOverflow profile](https://stackoverflow.com/users/804100/evan-hahn)
 - [Reddit's /r/dailyprogrammer challenge solutions](/random/rdailyprogrammer-solutions)
 
