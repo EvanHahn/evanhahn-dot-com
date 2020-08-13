@@ -22,7 +22,9 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
         <script async defer src="https://cdn.simpleanalytics.io/hello.js" />
-        <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt="" /></noscript>
+        <noscript>
+          <img src="https://api.simpleanalytics.io/hello.gif" alt="" />
+        </noscript>
       </body>
     </html>
   );
