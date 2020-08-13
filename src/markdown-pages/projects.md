@@ -22,7 +22,7 @@ I've written many [guides, tutorials, and how-tos](/guides). Two of those got tu
 
 ## Jobs
 
-I'm currently volunteering for a few organizations helping to mitigate climate change. It's early days so I don't have much more to share yet!
+I recently started a job on [Signal](https://signal.org/)'s Desktop team. It's early days so I don't have much more to share yet!
 
 I've had two full-time jobs:
 
