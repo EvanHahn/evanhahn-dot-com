@@ -24,11 +24,13 @@ I've written many [guides, tutorials, and how-tos](/guides). Two of those got tu
 
 I recently started a job on [Signal](https://signal.org/)'s Desktop team. It's early days so I don't have much more to share yet!
 
-I've had two full-time jobs:
+I had two full-time jobs before this:
 
 - [Airtable](https://airtable.com) is a tool to organize anything. I was on the Platform team where I worked on the [API](https://airtable.com/api), [Blocks](https://airtable.com/blocks), and much more. I learned a ton about programming, prioritization, product, and puppies.
 
 - [Braintree](https://www.braintreepayments.com/) lets developers easily accept payments. I was on the Contextual Commerce (now called [Extend](https://www.braintreepayments.com/products/braintree-extend)) team where I did a lot of Clojure and Ruby. Before that, I spent a lot of time building Braintree's SDKs. My biggest project was [Hosted Fields](https://www.braintreepayments.com/features/seamless-checkout/custom-ui), a fancy way to accept credit cards on a webpage. We even got [a patent for it](http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=10565596.PN.&OS=PN/10565596&RS=PN/10565596), which I have mixed feelings about.
+
+I've also done some part-time work for [Codecademy](https://www.codecademy.com/) with their ["Learn React" course](https://www.codecademy.com/learn/react-101), [Cooler](https://www.cooler.dev/) with their climate change API, and [Kanary](https://www.thekanary.com/) with their matching infrastructure.
 
 Before graduating college, I had a few other part-time jobs, mostly internships:
 
