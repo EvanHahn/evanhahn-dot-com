@@ -7,7 +7,7 @@ This is a giant list of projects I've worked on.
 
 Some highlights:
 
-- [Helmet](https://github.com/helmetjs/helmet) is a module to help secure Express web applications. It was originally created by [Adam Baldwin](https://evilpacket.net/) and I've been the primary maintainer since 2013. It had [27.7 million downloads in 2019](https://npm-stat.com/charts.html?package=helmet).
+- [Helmet](https://github.com/helmetjs/helmet) is a module to help secure Express web applications. It was originally created by [Adam Baldwin](https://evilpacket.net/) and I've been the primary maintainer since 2013. It has been downloaded [45.6 million times this year](https://npm-stat.com/charts.html?package=helmet).
 - [_Express.js in Action_](https://www.manning.com/books/express-in-action?utm_source=express-in-action&utm_medium=affiliate&utm_campaign=book_hahn_express_4_7_16&a_aid=express-in-action&a_bid=fe3fcff7) is a book I wrote about Express and its ecosystem. It was published in April 2016—a lifetime ago—but despite some of it being a little outdated, I'm still proud of it.
 - [HumanizeDuration.js](https://evanhahn.github.io/HumanizeDuration.js/) is a library that turns durations to strings. For example, it turns 361,000 milliseconds into "6 minutes, 1 second". Dozens of contributors have localized it into 43 different languages.
 
