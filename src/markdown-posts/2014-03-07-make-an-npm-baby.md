@@ -6,9 +6,9 @@ path: /make-an-npm-baby/
 
 _This guide expects you to have used Node and npm before, but you don't have to be an expert! You should also know how to publish an open source repository on GitHub and a bit about testing._
 
-It's time. You've been mooching off of [npm](https://npmjs.com/) for awhile now, and you want to make an open source package. Let me be your spirit guide.
+It's time. You've been mooching off of [npm](https://npmjs.com/) for awhile now, and you want to make an open source package. Let me be your guide.
 
-[Go check out the finished source on GitHub](https://github.com/EvanHahn/startInterval) if you'd like to see all of this together. Unfortunately, you won't be able to publish a package called "startinterval" because I've already done it. It might be best to follow along but to avoid polluting npm with example packages.
+[Go check out the finished source](https://github.com/EvanHahn/startInterval) if you'd like to see all of this together. Unfortunately, you won't be able to publish a package called "startinterval" because I've already done it. It might be best to follow along but to avoid polluting npm with example packages.
 
 ## What we'll build
 
@@ -21,7 +21,7 @@ I'd like to build a nearly-identical function that does the same thing as `setIn
 
     startInterval(myFunction, 1000);
 
-This is a pretty simple package, so it'll be helpful when we learn all of the complexities of a sexy npm module.
+This is a pretty simple package, so it'll be helpful when we learn all of the complexities of a npm module.
 
 ## A first version
 
@@ -29,7 +29,7 @@ There's a _lot_ of stuff you can do for an npm package. Let's start with a respe
 
 ### package dot json
 
-Every npm module has a file called `package.json` inside. It's a simple JSON document that's got [a lot of options](https://docs.npmjs.com/files/package.json). We won't explore all of them, but if you need help, check out [Nodejitsu's interactive guide](http://browsenpm.org/package.json).
+Every npm module has a file called `package.json` inside. It's a simple JSON document that's got [a lot of options](https://docs.npmjs.com/files/package.json).
 
 (Oh hey: make sure you've made a new directory when you're doing this stuff.)
 
@@ -47,7 +47,7 @@ So there are four keys:
 
 - **name** is the name of your package. Pretty straightforward, but it doesn't allow spaces or capitals, otherwise I would've capitalized the I.
 - **author** is you! Mine is `"Evan Hahn <me@evanhahn.com> (https://evanhahn.com)"` but that's probably not yours.
-- **version** is the semantic version. You can [read a lot about semantic versioning](https://semver.org/), but here's a quick rundown: there are three positive integers, `A.B.C`. Increment `C` when you fix bugs. Increment `B` when you add features but don't break old code. Increment `A` when you'll break old code. And when `A` is 0, _there are no rules_. For now, there are no rules.
+- **version** is the semantic version. You can [read a lot about semantic versioning](https://semver.org/), but here's a quick rundown: there are three positive integers, `A.B.C`. Increment `C` when you fix bugs or make performance improvements. Increment `B` when you add features but don't break old code. Increment `A` when you'll break old code. And when `A` is 0, _there are no rules_. For now, there are no rules.
 - **main** is the entry point. When you say `require('startinterval')` from another file, it'll point to `index.js`.
 
 That's a really basic `package.json`. Let's write the code.
@@ -65,7 +65,7 @@ The first version of our code is just 5 lines.
 
 Drop this into `index.js`, like we specified in `package.json`.
 
-An aside: there's nothing too special about `index.js` -- you could've called it `squigglebutt.js`, and as long as you changed it in `package.json`, you're good. (`index.js` is a _tiny bit_ special, though -- if you `require('/some/folder/')`, it'll be as if you did `require('/some/folder/index.js')`.)
+An aside: there's nothing too special about `index.js`—you could've called it `squigglebutt.js`, and as long as you changed it in `package.json`, you're good. (`index.js` is a _tiny bit_ special, though -- if you `require('/some/folder/')`, it'll be as if you did `require('/some/folder/index.js')`.)
 
 ### Associate an npm account
 
@@ -84,7 +84,7 @@ We're ready to publish a first version! My body quivers with excitement.
 
 If all goes well, npm will spit out some HTTP information...and then, without much fanfare, your package will appear on the npm website! I've experienced a delay of a few minutes, so you can frantically refresh the homepage until your package appears (or until npm crashes).
 
-And you've made a first version! Try making a new project and using it with `require('startinterval')`...and be amazed.
+And you've made a first version! Try making a new project, installing it, and using it with `require('startinterval')`...and be amazed.
 
 It's not finished, though. Read on to make a more "mature" npm package.
 
@@ -100,7 +100,7 @@ npm will give you (and anyone who installs your package) a warning if you don't 
 
 You'll want to license your code so that people can legally use it (unless your intended users are _the hardest of criminals_). If you need help choosing a license, I'd recommend GitHub's [ChooseALicense dot com](http://choosealicense.com/) (although I should add the disclaimer that I'm not a lawyer and nothing I say is legal advice).
 
-npm packages seem to like the [MIT License](http://opensource.org/licenses/MIT) but you can choose whatever you want. I'll choose the [WTFPL](http://www.wtfpl.net/).
+npm packages seem to like the [MIT License](http://opensource.org/licenses/MIT) but you can choose whatever you want.
 
 Two things you'll want to do:
 
@@ -108,14 +108,16 @@ Two things you'll want to do:
 2.  Add the license to `package.json`:
 
         // ...
-        "license": "WTFPL"
+        "license": "MIT"
         // ...
 
-### Put this sucker on GitHub
+### Put the source code somewhere
 
-Nearly every respectable npm package I've seen is on GitHub somewhere. You can publish your package as an open source project so that everyone can see how weird your coding style is (we'll get to that in a minute).
+Nearly every npm package hosts its source somewhere. Microsoft's GitHub is the most popular choice, but [GitLab](https://gitlab.com/) and [Bitbucket](https://bitbucket.org) are two other popular ones.
 
-I'm going to assume you know how to make a GitHub repository and push code to it, so here's some npm-specific stuff:
+It's a good practice to publish your package as an open source project. It'll help other people see the source code of your package, make contributions if they wish to, and ask questions.
+
+I'm going to assume you know how to do this, so here's some npm-specific stuff:
 
 - You don't want certain things getting in your GitHub repository (log files and included dependencies, for example), so make a [gitignore](https://help.github.com/articles/ignoring-files). I use [GitHub's Node.js gitignore file](https://github.com/github/gitignore/blob/master/Node.gitignore), and you should too!
 
@@ -148,15 +150,13 @@ Now, without any extra work (like having to use [Browserify](http://browserify.o
 
 I'm not going to preach the benefits of testing your code. There are already enough assholes in the world making you feel bad. But let's test it.
 
-Just like a lot of things in JavaScript, there are a million different libraries that do what we want. There's [Jasmine](http://jasmine.github.io/) and [Vows](http://vowsjs.org/) or [Assert](http://nodejs.org/api/assert.html) and [Should](https://github.com/tj/should.js)...I'd go crazy trying to explain all of them to you. Know that there are other options out there, and if you don't like these, there's a lot of good shopping to do.
+Just like a lot of things in JavaScript, there are a million different libraries that do what we want. There's [Jest](https://jestjs.io/) and [Ava](https://github.com/avajs/ava) for running tests, or [Assert](http://nodejs.org/api/assert.html) and [Should](https://github.com/tj/should.js) for doing assertions. Know that there are other options out there, and if you don't like the options I outline below, there's a lot of good shopping to do.
 
-Today, we're going to use three testing libraries: [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/), and [Sinon](http://sinonjs.org/).
+Today, we're going to use three testing libraries: [Mocha](https://mochajs.org/), [Chai](https://www.chaijs.com/), and [Sinon](https://sinonjs.org/).
 
 ### What are these things?
 
-If you don't know much about testing, let me steal a line from [another guide of mine](/how-do-i-jasmine/):
-
-> Testing in a nutshell: basically, your program will have a bunch of functions and classes. You want to make sure that, no matter what you throw at them, they'll perform how you want them to. For example, this function should always return a string that says `"hello"` in it. Testing ensures that everything goes down exactly how you planned. It's like you're God...but it's probably a little more boring because it's code.
+Testing in a nutshell: basically, your code will have a bunch of functions and classes and whatnot. You want to make sure that, no matter what you throw at them, they'll perform how you want them to. For example, this function should always return a string that says `"hello"` in it. Testing ensures that everything goes down exactly how you planned.
 
 _Mocha_ is a testing framework. At the end of the day, it's the thing that actually runs your tests. It's the syntax you use to say "here's what I'm testing, let me set it up, blah blah, blah".
 
@@ -170,7 +170,7 @@ The first thing to do is to install Mocha, Chai, and Sinon.
 
     npm install mocha chai sinon --save-dev
 
-This installs the packages and saves them under the "devDependencies" field of `package.json`. "Regular" dependencies are things that you _need_ to run the package, and they're specified under the "dependencies" key. "devDependencies" are needed when _developing_ the package. Testing usually falls under the latter category.
+This installs the packages and saves them under the "devDependencies" field of `package.json`. "Regular" dependencies are things that you _need_ to run the package, and they're specified under the "dependencies" key. "devDependencies" are needed when _developing_ the package. Testing usually falls under the latter category, because end users won't need to run your tests.
 
 Now that we've installed Mocha, let's add a script to our package. Add this to `package.json` (I'll explain in a moment):
 
@@ -185,25 +185,20 @@ Basically, this allows you to type `npm test` in your terminal and run the tests
 Now, make a folder called `test` and put `test.js` inside. We'll make a simple example test for now. Fill it with this code (which the in-line comments hopefully explain):
 
     // First, we require `expect` from Chai.
-    var chai = require('chai');
-    var expect = chai.expect;
+    const { expect } = require('chai');
 
     // `describe` makes a "suite" of tests; think of them as a group.
     describe('fake suite of tests', function() {
-
       // The tests have an English description...
       it('has 2 equal to be greater than 0', function() {
-
         // ...and a code assertion.
         expect(2).to.be.above(0);
-
       });
 
       // You can have multiple tests in a suite.
       it('has 1 equal to 1', function() {
         expect(1).to.equal(1);
       });
-
     });
 
 When you go into your project's root directory and type `npm test`, you should see some green text that says "2 passing"! This is because you have two tests and they both pass.
@@ -217,28 +212,26 @@ Our project doesn't need to test whether numbers are equal to each other. That's
 Let's write a first _real_ test!
 
     // Require everything we need (including our function!)
-    var chai = require('chai');
-    var expect = chai.expect;
-    var sinon = require('sinon');
-    var startInterval = require('..');
+    const { expect } = require('chai');
+    const sinon = require('sinon');
+    const startInterval = require('..');
 
     describe('startInterval', function() {
       it('calls the function immediately', function() {
-        var fn = sinon.spy(); // make a spy function
-        var interval = startInterval(fn, 1000);
+        const fn = sinon.spy(); // make a spy function
+        const interval = startInterval(fn, 1000);
         expect(fn.calledOnce).to.be.true; // we can call this on the spy
         clearInterval(interval); // make sure we "clean up" the test
       });
     });
 
-`npm test` this sucker and you'll see it run! Our function works...well, only the stuff we've tested! Let's add a second test:
+Run `npm test` and see what happens! Our function works...well, only the stuff we've tested! Let's add a second test:
 
     it('calls the function many times over time', function() {
-
       // Set up the things we need. Most notably, use Sinon's "fake clock".
-      var fn = sinon.spy();
-      var clock = sinon.useFakeTimers();
-      var interval = startInterval(fn, 100);
+      const fn = sinon.spy();
+      const clock = sinon.useFakeTimers();
+      const interval = startInterval(fn, 100);
 
       // Should've been called once in the first 99 ms...
       clock.tick(99);
@@ -257,7 +250,6 @@ Let's write a first _real_ test!
       // Teardown
       clock.restore();
       clearInterval(interval);
-
     });
 
 Try running `npm test` to see that things work!
@@ -267,39 +259,35 @@ Try running `npm test` to see that things work!
 This is a pretty simple function with only two tests, but you can see that we have repeated code. `fn` is identical each time, and we're calling `clearInterval` at the end of every test. Let's use Mocha's `beforeEach` and `afterEach` features to clean that up. Here's what the code looks like now:
 
     describe('startInterval', function() {
-
       // Before each spec, make the fake spy and clock.
-      var fn, clock;
       beforeEach(function() {
-        fn = sinon.spy();
-        clock = sinon.useFakeTimers();
+        this.fn = sinon.spy();
+        this.clock = sinon.useFakeTimers();
       });
 
       // After each spec, cancel the interval we start and restore the clock.
-      var interval;
       afterEach(function() {
-        clearInterval(interval);
-        clock.restore();
+        clearInterval(this.interval);
+        this.clock.restore();
       });
 
       it('calls the function immediately', function() {
         // Notice how our code is much shorter!
-        interval = startInterval(fn, 1000);
-        expect(fn.calledOnce).to.be.true;
+        this.interval = startInterval(this.fn, 1000);
+        expect(this.fn.calledOnce).to.be.true;
       });
 
       it('calls the function many times over time', function() {
-        interval = startInterval(fn, 100);
-        clock.tick(99);
-        expect(fn.callCount).to.equal(1);
-        clock.tick(2);
-        expect(fn.callCount).to.equal(2);
-        clock.tick(100);
-        expect(fn.callCount).to.equal(3);
-        clock.tick(100);
-        expect(fn.callCount).to.equal(4);
+        this.interval = startInterval(this.fn, 100);
+        this.clock.tick(99);
+        expect(this.fn.callCount).to.equal(1);
+        this.clock.tick(2);
+        expect(this.fn.callCount).to.equal(2);
+        this.clock.tick(100);
+        expect(this.fn.callCount).to.equal(3);
+        this.clock.tick(100);
+        expect(this.fn.callCount).to.equal(4);
       });
-
     });
 
 It's much shorter and clearer now! Well done.
@@ -308,15 +296,15 @@ It's much shorter and clearer now! Well done.
 
 There are a lot of people named Travis, but the one we care about today is named [Travis CI](https://travis-ci.org/). Travis lets you run your tests on every push and every pull request, so you'll quickly know whether your tests are failing. Turns out that this isn't too hard to set up!
 
-1.  Set up a Travis account on [travis-ci.org](https://travis-ci.org/) by signing in with GitHub.
+1.  Set up a Travis account on [travis-ci.org](https://travis-ci.org/).
 
 2.  Visit [your profile](https://travis-ci.org/profile), find your repository and switch it to "on".
 
-3.  Create a file called `.travis.yml` in the root of your project and add the following to it:
+3.  Create a file called `.travis.yml` in the root of your project and add the following to it, which will test your code on Node version 14:
 
         language: node_js
         node_js:
-          - "0.10"
+          - "14"
 
 4.  Add that file to GitHub (add, commit, and push).
 
@@ -324,7 +312,7 @@ It'll take a few minutes, but if everything goes well, you'll get an email from 
 
 ### Adding the status to your readme
 
-On the Travis page for your package, there's an image at the top right that says "build passing". It's _very fashionable_ and very easy to put that image in your readme, so let's do that. Click on the image to see a popup with a bunch of inputs. You'll want to copy the Markdown text and paste it into `README.md`. (You might want to edit this live on GitHub so you can preview it.)
+On the Travis page for your package, there's an image at the top right that says "build passing". It's _very fashionable_ and very easy to put that image in your readme, so let's do that. Click on the image to see a popup with a bunch of inputs. You'll want to copy the Markdown text and paste it into `README.md`.
 
 Now the build status is in your README!
 
