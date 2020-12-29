@@ -1,5 +1,6 @@
 ---
 title: Projects
+description: Evan Hahn's projects.
 path: /projects
 ---
 

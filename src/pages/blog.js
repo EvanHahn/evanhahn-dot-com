@@ -39,7 +39,7 @@ export default function BlogPage() {
     ));
 
   return (
-    <ContentPage title="Blog">
+    <ContentPage title="Blog" description="Evan Hahn's blog">
       <ul>{blogLinks}</ul>
     </ContentPage>
   );

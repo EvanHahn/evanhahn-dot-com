@@ -1,9 +1,10 @@
 ---
 title: Guides
+description: Evan Hahn's guides.
 path: /guides
 ---
 
-I've written a number of guides and how-tos.
+I've written some guides and how-tos. Here they are:
 
 ## JavaScript
 

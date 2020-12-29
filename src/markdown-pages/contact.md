@@ -1,5 +1,6 @@
 ---
 title: Contact Evan Hahn
+description: me@evanhahn.com and more.
 path: /contact
 ---
 
