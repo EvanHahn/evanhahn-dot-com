@@ -4,7 +4,7 @@ layout: post
 path: /express-dot-static-deep-dive/
 ---
 
-_This guide assumes you know how to use [Express](https://expressjs.com/) and have used its static middleware. No need to have done anything complex with it, though! If you need help, you can check out [my intro to Express](/understanding-express) or [my book on the topic](https://www.manning.com/books/express-in-action?utm_source=express-in-action&utm_medium=affiliate&utm_campaign=book_hahn_express_4_7_16&a_aid=express-in-action&a_bid=fe3fcff7). This guide was last updated for Express 4.6.1._
+_This guide assumes you know how to use [Express](https://expressjs.com/) and have used its static middleware. No need to have done anything complex with it, though! If you need help, you can check out [my intro to Express](/understanding-express) or [my book on the topic][book]. This guide was last updated for Express 4.6.1._
 
 **This guide is a little bit outdated; check out [the new docs](https://github.com/expressjs/serve-static).**
 
@@ -225,3 +225,5 @@ This is sensibly disabled by default, and I can't think of a great reason to cha
 I don't know about you, but I didn't expect Express's static middleware to be so complicated! Luckily, I think they've done a good job choosing sensible defaults so that you don't have to worry about this stuff 99% of the time.
 
 Hopefully you've enjoyed this little dive into the wonders of serving static files with Express!
+
+[book]: https://www.manning.com/books/express-in-action?utm_source=express-in-action&utm_medium=affiliate&utm_campaign=book_hahn_express_4_7_16&a_aid=express-in-action&a_bid=fe3fcff7
