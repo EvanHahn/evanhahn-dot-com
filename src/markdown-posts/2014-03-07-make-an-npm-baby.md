@@ -1,5 +1,6 @@
 ---
 title: Publishing a simple package to npm
+description: Learn how to publish an npm package.
 layout: post
 path: /make-an-npm-baby/
 ---

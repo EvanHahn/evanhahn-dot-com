@@ -1,5 +1,6 @@
 ---
 title: "Vim's :x command"
+description: "Vim has :x which is basically the same as :wq but slightly less typing."
 layout: post
 path: /vim-colon-x-command/
 ---

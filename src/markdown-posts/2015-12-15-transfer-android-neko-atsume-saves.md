@@ -1,5 +1,6 @@
 ---
 title: How to transfer Android Neko Atsume saves using adb
+description: "Use the terminal and adb to transfer your nekos."
 layout: post
 path: /transfer-android-neko-atsume-saves/
 ---
