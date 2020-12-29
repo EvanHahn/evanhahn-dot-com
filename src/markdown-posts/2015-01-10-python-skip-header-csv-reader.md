@@ -5,9 +5,9 @@ layout: post
 path: /python-skip-header-csv-reader/
 ---
 
-I was choosing a new credit card and was between two options. One of them offered cash back on all purchases. The other offered _less_ cash back on all purchases but _much more cash back_ on certain purchases. I wanted to know: which credit card was better based on my purchase history? Like any normal person, I exported my transactions as CSV and began to dig around with Python.
+_In short: use `next(csvreader)`._
 
-My CSV file had a header on the first line, which was different from the rest. The file looked something like this (not my actual transactions):
+Let's say you have a CSV like this, which you're trying to parse with Python:
 
 ```
 Date,Description,Amount
@@ -17,21 +17,30 @@ Date,Description,Amount
 ...
 ```
 
-I wanted to use [Python's built-in CSV reader class](https://docs.python.org/2/library/csv.html#csv.reader) and skip any parsing of the header line. So I did this:
+You don't want to parse the first row as data, so you can skip it with `next`. For example:
 
 ```
-with open('mycsv.csv', 'r') as csvfile:
-
+with open("mycsv.csv", "r") as csvfile:
     csvreader = csv.reader(csvfile)
 
     # This skips the first row of the CSV file.
-    # csvreader.next() also works in Python 2.
     next(csvreader)
 
     for row in csvreader:
         # do stuff with rows...
 ```
 
-The call to `next` reads the first row and discards it. From there, we're ready to iterate through the actual data! One small caveat: I had issues in Python 3 when opening the file in binary mode (`rb` instead of `r`).
+The call to `next` reads the first row and discards it. From there, you're ready to iterate through the actual data.
 
-This trick helped me choose my credit card and may help you do the same with CSVs in Python!
+You may instead wish to use a [`DictReader`][DictReader], which parses the first row as field names by default. For example:
+
+```
+with open("mycsv.csv", "r") as csvfile:
+    csvreader = csv.DictReader(csvfile)
+    for row in csvreader:
+        print(row["Date"], row["Description"], row["Amount"])
+```
+
+Either way, you've now skipped the first row of a CSV file in Python!
+
+[DictReader]: https://docs.python.org/3/library/csv.html#csv.DictReader
