@@ -1,5 +1,6 @@
 ---
 title: Should you use semicolons in JavaScript?
+description: JavaScript doesn't seem to require them. Are they needed?
 path: /should-you-use-semicolons-in-javascript
 ---
 

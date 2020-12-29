@@ -16,6 +16,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               path
+              title
+              description
             }
             fileAbsolutePath
           }

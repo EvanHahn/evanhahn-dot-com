@@ -54,10 +54,16 @@ function ContentPageDate({ date }) {
   );
 }
 
-export default function ContentPage({ pageTitle, title, date, children }) {
+export default function ContentPage({
+  pageTitle,
+  title,
+  description,
+  date,
+  children,
+}) {
   return (
     <div className="ContentPage">
-      <SEO title={pageTitle || title} />
+      <SEO title={pageTitle || title} description={description} />
 
       <div className="ContentPageHeaderAndMainWrapper">
         <main className="ContentPageMain">

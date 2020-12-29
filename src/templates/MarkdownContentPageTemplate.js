@@ -9,6 +9,7 @@ export default function MarkdownContentPageTemplate({ data }) {
   return (
     <ContentPage
       title={frontmatter.title}
+      description={frontmatter.description}
       date={getDateFromPath(fileAbsolutePath)}
     >
       <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -23,6 +24,7 @@ export const pageQuery = graphql`
       frontmatter {
         path
         title
+        description
       }
       fileAbsolutePath
     }
