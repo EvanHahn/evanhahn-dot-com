@@ -1,5 +1,6 @@
 ---
 title: Gotchas with Express query parsing (and how to avoid them)
+description: Express's default query parser has some edge cases that can cause unexpected behavior or errors. You can either handle these edge cases or change the default query string parser.
 layout: post
 path: /gotchas-with-express-query-parsing-and-how-to-avoid-them/
 ---

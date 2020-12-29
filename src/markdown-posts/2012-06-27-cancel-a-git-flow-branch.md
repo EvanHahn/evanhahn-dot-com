@@ -1,5 +1,6 @@
 ---
 title: Cancel a git-flow branch
+description: Just delete it like a normal branch.
 author: Evan Hahn
 layout: post
 path: /cancel-a-git-flow-branch/

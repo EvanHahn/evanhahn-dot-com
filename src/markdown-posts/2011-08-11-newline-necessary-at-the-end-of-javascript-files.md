@@ -1,5 +1,6 @@
 ---
 title: Newline necessary at the end of JavaScript files?
+description: "When in doubt: yes."
 author: Evan Hahn
 layout: post
 path: /newline-necessary-at-the-end-of-javascript-files/

@@ -1,5 +1,6 @@
 ---
 title: Skip the header of a file with Python's CSV reader
+description: "next(csvreader) does the trick."
 layout: post
 path: /python-skip-header-csv-reader/
 ---

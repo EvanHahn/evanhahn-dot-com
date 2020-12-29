@@ -1,5 +1,6 @@
 ---
 title: Disable ESLint for a file
+description: "Put /* eslint-disable */ at the top of the file."
 layout: post
 path: /disable-eslint-for-a-file/
 ---

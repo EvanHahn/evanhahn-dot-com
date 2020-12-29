@@ -1,5 +1,6 @@
 ---
 title: Understanding Express.js
+description: Understand how the popular Node web framework works.
 layout: post
 path: /understanding-express/
 ---

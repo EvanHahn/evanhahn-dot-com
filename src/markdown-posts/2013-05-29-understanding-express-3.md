@@ -1,5 +1,6 @@
 ---
 title: Understanding Express.js version 3
+description: Understand how an old version of the popular Node web framework works.
 author: Evan Hahn
 layout: post
 path: /understanding-express-3/

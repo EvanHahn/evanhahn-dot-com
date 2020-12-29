@@ -1,5 +1,6 @@
 ---
 title: How to reverse an array in JavaScript
+description: "myArray.concat().reverse() should work."
 path: /how-to-reverse-an-array-in-javascript
 ---
 

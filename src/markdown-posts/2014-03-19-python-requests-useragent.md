@@ -1,5 +1,6 @@
 ---
 title: "Dealing with the User-Agent of Python's Requests library"
+description: "What is Requests's User-Agent?"
 layout: post
 path: /python-requests-library-useragent
 ---
