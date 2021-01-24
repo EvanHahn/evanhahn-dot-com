@@ -183,6 +183,8 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - [Add Bower support](https://github.com/stuartmemo/qwerty-hancock/pull/5)
 - [shurikenJS](https://github.com/shurikenjs/shurikenjs)
   - [Add basic Jasmine tests](https://github.com/shurikenjs/shurikenjs/pull/1)
+- [statuses](https://github.com/jshttp/statuses)
+  - [Throw when passed strings on Object.prototype](https://github.com/jshttp/statuses/pull/21)
 - [Tab Center Redux](https://github.com/eoger/tabcenter-redux)
   - [Bugfix: clear favicon when the favicon is removed](https://github.com/eoger/tabcenter-redux/pull/252)
   - [Use === instead of == across the codebase](https://github.com/eoger/tabcenter-redux/pull/259)
