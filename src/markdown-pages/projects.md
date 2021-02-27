@@ -23,7 +23,7 @@ I've written many [guides, tutorials, and how-tos](/guides). Two of those got tu
 
 ## Jobs
 
-I recently started a job on [Signal](https://signal.org/)'s Desktop team. So far, my most significant contribution has been work on our [encrypted group calling feature](https://signal.org/blog/group-calls/).
+I currently work on [Signal](https://signal.org/)'s Desktop team. So far, my most significant contribution has been work on our [encrypted group calling feature](https://signal.org/blog/group-calls/), but you can browse [all of my commits](https://github.com/signalapp/Signal-Desktop/commits?author=EvanHahn-Signal).
 
 I had two full-time jobs before this:
 
@@ -128,6 +128,7 @@ I've published a number of modules and packages and libraries and tools and what
 - [scrabbler](https://github.com/EvanHahn/scrabbler) is a small Scrabble cheater written in Python
 - [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
 - [setAttributes](https://github.com/EvanHahn/setAttributes) helps you call `.setAttribute` on a DOM node more easily
+- [Signal Desktop](https://github.com/signalapp/Signal-Desktop) is, unsurprisingly, Signal's open source Desktop client built on Electron. See [all of my changes here](https://github.com/signalapp/Signal-Desktop/commits?author=EvanHahn-Signal).
 - [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](https://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
 - [startInterval](https://github.com/EvanHahn/startInterval) is like JavaScript's `setInterval` but it starts immediately. It was made for [a guide](/make-an-npm-baby/)
 - [The TypeScript Grunt skeleton](https://github.com/EvanHahn/TypeScript-Grunt-skeleton)
