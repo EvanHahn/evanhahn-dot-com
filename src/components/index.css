@@ -29,7 +29,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 html {
-  font-family: Lato, "DejaVu Sans", "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
+  font-family: Lato, Avenir, "Noto Sans", "Segoe UI", Ubuntu, Tahoma, sans-serif;
   font-size: 18pt;
   color: var(--text-color);
   background: var(--background-color);
