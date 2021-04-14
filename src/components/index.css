@@ -96,6 +96,11 @@ small {
   text-align: center;
 }
 
+.IndexPage .Logo {
+  width: 200px;
+  height: 200px;
+}
+
 .IndexPage h1 {
   font-size: 2rem;
 }
@@ -144,11 +149,20 @@ small {
 }
 
 .Logo {
-  width: 100%;
-  max-width: 200px;
   border: 3px solid var(--logo-border-color);
   border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
   background: var(--logo-color);
+
+  /* For the alt text */
+  align-items: center;
+  color: var(--inverted-text-color);
+  display: flex;
+  font-weight: 900;
+  justify-content: center;
+  line-height: 1em;
+  text-align: center;
 }
 
 .ContentPage {
@@ -177,6 +191,7 @@ small {
 
 .ContentPageHeader .Logo {
   width: 150px;
+  height: 150px;
   transition: transform 0.1s ease-out;
 }
 
@@ -294,6 +309,7 @@ small {
 
   .ContentPageHeader .Logo {
     width: 100px;
+    height: 100px;
   }
 
   .ContentPageHeader .IconLink a {
