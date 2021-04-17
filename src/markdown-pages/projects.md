@@ -212,7 +212,7 @@ Pretty much all of the above is code-related, but I've done a few other things h
 - [How many English words are alphabetical?](/under-1-of-english-words-are-alphabetical)
 - ["Is it worth cheating Caltrain?"](/is-it-worth-cheating-caltrain)
 - [Naps and their effectiveness](/naps-and-their-effectiveness)
-- Study guides from Michigan: [semester 3](/a-couple-of-resources-from-my-3rd-semester), [semester 4](/resources-from-my-4th-semester), [semester 5](/resources-from-my-5th-semester), and [semester 6](/semester-6-resources)
+- Study guides from my time as an undergraduate at the University of Michigan: [semester 3](/a-couple-of-resources-from-my-3rd-semester), [semester 4](/resources-from-my-4th-semester), [semester 5](/resources-from-my-5th-semester), and [semester 6](/semester-6-resources)
 - Custom Steam icons for [Zineth](https://evanhahn.com/tape/zineth.png), [Lode Runner 2](https://evanhahn.com/tape/loderunner2.png)
 
 And that's it! That's pretty much everything I've done.
