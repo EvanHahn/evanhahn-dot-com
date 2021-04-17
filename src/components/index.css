@@ -172,7 +172,7 @@ small {
   justify-content: space-between;
   margin: 0 auto;
   width: 95%;
-  max-width: 960px;
+  max-width: 1200px;
 }
 
 .ContentPageHeaderAndMainWrapper {
@@ -209,7 +209,7 @@ small {
 }
 
 .ContentPageMain {
-  flex-grow: 5;
+  flex-grow: 6;
   padding: 1rem 0;
 }
 
@@ -296,7 +296,7 @@ small {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .ContentPageHeaderAndMainWrapper {
     flex-direction: column;
   }
