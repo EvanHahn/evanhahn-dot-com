@@ -82,6 +82,7 @@ I've published a number of modules and packages and libraries and tools and what
 - [Facebook autopoker Chrome extension](/wp-content/uploads/2012/09/pokey/pokey.zip) ([or the source](/wp-content/uploads/2012/09/pokey/src/))
 - [ffmpeg buddy](https://evanhahn.github.io/ffmpeg-buddy/) helps you build ffmpeg commands
 - [Fireworks](https://js1k.com/2016-elemental/demo/2584) was my entry to [JS1k 2016](https://js1k.com/2016-elemental/)
+- [FLoC Block](https://gitlab.com/EvanHahn/floc-block) is a small Express middleware to block Google's FLoC tracking
 - [Flood](/tape/flood/) is a game I didn't invent but did implement. A friend didn't like the version she was playing, so I made one that she liked
 - [Fudo](/tape/fudo) is an adorable friend that was made from scratch in 36 hours at a hackathon. Art by [Lulu Tang](http://www.luluspice.com/). Sound and code help from [David Jackson](https://www.linkedin.com/pub/david-jackson/64/1aa/5b3/)
 - [functional state machine](https://github.com/EvanHahn/functional-state-machine.js) is a small JavaScript state machine that's purely functional
