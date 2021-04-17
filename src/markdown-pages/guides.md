@@ -23,6 +23,7 @@ I've written some guides and how-tos. Here they are:
 - [Understanding Express.js](/understanding-express) or the book [_Express.js in Action_](https://www.manning.com/books/express-in-action?utm_source=express-in-action&utm_medium=affiliate&utm_campaign=book_hahn_express_4_7_16&a_aid=express-in-action&a_bid=fe3fcff7)
 - [Gotchas with Express query parsing (and how to avoid them)](/gotchas-with-express-query-parsing-and-how-to-avoid-them)
 - [A deep dive into Express's static middleware](/express-dot-static-deep-dive)
+- [How to block Google's FLoC tracking with Express](/block-googles-floc-tracking-with-express)
 
 ### CoffeeScript
 
