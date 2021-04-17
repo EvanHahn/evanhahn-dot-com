@@ -17,8 +17,8 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^5.2.1",
-    "prettier": "2.0.5"
+    "eslint-config-react-app": "^6.0.0",
+    "prettier": "^2.2.1"
   },
   "scripts": {
     "build": "gatsby build",

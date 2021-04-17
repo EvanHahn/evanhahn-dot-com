@@ -1,6 +1,6 @@
 ---
 title: Disable JSHint for a file
-description: "Put \"// jshint ignore: start\" at the top of the file."
+description: 'Put "// jshint ignore: start" at the top of the file.'
 layout: post
 path: /disable-jshint-for-a-file/
 ---

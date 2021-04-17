@@ -1,6 +1,6 @@
 ---
 title: Start Vim and temporarily ignore your .vimrc
-description: "\"vim -u NONE\" starts Vim without a .vimrc."
+description: '"vim -u NONE" starts Vim without a .vimrc.'
 author: Evan Hahn
 layout: post
 path: /ignore-vimrc-with-vim/

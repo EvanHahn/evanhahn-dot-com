@@ -32,7 +32,7 @@ with open("mycsv.csv", "r") as csvfile:
 
 The call to `next` reads the first row and discards it. From there, you're ready to iterate through the actual data.
 
-You may instead wish to use a [`DictReader`][DictReader], which parses the first row as field names by default. For example:
+You may instead wish to use a [`DictReader`][dictreader], which parses the first row as field names by default. For example:
 
 ```
 with open("mycsv.csv", "r") as csvfile:
@@ -43,4 +43,4 @@ with open("mycsv.csv", "r") as csvfile:
 
 Either way, you've now skipped the first row of a CSV file in Python!
 
-[DictReader]: https://docs.python.org/3/library/csv.html#csv.DictReader
+[dictreader]: https://docs.python.org/3/library/csv.html#csv.DictReader
