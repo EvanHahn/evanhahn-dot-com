@@ -6,9 +6,13 @@ export default function Logo() {
     {
       file(relativePath: { eq: "logo_white.png" }) {
         childImageSharp {
-          fixed(width: 512, height: 512, fit: COVER) {
-            src
-          }
+          gatsbyImageData(
+            width: 512
+            height: 512
+            placeholder: NONE
+            transformOptions: { fit: COVER }
+            layout: FIXED
+          )
         }
       }
     }
@@ -18,7 +22,8 @@ export default function Logo() {
     <img
       className="Logo"
       alt="Evan Hahn"
-      src={data.file.childImageSharp.fixed.src}
+      // We use the fallback for simplicity.
+      src={data.file.childImageSharp.gatsbyImageData.images.fallback.src}
     />
   );
 }

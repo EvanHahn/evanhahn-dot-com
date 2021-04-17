@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import InEnvironment from "./components/InEnvironment";
 
 export default function HTML(props) {
   return (
@@ -21,10 +22,12 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script async defer src="https://cdn.simpleanalytics.io/hello.js" />
-        <noscript>
-          <img src="https://api.simpleanalytics.io/hello.gif" alt="" />
-        </noscript>
+        <InEnvironment environment="production">
+          <script async defer src="https://cdn.simpleanalytics.io/hello.js" />
+          <noscript>
+            <img src="https://api.simpleanalytics.io/hello.gif" alt="" />
+          </noscript>
+        </InEnvironment>
       </body>
     </html>
   );
