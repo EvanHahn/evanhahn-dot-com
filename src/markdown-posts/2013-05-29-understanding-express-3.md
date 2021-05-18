@@ -327,7 +327,7 @@ But it gets cooler.
 
 Routing would be enough, but Express is absolutely ruthless.
 
-Express augments the request and response objects that you're passed in every request handler. The old stuff is still there, but they add some new stuff too! [The API docs](http://expressjs.com/3x/api.html) explain everything, but let's look at a couple of examples.
+Express augments the request and response objects in every request handler. The old stuff is still there, but they add some new stuff too! [The API docs](http://expressjs.com/3x/api.html) explain everything, but let's look at a couple of examples.
 
 One nicety they give you is a `redirect` method. Here are some examples:
 
