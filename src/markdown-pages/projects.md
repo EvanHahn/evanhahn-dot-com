@@ -181,6 +181,8 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - [Add Bower support](https://github.com/ericdrowell/KineticJS/pull/592)
 - [methods](https://github.com/jshttp/methods)
   - [Add some simple tests](https://github.com/jshttp/methods/pull/6)
+- [Pony](https://ponylang.io)
+  - [Remove whitespace-only lines from stdlib](https://github.com/ponylang/ponyc/pull/3761)
 - [Qwerty Hancock](https://github.com/stuartmemo/qwerty-hancock)
   - [Add Bower support](https://github.com/stuartmemo/qwerty-hancock/pull/5)
 - [shurikenJS](https://github.com/shurikenjs/shurikenjs)
