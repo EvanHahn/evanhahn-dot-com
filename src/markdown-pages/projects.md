@@ -164,6 +164,8 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - Dependency updates ([wdm](https://github.com/350org/strikes-poster-generator/pull/7), [Backbone and Underscore](https://github.com/350org/strikes-poster-generator/pull/8), and [Middleman](https://github.com/350org/strikes-poster-generator/pull/9))
 - [Arrow](https://arrow.readthedocs.io/en/latest/)
   - [Throw TypeError when passing booleans to arrow.get](https://github.com/crsmithdev/arrow/pull/259)
+- [Awesome Crystal](https://github.com/veelenga/awesome-crystal)
+  - [Fix stdlib compression links](https://github.com/veelenga/awesome-crystal/pull/557)
 - [bash-guide](https://github.com/Idnan/bash-guide/pull/63)
   - [Remove gendered language](https://github.com/Idnan/bash-guide/pull/63)
 - [clj-http](https://github.com/dakrone/clj-http)
