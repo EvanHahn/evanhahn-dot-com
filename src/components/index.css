@@ -143,11 +143,6 @@ small {
   margin-right: 0.3rem;
 }
 
-/* This should be transparent, but I didn't want to edit the SVG. */
-.MastodonIconM {
-  fill: var(--background-color);
-}
-
 .Logo {
   border: 3px solid var(--logo-border-color);
   border-radius: 100%;
