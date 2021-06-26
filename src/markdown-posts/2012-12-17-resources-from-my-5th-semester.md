@@ -24,7 +24,6 @@ During my 5th semester, I produced some things that people might be able to use.
 
 ## Introduction to Computer Organization (EECS 370)
 
-- EECS 370 had me writing a few projects with LC-2K, a fake assembly language. I [made a list of some little tricks](https://evanhahn.com/?page_id=1330) you can do with LC-2K.
 - EECS 370's projects are mostly in C, and I found ["Essential C"](http://cslibrary.stanford.edu/101/EssentialC.pdf), a document put out by Stanford, to be incredibly helpful. Not a resource I made, but one that I found incredibly useful.
 - I made a ["stuff to study" for the first exam](https://evanhahn.com/wp-content/uploads/2012/10/EECS_370_exam_1.txt). Not exactly a study guide, but might be useful.
 - My friends and I made [a study guide for the second exam](https://evanhahn.com/wp-content/uploads/2012/10/EECS-370-exam-2-study-guide.txt), which was actually pretty sweet.
