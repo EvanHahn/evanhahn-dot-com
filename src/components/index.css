@@ -75,7 +75,7 @@ a:active {
 h1 {
   font-weight: 900;
   font-size: 2.5rem;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   line-height: 1em;
 }
 
@@ -174,6 +174,35 @@ small {
   display: flex;
 }
 
+.ContentPageMiniHeader {
+  display: none;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  font-weight: 900;
+  line-height: 1rem;
+  position: relative;
+}
+
+.ContentPageMiniHeader a {
+  position: relative;
+  display: block;
+  align-self: flex-end;
+  color: var(--inverted-text-color);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-color);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  top: -0.2rem;
+  transition: top 200ms ease-out, opacity 400ms ease-out;
+  opacity: 0.8;
+}
+
+.ContentPageMiniHeader a:hover {
+  top: 0;
+  opacity: 1;
+}
+
 .ContentPageHeader {
   display: flex;
   flex-grow: 1;
@@ -259,6 +288,7 @@ small {
 
 .ContentPageMain pre {
   padding: 1rem;
+  font-size: 16pt;
   line-height: 1.2em;
   color: var(--pre-text-color);
   background: var(--pre-background-color);
@@ -291,9 +321,13 @@ small {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 850px) {
   .ContentPageHeaderAndMainWrapper {
     flex-direction: column;
+  }
+
+  .ContentPageMiniHeader {
+    display: flex;
   }
 
   .ContentPageHeader {

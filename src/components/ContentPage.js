@@ -11,6 +11,15 @@ import CodeIcon from "../components/CodeIcon";
 import EmailIcon from "../components/EmailIcon";
 import "../components/index.css";
 
+function ContentPageMiniHeader() {
+  // TODO: The below should use the site title
+  return (
+    <header className="ContentPageMiniHeader">
+      <Link to="/">Evan Hahn (dot com)</Link>
+    </header>
+  );
+}
+
 function ContentPageHeader() {
   return (
     <header className="ContentPageHeader">
@@ -64,6 +73,8 @@ export default function ContentPage({
   return (
     <div className="ContentPage">
       <SEO title={pageTitle || title} description={description} />
+
+      <ContentPageMiniHeader />
 
       <div className="ContentPageHeaderAndMainWrapper">
         <main className="ContentPageMain">
