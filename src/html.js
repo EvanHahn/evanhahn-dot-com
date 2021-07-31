@@ -23,9 +23,13 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
         <InEnvironment environment="production">
-          <script async defer src="https://cdn.simpleanalytics.io/hello.js" />
+          <script async defer src="https://sa.evanhahn.com/latest.js"></script>
           <noscript>
-            <img src="https://api.simpleanalytics.io/hello.gif" alt="" />
+            <img
+              src="https://sa.evanhahn.com/noscript.gif"
+              alt=""
+              referrerpolicy="no-referrer-when-downgrade"
+            />
           </noscript>
         </InEnvironment>
       </body>
