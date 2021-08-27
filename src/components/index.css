@@ -99,6 +99,7 @@ small {
 .IndexPage .Logo {
   width: 200px;
   height: 200px;
+  margin-bottom: 2rem;
 }
 
 .IndexPage h1 {
