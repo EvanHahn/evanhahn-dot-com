@@ -33,7 +33,7 @@ _In short: it returns `undefined` if serializing `undefined`, a function, or a s
 
 ### When it returns `undefined`
 
-I think it's surprising that `JSON.stringify` can ever return anything other than a string. But it can return `undefined` in 5 cases:
+I think it's surprising that `JSON.stringify` can ever return anything other than a string. But it can return `undefined` in 6 cases:
 
 1. Trying to serialize `undefined` at the top level returns `undefined`.
 
@@ -64,7 +64,16 @@ I think it's surprising that `JSON.stringify` can ever return anything other tha
    // => undefined
    ```
 
-4. Objects with a `toJSON` function will be run instead of trying to serialize them normally. But if `toJSON` returns one of the values above, trying to serialize it at the top level will cause `JSON.stringify` to return `undefined`.
+4. In browsers, trying to serialize the deprecated [`document.all`](https://developer.mozilla.org/en-US/docs/Web/API/Document/all) also returns undefined. (Thanks to [senocular on Reddit](https://www.reddit.com/r/javascript/comments/rezyv6/comment/hob1r76/) for pointing this out!)
+
+   ```js
+   JSON.stringify(document.all);
+   // => undefined
+   ```
+
+   This only affects browsers because `document.all` is not available in other environments, such as Node.
+
+5. Objects with a `toJSON` function will be run instead of trying to serialize them normally. But if `toJSON` returns one of the values above, trying to serialize it at the top level will cause `JSON.stringify` to return `undefined`.
 
    ```js
    JSON.stringify({ toJSON: () => undefined });
@@ -77,7 +86,7 @@ I think it's surprising that `JSON.stringify` can ever return anything other tha
    // => undefined
    ```
 
-5. You can pass a second argument, called the "replacer", which changes the serialization logic. If this function returns one of the values above for the top level, `JSON.stringify` will return `undefined`. (As an aside, I've never seen the replacer argument used outside of documentation.)
+6. You can pass a second argument, called the "replacer", which changes the serialization logic. If this function returns one of the values above for the top level, `JSON.stringify` will return `undefined`. (As an aside, I've never seen the replacer argument used outside of documentation.)
 
    ```js
    JSON.stringify({ ignored: true }, () => undefined);
