@@ -2,7 +2,7 @@
   "name": "evanhahn.com",
   "private": true,
   "dependencies": {
-    "date-fns": "^2.23.0",
+    "date-fns": "^2.27.0",
     "gatsby": "^3.10.2",
     "gatsby-image": "^3.10.0",
     "gatsby-plugin-manifest": "^3.10.0",
