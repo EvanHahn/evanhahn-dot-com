@@ -212,15 +212,17 @@ There's some code stuff that isn't open source for whatever reason. Those things
 
 Pretty much all of the above is code-related, but I've done a few other things here and there when I can tear myself away. They are, in no order:
 
-- [America's DJ](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations
+- ["Everything we know about Breath of the Wild 2 as of December 2021"](https://www.reddit.com/r/truezelda/comments/rqiq9d/)
+- ["Is it worth cheating Caltrain?"](/is-it-worth-cheating-caltrain)
+- ["Predicting the next Zelda's release date based on historical data"](https://www.reddit.com/r/truezelda/comments/hf6l1k/)
 - [A very short poem called "Camera"](http://issuu.com/netspencer/docs/calliope?mode=window&pageNumber=12)
 - [A wallpaper from a NASA photo](/wp-content/uploads/2013/02/astro/)
+- [America's DJ](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations
 - [ClimateAction.tech community support](https://climateaction.tech/community/)
 - [Evan Hahn's 100 dope beats of the day](/dbotd/)
 - [How many English words are alphabetical?](/under-1-of-english-words-are-alphabetical)
-- ["Is it worth cheating Caltrain?"](/is-it-worth-cheating-caltrain)
 - [Naps and their effectiveness](/naps-and-their-effectiveness)
-- Study guides from my time as an undergraduate at the University of Michigan: [semester 3](/a-couple-of-resources-from-my-3rd-semester), [semester 4](/resources-from-my-4th-semester), [semester 5](/resources-from-my-5th-semester), and [semester 6](/semester-6-resources)
 - Custom Steam icons for [Zineth](https://evanhahn.com/tape/zineth.png), [Lode Runner 2](https://evanhahn.com/tape/loderunner2.png)
+- Study guides from my time as an undergraduate at the University of Michigan: [semester 3](/a-couple-of-resources-from-my-3rd-semester), [semester 4](/resources-from-my-4th-semester), [semester 5](/resources-from-my-5th-semester), and [semester 6](/semester-6-resources)
 
 And that's it! That's pretty much everything I've done.
