@@ -107,6 +107,8 @@ I've published a number of modules and packages and libraries and tools and what
 - [Lil' pages](/tape/lil/) is a collection of little web-based utilities
 - [luhncheck](https://evanhahn.github.io/luhncheck/) is a little website that runs a number through a [Luhn validator](https://en.wikipedia.org/wiki/Luhn_algorithm)
 - [mailtolink.js](https://github.com/EvanHahn/mailtolink.js) creates `mailto:` links from JavaScript
+- [map-invert](https://www.npmjs.com/package/map-invert) inverts JavaScript Maps
+- [map-omit](https://www.npmjs.com/package/map-omit) removes keys from JavaScript Maps
 - [Meme.js](https://github.com/BuddyMeme/Meme.js) is a canvas-based meme generator I worked on for now-defunct Buddy Meme
 - [MiniClass](https://github.com/EvanHahn/MiniClass) is yet another JavaScript library that allows for simple classical OO. It's tiny
 - [minidots](https://github.com/EvanHahn/minidots) are a couple of dotfiles I use when SSHing or in VMs
