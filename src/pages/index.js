@@ -57,6 +57,7 @@ const IndexPage = () => {
           href="https://bigshoulders.city/@EvanHahn"
           target="_blank"
           icon={<MastodonIcon />}
+          rels={["me"]}
         >
           Mastodon
         </IconLink>

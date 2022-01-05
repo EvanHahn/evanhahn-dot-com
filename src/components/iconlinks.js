@@ -11,6 +11,7 @@ export function IconLink({
   target,
   icon,
   children,
+  rels = [],
 }) {
   let Component;
   let props;
@@ -19,7 +20,11 @@ export function IconLink({
     props = { to: href };
   } else {
     Component = "a";
-    props = { href, target, rel: "noreferrer noopener" };
+    props = {
+      href,
+      target,
+      rel: ["noreferrer", "noopener", ...rels].join(" "),
+    };
   }
 
   return (
