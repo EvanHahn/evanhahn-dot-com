@@ -180,6 +180,8 @@ I've made a bunch of small pull requests to various open source projects. Most o
 - [Deno](https://deno.land/)
   - [Update mime-db to 1.38.0](https://github.com/denoland/deno_std/pull/238)
   - [Add `util.callbackify` to the `node` standard library](https://github.com/denoland/deno/pull/5415)
+- [expressjs.com](https://expressjs.com/)
+  - [Update Helmet documentation](https://github.com/expressjs/expressjs.com/pull/1319)
 - [flow-typed](https://github.com/flow-typed/flow-typed)
   - [express: correct `is` method return type on requests](https://github.com/flow-typed/flow-typed/pull/3464)
 - [KineticJS](https://github.com/ericdrowell/KineticJS)
