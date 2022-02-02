@@ -132,6 +132,7 @@ I've published a number of modules and packages and libraries and tools and what
 - [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
 - [setAttributes](https://github.com/EvanHahn/setAttributes) helps you call `.setAttribute` on a DOM node more easily
 - [Signal Desktop](https://github.com/signalapp/Signal-Desktop) is, unsurprisingly, Signal's open source Desktop client built on Electron. See [all of my changes here](https://github.com/signalapp/Signal-Desktop/commits?author=EvanHahn-Signal).
+- [Simple Statistics](https://evanhahn.gitlab.io/simple-statistics-crystal/) is a Crystal shard for simple statistical operations, such as median or standard deviation
 - [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](https://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
 - [startInterval](https://github.com/EvanHahn/startInterval) is like JavaScript's `setInterval` but it starts immediately. It was made for [a guide](/make-an-npm-baby/)
 - [The TypeScript Grunt skeleton](https://github.com/EvanHahn/TypeScript-Grunt-skeleton)
