@@ -160,6 +160,20 @@ small {
   flex-wrap: wrap;
 }
 
+.SkipToContentLink {
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--soft-background-color);
+  transform: translateY(-100%);
+}
+
+.SkipToContentLink:focus {
+  transform: translateY(0);
+}
+
 .ContentPageHeader .Logo {
   width: 88px;
   height: 88px;

@@ -8,6 +8,7 @@ import "../components/index.css";
 function ContentPageHeader() {
   return (
     <header className="ContentPageHeader">
+      <a className="SkipToContentLink" href="#main">Skip to content</a>
       <div className="Container">
         <Link to="/">
           <Logo />
