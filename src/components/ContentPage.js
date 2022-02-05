@@ -85,11 +85,6 @@ export default function ContentPage({
             <li>
               <a href="https://github.com/EvanHahn">GitHub</a>
             </li>
-            <li>
-              <a href="https://stackoverflow.com/users/804100/evan-hahn">
-                StackOverflow
-              </a>
-            </li>
           </ul>
           <p>
             Unless noted otherwise, content is licensed under the{" "}
