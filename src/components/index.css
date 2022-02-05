@@ -61,7 +61,7 @@ a:hover {
   text-decoration-style: solid;
 }
 
-a:focus {
+a:focus:not(:active) {
   outline: 4px solid var(--text-color);
 }
 
