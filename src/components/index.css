@@ -3,10 +3,10 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 :root {
   --text-color: #000;
   --inverted-text-color: #fff;
+  --soft-background-color: #efefef;
   --background-color: #f5f5f5;
   --primary-color: #000;
-  --logo-color: var(--primary-color);
-  --logo-border-color: transparent;
+  --logo-color: #bd271d;
   --pre-text-color: #000;
   --pre-background-color: #edd;
 }
@@ -15,10 +15,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   :root {
     --text-color: #fff;
     --inverted-text-color: #000;
+    --soft-background-color: #333;
     --background-color: #000;
     --primary-color: #fff;
-    --logo-color: transparent;
-    --logo-border-color: #fff;
     --pre-text-color: #fff;
     --pre-background-color: #222;
   }
@@ -29,7 +28,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 html {
-  font-family: Lato, Avenir, "Noto Sans", "Segoe UI", Ubuntu, Tahoma, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18pt;
   color: var(--text-color);
   background: var(--background-color);
@@ -55,11 +54,15 @@ code, pre {
 
 a {
   color: var(--primary-color);
-  text-decoration: dotted underline;
+  text-decoration: underline;
 }
 
 a:hover {
   text-decoration-style: solid;
+}
+
+a:focus {
+  outline: 4px solid var(--text-color);
 }
 
 a:active {
@@ -75,6 +78,7 @@ a:active {
 h1 {
   font-weight: 900;
   font-size: 2.5rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   line-height: 1em;
 }
@@ -106,46 +110,17 @@ small {
   font-size: 2rem;
 }
 
-.IconLinks {
-  width: 100%;
-  max-width: 900px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 1rem;
+.IndexPageLinkGroup {
+  text-align: center;
 }
 
-@media screen and (max-width: 700px) {
-  .IconLinks {
-    flex-direction: column;
-  }
-}
-
-.IconLinks:last-child {
-  margin-bottom: 0;
-}
-
-.IconLink {
-  list-style-type: none;
-}
-
-.IconLink a {
-  display: flex;
-  padding: 0.5rem;
-  flex-wrap: wrap;
-  align-items: center;
-  border-bottom: none;
-  font-weight: bold;
-}
-
-.IconLink img, .IconLink svg {
-  height: 1.2em;
-  margin-right: 0.3rem;
+.IndexPageLinkGroup > a {
+  display: inline-block;
+  text-align: center;
+  padding: 0 1em;
 }
 
 .Logo {
-  border: 3px solid var(--logo-border-color);
   border-radius: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -161,62 +136,33 @@ small {
   text-align: center;
 }
 
-.ContentPage {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0 auto;
+.Container {
   width: 95%;
-  max-width: 1200px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.ContentPageHeaderAndMainWrapper {
+.ContentPage {
   display: flex;
-}
-
-.ContentPageMiniHeader {
-  display: none;
-  margin-bottom: 1rem;
   flex-direction: column;
-  font-weight: 900;
-  line-height: 1rem;
-  position: relative;
-}
-
-.ContentPageMiniHeader a {
-  position: relative;
-  display: block;
-  align-self: flex-end;
-  color: var(--inverted-text-color);
-  text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  background: var(--primary-color);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  top: -0.2rem;
-  transition: top 200ms ease-out, opacity 400ms ease-out;
-  opacity: 0.8;
-}
-
-.ContentPageMiniHeader a:hover {
-  top: 0;
-  opacity: 1;
+  min-height: 100vh;
 }
 
 .ContentPageHeader {
+  padding: 0.5rem;
+  background: var(--soft-background-color);
+}
+
+.ContentPageHeader .Container {
   display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  padding: 2rem 0 1rem 0;
-  margin-left: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .ContentPageHeader .Logo {
-  width: 150px;
-  height: 150px;
+  width: 88px;
+  height: 88px;
   transition: transform 0.1s ease-out;
 }
 
@@ -224,18 +170,24 @@ small {
   transform: scale(1.1);
 }
 
-.ContentPageHeader .IconLinks {
-  flex-direction: column;
-  width: auto;
+.ContentPageHeaderLinks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.ContentPageHeader .IconLink a {
-  flex-wrap: nowrap;
+.ContentPageHeaderLinks a {
+  margin-left: 1rem;
+}
+
+.ContentPageHeaderLinks a:first-child {
+  margin-left: 0;
 }
 
 .ContentPageMain {
-  flex-grow: 6;
-  padding: 1rem 0;
+  flex-grow: 1;
+  padding-bottom: 1rem;
 }
 
 .ContentPageMain h2,
@@ -316,42 +268,39 @@ small {
 
 .ContentPageFooter {
   line-height: 1.5em;
-  padding: 1rem 0;
+  padding: 2rem 0 1rem 0;
   font-size: 80%;
-  text-align: center;
   opacity: 0.8;
+  background: var(--soft-background-color);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.ContentPageFooter .Container > * {
+  margin-bottom: 1rem;
+}
+
+.ContentPageFooter ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ContentPageFooter ul li {
+  margin-left: 1rem;
+}
+
+.ContentPageFooter ul li:first-child {
+  margin-left: 0;
 }
 
 @media screen and (max-width: 850px) {
-  .ContentPageHeaderAndMainWrapper {
-    flex-direction: column;
+  .ContentPageHeader .Container {
+    justify-content: center;
   }
 
-  .ContentPageMiniHeader {
-    display: flex;
-  }
-
-  .ContentPageHeader {
-    border-top: 1px dotted #666;
-    border-bottom: 1px dotted #666;
-    margin: 2rem 0;
-  }
-
-  .ContentPageHeader .Logo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .ContentPageHeader .IconLink a {
-    padding: 0.25rem 1rem;
-  }
-
-  .ContentPageHeader .IconLink img,
-  .ContentPageHeader .IconLink svg {
+  .ContentPageHeaderLinks {
     display: none;
-  }
-
-  .ContentPageMain {
-    padding: 0;
   }
 }

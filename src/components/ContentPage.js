@@ -2,55 +2,24 @@ import React from "react";
 import { Link } from "gatsby";
 import SEO from "../components/seo";
 import Logo from "./logo";
-import { IconLinks, IconLink } from "./iconlinks";
 import DateElement from "../components/DateElement";
-import AboutIcon from "../components/AboutIcon";
-import BlogIcon from "../components/BlogIcon";
-import BookIcon from "../components/BookIcon";
-import CodeIcon from "../components/CodeIcon";
-import EmailIcon from "../components/EmailIcon";
 import "../components/index.css";
-
-function ContentPageMiniHeader() {
-  // TODO: The below should use the site title
-  return (
-    <header className="ContentPageMiniHeader">
-      <Link to="/">Evan Hahn (dot com)</Link>
-    </header>
-  );
-}
 
 function ContentPageHeader() {
   return (
     <header className="ContentPageHeader">
-      <Link to="/">
-        <Logo />
-      </Link>
-
-      <IconLinks>
-        <IconLink
-          href="https://blacklivesmatter.com/"
-          target="_blank"
-          icon={null}
-        >
-          #BlackLivesMatter
-        </IconLink>
-        <IconLink useGatsbyLink href="/about" icon={<AboutIcon />}>
-          About
-        </IconLink>
-        <IconLink useGatsbyLink href="/contact" icon={<EmailIcon />}>
-          Contact
-        </IconLink>
-        <IconLink useGatsbyLink href="/projects" icon={<CodeIcon />}>
-          Projects
-        </IconLink>
-        <IconLink useGatsbyLink href="/guides" icon={<BookIcon />}>
-          Guides
-        </IconLink>
-        <IconLink useGatsbyLink href="/blog" icon={<BlogIcon />}>
-          Blog
-        </IconLink>
-      </IconLinks>
+      <div className="Container">
+        <Link to="/">
+          <Logo />
+        </Link>
+        <div className="ContentPageHeaderLinks">
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/guides">Guides</Link>
+          <Link to="/blog">Blog</Link>
+        </div>
+      </div>
     </header>
   );
 }
@@ -74,52 +43,82 @@ export default function ContentPage({
     <div className="ContentPage">
       <SEO title={pageTitle || title} description={description} />
 
-      <ContentPageMiniHeader />
+      <ContentPageHeader />
 
-      <div className="ContentPageHeaderAndMainWrapper">
-        <main className="ContentPageMain">
+      <main id="main" className="ContentPageMain">
+        <div className="Container">
           <h1>{title}</h1>
           {children}
           {date && <ContentPageDate date={date} />}
-        </main>
-
-        <ContentPageHeader />
-      </div>
+        </div>
+      </main>
 
       <footer className="ContentPageFooter">
-        Unless noted otherwise, content is licensed under the{" "}
-        <a
-          href="https://creativecommons.org/licenses/by/4.0/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Creative Commons Attribution License
-        </a>{" "}
-        and code under the{" "}
-        <a
-          href="https://unlicense.org/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Unlicense
-        </a>
-        . The logo was created by{" "}
-        <a
-          href="http://luluspice.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Lulu Tang
-        </a>
-        . Icons are{" "}
-        <a
-          href="http://www.entypo.com"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Entypo pictograms by Daniel Bruce
-        </a>
-        . Please come back soon!
+        <div className="Container">
+          <ul>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/projects">Projects</Link>
+            </li>
+            <li>
+              <Link to="/guides">Guides</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="mailto:me@evanhahn.com">Email</a>
+            </li>
+            <li>
+              <a href="https://bigshoulders.city/@EvanHahn">Mastodon</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/EvanHahn">Twitter</a>
+            </li>
+            <li>
+              <a href="https://github.com/EvanHahn">GitHub</a>
+            </li>
+            <li>
+              <a href="https://stackoverflow.com/users/804100/evan-hahn">
+                StackOverflow
+              </a>
+            </li>
+          </ul>
+          <p>
+            Unless noted otherwise, content is licensed under the{" "}
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Creative Commons Attribution License
+            </a>{" "}
+            and code under the{" "}
+            <a
+              href="https://unlicense.org/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Unlicense
+            </a>
+            . The logo was created by{" "}
+            <a
+              href="http://luluspice.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Lulu Tang
+            </a>
+            .
+          </p>
+        </div>
       </footer>
     </div>
   );

@@ -1,16 +1,7 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { IconLinks, IconLink } from "../components/iconlinks";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import SEO from "../components/seo";
 import Logo from "../components/logo";
-import AboutIcon from "../components/AboutIcon";
-import BlogIcon from "../components/BlogIcon";
-import BookIcon from "../components/BookIcon";
-import CodeIcon from "../components/CodeIcon";
-import EmailIcon from "../components/EmailIcon";
-import GithubIcon from "../components/GithubIcon";
-import MastodonIcon from "../components/MastodonIcon";
-import TwitterIcon from "../components/TwitterIcon";
 import "../components/index.css";
 
 const IndexPage = () => {
@@ -34,48 +25,13 @@ const IndexPage = () => {
         <h1>{data.site.siteMetadata.description}</h1>
       </header>
 
-      <IconLinks>
-        <IconLink useGatsbyLink href="/about" icon={<AboutIcon />}>
-          About me
-        </IconLink>
-        <IconLink useGatsbyLink href="/projects" icon={<CodeIcon />}>
-          Projects
-        </IconLink>
-        <IconLink useGatsbyLink href="/guides" icon={<BookIcon />}>
-          Guides
-        </IconLink>
-        <IconLink useGatsbyLink href="/blog" icon={<BlogIcon />}>
-          Blog
-        </IconLink>
-      </IconLinks>
-
-      <IconLinks>
-        <IconLink href="mailto:me@evanhahn.com" icon={<EmailIcon />}>
-          Email
-        </IconLink>
-        <IconLink
-          href="https://bigshoulders.city/@EvanHahn"
-          target="_blank"
-          icon={<MastodonIcon />}
-          rels={["me"]}
-        >
-          Mastodon
-        </IconLink>
-        <IconLink
-          href="https://twitter.com/EvanHahn"
-          target="_blank"
-          icon={<TwitterIcon />}
-        >
-          Twitter
-        </IconLink>
-        <IconLink
-          href="https://github.com/EvanHahn"
-          target="_blank"
-          icon={<GithubIcon />}
-        >
-          GitHub
-        </IconLink>
-      </IconLinks>
+      <div className="IndexPageLinkGroup">
+        <Link to="/about">About me</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/guides">Guides</Link>
+        <Link to="/blog">Blog</Link>
+      </div>
     </div>
   );
 };
