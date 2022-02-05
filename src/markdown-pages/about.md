@@ -5,7 +5,7 @@ path: /about
 
 I'm Evan Hahn, a programmer.
 
-I grew up in Silicon Valley and now live in Chicago in a haunted mansion.
+I grew up in Silicon Valley and now live in Chicago.
 
 I work for [Signal](https://signal.org/). Before this, I worked for [Airtable](https://airtable.com).
 
