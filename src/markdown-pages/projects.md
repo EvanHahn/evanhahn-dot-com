@@ -8,7 +8,7 @@ This is a giant list of projects I've worked on.
 
 Some highlights:
 
-- [Helmet](https://github.com/helmetjs/helmet) is a module to help secure Express web applications. It was originally created by [Adam Baldwin](https://evilpacket.net/) and I've been the primary maintainer since 2013. It was downloaded [over 72 million times in 2021](https://npm-stat.com/charts.html?package=helmet) so far.
+- [Helmet](https://github.com/helmetjs/helmet) is a module to help secure Express web applications. It was originally created by [Adam Baldwin](https://evilpacket.net/) and I've been the primary maintainer since 2013. It was downloaded [over 72 million times in 2021](https://npm-stat.com/charts.html?package=helmet).
 - [_Express.js in Action_](https://www.manning.com/books/express-in-action?utm_source=express-in-action&utm_medium=affiliate&utm_campaign=book_hahn_express_4_7_16&a_aid=express-in-action&a_bid=fe3fcff7) is a book I wrote about Express and its ecosystem. It was published in April 2016—a lifetime ago—but despite some of it being a little outdated, I'm still proud of it.
 - [HumanizeDuration.js](https://evanhahn.github.io/HumanizeDuration.js/) is a library that turns durations to strings. For example, it turns 361,000 milliseconds into "6 minutes, 1 second". Dozens of contributors have localized it into 58 different languages.
 
@@ -23,7 +23,7 @@ I've written many [guides, tutorials, and how-tos](/guides). Two of those got tu
 
 ## Jobs
 
-I currently work on [Signal](https://signal.org/)'s Desktop team. So far, my most significant contribution has been work on our [encrypted group calling feature](https://signal.org/blog/group-calls/), but you can browse [all of my commits](https://github.com/signalapp/Signal-Desktop/commits?author=EvanHahn-Signal).
+I currently work on [Signal](https://signal.org/)'s Desktop team. I've worked on many things including an [encrypted group calling feature](https://signal.org/blog/group-calls/). You can browse [all of my commits](https://github.com/signalapp/Signal-Desktop/commits?author=EvanHahn-Signal).
 
 I had two full-time jobs before this:
 
