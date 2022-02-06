@@ -31,7 +31,7 @@ I've written some guides and how-tos. Here they are:
 - [Smoothing out setTimeout in CoffeeScript](/smoothing-out-settimeout-in-coffeescript)
 - [A quick romp through default values in CoffeeScript](/default-values-in-coffeescript)
 
-## General web
+## Web development
 
 - [Disabling selection and copy-paste on the web](/how-to-disable-copy-paste-on-your-website)
 - [Overwriting document.head in strict mode on Safari](/document-dot-head-on-safari-strict-mode)
@@ -52,5 +52,6 @@ I've written some guides and how-tos. Here they are:
 
 ## Grab bag
 
-- [How to code Tic-Tac-Toe (and a Lua implementation)](/how-to-code-tic-tac-toe-and-a-lua-implementation)
 - [Skip the header of a file with Python's CSV reader](/python-skip-header-csv-reader)
+- [Clojure's "zero?" has some quirks](/clojures-zero-has-some-quirks/)
+- [How to code Tic-Tac-Toe (and a Lua implementation)](/how-to-code-tic-tac-toe-and-a-lua-implementation)
