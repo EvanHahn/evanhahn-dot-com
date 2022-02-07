@@ -94,6 +94,8 @@ a:active {
 }
 
 h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
   font-weight: 900;
   font-size: 2.5rem;
   margin-top: 2rem;
