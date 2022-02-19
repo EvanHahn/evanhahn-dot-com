@@ -178,7 +178,7 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - `better-sqlite3` updates ([#55144](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55144))
   - `connect` changes and code reviews ([#24883](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/24883), [#40409](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/40409), [#40776](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/40776))
   - `keygrip` tidying ([#41152](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/41152))
-  - `react-virtualized` tweak ([#58648](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/58648))
+  - `react-virtualized` tweaks ([#58648](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/58648), [#58705](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/58705))
 - [Deno](https://deno.land/)
   - [Update mime-db to 1.38.0](https://github.com/denoland/deno_std/pull/238)
   - [Add `util.callbackify` to the `node` standard library](https://github.com/denoland/deno/pull/5415)
