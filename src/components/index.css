@@ -75,12 +75,11 @@ a {
   text-decoration: underline;
 }
 
-a:hover {
-  text-decoration-style: solid;
-}
-
-a:focus:not(:active) {
-  outline: 4px solid var(--text-color);
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--inverted-text-color);
+  background: var(--text-color);
 }
 
 a:active {
@@ -121,9 +120,12 @@ small {
 }
 
 .IndexPage .Logo {
+  margin-bottom: 2rem;
+}
+
+.IndexPage .Logo__image {
   width: 200px;
   height: 200px;
-  margin-bottom: 2rem;
 }
 
 .IndexPage h1 {
@@ -140,7 +142,7 @@ small {
   padding: 0 1em;
 }
 
-.Logo {
+.Logo__image {
   border-radius: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -194,14 +196,24 @@ small {
   transform: translateY(0);
 }
 
-.ContentPageHeader .Logo {
+.ContentPageHeader .Logo__image {
   width: 88px;
   height: 88px;
   transition: transform 0.1s ease-out;
 }
 
-.ContentPageHeader .Logo:hover {
+.ContentPageHeader .Logo:hover,
+.ContentPageHeader .Logo:focus {
+  background: inherit;
+}
+
+.ContentPageHeader .Logo:hover .Logo__image,
+.ContentPageHeader .Logo:focus .Logo__image {
   transform: scale(1.1);
+}
+
+.ContentPageHeader .Logo:focus .Logo__image {
+  outline: 5px solid var(--text-color);
 }
 
 .ContentPageHeaderLinks {

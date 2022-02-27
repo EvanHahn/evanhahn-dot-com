@@ -12,9 +12,7 @@ function ContentPageHeader() {
         Skip to content
       </a>
       <div className="Container">
-        <Link to="/">
-          <Logo />
-        </Link>
+        <Logo linkTo="/" />
         <div className="ContentPageHeaderLinks">
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>

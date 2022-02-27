@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 
-export default function Logo() {
+export default function Logo({ linkTo }) {
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "logo_white.png" }) {
@@ -18,12 +19,22 @@ export default function Logo() {
     }
   `);
 
-  return (
+  const image = (
     <img
-      className="Logo"
+      className="Logo__image"
       alt="Evan Hahn"
       // We use the fallback for simplicity.
       src={data.file.childImageSharp.gatsbyImageData.images.fallback.src}
     />
   );
+
+  if (linkTo) {
+    return (
+      <Link className="Logo" to={linkTo}>
+        {image}
+      </Link>
+    );
+  }
+
+  return image;
 }
