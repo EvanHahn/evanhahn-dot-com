@@ -4,8 +4,13 @@ description: me@evanhahn.com and more.
 path: /contact
 ---
 
-You can **email me** at <me@evanhahn.com>.
+You probably want to [email me at me@evanhahn.com](mailto:me@evanhahn.com), but you can also find me elsewhere online:
 
-You can follow me on the **Fediverse** at [@EvanHahn@bigshoulders.city](https://bigshoulders.city/@EvanHahn) and on **Twitter** at [@EvanHahn](https://twitter.com/EvanHahn).
-
-I'm on **GitHub** at [github.com/EvanHahn](https://github.com/EvanHahn) and I'm also on **StackOverflow** [here](https://stackoverflow.com/users/804100/evan-hahn).
+- [Fediverse](https://bigshoulders.city/@EvanHahn)
+- [GitHub](https://github.com/EvanHahn)
+- [GitLab](https://gitlab.com/EvanHahn)
+- [Keybase](https://keybase.io/EvanHahn)
+- [Lobsters](https://lobste.rs/u/EvanHahn)
+- [Reddit](https://reddit.com/user/evanhahn)
+- [StackOverflow](https://stackoverflow.com/users/804100/evan-hahn)
+- [Twitter](https://twitter.com/EvanHahn)
