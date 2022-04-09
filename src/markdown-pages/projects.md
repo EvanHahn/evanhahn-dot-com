@@ -23,7 +23,7 @@ I've written many [guides, tutorials, and how-tos](/guides). Two of those got tu
 
 ## Jobs
 
-I currently work on [Signal](https://signal.org/)'s Desktop team. I've worked on many things including an [encrypted group calling feature](https://signal.org/blog/group-calls/). You can browse [all of my commits](https://github.com/signalapp/Signal-Desktop/commits?author=EvanHahn-Signal).
+I currently work at [Signal](https://signal.org/), primarily on our Desktop team. I've worked on many things including an [encrypted group calling feature](https://signal.org/blog/group-calls/). You can browse [all of my commits](https://github.com/signalapp/Signal-Desktop/commits?author=EvanHahn-Signal).
 
 I had two full-time jobs before this:
 
