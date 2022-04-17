@@ -19,7 +19,8 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "eslint-config-react-app": "^7.0.0",
+    "eslint": "^8.13.0",
+    "eslint-config-react-app": "^7.0.1",
     "prettier": "^2.6.2"
   },
   "scripts": {
@@ -29,6 +30,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "prettier --check ."
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "test": "npm run lint"
   }
 }
