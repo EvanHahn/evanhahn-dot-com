@@ -1,0 +1,27 @@
+name: Check site
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Hugo
+        run: sudo snap install hugo --channel=extended
+
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      - name: Check out repo
+        uses: actions/checkout@v2
+
+      - name: Build site with Hugo
+        run: hugo --panicOnWarning --verbose
+
+      - name: Check formatting
+        run: npm ci && npm test
+        env:
+          CI: true
