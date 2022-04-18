@@ -14,6 +14,7 @@ I've written some guides and how-tos. Here they are:
 - [Disable ESLint for a file](/disable-eslint-for-a-file)
 - [Disable JSHint for a file](/disable-jshint-for-a-file)
 - [When stringify doesn't return a string](/when-stringify-doesnt-return-a-string)
+- [How to reverse an array]({{< ref "posts/2020-04-29-reverse-javascript-array" >}})
 - [Remove one element by index from JavaScript array](/remove-one-element-by-index-from-javascript-array)
 - [Randomly generate either -1 or 1](/randomly-generate-either-1-or-1)
 - [Should you use semicolons in JavaScript?](/should-you-use-semicolons-in-javascript)
