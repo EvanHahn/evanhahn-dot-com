@@ -1,38 +1,12 @@
 {
   "name": "evanhahn.com",
   "private": true,
-  "dependencies": {
-    "date-fns": "^2.28.0",
-    "gatsby": "^4.11.2",
-    "gatsby-image": "^3.11.0",
-    "gatsby-plugin-manifest": "^4.11.1",
-    "gatsby-plugin-offline": "^5.11.1",
-    "gatsby-plugin-react-helmet": "^5.11.0",
-    "gatsby-plugin-sharp": "^4.11.1",
-    "gatsby-source-filesystem": "^4.11.1",
-    "gatsby-transformer-remark": "^5.11.1",
-    "gatsby-transformer-sharp": "^4.11.0",
-    "path-browserify": "^1.0.1",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0"
-  },
   "devDependencies": {
-    "eslint": "^8.13.0",
-    "eslint-config-react-app": "^7.0.1",
     "prettier": "^2.6.2"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
     "format": "prettier --write .",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check .",
+    "lint": "prettier --check .",
     "test": "npm run lint"
   }
 }

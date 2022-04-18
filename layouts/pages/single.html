@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <main class="content-page">
+    {{ $byline := cond (isset .Params "byline") .Params.Byline false }}
+    <h1 {{ if $byline }}class="with-byline"{{ end }}>{{ .Title }}</h1>
+    {{ if $byline }}
+      {{ partial "byline" . }}
+    {{ end }}
+    {{ .Content }}
+  </main>
+{{ end }}

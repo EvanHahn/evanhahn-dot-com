@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 18pt;
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+body {
+  line-height: 2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+strong {
+  font-weight: 900;
+}
+
+em {
+  font-style: italic;
+}
+
+code,
+pre {
+  font-family: SourceCodePro, Inconsolata, Consolas, Monaco, Ubuntu Mono,
+    monospace;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--inverted-text-color);
+  background: var(--text-color);
+}
+
+a:active {
+  position: relative;
+  top: 1px;
+}
+
+::selection {
+  color: var(--inverted-text-color);
+  background: var(--primary-color);
+}
+
+h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1em;
+}
+
+small {
+  font-size: 80%;
+}

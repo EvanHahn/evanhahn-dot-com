@@ -1,5 +1,9 @@
-.cache
-package.json
-package-lock.json
-public
-static
+# Project-specific stuff
+*.html
+/static/
+
+# Hugo files
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json

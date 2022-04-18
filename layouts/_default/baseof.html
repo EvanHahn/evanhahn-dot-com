@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8" />
+
+    {{ $title := cond (isset .Params "title") .Params.Title .Site.Title }}
+    {{ $description := cond (isset .Params "description") .Params.Description .Site.Params.SiteDescription }}
+
+    <title>{{ $title }}</title>
+
+    {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+    {{ $favicon := resources.Get "images/evanhahnlogo.png" }}
+    {{ $favicon = $favicon.Resize "32x32" }}
+    <link rel="icon" href="{{ $favicon.Permalink }}" type="image/png" />
+
+    <meta name="description" content="{{ $description }}" />
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <meta name="og:title" content="{{ $title }}" />
+    <meta name="og:description" content="{{ $description }}" />
+    <meta name="og:type" content="website" />
+
+    <meta name="twitter:title" content="{{ $title }}" />
+    <meta name="twitter:description" content="{{ $description }}" />
+    <meta name="twitter:creator" content="{{ .Site.Params.Author }}" />
+    <meta name="twitter:card" content="summary" />
+
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  </head>
+  <body>
+    {{ block "main" . }}{{ end }}
+
+    {{ block "footer" . }}
+      <footer>
+        <a class="logo" href="{{ ref . "/" }}">{{ partial "logo-image" . }}</a>
+
+        <ul>
+          <li><a href="{{ ref . "/pages/about" }}">About me</a></li>
+          <li><a href="{{ ref . "/pages/contact" }}">Contact</a></li>
+          <li><a href="{{ ref . "/pages/projects" }}">Projects</a></li>
+          <li><a href="{{ ref . "/pages/guides" }}">Guides</a></li>
+          <li><a href="{{ ref . "/posts" }}">Blog</a></li>
+        </ul>
+        <p>
+          Content is licensed under the
+          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer noopener">Creative Commons Attribution License</a>
+          and code under the
+          <a href="https://unlicense.org/" target="_blank" rel="noreferrer noopener">Unlicense</a>.
+          The logo was created by <a href="http://luluspice.com/" target="_blank" rel="noreferrer noopener" >Lulu Tang</a>.
+        </p>
+      </footer>
+    {{ end }}
+  </body>
+</html>

@@ -1,0 +1,28 @@
+.home {
+  display: flex;
+  min-height: 100vh;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .logo__image {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      text-align: center;
+      padding: 0 1em;
+    }
+  }
+}

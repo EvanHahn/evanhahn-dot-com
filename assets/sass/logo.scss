@@ -1,0 +1,24 @@
+.logo {
+  display: inline-block;
+
+  &__image {
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--logo-color);
+    color: transparent;
+  }
+
+  & &__image {
+    transition: background 0.1s ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    background: transparent;
+
+    .logo__image {
+      background: var(--logo-hover-color);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+:root {
+  --text-color: #000;
+  --inverted-text-color: #fff;
+  --background-color: #f5f5f5;
+  --primary-color: #000;
+  --logo-color: #bd271d;
+  --pre-text-color: #000;
+  --pre-background-color: #fff;
+  --logo-hover-color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fff;
+    --inverted-text-color: #000;
+    --background-color: #000;
+    --primary-color: #fff;
+    --pre-text-color: #fff;
+    --pre-background-color: #222;
+    --logo-hover-color: #333;
+  }
+}

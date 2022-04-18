@@ -1,0 +1,7 @@
+<div class="byline">
+  <address>by <a rel="author" href="{{ ref . "/" }}">{{ .Site.Params.Author }}</a></address>{{ if .Date }}, posted
+  <time dateTime="{{ .Date.Format "2006-01-02" }}">
+    {{ .Date.Format "Jan 2, 2006" }}
+  </time>
+  {{ end }}
+</div>

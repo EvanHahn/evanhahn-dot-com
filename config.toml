@@ -1,0 +1,9 @@
+title = 'Evan Hahn (dot com)'
+baseURL = 'https://evanhahn.com/'
+languageCode = 'en-us'
+disableKinds = ['taxonomy', 'term', 'sitemap']
+enableRobotsTXT = true
+
+[params]
+  Author = 'Evan Hahn'
+  SiteDescription = "I'm Evan Hahn, a programmer."
