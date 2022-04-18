@@ -7,3 +7,7 @@ enableRobotsTXT = true
 [params]
   Author = 'Evan Hahn'
   SiteDescription = "I'm Evan Hahn, a programmer."
+
+[markup]
+  [markup.highlight]
+    style = 'dracula'
