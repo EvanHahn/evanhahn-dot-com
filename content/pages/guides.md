@@ -19,7 +19,6 @@ I've written some guides and how-tos. Here they are:
 - [Randomly generate either -1 or 1](/randomly-generate-either-1-or-1)
 - [Should you use semicolons in JavaScript?](/should-you-use-semicolons-in-javascript)
 - [Newline necessary at the end of JavaScript files?](/newline-necessary-at-the-end-of-javascript-files)
-- [Detect RockMelt browser](/javascript-detect-if-your-browser-is-rockmelt)
 
 ### Express
 
