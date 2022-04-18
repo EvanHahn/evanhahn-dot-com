@@ -16,12 +16,16 @@ It's time. You've been mooching off of [npm](https://npmjs.com/) for awhile now,
 
 JavaScript has had `setInterval` for a long time. It runs a function every so often. Frequently, I find myself doing something like this:
 
-    setInterval(myFunction, 1000);
-    myFunction();
+```js
+setInterval(myFunction, 1000);
+myFunction();
+```
 
 I'd like to build a nearly-identical function that does the same thing as `setInterval` but also runs the function immediately. It'll turn the above code into this:
 
-    startInterval(myFunction, 1000);
+```js
+startInterval(myFunction, 1000);
+```
 
 This is a pretty simple package, so it'll be helpful when we learn all of the complexities of a npm module.
 
@@ -37,13 +41,15 @@ Every npm module has a file called `package.json` inside. It's a simple JSON doc
 
 You can make this file yourself, or let `npm init` do it for you. Personally, I think `npm init` adds a lot of stuff, so let's just put this inside for now (I'll explain in a minute):
 
-    {
-      "name": "startinterval",
-      "description": "setInterval but also calls the function immediately",
-      "author": "Your Name <yourname@example.com> (https://example.com)",
-      "version": "0.1.0",
-      "main": "index.js"
-    }
+```json
+{
+  "name": "startinterval",
+  "description": "setInterval but also calls the function immediately",
+  "author": "Your Name <yourname@example.com> (https://example.com)",
+  "version": "0.1.0",
+  "main": "index.js"
+}
+```
 
 So there are four keys:
 
@@ -58,12 +64,14 @@ That's a really basic `package.json`. Let's write the code.
 
 The first version of our code is just 5 lines.
 
-    function startInterval(fn) {
-      fn(); // do the function right now
-      return setInterval.apply(this, arguments); // defer to setInterval
-    }
+```js
+function startInterval(fn) {
+  fn(); // do the function right now
+  return setInterval.apply(this, arguments); // defer to setInterval
+}
 
-    module.exports = startInterval; // let me be required
+module.exports = startInterval; // let me be required
+```
 
 Drop this into `index.js`, like we specified in `package.json`.
 
@@ -82,7 +90,9 @@ Feel the thrill.
 
 We're ready to publish a first version! My body quivers with excitement.
 
-    npm publish . # where . is just the path to this package
+```sh
+npm publish . # where . is just the path to this package
+```
 
 If all goes well, npm will spit out some HTTP information...and then, without much fanfare, your package will appear on the npm website! I've experienced a delay of a few minutes, so you can frantically refresh the homepage until your package appears (or until npm crashes).
 
@@ -127,14 +137,18 @@ I'm going to assume you know how to do this, so here's some npm-specific stuff:
 
 - Now that your package is on GitHub, you should add a repository field to your `package.json`. It'll look something like this:
 
-        "repository": {
-          "type": "git",
-          "url": "https://github.com/EvanHahn/startInterval.git"
-        }
+  ```json
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EvanHahn/startInterval.git"
+  }
+  ```
 
 - If you have a bug in your software, it'd be great for people to know where to submit it! You can add this information under the "bugs" field in `package.json`. I'd recommend the GitHub issue tracker URL for your repository. Mine looks like this:
 
-        "bugs": "https://github.com/EvanHahn/startInterval/issues"
+  ```json
+  "bugs": "https://github.com/EvanHahn/startInterval/issues"
+  ```
 
   You can also add more information like an email address if you want.
 
@@ -142,9 +156,11 @@ I'm going to assume you know how to do this, so here's some npm-specific stuff:
 
 Someone could come across your package outside of the Node world -- maybe they're in a browser. To let them, wrap your `module.exports` line in an `if` statement that will only use `module.exports` if it can.
 
-    if (typeof module !== 'undefined') {
-      module.exports = startInterval;
-    }
+```js
+if (typeof module !== "undefined") {
+  module.exports = startInterval;
+}
+```
 
 Now, without any extra work (like having to use [Browserify](http://browserify.org/)), someone can drop `startinterval.js` on their website. If you're in a browser environment, `startInterval` will be in the global namespace. But if you're in Node, it'll export the function.
 
@@ -170,7 +186,9 @@ _Sinon_ does "spies". This basically lets us define functions that know how many
 
 The first thing to do is to install Mocha, Chai, and Sinon.
 
-    npm install mocha chai sinon --save-dev
+```sh
+npm install mocha chai sinon --save-dev
+```
 
 This installs the packages and saves them under the "devDependencies" field of `package.json`. "Regular" dependencies are things that you _need_ to run the package, and they're specified under the "dependencies" key. "devDependencies" are needed when _developing_ the package. Testing usually falls under the latter category, because end users won't need to run your tests.
 
@@ -186,22 +204,24 @@ Basically, this allows you to type `npm test` in your terminal and run the tests
 
 Now, make a folder called `test` and put `test.js` inside. We'll make a simple example test for now. Fill it with this code (which the in-line comments hopefully explain):
 
-    // First, we require `expect` from Chai.
-    const { expect } = require('chai');
+```js
+// First, we require `expect` from Chai.
+const { expect } = require("chai");
 
-    // `describe` makes a "suite" of tests; think of them as a group.
-    describe('fake suite of tests', function() {
-      // The tests have an English description...
-      it('has 2 equal to be greater than 0', function() {
-        // ...and a code assertion.
-        expect(2).to.be.above(0);
-      });
+// `describe` makes a "suite" of tests; think of them as a group.
+describe("fake suite of tests", function () {
+  // The tests have an English description...
+  it("has 2 equal to be greater than 0", function () {
+    // ...and a code assertion.
+    expect(2).to.be.above(0);
+  });
 
-      // You can have multiple tests in a suite.
-      it('has 1 equal to 1', function() {
-        expect(1).to.equal(1);
-      });
-    });
+  // You can have multiple tests in a suite.
+  it("has 1 equal to 1", function () {
+    expect(1).to.equal(1);
+  });
+});
+```
 
 When you go into your project's root directory and type `npm test`, you should see some green text that says "2 passing"! This is because you have two tests and they both pass.
 
@@ -213,46 +233,50 @@ Our project doesn't need to test whether numbers are equal to each other. That's
 
 Let's write a first _real_ test!
 
-    // Require everything we need (including our function!)
-    const { expect } = require('chai');
-    const sinon = require('sinon');
-    const startInterval = require('..');
+```js
+// Require everything we need (including our function!)
+const { expect } = require("chai");
+const sinon = require("sinon");
+const startInterval = require("..");
 
-    describe('startInterval', function() {
-      it('calls the function immediately', function() {
-        const fn = sinon.spy(); // make a spy function
-        const interval = startInterval(fn, 1000);
-        expect(fn.calledOnce).to.be.true; // we can call this on the spy
-        clearInterval(interval); // make sure we "clean up" the test
-      });
-    });
+describe("startInterval", function () {
+  it("calls the function immediately", function () {
+    const fn = sinon.spy(); // make a spy function
+    const interval = startInterval(fn, 1000);
+    expect(fn.calledOnce).to.be.true; // we can call this on the spy
+    clearInterval(interval); // make sure we "clean up" the test
+  });
+});
+```
 
 Run `npm test` and see what happens! Our function works...well, only the stuff we've tested! Let's add a second test:
 
-    it('calls the function many times over time', function() {
-      // Set up the things we need. Most notably, use Sinon's "fake clock".
-      const fn = sinon.spy();
-      const clock = sinon.useFakeTimers();
-      const interval = startInterval(fn, 100);
+```js
+it("calls the function many times over time", function () {
+  // Set up the things we need. Most notably, use Sinon's "fake clock".
+  const fn = sinon.spy();
+  const clock = sinon.useFakeTimers();
+  const interval = startInterval(fn, 100);
 
-      // Should've been called once in the first 99 ms...
-      clock.tick(99);
-      expect(fn.callCount).to.equal(1);
+  // Should've been called once in the first 99 ms...
+  clock.tick(99);
+  expect(fn.callCount).to.equal(1);
 
-      // But then we get "pushed over" into having called it again.
-      clock.tick(2);
-      expect(fn.callCount).to.equal(2);
+  // But then we get "pushed over" into having called it again.
+  clock.tick(2);
+  expect(fn.callCount).to.equal(2);
 
-      // Test that a few more times.
-      clock.tick(100);
-      expect(fn.callCount).to.equal(3);
-      clock.tick(100);
-      expect(fn.callCount).to.equal(4);
+  // Test that a few more times.
+  clock.tick(100);
+  expect(fn.callCount).to.equal(3);
+  clock.tick(100);
+  expect(fn.callCount).to.equal(4);
 
-      // Teardown
-      clock.restore();
-      clearInterval(interval);
-    });
+  // Teardown
+  clock.restore();
+  clearInterval(interval);
+});
+```
 
 Try running `npm test` to see that things work!
 
@@ -260,37 +284,39 @@ Try running `npm test` to see that things work!
 
 This is a pretty simple function with only two tests, but you can see that we have repeated code. `fn` is identical each time, and we're calling `clearInterval` at the end of every test. Let's use Mocha's `beforeEach` and `afterEach` features to clean that up. Here's what the code looks like now:
 
-    describe('startInterval', function() {
-      // Before each spec, make the fake spy and clock.
-      beforeEach(function() {
-        this.fn = sinon.spy();
-        this.clock = sinon.useFakeTimers();
-      });
+```js
+describe("startInterval", function () {
+  // Before each spec, make the fake spy and clock.
+  beforeEach(function () {
+    this.fn = sinon.spy();
+    this.clock = sinon.useFakeTimers();
+  });
 
-      // After each spec, cancel the interval we start and restore the clock.
-      afterEach(function() {
-        clearInterval(this.interval);
-        this.clock.restore();
-      });
+  // After each spec, cancel the interval we start and restore the clock.
+  afterEach(function () {
+    clearInterval(this.interval);
+    this.clock.restore();
+  });
 
-      it('calls the function immediately', function() {
-        // Notice how our code is much shorter!
-        this.interval = startInterval(this.fn, 1000);
-        expect(this.fn.calledOnce).to.be.true;
-      });
+  it("calls the function immediately", function () {
+    // Notice how our code is much shorter!
+    this.interval = startInterval(this.fn, 1000);
+    expect(this.fn.calledOnce).to.be.true;
+  });
 
-      it('calls the function many times over time', function() {
-        this.interval = startInterval(this.fn, 100);
-        this.clock.tick(99);
-        expect(this.fn.callCount).to.equal(1);
-        this.clock.tick(2);
-        expect(this.fn.callCount).to.equal(2);
-        this.clock.tick(100);
-        expect(this.fn.callCount).to.equal(3);
-        this.clock.tick(100);
-        expect(this.fn.callCount).to.equal(4);
-      });
-    });
+  it("calls the function many times over time", function () {
+    this.interval = startInterval(this.fn, 100);
+    this.clock.tick(99);
+    expect(this.fn.callCount).to.equal(1);
+    this.clock.tick(2);
+    expect(this.fn.callCount).to.equal(2);
+    this.clock.tick(100);
+    expect(this.fn.callCount).to.equal(3);
+    this.clock.tick(100);
+    expect(this.fn.callCount).to.equal(4);
+  });
+});
+```
 
 It's much shorter and clearer now! Well done.
 
@@ -304,9 +330,11 @@ There are a lot of people named Travis, but the one we care about today is named
 
 3.  Create a file called `.travis.yml` in the root of your project and add the following to it, which will test your code on Node version 14:
 
-        language: node_js
-        node_js:
-          - "14"
+    ```yml
+    language: node_js
+    node_js:
+      - "14"
+    ```
 
 4.  Add that file to GitHub (add, commit, and push).
 
@@ -328,6 +356,8 @@ We've seen that a even simple function can become a big npm package pretty quick
 
 And publish again!
 
-    npm publish .
+```sh
+npm publish .
+```
 
 Welcome to npm, my friend.
