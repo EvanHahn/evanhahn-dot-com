@@ -5,12 +5,12 @@
       <h1>{{ .Site.Params.SiteDescription }}</h1>
     </header>
 
-    <nav>
-      <a href="{{ ref . "/pages/about" }}">About me</a>
-      <a href="{{ ref . "/pages/contact" }}">Contact</a>
-      <a href="{{ ref . "/pages/projects" }}">Projects</a>
-      <a href="{{ ref . "/pages/guides" }}">Guides</a>
-      <a href="{{ ref . "/posts" }}">Blog</a>
+    <nav>{{ "" -}}
+      <a href="{{ ref . "/pages/about" }}">About me</a>{{ "" -}}
+      <a href="{{ ref . "/pages/contact" }}">Contact</a>{{ "" -}}
+      <a href="{{ ref . "/pages/projects" }}">Projects</a>{{ "" -}}
+      <a href="{{ ref . "/pages/guides" }}">Guides</a>{{ "" -}}
+      <a href="{{ ref . "/posts" }}">Blog</a>{{ "" -}}
     </nav>
   </div>
 {{ end }}
