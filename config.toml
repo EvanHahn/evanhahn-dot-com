@@ -3,9 +3,11 @@ baseURL = 'https://evanhahn.com/'
 languageCode = 'en-us'
 disableKinds = ['taxonomy', 'term', 'sitemap']
 enableRobotsTXT = true
+copyright = 'Content is licensed under the Creative Commons Attribution License and code under the Unlicense.'
 
 [params]
   Author = 'Evan Hahn'
+  AuthorEmail = 'me@evanhahn.com'
   SiteDescription = "I'm Evan Hahn, a programmer."
 
 [markup]
