@@ -47,7 +47,9 @@ Before graduating college, I had a few other part-time jobs, mostly internships:
 
 ## Open source stuff
 
-I've published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
+My main open source contributions have been for Signal. You can [browse my commits for Signal Desktop](https://github.com/signalapp/Signal-Desktop/commits?author=evanhahn-signal) and [Signal for iOS](https://github.com/signalapp/Signal-iOS/commits?author=evanhahn-signal). (I even made a few silly changes in [Signal for Android](https://github.com/signalapp/Signal-Android/commits?author=evanhahn-signal).)
+
+I've also published a number of modules and packages and libraries and tools and whatever. In alphabetical order, they are:
 
 - [America's DJ](https://twitter.com/americas_dj) is a Twitter bot that tweets fake DJ names pulled from US military operations. You can find the source [here](https://github.com/EvanHahn/us-military-dj-names).
 - [American police shooting countdown](https://js1024.fun/results/2020#41), my entry to JS1024 2020
