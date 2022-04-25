@@ -189,6 +189,8 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - [Update Helmet documentation](https://github.com/expressjs/expressjs.com/pull/1319)
 - [flow-typed](https://github.com/flow-typed/flow-typed)
   - [express: correct `is` method return type on requests](https://github.com/flow-typed/flow-typed/pull/3464)
+- [GRDB](https://github.com/groue/GRDB.swift)
+  - [Fix changelog links](https://github.com/groue/GRDB.swift/pull/1203)
 - [KineticJS](https://github.com/ericdrowell/KineticJS)
   - [Add Bower support](https://github.com/ericdrowell/KineticJS/pull/592)
 - [methods](https://github.com/jshttp/methods)
@@ -204,6 +206,8 @@ I've made a bunch of small pull requests to various open source projects. Most o
 - [Tab Center Redux](https://github.com/eoger/tabcenter-redux)
   - [Bugfix: clear favicon when the favicon is removed](https://github.com/eoger/tabcenter-redux/pull/252)
   - [Use === instead of == across the codebase](https://github.com/eoger/tabcenter-redux/pull/259)
+- [Vapor Security Headers](https://github.com/brokenhandsio/VaporSecurityHeaders)
+  - [Disable X-XSS-Protection filter, for safety](https://github.com/brokenhandsio/VaporSecurityHeaders/pull/26)
 
 ## Code stuff that isn't open source
 
