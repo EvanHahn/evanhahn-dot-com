@@ -7,13 +7,14 @@
     <ul>
       {{ range .Pages }}
         <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>{{ "" -}}
           {{ if .Date }}
-          <br />
-          <small>
-            <time dateTime="{{ .Date.Format "2006-01-02" }}">
-              {{ .Date.Format "January 2, 2006" }}
-            </time>
+          <small>{{ "" -}}
+            ({{ "" -}}
+              <time dateTime="{{ .Date.Format "2006-01-02" }}">{{ "" -}}
+                {{ .Date.Format "January 2, 2006" -}}
+              </time>{{ "" -}}
+            ){{ "" -}}
           </small>
           {{ end }}
         </li>
