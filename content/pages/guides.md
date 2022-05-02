@@ -17,6 +17,7 @@ I've written some guides and how-tos. Here they are:
 - [How to reverse an array]({{< ref "posts/2020-04-29-reverse-javascript-array" >}})
 - [Remove one element by index from JavaScript array](/remove-one-element-by-index-from-javascript-array)
 - [Randomly generate either -1 or 1](/randomly-generate-either-1-or-1)
+- [Overwriting document.head in strict mode on Safari](/document-dot-head-on-safari-strict-mode)
 - [Should you use semicolons in JavaScript?](/should-you-use-semicolons-in-javascript)
 - [Newline necessary at the end of JavaScript files?](/newline-necessary-at-the-end-of-javascript-files)
 
@@ -32,10 +33,10 @@ I've written some guides and how-tos. Here they are:
 - [Smoothing out setTimeout in CoffeeScript](/smoothing-out-settimeout-in-coffeescript)
 - [A quick romp through default values in CoffeeScript](/default-values-in-coffeescript)
 
-## Web development
+## Python
 
-- [Disabling selection and copy-paste on the web](/how-to-disable-copy-paste-on-your-website)
-- [Overwriting document.head in strict mode on Safari](/document-dot-head-on-safari-strict-mode)
+- [Skip the header of a file with Python's CSV reader]({{< ref "posts/2015-01-10-python-skip-header-csv-reader" >}})
+- [How to read tab-separated values (TSV) files in Python]({{< ref "posts/2022-05-02-how-to-read-tsv-files-in-python" >}})
 
 ## Tools
 
@@ -54,6 +55,6 @@ I've written some guides and how-tos. Here they are:
 
 ## Grab bag
 
-- [Skip the header of a file with Python's CSV reader](/python-skip-header-csv-reader)
+- [Disabling selection and copy-paste on the web](/how-to-disable-copy-paste-on-your-website)
 - [Clojure's "zero?" has some quirks](/clojures-zero-has-some-quirks/)
 - [How to code Tic-Tac-Toe (and a Lua implementation)](/how-to-code-tic-tac-toe-and-a-lua-implementation)
