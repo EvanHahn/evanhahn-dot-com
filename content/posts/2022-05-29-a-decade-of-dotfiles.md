@@ -1,5 +1,6 @@
 ---
 title: A decade of dotfiles
+description: "Reflections on a decade of configuration files."
 url: /a-decade-of-dotfiles
 date: 2022-05-29
 publishDate: 2022-05-29
