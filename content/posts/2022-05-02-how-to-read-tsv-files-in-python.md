@@ -1,6 +1,7 @@
 ---
 title: "How to read tab-separated values (TSV) files in Python"
 url: "/how-to-read-tsv-files-in-python"
+description: "Use the csv module with a tab delimiter."
 date: 2022-05-02
 ---
 
