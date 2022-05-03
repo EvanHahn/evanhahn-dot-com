@@ -5,6 +5,8 @@ description: "A roundup of everything we know about the upcoming game, as of Apr
 url: /everything-we-know-about-zelda-breath-of-the-wild-sequel-as-of-april-2022
 ---
 
+**I've updated this! See [the May 2022 roundup]({{< ref "posts/2022-05-03-everything-we-know-about-zelda-breath-of-the-wild-sequel-as-of-may-2022" >}}).**
+
 _I've also [posted this on Reddit](https://www.reddit.com/r/truezelda/comments/tx15ww/everything_we_know_about_botw2_as_of_april_2022/)._
 
 This post tries to summarize everything we know about Breath of the Wild's sequel. It's arranged by time.
