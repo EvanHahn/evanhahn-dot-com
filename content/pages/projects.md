@@ -23,7 +23,7 @@ I've written many [guides, tutorials, and how-tos](/guides). Two of those got tu
 
 ## Jobs
 
-I currently work at [Signal](https://signal.org/), primarily on our Desktop team. I've worked on many things including an [encrypted group calling feature](https://signal.org/blog/group-calls/). You can browse [all of my commits](https://github.com/signalapp/Signal-Desktop/commits?author=EvanHahn-Signal).
+I currently work at [Signal](https://signal.org/). I currently work on the iOS app, but used to work on the Desktop team. I've worked on many things including an [encrypted group calling feature](https://signal.org/blog/group-calls/), a [privacy-preserving donations feature](https://signal.org/blog/become-a-signal-sustainer/), and much more.
 
 I had two full-time jobs before this:
 
@@ -133,7 +133,6 @@ I've also published a number of modules and packages and libraries and tools and
 - [scrabbler](https://github.com/EvanHahn/scrabbler) is a small Scrabble cheater written in Python
 - [ScriptInclude](https://github.com/EvanHahn/ScriptInclude) adds `include` to browser-based JavaScript and is tiny
 - [setAttributes](https://github.com/EvanHahn/setAttributes) helps you call `.setAttribute` on a DOM node more easily
-- [Signal Desktop](https://github.com/signalapp/Signal-Desktop) is, unsurprisingly, Signal's open source Desktop client built on Electron. See [all of my changes here](https://github.com/signalapp/Signal-Desktop/commits?author=EvanHahn-Signal).
 - [Simple Statistics](https://evanhahn.gitlab.io/simple-statistics-crystal/) is a Crystal shard for simple statistical operations, such as median or standard deviation
 - [SnackWrap](https://github.com/EvanHahn/SnackWrap) allows you to watch files and run a shell command every time a file changes. Not as focused as [Grunt](https://gruntjs.com/) or [Sprockets](https://github.com/sstephenson/sprockets)
 - [startInterval](https://github.com/EvanHahn/startInterval) is like JavaScript's `setInterval` but it starts immediately. It was made for [a guide](/make-an-npm-baby/)
@@ -201,6 +200,10 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - [Add Bower support](https://github.com/stuartmemo/qwerty-hancock/pull/5)
 - [shurikenJS](https://github.com/shurikenjs/shurikenjs)
   - [Add basic Jasmine tests](https://github.com/shurikenjs/shurikenjs/pull/1)
+- [Signal](https://signal.org//)
+  - [Many changes to Signal Desktop](https://github.com/signalapp/Signal-Desktop/commits?author=evanhahn-signal)
+  - [Many changes to Signal for iOS](https://github.com/signalapp/Signal-iOS/commits?author=evanhahn-signal)
+  - [A small number of Signal for Android changes](https://github.com/signalapp/Signal-Android/commits?author=evanhahn-signal)
 - [statuses](https://github.com/jshttp/statuses)
   - [Throw when passed strings on Object.prototype](https://github.com/jshttp/statuses/pull/21)
 - [Tab Center Redux](https://github.com/eoger/tabcenter-redux)
@@ -223,7 +226,11 @@ There's some code stuff that isn't open source for whatever reason. Those things
 
 Pretty much all of the above is code-related, but I've done a few other things here and there when I can tear myself away. They are, in no order:
 
-- ["Everything we know about Breath of the Wild 2 as of December 2021"](https://www.reddit.com/r/truezelda/comments/rqiq9d/)
+- Everything we know about Breath of the Wild 2 series roundups
+  - [As of May 2022]({{< ref "posts/2022-05-03-everything-we-know-about-zelda-breath-of-the-wild-sequel-as-of-may-2022" >}})
+  - [As of April 2022]({{< ref "posts/2022-04-05-everything-we-know-about-zelda-breath-of-the-wild-sequel-as-of-april-2022" >}})
+  - [As of March 2022](https://www.reddit.com/r/truezelda/comments/t51u4s)
+  - [As of December 2021](https://www.reddit.com/r/truezelda/comments/rqiq9d/)
 - ["Is it worth cheating Caltrain?"](/is-it-worth-cheating-caltrain)
 - ["Predicting the next Zelda's release date based on historical data"](https://www.reddit.com/r/truezelda/comments/hf6l1k/)
 - [A very short poem called "Camera"](http://issuu.com/netspencer/docs/calliope?mode=window&pageNumber=12)
