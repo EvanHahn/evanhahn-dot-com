@@ -47,6 +47,7 @@ I've written some guides and how-tos. Here they are:
 
 ### Other
 
+- [Disable SwiftLint for a file]({{< ref "posts/2022-05-17-disable-swiftlint-for-a-file" >}})
 - [Disable the beer emoji in Homebrew](/disable-homebrew-emoji)
 - [Install Node Version Manager without the "source" line](/install-nvm-without-source-line)
 - [Install a list of Atom packages from a file](/atom-apm-install-list)
