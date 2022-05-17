@@ -194,6 +194,8 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - [Add Bower support](https://github.com/ericdrowell/KineticJS/pull/592)
 - [methods](https://github.com/jshttp/methods)
   - [Add some simple tests](https://github.com/jshttp/methods/pull/6)
+- [node-process-limits](https://github.com/timjrobinson/node-process-limits)
+  - [Validate pid before calling](https://github.com/timjrobinson/node-process-limits/pull/1)
 - [Pony](https://ponylang.io)
   - [Remove whitespace-only lines from stdlib](https://github.com/ponylang/ponyc/pull/3761)
 - [Qwerty Hancock](https://github.com/stuartmemo/qwerty-hancock)
