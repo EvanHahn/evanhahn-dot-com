@@ -9,7 +9,7 @@
     <title>{{ $title }}</title>
 
     {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
     {{ $favicon := resources.Get "images/evanhahnlogo.png" }}
     {{ $favicon = $favicon.Resize "32x32" }}
