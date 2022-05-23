@@ -15,14 +15,20 @@ It comes from the [C standard](http://c0x.coding-guidelines.com/5.1.1.2.html) wh
 
 There are cases in JavaScript where it can be an issue as well, but not as many. For example, this is perfectly valid JavaScript, which could happen in file concatenation:
 
-    return 12; }var x = 10;
+```javascript
+return 12; }var x = 10;
+```
 
 But don't worry -- bad things can still happen. For example, I once had a file that ended in a comment. It broke everything when I combined them. This could happen, and it's no good:
 
-    x = 0; // x is now 0function doStuff() {
+```javascript
+x = 0; // x is now 0function doStuff() {
+```
 
 Or you could forget to end your file with a semicolon (or a `}`). JavaScript won't be able to figure _this_ one out:
 
-    x = 0function doStuff() {
+```javascript
+x = 0function doStuff() {
+```
 
 So, to conclude: When in doubt, end your JavaScript files with newlines. If the last line is an instruction that has an obvious end (ends in a `;` or a `}`), you don't have to end it in with a newline. If the last line is a comment or has no ending, you should put a newline. And if you only have one JavaScript file, you don't have to worry at all.

@@ -40,15 +40,17 @@ Let's explore how this solution is achieved.
 
 There's a CSS property called `user-select` that lets you do this with CSS (awesome!). Because it's not fully compatible, it's got a bunch of vendor-prefixed declarations. Adding the following to your CSS will make `.my-element` unselectable:
 
-    .my-element {
-      -webkit-user-select: none;
-      -khtml-user-drag: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -moz-user-select: -moz-none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+```css
+.my-element {
+  -webkit-user-select: none;
+  -khtml-user-drag: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+```
 
 Here's what I can piece together about the compatibility of this:
 
@@ -82,9 +84,11 @@ There are two JavaScript events called `onselectstart` and `ondragstart`, which 
 
 If you're using jQuery, here's how you use it:
 
-    $('.nonselectable').on('dragstart, selectstart', function(evt) {
-      evt.preventDefault();
-    });
+```javascript
+$(".nonselectable").on("dragstart, selectstart", function (evt) {
+  evt.preventDefault();
+});
+```
 
 You can do this without jQuery, too. It's even more of a nightmare, and I wouldn't recommend it. Go spend time with your family or something.
 
@@ -96,13 +100,18 @@ We still haven't solved Opera or JavaScript-free IE 5.5+. Prepare to die.
 
 There's an HTML attribute called `unselectable` that's compatible with Opera and Internet Explorer (and others, but we've solved them). Here's how you use it:
 
-    <div unselectable="on">This text is unselectable by IE users!</div>
+```html
+<div unselectable="on">This text is unselectable by IE users!</div>
+```
 
 That's all good and dandy, but it's got one major issue: the property isn't inherited. (It's also worth noting that it's not W3C valid.) If your parent is unselectable, you are selectable by default. For example:
 
-    <p unselectable="on">
-      This text is unselectable in IE! Unfortunately, <b>this bold stuff IS selectable</b>.
-    </p>
+```html
+<p unselectable="on">
+  This text is unselectable in IE! Unfortunately,
+  <b>this bold stuff IS selectable</b>.
+</p>
+```
 
 So, in order to make `unselectable` work, you have to make sure to apply it on _every element_ that you don't want to be selected. This is _incredibly_ tedious, but might be alright if you have a small number of unselectable elements.
 
@@ -112,15 +121,19 @@ You could use JavaScript to go through each HTML element and apply the `unselect
 
 If you're using jQuery (or Zepto):
 
-    // change this selector if you don't want to kill all elements
-    $('*').attr('unselectable', 'on');
+```javascript
+// change this selector if you don't want to kill all elements
+$("*").attr("unselectable", "on");
+```
 
 If you aren't using jQuery, here's a solution that [looks like](http://www.aptana.com/reference/api/Document.html#Document.getElementsByTagName) it hits any version above Opera 7:
 
-    var elements = document.getElementsByTagName('*');  // change this if you don't want to kill all elements
-    for (var i = 0, l = elements.length; i < l; i ++) {
-      elements[i].setAttribute('unselectable', 'on');
-    }
+```javascript
+var elements = document.getElementsByTagName("*"); // change this if you don't want to kill all elements
+for (var i = 0, l = elements.length; i < l; i++) {
+  elements[i].setAttribute("unselectable", "on");
+}
+```
 
 If you don't care about Opera but _do_ care about IE, use the solutions above.
 
@@ -132,22 +145,26 @@ And now I shall explain my solution I skimmed over in the "in short" section.
 
 First, add this CSS:
 
-    .nonselectable {
-      -webkit-user-select: none;
-      -khtml-user-drag: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -moz-user-select: -moz-none;
-      -ms-user-select: none;
-      -o-user-select: none;
-      user-select: none;
-    }
+```css
+.nonselectable {
+  -webkit-user-select: none;
+  -khtml-user-drag: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+```
 
 This will cover Chrome, Firefox, Safari, and IE10. All you have to do is add the class `nonselectable` to elements that shouldn't be selectable. You can also use one of the preprocessor mixins in sections above.
 
 I _usually_ stop there and forget about old IE and Opera. If you don't want to do that, you'll need to add `unselectable="on"` to any element (and any of its sub-elements) that shouldn't be selectable. You can do this manually for a small number of elements or use JavaScript (with jQuery):
 
-    $('.nonselectable').find('*').andSelf().attr('unselectable', 'on');
+```javascript
+$(".nonselectable").find("*").andSelf().attr("unselectable", "on");
+```
 
 This covers Opera and all of IE, though it _does_ require JavaScript.
 
@@ -172,7 +189,11 @@ Finally, _use this stuff sparingly_ and remember that it won't work too often. I
 
 - You can make no-JavaScript IE9 have an invisible selection (that is, highlighting text looks like it does nothing), so users will think they don't have the ability to copy-paste. _This will break functionality in other browsers_, but if you _only_ care about IE for some mad reason, you can do something like this:
 
-        .nonselectable::selection { background: transparent; }
+  ```css
+  .nonselectable::selection {
+    background: transparent;
+  }
+  ```
 
 ## Phew!
 

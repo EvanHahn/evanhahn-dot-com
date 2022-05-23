@@ -6,37 +6,49 @@ layout: post
 url: /my-c-pointers-reference/
 ---
 
-In one of my C++ classes, we went over pointers and references. Because this stuff isn't second-nature to me, I made a little cheat-sheet, which is here if you'd like.
+In one of my C++ courses, we went over pointers and references. Because this stuff isn't second-nature to me, I made a little cheat-sheet, which is here if you'd like.
 
 ## Declare a pointer
 
-    int * foo;
+```cpp
+int * foo;
+```
 
 ## Referencify
 
-    int foo = 5;
-    int * bar;
-    bar = &foo;
-    // *bar = 5
-    foo = 6;
-    // *bar = 6
+```cpp
+int foo = 5;
+int * bar;
+bar = &foo;
+// *bar = 5
+foo = 6;
+// *bar = 6
+```
 
 ## Dereferencing
 
-    int * foo;
-    *foo = 5;
-    *foo = 10;
+```cpp
+int * foo;
+*foo = 5;
+*foo = 10;
+```
 
 ## Function pointers
 
-    int (*foo)(int int) is a function that returns an integer and takes 2
-    foo = min;
-    foo = add;
+```cpp
+int (*foo)(int int) // a function that returns an integer and takes 2
+foo = min;
+foo = add;
+```
 
 ## Declaring arrays
 
-    int array[5];
+```cpp
+int array[5];
+```
 
 ## C strings
 
-    char a[] = "foo";
+```cpp
+char a[] = "foo";
+```

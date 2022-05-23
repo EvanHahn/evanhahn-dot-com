@@ -13,24 +13,26 @@ There are a lot of fancy tools that help you find these variables, but if you're
 
 Here's the finished, annotated code:
 
-```
+```javascript
 (function () {
   // Create an iframe and put it in the <body>.
-  var iframe = document.createElement('iframe')
-  document.body.appendChild(iframe)
+  const iframe = document.createElement("iframe");
+  document.body.appendChild(iframe);
 
   // We'll use this to get a "pristine" window object.
-  var pristineWindow = iframe.contentWindow.window
+  const pristineWindow = iframe.contentWindow.window;
 
   // Go through every property on `window` and filter it out if
   // the iframe's `window` also has it.
-  console.log(Object.keys(window).filter(function (key) {
-    return !pristineWindow.hasOwnProperty(key)
-  }))
+  console.log(
+    Object.keys(window).filter(
+      (key) => !Object.prototype.hasOwnProperty.call(pristineWindow, key)
+    )
+  );
 
   // Remove the iframe.
-  document.body.removeChild(iframe)
-})()
+  document.body.removeChild(iframe);
+})();
 ```
 
 In short, this looks at all the global variables on _your_ `window` and compares it with the "pristine" `window` inside an iframe. If you have anything the iframe doesn't, it prints it out.
