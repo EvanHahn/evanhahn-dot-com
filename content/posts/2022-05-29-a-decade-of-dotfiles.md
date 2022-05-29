@@ -6,8 +6,6 @@ date: 2022-05-29
 publishDate: 2022-05-29
 ---
 
-_This post is a draft! Please give me feedback!_
-
 My first commit to [my dotfiles repository][0] was ten years ago. Here are a few things I've learned about maintaining a system configuration in that time.
 
 (This will mostly be for macOS and Linux. I don't have experience configuring Windows or FreeBSD machines, for example.)

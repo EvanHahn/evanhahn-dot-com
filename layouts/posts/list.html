@@ -6,11 +6,6 @@
 
     {{ $previousYear := "" -}}
     {{ range .Pages -}}
-      <!-- Useful in conjunction with the `--buildFuture` flag -->
-      {{ if gt .Date now -}}
-        {{ continue -}}
-      {{ end -}}
-
       {{ $year := .Date.Format "2006" -}}
       {{ if ne $year $previousYear -}}
         {{ if ne $previousYear "" -}}
@@ -22,6 +17,7 @@
 
       <li>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ "" -}}
+        {{ if .Date }}
         <br />
         <small>{{ "" -}}
           {{ "" -}}
@@ -30,6 +26,7 @@
             </time>{{ "" -}}
           {{ "" -}}
         </small>
+        {{ end }}
       </li>
 
       {{ $previousYear = $year }}
