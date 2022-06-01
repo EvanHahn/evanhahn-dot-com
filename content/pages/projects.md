@@ -213,6 +213,7 @@ I've made a bunch of small pull requests to various open source projects. Most o
   - [Use === instead of == across the codebase](https://github.com/eoger/tabcenter-redux/pull/259)
 - [Vapor Security Headers](https://github.com/brokenhandsio/VaporSecurityHeaders)
   - [Disable X-XSS-Protection filter, for safety](https://github.com/brokenhandsio/VaporSecurityHeaders/pull/26)
+  - [Add support for fallback referrer policies](https://github.com/brokenhandsio/VaporSecurityHeaders/pull/27)
 
 ## Code stuff that isn't open source
 
