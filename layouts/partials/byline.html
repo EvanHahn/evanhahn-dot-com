@@ -1,7 +1,23 @@
 <div class="byline">
-  <address>by <a rel="author" href="{{ ref . "/" }}">{{ .Site.Params.Author }}</a></address>{{ if .Date }}, posted
-  <time dateTime="{{ .Date.Format "2006-01-02" }}">
-    {{ .Date.Format "Jan 2, 2006" }}
-  </time>
-  {{ end }}
+  <address>by <a rel="author" href="{{ ref . "/" }}">{{ .Site.Params.Author }}</a></address>{{ "" -}}
+
+  {{ if .Date -}}
+    ,
+    {{ if ne .Date .Lastmod -}}
+      updated
+      <time dateTime="{{ .Lastmod.Format "2006-01-02" }}">{{ "" -}}
+        {{ .Lastmod.Format "Jan 2, 2006" -}}
+      </time>
+      (originally posted
+      <time dateTime="{{ .Date.Format "2006-01-02" }}">{{ "" -}}
+        {{ .Date.Format "Jan 2, 2006" -}}
+      </time>)
+    {{ else -}}
+      posted
+      <time dateTime="{{ .Date.Format "2006-01-02" }}">{{ "" -}}
+        {{ .Date.Format "Jan 2, 2006" -}}
+      </time>
+    {{ end -}}
+
+  {{ end -}}
 </div>
