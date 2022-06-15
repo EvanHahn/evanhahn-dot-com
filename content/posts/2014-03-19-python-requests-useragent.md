@@ -22,6 +22,8 @@ And on a Linux box with an older version:
 
 To change the useragent, you can specify it when you make a request:
 
-    requests.get("https://example.com", headers={ "user-agent": "The Coolest Useragent" })
+```python
+requests.get("https://example.com", headers={ "user-agent": "The Coolest Useragent" })
+```
 
 And that's it!

@@ -14,14 +14,16 @@ CoffeeScript can implement private functions, but not other variables. It's a bi
 
 In simple cases for functions, it works very well. Take a look at the example below:
 
-    class Person
-      sayHello = (to) ->  # Private
-        console.log "Hello, #{to}."
-      helloWorld: ->
-        sayHello("world")
+```coffeescript
+class Person
+  sayHello = (to) ->  # Private
+    console.log "Hello, #{to}."
+  helloWorld: ->
+    sayHello("world")
 
-    p = new Person
-    p.helloWorld()  # => "Hello, world."
+p = new Person
+p.helloWorld()  # => "Hello, world."
+```
 
 This works just as expected, but it only works for functions that don't talk to `this`. We'll explore how to get things talking to `this` below.
 
@@ -29,20 +31,22 @@ This works just as expected, but it only works for functions that don't talk to 
 
 Unfortunately, we can't have private variables. Take a look at this example:
 
-    class Animal
-      firstName = ""  # Private member
-      constructor: (n) ->
-        firstName = n
-      getFirstName: ->
-        firstName
+```coffeescript
+class Animal
+  firstName = ""  # Private member
+  constructor: (n) ->
+    firstName = n
+  getFirstName: ->
+    firstName
 
-    jambo = new Animal "Jambo"
-    console.log jambo.getFirstName()  # => "Jambo"
+jambo = new Animal "Jambo"
+console.log jambo.getFirstName()  # => "Jambo"
 
-    birch = new Animal "Birch"
-    console.log birch.getFirstName()  # => "Birch"
+birch = new Animal "Birch"
+console.log birch.getFirstName()  # => "Birch"
 
-    console.log jambo.getFirstName()  # => "Birch"  # Not what we want!!
+console.log jambo.getFirstName()  # => "Birch"  # Not what we want!!
+```
 
 If you [take a look at the compiled JavaScript][1], the problem becomes more evident -- the `firstName` variable is "shared" across all instances of the Animal class. Unfortunately, CoffeeScript can't fix this issue for us.
 
@@ -54,19 +58,21 @@ Many thanks to [Harry Brundage][2] for pointing this out! I had this wrong.
 
 It's likely that you'll want to have a private function that talks to a class's instance variables. Unfortunately, this won't work:
 
-    class Sorcerer
-      constructor: (@spell) ->
-      conjureSpell = ->   # private
-        @spell.conjure()  # "this" is scoped incorrectly here, so it won't work
-      useSpell: ->
-        conjureSpell()
-        @spell.use()
+```coffeescript
+class Sorcerer
+  constructor: (@spell) ->
+  conjureSpell = ->   # private
+    @spell.conjure()  # "this" is scoped incorrectly here, so it won't work
+  useSpell: ->
+    conjureSpell()
+    @spell.use()
 
-    s = new Sorcerer
-      conjure: -> console.log "Brewing potion..."
-      use: -> console.log "Now I have superpowers!"
+s = new Sorcerer
+  conjure: -> console.log "Brewing potion..."
+  use: -> console.log "Now I have superpowers!"
 
-    s.useSpell()  # Cannot call method "conjure" of undefined
+s.useSpell()  # Cannot call method "conjure" of undefined
+```
 
 Even if we define `conjureSpell` with [CoffeeScript's fat arrow][3], it doesn't work. This is because `@spell` in `conjureSpell` is undefined -- the scope of `this` is wrong. There are a few ways around this problem, but none of them are very pretty.
 
@@ -76,33 +82,37 @@ Even if we define `conjureSpell` with [CoffeeScript's fat arrow][3], it doesn't 
 
 - Another way is to basically define them in the constructor and with the `=>`. [This breaks inheritance][9] like the above example, but it has the advantage that your methods looks totally normal outside of the constructor. I'd avoid this solution as well.
 
-      class Sorcerer
-        conjureSpell = null   # Define it up here so it's in scope
-        constructor: (@spell) ->
-          conjureSpell = =>   # private, note the =>
-            @spell.conjure()
-        useSpell: ->
-          conjureSpell()
-          @spell.use()
+```coffeescript
+class Sorcerer
+  conjureSpell = null   # Define it up here so it's in scope
+  constructor: (@spell) ->
+    conjureSpell = =>   # private, note the =>
+      @spell.conjure()
+  useSpell: ->
+    conjureSpell()
+    @spell.use()
+```
 
-* The way I'd really recommend is abandoning truly private variables altogether and simply prefixing your private stuff with an underscore. That's a JavaScript convention and there's a reason that it's widely used.
+- The way I'd really recommend is abandoning truly private variables altogether and simply prefixing your private stuff with an underscore. That's a JavaScript convention and there's a reason that it's widely used.
 
 ## They're private, not protected
 
 Private members are just that: private. As such, we can't access private members in child classes:
 
-    class Person
-      sayHello = (to) ->  # Private
-        console.log "Hello, #{to}."
-      helloWorld: ->
-        sayHello("world")
+```coffeescript
+class Person
+  sayHello = (to) ->  # Private
+    console.log "Hello, #{to}."
+  helloWorld: ->
+    sayHello("world")
 
-    class Employee extends Person
-      helloBoss: ->
-        sayHello("boss")
+class Employee extends Person
+  helloBoss: ->
+    sayHello("boss")
 
-    e = new Employee
-    e.helloBoss()  # => ReferenceError: sayHello is not defined
+e = new Employee
+e.helloBoss()  # => ReferenceError: sayHello is not defined
+```
 
 As far as I know, you can't make protected members with CoffeeScript classes because JavaScript doesn't really have classical inheritance. If you need them, you'll need to make them public and prefix them with an underscore.
 

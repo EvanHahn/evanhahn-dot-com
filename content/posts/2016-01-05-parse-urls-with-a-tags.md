@@ -9,29 +9,29 @@ I've needed to use JavaScript to parse URLs. If you're in a modern environment w
 
 You can use `<a>` tags to parse out various attributes of a URL. For example, to get the hostname of a URL, you could do something like this:
 
-```
-var a = document.createElement('a')
-a.href = 'https://evanhahn.com/parse-urls-with-a-tags/'
+```js
+var a = document.createElement("a");
+a.href = "https://evanhahn.com/parse-urls-with-a-tags/";
 
-a.hostname  // => 'evanhahn.com'
+a.hostname; // => 'evanhahn.com'
 ```
 
 You can grab things like `hostname`, `protocol`, `hash`, and much more. Take a look:
 
-```
-var a = document.createElement('a')
-a.href = 'https://user:pass@evanhahn.com:8080/p/a/t/h?query=string#hash'
+```js
+var a = document.createElement("a");
+a.href = "https://user:pass@evanhahn.com:8080/p/a/t/h?query=string#hash";
 
-a.hash      // => '#hash'
-a.host      // => 'evanhahn.com:8080'
-a.hostname  // => 'evanhahn.com'
-a.origin    // => 'https://evanhahn.com:8080'
-a.password  // => 'pass'
-a.pathname  // => '/p/a/t/h'
-a.port      // => '8080'
-a.protocol  // => 'https:'
-a.search    // => '?query=string'
-a.username  // => 'user'
+a.hash; // => '#hash'
+a.host; // => 'evanhahn.com:8080'
+a.hostname; // => 'evanhahn.com'
+a.origin; // => 'https://evanhahn.com:8080'
+a.password; // => 'pass'
+a.pathname; // => '/p/a/t/h'
+a.port; // => '8080'
+a.protocol; // => 'https:'
+a.search; // => '?query=string'
+a.username; // => 'user'
 ```
 
 This is really useful as a lightweight way to parse URLs!

@@ -15,7 +15,7 @@ But despite similar documentation, `zero?` is a little bit different from the re
 
 Let's start by looking at `true?`. It accepts anything as an argument; a boolean, a string, whatever.
 
-```
+```clojure
 (true? true)   ;; true
 (true? false)  ;; false
 (true? "str")  ;; false
@@ -23,7 +23,7 @@ Let's start by looking at `true?`. It accepts anything as an argument; a boolean
 
 In contrast, `zero?` throws an error if the argument isn't a number.
 
-```
+```clojure
 (zero? 0)      ;; true
 (zero? 42.0)   ;; false
 (zero? "str")  ;; throws java.lang.ClassCastException
@@ -33,7 +33,7 @@ This was a little surprising to me! It's not documented and it also doesn't matc
 
 `zero?` is also a little smarter about different numeric types. `zero?` handles cases that a simple equality check doesn't.
 
-```
+```clojure
 (= 0 0)      ;; true
 (= 0 0.0)    ;; false
 (= 0 "str")  ;; false
@@ -45,7 +45,7 @@ This was a little surprising to me! It's not documented and it also doesn't matc
 
 You could write a version of `zero?` that works like `nil?`, which won't throw on non-numeric input but will still work for various number types.
 
-```
+```clojure
 (defn safe-zero? [x]
   (and (number? x) (zero? x)))
 

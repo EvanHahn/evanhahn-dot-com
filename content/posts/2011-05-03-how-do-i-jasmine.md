@@ -30,9 +30,11 @@ Bam. It's Jasmine time.
 
 Let's say you're making a program that has one function, which says hello to the _entire world_. It would look like this:
 
-    function helloWorld() {
-      return 'Hello world!';
-    }
+```javascript
+function helloWorld() {
+  return "Hello world!";
+}
+```
 
 ### The spec
 
@@ -42,11 +44,13 @@ Easy peasy. First, put this lovely file into the `src` directory. Let's call it 
 
 Okay, next is the spec. Easy peasy. It's gonna look like this; I'll explain it in just a minute.
 
-    describe('Hello world', function () {
-      it('says hello', function () {
-        expect(helloWorld()).toEqual('Hello world!');
-      });
-    });
+```javascript
+describe("Hello world", function () {
+  it("says hello", function () {
+    expect(helloWorld()).toEqual("Hello world!");
+  });
+});
+```
 
 Okay, so this is a little less easy peasy, but it's not awful. Lemme explain:
 
@@ -74,11 +78,13 @@ In the previous example, I was checking to see if `helloWorld()` was indeed equa
 
 But what if I wanted to expect it to contain the word "world", but I don't give a damn what else is in there? I just want it to say "world". Easy peasy: I just need to use a different matcher. Have yourself a look.
 
-    describe('Hello world', function () {
-    	it('says world', function () {
-        	expect(helloWorld()).toContain('world');
-    	});
-    });
+```javascript
+describe("Hello world", function () {
+  it("says world", function () {
+    expect(helloWorld()).toContain("world");
+  });
+});
+```
 
 Instead of expecting something to be exactly "Hello world!", I'm now just expecting it to contain "world". Easy peasy. It even reads like English!
 
@@ -94,21 +100,21 @@ So it's nice that Jasmine has all of these built-in matchers, but you're not a s
 
 Let's use some `beforeEach()` magic to make things happen for us. This example ain't too bad. Here's an example suite:
 
-    describe('Hello world', function () {
-
-      beforeEach(function () {
-        this.addMatchers({
-          toBeDivisibleByTwo: function () {
-            return (this.actual % 2) === 0;
-          }
-        });
-      });
-
-      it('is divisible by 2', function () {
-        expect(gimmeANumber()).toBeDivisibleByTwo();
-      });
-
+```javascript
+describe("Hello world", function () {
+  beforeEach(function () {
+    this.addMatchers({
+      toBeDivisibleByTwo: function () {
+        return this.actual % 2 === 0;
+      },
     });
+  });
+
+  it("is divisible by 2", function () {
+    expect(gimmeANumber()).toBeDivisibleByTwo();
+  });
+});
+```
 
 You can see that I defined a matcher called `toBeDivisibleByTwo`, which just returns if something is divisible by 2. I put it in `beforeEach()` because I wanted it to be defined _before each spec_. And so it was. Notice that I use it exactly like I used the built-in ones. Easy peasy.
 
@@ -136,26 +142,30 @@ In Jasmine, a **spy** does pretty much what it says: it lets you spy on pieces o
 
 So let's say you have a class called a Person. It can say hello in general, and it can also say hello to someone. Here's what that might look like:
 
-    var Person = function () {};
+```javascript
+var Person = function () {};
 
-    Person.prototype.helloSomeone = function (toGreet) {
-        return this.sayHello() + ' ' + toGreet;
-    };
+Person.prototype.helloSomeone = function (toGreet) {
+  return this.sayHello() + " " + toGreet;
+};
 
-    Person.prototype.sayHello = function () {
-        return 'Hello';
-    };
+Person.prototype.sayHello = function () {
+  return "Hello";
+};
+```
 
 Pretty simple. We've got a couple of methods that do a couple of things. Easy peasy. Now, let's say we want to make sure it calls the `sayHello()` function when we call the `helloSomeone()` function. Here's what our suite will look like:
 
-    describe('Person', function () {
-        it('calls the sayHello() function', function () {
-        	var fakePerson = new Person();
-    	    spyOn(fakePerson, 'sayHello');
-    		fakePerson.helloSomeone('world');
-        	expect(fakePerson.sayHello).toHaveBeenCalled();
-      });
-    });
+```javascript
+describe("Person", function () {
+  it("calls the sayHello() function", function () {
+    var fakePerson = new Person();
+    spyOn(fakePerson, "sayHello");
+    fakePerson.helloSomeone("world");
+    expect(fakePerson.sayHello).toHaveBeenCalled();
+  });
+});
+```
 
 Let's go through this, line by line:
 
@@ -165,20 +175,24 @@ Throwing this through the spec runner should give you positive results; your pro
 
 Okay, maybe that's not all we want. Maybe we want to make sure that `helloSomeone` is called with `'world'` as its argument. Jasmine has got your back. She knows what she's doing. Take a look at this example spec:
 
-    describe('Person', function () {
-    	it('greets the world', function () {
-        	var fakePerson = new Person();
-    	    spyOn(fakePerson, 'helloSomeone');
-    		fakePerson.helloSomeone('world');
-    		expect(fakePerson.helloSomeone).toHaveBeenCalledWith('world');
-        });
-    });
+```javascript
+describe("Person", function () {
+  it("greets the world", function () {
+    var fakePerson = new Person();
+    spyOn(fakePerson, "helloSomeone");
+    fakePerson.helloSomeone("world");
+    expect(fakePerson.helloSomeone).toHaveBeenCalledWith("world");
+  });
+});
+```
 
 As you may be able to read (it looks a lot like English!), this spy makes sure that `helloSomeone()`'s argument is `'world'`. Run that through Jasmine and she'll tell you everything is good.
 
 If you want to ensure that something _isn't_ called, it's a lot like when you're making sure a variable isn't something: use `.not`. So, for example, if you want to make sure that a function isn't called with a particular argument...
 
-    expect(fakePerson.helloSomeone).not.toHaveBeenCalledWith('foo');
+```javascript
+expect(fakePerson.helloSomeone).not.toHaveBeenCalledWith("foo");
+```
 
 There are a number of other spy arguments <a href="https://github.com/pivotal/jasmine/wiki/Spies">in the documentation</a>.
 
@@ -188,26 +202,30 @@ In the previous example, we were spying on a function. We weren't doing anything
 
 Here's the same person from before. I haven't touched it. I promise.
 
-    var Person = function () {};
+```javascript
+var Person = function () {};
 
-    Person.prototype.helloSomeone = function (toGreet) {
-        return this.sayHello() + ' ' + toGreet;
-    };
+Person.prototype.helloSomeone = function (toGreet) {
+  return this.sayHello() + " " + toGreet;
+};
 
-    Person.prototype.sayHello = function () {
-        return 'Hello';
-    };
+Person.prototype.sayHello = function () {
+  return "Hello";
+};
+```
 
 In some cases, you don't even care if something functioned _properly_, you just care that it called a function at all. (This might be because you are testing it elsewhere, or maybe just because you're lazy.) With Jasmine, you "empty" the contents of the function while you're testing. Let's take a look at an example and go through it line-by-line:
 
-    describe('Person', function () {
-        it('says hello', function () {
-    		var fakePerson = new Person();
-    		fakePerson.sayHello = jasmine.createSpy('Say-hello spy');
-    		fakePerson.helloSomeone('world');
-    	    expect(fakePerson.sayHello).toHaveBeenCalled();
-        });
-    });
+```javascript
+describe("Person", function () {
+  it("says hello", function () {
+    var fakePerson = new Person();
+    fakePerson.sayHello = jasmine.createSpy("Say-hello spy");
+    fakePerson.helloSomeone("world");
+    expect(fakePerson.sayHello).toHaveBeenCalled();
+  });
+});
+```
 
 Okay, so here's what's going on:
 
@@ -215,14 +233,22 @@ Same as before, we make a fake person. But now we're going to turn `sayHello()` 
 
 Okay. What if you don't want it to be empty, you actually want it to return something? Jasmine to the rescue. You can specify that a spy function return something (in this case, `'ello ello'`):
 
-    fakePerson.sayHello = jasmine.createSpy(''Say hello' spy').andReturn('ello ello');
+```javascript
+fakePerson.sayHello = jasmine
+  .createSpy('"Say hello" spy')
+  .andReturn("ello ello");
+```
 
 But there's no pleasing you. You always need more. You can even give your spy functions something to do. This example does a little and then says some French:
 
-    fakePerson.sayHello = jasmine.createSpy(''Say hello' spy').andCallFake(function () {
-    	document.write('Time to say hello!');
-        return 'bonjour';
-    });
+```javascript
+fakePerson.sayHello = jasmine
+  .createSpy('"Say hello" spy')
+  .andCallFake(function () {
+    document.write("Time to say hello!");
+    return "bonjour";
+  });
+```
 
 That was a lot less interesting than James Bond, but probably more useful to you as a programmer in the end. Still, you should help yourself to a Vodka Martini. Shaken, not stirred. Because you are now a master of the spies.
 
@@ -234,20 +260,20 @@ There are two Jasmine functions that help you with asynchronicity: `run()` and `
 
 `run()` blocks execute procedurally, so you don't have to worry about asynchronous code screwing everything up. This is some code that runs one after the other.
 
-    it('is a test of run()', function () {
+```javascript
+it("is a test of run()", function () {
+  runs(function () {
+    var foo = 1;
+    expect(foo).toEqual(1);
+  });
 
-    	runs(function () {
-        	var foo = 1;
-    	    expect(foo).toEqual(1);
-    	});
-
-    	runs(function () {
-        	var bar = 2;
-    	    bar ++;
-    		expect(bar).toEqual(3);
-    	});
-
-    });
+  runs(function () {
+    var bar = 2;
+    bar++;
+    expect(bar).toEqual(3);
+  });
+});
+```
 
 Without asynchronous stuff, I'm pretty sure that `run()` is useless. If everything is sequential, everything is _kinda sorta_ just in a `run()` block anyway, right?
 
@@ -255,35 +281,39 @@ So now let's go into `waitsFor()`, which is the exciting part.
 
 Okay, tiger. Let's say you want to make sure your calculator class can find the greatest common factor between any two numbers. It'll do it asynchronously, because some numbers are _ginormous_. Here's an example of something that **would not work**:
 
-    describe('Calculator', function () {
-    	it('should factor two huge numbers asynchronously', function () {
-        	var calc = new Calculator();
-    	    var answer = calc.factor(18973547201226, 28460320801839);
-    		expect(answer).toEqual(9486773600613);	// DANGER ZONE: This doesn't work if factor() is asynchronous!!
-        	// THIS DOESN'T WORK, STUPID
-    	});
-    });
+```javascript
+describe("Calculator", function () {
+  it("should factor two huge numbers asynchronously", function () {
+    var calc = new Calculator();
+    var answer = calc.factor(18973547201226, 28460320801839);
+    expect(answer).toEqual(9486773600613); // DANGER ZONE: This doesn't work if factor() is asynchronous!!
+    // THIS DOESN'T WORK
+  });
+});
+```
 
 So how would you get it to work? You'd use `waitsFor()`. `waitsFor()` waits for some condition to be true, and then it continues on. You can also specify an optional timeout; if it waits for longer than that, it'll fail with an optional message.
 
-    describe('Calculator', function () {
+```javascript
+describe("Calculator", function () {
+  it("should factor two huge numbers asynchronously", function () {
+    var calc = new Calculator();
+    var answer = calc.factor(18973547201226, 28460320801839);
 
-    	it('should factor two huge numbers asynchronously', function () {
+    waitsFor(
+      function () {
+        return calc.answerHasBeenCalculated();
+      },
+      "It took too long to find those factors.",
+      10000
+    );
 
-        	var calc = new Calculator();
-    	    var answer = calc.factor(18973547201226, 28460320801839);
-
-    		waitsFor(function () {
-        		return calc.answerHasBeenCalculated();
-    	    }, 'It took too long to find those factors.', 10000);
-
-    		runs(function () {
-        		expect(answer).toEqual(9486773600613);
-    	    });
-
-    	});
-
+    runs(function () {
+      expect(answer).toEqual(9486773600613);
     });
+  });
+});
+```
 
 The above code waits for the calculator to return `true` on `calc.answerHasBeenCalculated()`. Once it does, it goes on to the next block. If it doesn't succeed after 10 seconds, it'll pull the plug and give you an error.
 

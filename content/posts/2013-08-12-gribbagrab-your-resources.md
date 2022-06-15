@@ -6,6 +6,8 @@ layout: post
 url: /gribbagrab-your-resources/
 ---
 
+**This project is outdated.**
+
 _In short: I built [Gribbagrab](https://github.com/EvanHahn/Gribbagrab) to asynchronously load JavaScript and CSS._
 
 I'm going to be honest: I respectfully dislike RequireJS. Nobody _likes_ AMD, they just accept it. It's fugly. It requires extra work when loading non-AMD modules. It's big and powerful.

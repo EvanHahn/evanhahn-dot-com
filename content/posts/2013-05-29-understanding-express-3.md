@@ -25,20 +25,22 @@ So let's understand Express from the bottom, with Node.
 
 Node has an [HTTP module](http://nodejs.org/api/http.html) which makes a pretty simple abstraction for making a webserver. Here's what that might look like:
 
-    // Require what we need
-    var http = require("http");
+```javascript
+// Require what we need
+var http = require("http");
 
-    // Build the server
-    var app = http.createServer(function(request, response) {
-      response.writeHead(200, {
-        "Content-Type": "text/plain"
-      });
-      response.end("Hello world!\n");
-    });
+// Build the server
+var app = http.createServer(function (request, response) {
+  response.writeHead(200, {
+    "Content-Type": "text/plain",
+  });
+  response.end("Hello world!\n");
+});
 
-    // Start that server, baby
-    app.listen(1337, "localhost");
-    console.log("Server running at http://localhost:1337/");
+// Start that server, baby
+app.listen(1337, "localhost");
+console.log("Server running at http://localhost:1337/");
+```
 
 And if you run that app (if that file is called `app.js`, you'd run `node app.js`), you'll get a response of "Hello world!" if you visit `localhost:1337` in your browser. You'll get the same response no matter what, too. You can try visiting `localhost:1337/anime_currency` or `localhost:1337/?onlyfriend=anime`, and it's like talking to a brick wall: "Hello world!"
 
@@ -60,19 +62,19 @@ Whenever we make a request to the server, that request handler function is calle
 
 `request` is a request that comes from the client. In many apps, you'll see this shortened to `req`. Let's look at it. To do that, we'll modify the above request handler a bit:
 
-    var app = http.createServer(function(request, response) {
+```javascript
+var app = http.createServer(function (request, response) {
+  // Build the answer
+  var answer = "";
+  answer += "Request URL: " + request.url + "\n";
+  answer += "Request type: " + request.method + "\n";
+  answer += "Request headers: " + JSON.stringify(request.headers) + "\n";
 
-      // Build the answer
-      var answer = "";
-      answer += "Request URL: " + request.url + "\n";
-      answer += "Request type: " + request.method + "\n";
-      answer += "Request headers: " + JSON.stringify(request.headers) + "\n";
-
-      // Send answer
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      response.end(answer);
-
-    });
+  // Send answer
+  response.writeHead(200, { "Content-Type": "text/plain" });
+  response.end(answer);
+});
+```
 
 Restart the server and reload `localhost:1337`. You'll see what URL you're requesting, that it's a GET request, and that you've sent a number of cool headers like the user-agent and more complicated HTTP stuff! If you visit `localhost:1337/what_is_anime`, you'll see the request URL change. If you visit it with a different browser, the user-agent will change. If you send it a POST request, you'll see the method change.
 
@@ -80,7 +82,9 @@ The `response` is the next part. Just like the prior argument is often shortened
 
 Before you send it out, you'll want to write some headers. In our example, we do this:
 
-    response.writeHead(200, { "Content-Type": "text/plain" });
+```javascript
+response.writeHead(200, { "Content-Type": "text/plain" });
+```
 
 This does two things. First, it sends [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) 200, which means "OK, everything is good". Then, it sets some response headers. In this case, it's saying that we're sending back the plaintext content-type. We could send other things like JSON or HTML.
 
@@ -90,29 +94,31 @@ You want more? Okay. You asked nicely.
 
 One could imagine taking these APIs and turning them into something cool. You could do something (sorta) like this:
 
-    var http = require("http");
+```javascript
+var http = require("http");
 
-    http.createServer(function(req, res) {
+http
+  .createServer(function (req, res) {
+    // Homepage
+    if (req.url == "/") {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end("Welcome to the homepage!");
+    }
 
-      // Homepage
-      if (req.url == "/") {
-        res.writeHead(200, { "Content-Type": "text/html" });
-        res.end("Welcome to the homepage!");
-      }
+    // About page
+    else if (req.url == "/about") {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end("Welcome to the about page!");
+    }
 
-      // About page
-      else if (req.url == "/about") {
-        res.writeHead(200, { "Content-Type": "text/html" });
-        res.end("Welcome to the about page!");
-      }
-
-      // 404'd!
-      else {
-        res.writeHead(404, { "Content-Type": "text/plain" });
-        res.end("404 error! File not found.");
-      }
-
-    }).listen(1337, "localhost");
+    // 404'd!
+    else {
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      res.end("404 error! File not found.");
+    }
+  })
+  .listen(1337, "localhost");
+```
 
 You could clean this up and make it pretty, or you could be hardcore [like the npm.org folks](https://github.com/isaacs/npm-www#design-philosophy) and tough it out with vanilla Node. But you could also build a framework. That's what Sencha did. And they called it Connect.
 
@@ -124,21 +130,23 @@ Fitting that [Connect](http://www.senchalabs.org/connect/) happens to be the mid
 
 Let's say we wanted to write the "hello world" app that we had above, but with Connect this time. Don't forget to install Connect (`npm install`, baby). Once you've done that, the app is pretty similar.
 
-    // Require the stuff we need
-    var connect = require("connect");
-    var http = require("http");
+```javascript
+// Require the stuff we need
+var connect = require("connect");
+var http = require("http");
 
-    // Build the app
-    var app = connect();
+// Build the app
+var app = connect();
 
-    // Add some middleware
-    app.use(function(request, response) {
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      response.end("Hello world!\n");
-    });
+// Add some middleware
+app.use(function (request, response) {
+  response.writeHead(200, { "Content-Type": "text/plain" });
+  response.end("Hello world!\n");
+});
 
-    // Start it up!
-    http.createServer(app).listen(1337);
+// Start it up!
+http.createServer(app).listen(1337);
+```
 
 So let's step through this.
 
@@ -162,31 +170,35 @@ Remember the request handlers from a few sections earlier? Each piece of middlew
 
 Here's what middleware basically looks like:
 
-    function myFunMiddleware(request, response, next) {
-       // Do stuff with the request and response.
-       // When we're all done, call next() to defer to the next middleware.
-       next();
-    }
+```javascript
+function myFunMiddleware(request, response, next) {
+  // Do stuff with the request and response.
+  // When we're all done, call next() to defer to the next middleware.
+  next();
+}
+```
 
 When we start a server, we start at the topmost middleware and work our way to the bottom. So if we wanted to add simple logging to our app, we could do it!
 
-    var connect = require("connect");
-    var http = require("http");
-    var app = connect();
+```javascript
+var connect = require("connect");
+var http = require("http");
+var app = connect();
 
-    // Logging middleware
-    app.use(function(request, response, next) {
-      console.log("In comes a " + request.method + " to " + request.url);
-      next();
-    });
+// Logging middleware
+app.use(function (request, response, next) {
+  console.log("In comes a " + request.method + " to " + request.url);
+  next();
+});
 
-    // Send "hello world"
-    app.use(function(request, response) {
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      response.end("Hello world!\n");
-    });
+// Send "hello world"
+app.use(function (request, response) {
+  response.writeHead(200, { "Content-Type": "text/plain" });
+  response.end("Hello world!\n");
+});
 
-    http.createServer(app).listen(1337);
+http.createServer(app).listen(1337);
+```
 
 If you run this app and visit `localhost:1337`, you'll see that your server is logging some stuff and you'll see your page.
 
@@ -194,19 +206,21 @@ It's important to note that anything that works in the vanilla Node.js server al
 
 While you can totally write your own, Connect comes with a bunch of cool middleware and [there's a bunch of third-party middleware](https://github.com/senchalabs/connect/wiki) too. Let's remove our logger and use [the one built into Connect](http://www.senchalabs.org/connect/logger.html):
 
-    var connect = require("connect");
-    var http = require("http");
-    var app = connect();
+```javascript
+var connect = require("connect");
+var http = require("http");
+var app = connect();
 
-    app.use(connect.logger());
-    // Fun fact: connect.logger() returns a function.
+app.use(connect.logger());
+// Fun fact: connect.logger() returns a function.
 
-    app.use(function(request, response) {
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      response.end("Hello world!\n");
-    });
+app.use(function (request, response) {
+  response.writeHead(200, { "Content-Type": "text/plain" });
+  response.end("Hello world!\n");
+});
 
-    http.createServer(app).listen(1337);
+http.createServer(app).listen(1337);
+```
 
 Visit `localhost:1337` and you'll see some logging!
 
@@ -214,41 +228,43 @@ Visit `localhost:1337` and you'll see some logging!
 
 One could imagine stringing together some middleware to build an app. Maybe you'd do it like this:
 
-    var connect = require("connect");
-    var http = require("http");
-    var app = connect();
+```javascript
+var connect = require("connect");
+var http = require("http");
+var app = connect();
 
-    app.use(connect.logger());
+app.use(connect.logger());
 
-    // Homepage
-    app.use(function(request, response, next) {
-      if (request.url == "/") {
-        response.writeHead(200, { "Content-Type": "text/plain" });
-        response.end("Welcome to the homepage!\n");
-        // The middleware stops here.
-      } else {
-        next();
-      }
-    });
+// Homepage
+app.use(function (request, response, next) {
+  if (request.url == "/") {
+    response.writeHead(200, { "Content-Type": "text/plain" });
+    response.end("Welcome to the homepage!\n");
+    // The middleware stops here.
+  } else {
+    next();
+  }
+});
 
-    // About page
-    app.use(function(request, response, next) {
-      if (request.url == "/about") {
-        response.writeHead(200, { "Content-Type": "text/plain" });
-        response.end("Welcome to the about page!\n");
-        // The middleware stops here.
-      } else {
-        next();
-      }
-    });
+// About page
+app.use(function (request, response, next) {
+  if (request.url == "/about") {
+    response.writeHead(200, { "Content-Type": "text/plain" });
+    response.end("Welcome to the about page!\n");
+    // The middleware stops here.
+  } else {
+    next();
+  }
+});
 
-    // 404'd!
-    app.use(function(request, response) {
-      response.writeHead(404, { "Content-Type": "text/plain" });
-      response.end("404 error!\n");
-    });
+// 404'd!
+app.use(function (request, response) {
+  response.writeHead(404, { "Content-Type": "text/plain" });
+  response.end("404 error!\n");
+});
 
-    http.createServer(app).listen(1337);
+http.createServer(app).listen(1337);
+```
 
 "This is ugly! I need to build a framework," you say. You _savage_. You're never satisfied, are you? _Will there ever be enough?_
 
@@ -260,13 +276,17 @@ We've finally arrived at the third act of our nerdy quest. We're at the peak of 
 
 Just like Connect extends Node, Express extends Connect. The beginning looks very similar to Connect:
 
-    var express = require("express");
-    var http = require("http");
-    var app = express();
+```javascript
+var express = require("express");
+var http = require("http");
+var app = express();
+```
 
 And so does the end:
 
-    http.createServer(app).listen(1337);
+```javascript
+http.createServer(app).listen(1337);
+```
 
 But the middle is what's different. Where Connect gives you one cool feature (middleware), I think that Express gives you three cool features: routing, better request handlers, and views. Let's start with routing.
 
@@ -276,28 +296,30 @@ Routing is a way to map different requests to specific handlers. In many of the 
 
 But Express is smarter than that. Express gives us something called "routing" which I think is better explained with code than with English:
 
-    var express = require("express");
-    var http = require("http");
-    var app = express();
+```javascript
+var express = require("express");
+var http = require("http");
+var app = express();
 
-    app.all("*", function(request, response, next) {
-      response.writeHead(200, { "Content-Type": "text/plain" });
-      next();
-    });
+app.all("*", function (request, response, next) {
+  response.writeHead(200, { "Content-Type": "text/plain" });
+  next();
+});
 
-    app.get("/", function(request, response) {
-      response.end("Welcome to the homepage!");
-    });
+app.get("/", function (request, response) {
+  response.end("Welcome to the homepage!");
+});
 
-    app.get("/about", function(request, response) {
-      response.end("Welcome to the about page!");
-    });
+app.get("/about", function (request, response) {
+  response.end("Welcome to the about page!");
+});
 
-    app.get("*", function(request, response) {
-      response.end("404!");
-    });
+app.get("*", function (request, response) {
+  response.end("404!");
+});
 
-    http.createServer(app).listen(1337);
+http.createServer(app).listen(1337);
+```
 
 _Ooh._ That's hot.
 
@@ -311,10 +333,12 @@ In short: they're basically middleware like we've seen before. They're just func
 
 These routes can get smarter, with things like this:
 
-    app.get("/hello/:who", function(req, res) {
-      res.end("Hello, " + req.params.who + ".");
-      // Fun fact: this has security issues
-    });
+```javascript
+app.get("/hello/:who", function (req, res) {
+  res.end("Hello, " + req.params.who + ".");
+  // Fun fact: this has security issues
+});
+```
 
 Restart your server and visit `localhost:1337/hello/animelover69` for the following message:
 
@@ -332,13 +356,17 @@ Express augments the request and response objects in every request handler. The 
 
 One nicety they give you is a `redirect` method. Here are some examples:
 
-    response.redirect("/hello/anime");
-    response.redirect("http://www.myanimelist.net");
-    response.redirect(301, "http://www.anime.org");  // HTTP status code 301
+```javascript
+response.redirect("/hello/anime");
+response.redirect("http://www.myanimelist.net");
+response.redirect(301, "http://www.anime.org"); // HTTP status code 301
+```
 
 This isn't in vanilla Node and it's also absent from Connect, but Express adds this stuff. It adds things like `sendFile` which lets you just send a whole file:
 
-    response.sendFile("/path/to/anime.mp4");
+```javascript
+response.sendFile("/path/to/anime.mp4");
+```
 
 The request gets a number of cool properties, like `request.ip` to get the IP address and `request.files` to get uploaded files.
 
@@ -350,15 +378,17 @@ _More_ features? _Oh, Express, I'm blushing._
 
 Express can handle views. It's not too bad. Here's what the setup looks like:
 
-    // Start Express
-    var express = require("express");
-    var app = express();
+```javascript
+// Start Express
+var express = require("express");
+var app = express();
 
-    // Set the view directory to /views
-    app.set("views", __dirname + "/views");
+// Set the view directory to /views
+app.set("views", __dirname + "/views");
 
-    // Let's use the Pug templating language
-    app.set("view engine", "Pug");
+// Let's use the Pug templating language
+app.set("view engine", "Pug");
+```
 
 The first block is the same as always. Then we say "our views are in a folder called 'views'". Then we say "use Pug". [Pug](https://github.com/pugjs/pug) is a templating language. We'll see how it works in just a second!
 
@@ -366,19 +396,23 @@ Now, we've set up these views. How do we use them?
 
 Let's start by making a file called `index.pug` and put it into a directory called `views`. It might look like this:
 
-    doctype 5
-    html
-      body
-        h1 Hello, world!
-        p= message
+```pug
+doctype 5
+html
+  body
+    h1 Hello, world!
+    p= message
+```
 
 This is basically HTML without all the brackets. It should be _fairly_ straightforward if you know HTML. The only interesting part is the last line. `message` is a variable! Woah! Where did that come from? _I'll tell you._
 
 We need to render the view from within Express. Here's what that looks like:
 
-    app.get("/", function(request, response) {
-      response.render("index", { message: "I love anime" });
-    });
+```javascript
+app.get("/", function (request, response) {
+  response.render("index", { message: "I love anime" });
+});
+```
 
 Express adds a method to `response`, called `render`. It does a bunch of smart stuff, but it basically looks at the view engine and views directory (the stuff we defined earlier) and renders `index.pug`.
 
@@ -390,16 +424,18 @@ If you get all of this set up, you'll see [this page](http://evanhahn.com/wp-con
 
 I want to remind you that Express is built on top of Connect which is built on top of Node. This means that all Connect middleware works with Express. This is useful! For example:
 
-    var express = require("express");
-    var app = express();
+```javascript
+var express = require("express");
+var app = express();
 
-    app.use(express.logger());  // Inherited from Connect
+app.use(express.logger()); // Inherited from Connect
 
-    app.get("/", function(req, res) {
-      res.send("anime");
-    });
+app.get("/", function (req, res) {
+  res.send("anime");
+});
 
-    app.listen(1337);
+app.listen(1337);
+```
 
 If you learn one thing from this post, it should be this. If your brain has room for another fun fact: hippo milk is pink!
 
@@ -409,12 +445,15 @@ Most of the stuff in this post is conceptual, but let me push you in the right d
 
 You can install Express as an executable in your terminal. It spits out boilerplate code that's very helpful for starting your app. Install it globally with npm:
 
-    # You'll probably need `sudo` for this:
-    npm install -g express@3.10.x
+```sh
+npm install -g express@3.10.x
+```
 
 If you need help, use `express --help`. It spits out some options. For example, let's say I want to use EJS templating and LESS for CSS. My app is called "myApp". Here's what I'd type to get started:
 
-    express --ejs --css less myApp
+```sh
+express --ejs --css less myApp
+```
 
 It'll generate a bunch of files and then tell you to go into that directory and `npm install`. If you do that, you'll have a basic app running with `node app`! I'd recommend looking through the generated files to see some boilerplate, and then messing with it a bunch. It's hardly a full app, but I found it very helpful to poke through these files and mess with them when getting started.
 

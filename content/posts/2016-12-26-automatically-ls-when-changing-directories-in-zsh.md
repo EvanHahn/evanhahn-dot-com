@@ -11,8 +11,10 @@ I used to do this manually, but then I learned that zsh has a way to do this for
 
 Add something like this to your `.zshrc`:
 
-    chpwd() {
-      ls
-    }
+```sh
+chpwd() {
+  ls
+}
+```
 
 Now you'll `ls` whenever you `cd` (or `pushd`)!

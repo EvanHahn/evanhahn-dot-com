@@ -9,7 +9,9 @@ url: /cancel-a-git-flow-branch/
 
 To trash a branch using [git-flow](https://github.com/nvie/gitflow), simply delete it like you'd normally delete a Git branch:
 
-    git branch -D whatever/branch/you/wanna/delete
+```sh
+git branch -D whatever/branch/you/wanna/delete
+```
 
 Note that this does a _forced_ delete, so anything you did on that branch will be lost. You can be safer with the lowercase `-d` flag instead.
 

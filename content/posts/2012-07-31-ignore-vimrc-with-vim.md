@@ -9,7 +9,9 @@ url: /ignore-vimrc-with-vim/
 
 To start Vim without looking at your vimrc file:
 
-    vim -u NONE
+```sh
+vim -u NONE
+```
 
 It also works with `mvim` (I didn't test with `gvim` but I assume it works). This also ignores your `.vim` directory.
 

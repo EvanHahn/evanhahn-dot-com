@@ -14,39 +14,47 @@ I wanted to solve the ugliness of asynchronous syntax in browser-based script lo
 
 The basic idea of how this works requires a [Firefox-only property](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/noSuchMethod) called `__noSuchMethod__`. It works like this:
 
-    var myObject = {
-        __noSuchMethod__: function(id, args) {
-            console.log("A method called " + id + " was called with the following arguments:");
-            console.log(args);
-        }
-    };
+```javascript
+var myObject = {
+  __noSuchMethod__: function (id, args) {
+    console.log(
+      "A method called " + id + " was called with the following arguments:"
+    );
+    console.log(args);
+  },
+};
 
-    myObject.someMethod(1, 2, 3);
-    // "A method called someMethod was called with the following arguments:"
-    // [1, 2, 3]
+myObject.someMethod(1, 2, 3);
+// "A method called someMethod was called with the following arguments:"
+// [1, 2, 3]
+```
 
 Okay, so shelf that away for a minute.
 
 Let's say I've written a _dead simple_ logging library. It looks like this:
 
-    var logger = {
-        log: function(message) {
-            console.log(message);
-        },
-        version: function() {
-            return "1.2";
-        }
-    };
+```javascript
+var logger = {
+  log: function (message) {
+    console.log(message);
+  },
+  version: function () {
+    return "1.2";
+  },
+};
+```
 
 So `logger` has two methods: `log` and `version`. Not too crazy.
 
 Now, let's say we want to use this library. Here's the [dreamcode](http://nobackend.org/dreamcode.html) that we want:
 
-    var logger = require("logger.js");
-    logger.log("Hello world!");
+```javascript
+var logger = require("logger.js");
+logger.log("Hello world!");
 
-    var version = logger.version();
-    logger.log(version);
+var version = logger.version();
+logger.log(version);
+```
 
 Having written [a simple asynchronous script loader](https://github.com/evanhahn/scriptinclude) myself, they basically work by injecting a `<script>` tag, and when that loads, they run a callback.
 
@@ -54,36 +62,36 @@ So here's how this works: `require` is going to _immediately_ return an object t
 
 Here's what that looks like in imperfect code:
 
-    // A lil' function that requires stuff.
-    var require = function(src) {
+```javascript
+// A lil' function that requires stuff.
+var require = function (src) {
+  // Define a queue of methods which we'll run when we get things loaded.
+  var methodQueue = [];
 
-        // Define a queue of methods which we'll run when we get things loaded.
-        var methodQueue = [];
+  // Load the script.
+  var script = document.createElement("script");
+  script.src = src;
+  document.head.appendChild(script);
 
-        // Load the script.
-        var script = document.createElement("script");
-        script.src = src;
-        document.head.appendChild(script);
+  // When the script loads, run everything in the method queue.
+  script.onload = function () {
+    var exported = logger; // TODO: doesn't work for other libraries!
+    methodQueue.forEach(function (method) {
+      exported[method.id].apply(exported, method.args);
+    });
+  };
 
-        // When the script loads, run everything in the method queue.
-        script.onload = function() {
-            var exported = logger;  // TODO: doesn't work for other libraries!
-            methodQueue.forEach(function(method) {
-                exported[method.id].apply(exported, method.args);
-            });
-        };
-
-        // Return a dummy object which will throw methods into the queue.
-        return {
-            __noSuchMethod__: function(id, args) {
-                methodQueue.push({
-                    id: id,
-                    args: args
-                });
-            }
-        };
-
-    };
+  // Return a dummy object which will throw methods into the queue.
+  return {
+    __noSuchMethod__: function (id, args) {
+      methodQueue.push({
+        id: id,
+        args: args,
+      });
+    },
+  };
+};
+```
 
 We'd have to figure out some way of getting `exported` programmatically inside of the callback, probably with some overhead in the library like RequireJS needs. But this is the basic idea -- return an object that defers method calls.
 

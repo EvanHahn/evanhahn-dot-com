@@ -7,12 +7,16 @@ url: /bitcoin-shell-one-liner/
 
 I wanted to use my intermediate-at-shell skills to get the latest bitcoin price from [Coinbase](https://coinbase.com/?r=5150e82a9e19b7f80c000003). So I wrote this nasty thing:
 
-    curl -sSL https://coinbase.com/api/v1/prices/historical | head -n 1 | sed "s|^.*,|$|" | sed "s|\(\.[0-9]$\)|\10|"
+```sh
+curl -sSL https://coinbase.com/api/v1/prices/historical | head -n 1 | sed "s|^.*,|$|" | sed "s|\(\.[0-9]$\)|\10|"
+```
 
 I aliased it to `btc` and can now do this in my terminal:
 
-    > btc
-    $420.69
+```sh
+btc
+# $420.69
+```
 
 Kind of cool! If you're interested in how I made this work...
 

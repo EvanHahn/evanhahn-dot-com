@@ -5,6 +5,8 @@ layout: post
 url: /csp-module-is-the-largest-part-of-helmet/
 ---
 
+**This post is written for an old version of Helmet.**
+
 _This post is aimed at people that have some familiarity with my [Helmet Node.js module](https://github.com/helmetjs/helmet/)._
 
 [Helmet](https://github.com/helmetjs/helmet/) is a Node.js module that helps you secure your Express applications by setting various HTTP headers. It sets headers like `X-Frame-Options` to help prevent a kind of attack called "clickjacking" or `X-XSS-Filter` as a basic protection against cross-site scripting attacks. If you're writing an Express app (or a Connect or Koa app), I hope you'll give it a look!
@@ -19,7 +21,7 @@ I certainly _feel_ like the CSP part of Helmet is the biggest. I spend the most 
 
 [cloc](https://github.com/AlDanial/cloc/) is a cool program that counts lines of code. I used it to see which module was the biggest, and made sure to exclude `node_modules`, `package.json`, and test files. To see how big each module was, I ran this command in each directory:
 
-```
+```sh
 cloc --quiet --exclude-dir=node_modules,test --not-match-f='package\.json' --include-lang=Javascript,JSON .
 ```
 

@@ -18,7 +18,7 @@ Each line is a package that Atom should install. You can also specify version nu
 
 If you already have some packages installed, you can generate this file with the following shell command:
 
-```
+```sh
 apm list --installed --bare > my_atom_packages.txt
 ```
 
@@ -31,13 +31,13 @@ seti-ui@0.5.1
 
 If you're like me, you probably just want to install the _latest_ version of a package, whatever it is. You could write [a quick script](https://gist.github.com/EvanHahn/2b48b9c828af2c92fef9) to do it, or you could use grep to filter out the version information:
 
-```
+```sh
 apm list --installed --bare | grep '^[^@]\+' -o > my_atom_packages.txt
 ```
 
 Once you've generated the list of packages you want, it's time to install them. If your file is called `my_atom_packages.txt`, you can install it with the `--packages-file` flag:
 
-```
+```sh
 apm install --packages-file my_atom_packages.txt
 ```
 

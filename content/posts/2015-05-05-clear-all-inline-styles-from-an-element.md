@@ -11,7 +11,7 @@ As a front-end developer at [Braintree](https://www.braintreepayments.com/), I d
 
 After trying a few less-than-ideal solutions, I found a one-liner that solved the problem: all I had to do was set its `cssText` to the empty string, like this:
 
-```
+```javascript
 myElement.style.cssText = "";
 ```
 

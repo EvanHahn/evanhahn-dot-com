@@ -20,57 +20,69 @@ Express adds a property to every request, [`query`](https://expressjs.com/en/4x/
 
 For example, consider this simple Express app:
 
-    const app = express()
+```javascript
+const app = express();
 
-    // NOTE: This code has some problems, which we'll see soon.
-    app.get('/', (req, res) => {
-      const nameYelled = req.query.name.toUpperCase()
-      res.send('Hello, ' + nameYelled)
-    })
+// NOTE: This code has some problems, which we'll see soon.
+app.get("/", (req, res) => {
+  const nameYelled = req.query.name.toUpperCase();
+  res.send("Hello, " + nameYelled);
+});
 
-    app.listen(3000)
+app.listen(3000);
+```
 
 If you make an HTTP request and set the `name` query parameter to `Moogie`, this should respond with `Hello, MOOGIE`. For example:
 
-    curl 'http://localhost:3000/?name=Moogie'
-    # => Hello, MOOGIE
+```sh
+curl 'http://localhost:3000/?name=Moogie'
+# => Hello, MOOGIE
+```
 
 Of course, you could set `name` to something else, too:
 
-    curl 'http://localhost:3000/?name=Rom'
-    # => Hello, ROM
+```sh
+curl 'http://localhost:3000/?name=Rom'
+# => Hello, ROM
 
-    curl 'http://localhost:3000/?name=Gaila'
-    # => Hello, GAILA
+curl 'http://localhost:3000/?name=Gaila'
+# => Hello, GAILA
+```
 
 If you don't set the `name` parameter at all, you'll get an error because `req.query.name` is `undefined`.
 
-    curl 'http://localhost:3000/'
-    # => TypeError: Cannot read property 'toUpperCase' of undefined
-    #    ...
+```sh
+curl 'http://localhost:3000/'
+# => TypeError: Cannot read property 'toUpperCase' of undefined
+#    ...
+```
 
 We're getting `Cannot read property 'toUpperCase' of undefined` because `req.query.name` isn't defined, so we can't call `toUpperCase` on it. I don't find this behavior is too surprising, but it's worth keeping in mind.
 
 Let's update our code to handle the case where the `name` parameter is missing:
 
-    // NOTE: This code also has some problems, which we'll see soon.
-    app.get('/', (req, res) => {
-      if (req.query.name) {
-        const nameYelled = req.query.name.toUpperCase()
-        res.send('Hello, ' + nameYelled)
-      } else {
-        res.status(400)
-        res.send('No name provided!')
-      }
-    })
+```javascript
+// NOTE: This code also has some problems, which we'll see soon.
+app.get("/", (req, res) => {
+  if (req.query.name) {
+    const nameYelled = req.query.name.toUpperCase();
+    res.send("Hello, " + nameYelled);
+  } else {
+    res.status(400);
+    res.send("No name provided!");
+  }
+});
+```
 
 Good! Now we should be able to make requests with and without the parameter.
 
-    curl 'http://localhost:3000/?name=Brunt'
-    # => Hello, BRUNT
+```sh
+curl 'http://localhost:3000/?name=Brunt'
+# => Hello, BRUNT
 
-    curl 'http://localhost:3000/'
-    # => No name provided!
+curl 'http://localhost:3000/'
+# => No name provided!
+```
 
 Unfortunately, we can still crash this code. Let's see how.
 
@@ -78,83 +90,99 @@ Unfortunately, we can still crash this code. Let's see how.
 
 What if we send the `name` parameter not once, but twice?
 
-    curl 'http://localhost:3000/?name=Bing&name=Bong'
-    # => TypeError: req.query.name.toUpperCase is not a function
-    #    ...
+```sh
+curl 'http://localhost:3000/?name=Bing&name=Bong'
+# => TypeError: req.query.name.toUpperCase is not a function
+#    ...
+```
 
 A new error: `req.query.name.toUpperCase is not a function`. The same thing happens if we send the parameter three times, or four times, or twenty times. What's happening here?
 
 Let's add a new route that just responds with the value of `req.query` as JSON. This will help us debug.
 
-    // Set this Express option to format JSON nicely.
-    // This is just for our debugging.
-    app.set('json spaces', 2)
+```javascript
+// Set this Express option to format JSON nicely.
+// This is just for our debugging.
+app.set("json spaces", 2);
 
-    app.get('/log-query', (req, res) => {
-      res.json({
-        query: req.query
-      })
-    })
+app.get("/log-query", (req, res) => {
+  res.json({
+    query: req.query,
+  });
+});
+```
 
 Now let's try making a request to see what `req.query` is:
 
-    curl 'http://localhost:3000/log-query?name=Bing&name=Bong'
-    # => {
-    #      "query": {
-    #        "name": ["Bing", "Bong"]
-    #      }
-    #    }
+```sh
+curl 'http://localhost:3000/log-query?name=Bing&name=Bong'
+# => {
+#      "query": {
+#        "name": ["Bing", "Bong"]
+#      }
+#    }
+```
 
 Notice that `name` is no longer a string, but an _array_! That explains why our call to `toUpperCase` didn't work—`toUpperCase` is for strings, not arrays.
 
 You can also set the value to a one-element array by appending `[]` to the end of the name of the query parameter (like `name[]`):
 
-    curl 'http://localhost:3000/log-query?name[]=Moogie
-    # => {
-    #      "query": {
-    #        "name": ["Moogie"]
-    #      }
-    #    }
+```sh
+curl 'http://localhost:3000/log-query?name[]=Moogie
+# => {
+#      "query": {
+#        "name": ["Moogie"]
+#      }
+#    }
+```
 
 That's not all—there are more weird cases to think about. For example, you can send nested objects:
 
-    curl 'http://localhost:3000/log-query?a[b][c]=cool
-    # => {
-    #      "query": {
-    #        "a": {
-    #          "b": {
-    #            "c": "cool"
-    #          }
-    #        }
-    #      }
-    #    }
+```sh
+curl 'http://localhost:3000/log-query?a[b][c]=cool
+# => {
+#      "query": {
+#        "a": {
+#          "b": {
+#            "c": "cool"
+#          }
+#        }
+#      }
+#    }
+```
 
 This is certainly powerful, but it's a double-edged sword: it creates more code paths than you might expect. This can cause unexpected behavior if you don't anticipate every case, and you'll have to remember to do that _every time_ you read from `req.query`.
 
 We've shown that crashes are possible, but you could also cause unintended behavior with things like this. For example, let's say you only want to greet the user if their name is 12 characters or fewer. You might write something like this:
 
-    // NOTE: This has problems!
-    app.get('/', (req, res) => {
-      if (req.query.name && req.query.name.length <= 12) {
-        res.send('Hello, ' + req.query.name)
-      } else {
-        res.status(400)
-        res.send('Invalid name.')
-      }
-    })
+```javascript
+// NOTE: This has problems!
+app.get("/", (req, res) => {
+  if (req.query.name && req.query.name.length <= 12) {
+    res.send("Hello, " + req.query.name);
+  } else {
+    res.status(400);
+    res.send("Invalid name.");
+  }
+});
+```
 
 If you pass strings, everything is fine:
 
-    curl 'http://localhost:3000/?name=Benjamin'
-    # => Hello, BENJAMIN
+```sh
+curl 'http://localhost:3000/?name=Benjamin'
+# => Hello, BENJAMIN
 
-    curl 'http://localhost:3000/?name=MyVeryLongName'
-    # => Invalid name.
+curl 'http://localhost:3000/?name=MyVeryLongName'
+# => Invalid name.
+```
 
 But if you pass an array, you can trick the validation logic.
 
-    curl 'http://localhost:3000/?name[]=MyVeryVeryVeryVeryLongName'
-    # => Hello, MyVeryVeryVeryVeryLongName.
+```sh
+curl 'http://localhost:3000/?name[]=MyVeryVeryVeryVeryLongName'
+# => Hello, MyVeryVeryVeryVeryLongName.
+```
 
 Why is all of this happening?
 
@@ -178,15 +206,17 @@ If you need all the features that Express's default query parser provides, then 
 
 For example, the code from before could be adapted to look like this:
 
-    app.get('/', (req, res) => {
-      if (typeof req.query.name === 'string') {
-        const nameYelled = req.query.name.toUpperCase()
-        res.send('Hello, ' + nameYelled)
-      } else {
-        res.status(400)
-        res.send('No name provided!')
-      }
-    })
+```javascript
+app.get("/", (req, res) => {
+  if (typeof req.query.name === "string") {
+    const nameYelled = req.query.name.toUpperCase();
+    res.send("Hello, " + nameYelled);
+  } else {
+    res.status(400);
+    res.send("No name provided!");
+  }
+});
+```
 
 Depending on your use case, you'll need to do different validation of the incoming parameters, possibly using a validation library.
 
@@ -198,7 +228,9 @@ Express has a few [app-level settings](https://expressjs.com/en/4x/api.html#app.
 
 If you're lucky enough to not need to do _any query parsing at all_, you can just disable it. For example:
 
-    app.set('query parser', false)
+```javascript
+app.set("query parser", false);
+```
 
 This will set `req.query` to an empty object (`{}`) every time. If you can get away with this, why wouldn't you?
 
@@ -208,17 +240,23 @@ But if you're reading this, you probably _do_ need to do some query parsing. So 
 
 You might have some luck with the simple query parser, which is also configured with the `query parser` option:
 
-    app.set('query parser', 'simple')
+```javascript
+app.set("query parser", "simple");
+```
 
 This uses [Node's built-in `querystring` module](https://nodejs.org/api/querystring.html) under the hood instead of the default `qs` module. `querystring` doesn't parse nested objects or one-element arrays, which avoids a whole bunch of code paths, but it can still return an array if a key is passed multiple times. For example:
 
-    querystring.parse('name=Bing&name=Bong')
-    // => { name: ['Bing', 'Bong'] }
+```javascript
+querystring.parse("name=Bing&name=Bong");
+// => { name: ['Bing', 'Bong'] }
+```
 
 Unlike Express's default parser, the `qs` module), suffixes don't mean anything. For example, `name[]=Brunt` parses as `['Brunt']` with `qs`, but it's nothing special with the built-in one:
 
-    querystring.parse('name[]=Brunt')
-    // => { 'name[]': 'Brunt' }
+```javascript
+querystring.parse("name[]=Brunt");
+// => { 'name[]': 'Brunt' }
+```
 
 This is certainly simpler, but you'll still need to remember to check the type of `name` before using it—a value could be a string, or `undefined`, or an array.
 
@@ -230,37 +268,43 @@ Wouldn't it be nice if there were a way to deal with query parameters very expli
 
 For example, here's how you'd use it without Express:
 
-    // Note that this is standard JavaScript, so you can try it in your browser!
-    const query = new URLSearchParams('name=Bing&name=Bong')
+```javascript
+// Note that this is standard JavaScript, so you can try it in your browser!
+const query = new URLSearchParams("name=Bing&name=Bong");
 
-    query.has('name')
-    // => true
+query.has("name");
+// => true
 
-    query.get('name')
-    // => 'Bing'
+query.get("name");
+// => 'Bing'
 
-    query.getAll('name')
-    // => ['Bing', 'Bong']
+query.getAll("name");
+// => ['Bing', 'Bong']
+```
 
 While it's more verbose, I generally like `URLSearchParams` because it's explicit. When you call `getAll`, you'll always get an array of strings, no matter what. When you call `get`, you'll always get the first parameter as a string, or `null` if it's not there. No funny business with magically-created objects or arrays, and nothing to remember every time.
 
 Express lets you define a custom function for parsing query strings. Instead of passing `false` or `'simple'` as we've done before, we can pass a function:
 
-    app.set('query parser', (queryString) => {
-      return new URLSearchParams(queryString)
-    })
+```javascript
+app.set("query parser", (queryString) => {
+  return new URLSearchParams(queryString);
+});
+```
 
 Now `req.query` will be an instance of `URLSearchParams`. We can now rewrite our route handler like this:
 
-    app.get('/', (req, res) => {
-      if (req.query.has('name')) {
-        const nameYelled = req.query.get('name').toUpperCase()
-        res.send('Hello, ' + nameYelled)
-      } else {
-        res.status(400)
-        res.send('No name provided!')
-      }
-    })
+```javascript
+app.get("/", (req, res) => {
+  if (req.query.has("name")) {
+    const nameYelled = req.query.get("name").toUpperCase();
+    res.send("Hello, " + nameYelled);
+  } else {
+    res.status(400);
+    res.send("No name provided!");
+  }
+});
+```
 
 Try passing in `name` multiple times, or as an object, or as an array—`URLSearchParams` won't buckle!
 
@@ -268,19 +312,21 @@ This isn't something that's typically done in Express—most people stick with t
 
 You can go "halfway there" by instantiating `URLSearchParams` objects as needed. You'll need to use the `'simple'` query parser, but that lets you write code like this:
 
-    app.set('query parser', 'simple')
+```javascript
+app.set("query parser", "simple");
 
-    app.get('/', (req, res) => {
-      const query = new URLSearchParams(req.query)
+app.get("/", (req, res) => {
+  const query = new URLSearchParams(req.query);
 
-      if (query.has('name')) {
-        const nameYelled = query.get('name').toUpperCase()
-        res.send('Hello, ' + nameYelled)
-      } else {
-        res.status(400)
-        res.send('No name provided!')
-      }
-    })
+  if (query.has("name")) {
+    const nameYelled = query.get("name").toUpperCase();
+    res.send("Hello, " + nameYelled);
+  } else {
+    res.status(400);
+    res.send("No name provided!");
+  }
+});
+```
 
 `URLSearchParams` works with objects returned by Express's simple query string parser (in other words, an object returned by `querystring.parse`). This "hybrid approach" still preserves traditional `req.query` behavior but gives you the explicitness of `URLSearchParams`. You'll still need to remember to do this every time, though!
 

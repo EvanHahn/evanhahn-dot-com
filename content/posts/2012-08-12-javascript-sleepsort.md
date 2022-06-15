@@ -10,18 +10,26 @@ I came across the sleepsort today, which is a humorous sorting algorithm. Basica
 
 I was "inspired" and [implemented it in JavaScript](https://gist.github.com/3330517):
 
-    function sleepsort() {
-      var i = arguments.length;
-      while (i --) {
-        setTimeout(function(n) {
-          console.log(n);
-        }, i, arguments[i]);
-      }
-    }
+```javascript
+function sleepsort() {
+  var i = arguments.length;
+  while (i--) {
+    setTimeout(
+      function (n) {
+        console.log(n);
+      },
+      i,
+      arguments[i]
+    );
+  }
+}
+```
 
 I also implemented it in CoffeeScript:
 
-    sleepsort = ->
-      setTimeout ((n) => console.log n), number, number for number in arguments
+```coffeescript
+sleepsort = ->
+  setTimeout ((n) => console.log n), number, number for number in arguments
+```
 
 Perhaps it's obvious that it's not a "real" sort. It's clearly very slow for large numbers and doesn't even work for negative numbers. Still a fun little exercise!

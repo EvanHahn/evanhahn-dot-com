@@ -16,10 +16,16 @@ Go check out my [JavaScript implementation](https://gist.github.com/2587465) and
 
 Call it like this:
 
-    caesarShift('Attack at dawn!', 12);    // Returns "Mffmow mf pmiz!"
+```javascript
+caesarShift("Attack at dawn!", 12);
+// Returns "Mffmow mf pmiz!"
+```
 
 And reverse it like this:
 
-    caesarShift('Mffmow mf pmiz!', -12);    // Returns "Attack at dawn!"
+```javascript
+caesarShift("Mffmow mf pmiz!", -12);
+// Returns "Attack at dawn!"
+```
 
 Easy peasy! Enjoy.
