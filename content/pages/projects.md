@@ -186,6 +186,7 @@ I've made a bunch of small pull requests to various open source projects. Most o
 - [Express](https://expressjs.com/)
   - [Ignore settings on `Object.prototype`](https://github.com/expressjs/express/pull/4803)
   - [Update Helmet documentation](https://github.com/expressjs/expressjs.com/pull/1319)
+  - [Update website for new version](https://github.com/expressjs/expressjs.com/pull/1347)
 - [flow-typed](https://github.com/flow-typed/flow-typed)
   - [express: correct `is` method return type on requests](https://github.com/flow-typed/flow-typed/pull/3464)
 - [GRDB](https://github.com/groue/GRDB.swift)
