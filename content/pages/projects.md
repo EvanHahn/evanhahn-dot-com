@@ -23,7 +23,7 @@ I've written many [guides, tutorials, and how-tos](/guides). Two of those got tu
 
 ## Jobs
 
-I currently work at [Signal](https://signal.org/). I currently work on the iOS app, but used to work on the Desktop team. I've worked on many things including an [encrypted group calling feature](https://signal.org/blog/group-calls/), a [privacy-preserving donations feature](https://signal.org/blog/become-a-signal-sustainer/), and much more.
+I work at [Signal](https://signal.org/). I currently work on the iOS app, but used to work on the Desktop team. I've worked on many things including an [encrypted group calling feature](https://signal.org/blog/group-calls/), a [privacy-preserving donations feature](https://signal.org/blog/become-a-signal-sustainer/), and much more.
 
 I had two full-time jobs before this:
 
