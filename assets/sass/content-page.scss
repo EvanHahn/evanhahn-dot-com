@@ -10,7 +10,8 @@
     ul,
     ol,
     blockquote,
-    hr {
+    hr,
+    table {
       margin-left: auto;
       margin-right: auto;
       max-width: 800px;
@@ -57,7 +58,8 @@
   ol,
   blockquote,
   pre,
-  hr {
+  hr,
+  table {
     line-height: 1.75em;
     margin-bottom: 1.5rem;
   }
@@ -120,5 +122,23 @@
   hr {
     border: 0;
     border-top: 2px solid var(--primary-color);
+  }
+
+  table {
+    text-align: left;
+  }
+
+  thead {
+    color: var(--inverted-text-color);
+    background: var(--text-color);
+  }
+
+  th,
+  td {
+    padding: 0.5rem 1rem;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: var(--secondary-background-color);
   }
 }
